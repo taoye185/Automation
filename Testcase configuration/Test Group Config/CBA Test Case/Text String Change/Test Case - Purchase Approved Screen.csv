@@ -1,0 +1,12 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,2,,,,,,
+waitUntilPage,EnterPIN,,,,,,
+login,0,,,,,,
+waitUntilPage,Purchase,,,,,,
+singlePurchase,200,none,,none,,,
+waitUntilPage,PurchaseResult,,,,,,
+test,0,,,,isOnPage,,PurchaseResult
+test,0,,,,equal,PurchaseResultProcessTitle,Purchase
+test,0,,,,equal,PurchaseResultResultText,Approved
+test,0,,,,equal,PurchaseResultAmount,$2.00 
+test,0,,,,equal,PurchaseResultMerchantName,taoye010

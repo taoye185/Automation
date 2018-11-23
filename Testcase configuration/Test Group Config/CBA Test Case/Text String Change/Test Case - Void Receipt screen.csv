@@ -1,0 +1,45 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,2,,,,,,
+login,1,,,,,,
+waitUntilPage,120,Purchase,,,,,
+multiplePurchase,1,none,,none,,none,
+waitUntilPage,120,Purchase,,,,,
+clickButton,0,SideMenuShowMenu,,,,,
+clickButton,1,SideMenuTransactionHistory,,,,,
+waitUntilPage,120,TransactionHistory,,,,,
+clickButton,0,TransactionHistoryFirstTransaction,,,,,
+waitUntilPage,120,TransactionDetails,,,,,
+clickButton,0,TransactionDetailsVoid,,,,,
+test,5,,,,equal,EnterPINProcessTitle,Void transaction
+test,0,,,,equal,EnterPINTitle,Enter PIN
+login,0,,,,,,
+waitUntilPage,120,VoidProcessingPayment,,,,,
+test,0,,,,isOnPage,,VoidProcessingPayment
+test,0,,,,equal,VoidProcessingPaymentTitle,Processing
+test,0,,,,equal,VoidProcessingPaymentProcessTitle,Void
+test,0,,,,equal,VoidProcessingPaymentPurchaseAmount,($10.00)
+waitUntilPage,120,PurchaseResult,,,,,
+test,0,,,,equal,PurchaseResultProcessTitle,Void
+test,0,,,,equal,PurchaseResultResultText,Approved
+test,0,,,,equal,PurchaseResultAmount,($10.00)
+test,0,,,,equal,PurchaseResultMerchantName,taoye010
+test,0,,,,equal,PurchaseResultNoReceipt,No receipt
+test,0,,,,equal,PurchaseResultEmailReceipt,Email receipt
+clickButton,0,PurchaseResultNoReceipt,,,,,
+waitUntilPage,120,TransactionHistory,,,,,
+clickButton,0,TransactionHistoryFirstTransaction,,,,,
+waitUntilPage,120,TransactionDetails,,,,,
+test,0,,,,equal,TransactionDetailsProcessTitle,Transaction details
+test,0,,,,equal,TransactionDetailsTitle,Void approved
+test,0,,,,equal,TransactionDetailsAmount,($10.00)
+test,0,,,,equal,TransactionDetailsMerchantName,taoye010
+test,0,,,,equal,TransactionDetailsEmail receipt,Email receipt
+clickButton,0,TransactionDetailsBack,,,,,
+waitUntilPage,120,TransactionHistory,,,,,
+clickButton,0,TransactionHistorySecondTransaction,,,,,
+waitUntilPage,120,TransactionDetails,,,,,
+test,0,,,,equal,TransactionDetailsProcessTitle,Transaction details
+test,0,,,,equal,TransactionDetailsTitle,Purchase voided
+test,0,,,,equal,TransactionDetailsAmount,$10.00 
+test,0,,,,equal,TransactionDetailsMerchantName,taoye010
+test,0,,,,equal,TransactionDetailsEmail receipt,Email receipt

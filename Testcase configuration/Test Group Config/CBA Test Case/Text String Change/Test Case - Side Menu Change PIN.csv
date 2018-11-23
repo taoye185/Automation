@@ -1,0 +1,28 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,1,,,,,,
+reachPageByProcess,10,login,Purchase,,,,
+clickButton,0,PurchaseSideMenu,,,,,
+clickButton,1,SideMenuChangePIN,,,,,
+waitUntilPage,120,EnterOldPIN,,,,,
+logComment,0,"Testing Side menu Flow, screen 7",,,,,
+test,0,,,,isOnPage,,EnterOldPIN
+test,0,,,,equal,EnterOldPINProcessTitle,Change PIN
+test,0,,,,equal,EnterOldPINTitle,Enter old PIN
+login,0,,,,,,
+enterNumPadOK,5,654321,,,,,
+enterNumPadOK,5,654321,,,,,
+waitUntilPage,120,PINUpdated,,,,,
+logComment,0,"Testing Side menu Flow, screen 8",,,,,
+test,0,,,,isOnPage,,PINUpdated
+test,0,,,,equal,PINUpdatedTitle,PIN updated
+test,0,,,,equal,PINUpdatedTextBody,Your PIN's been changed
+test,0,,,,equal,PINUpdatedDone,Done
+logComment,0,Test completed. Resetting user password to default password.,,,,,
+clickButton,0,PINUpdatedDone,,,,,
+clickButton,1,PurchaseSideMenu,,,,,
+clickButton,1,SideMenuChangePIN,,,,,
+waitUntilPage,120,EnterOldPIN,,,,,
+enterNumPadOK,0,654321,,,,,
+login,1,,,,,,
+login,1,,,,,,
+clickButton,5,PINUpdatedDone,,,,,

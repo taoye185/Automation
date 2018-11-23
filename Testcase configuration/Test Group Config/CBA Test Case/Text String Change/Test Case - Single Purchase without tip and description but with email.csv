@@ -1,0 +1,22 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,5,,,,,,
+login,5,,,,,,
+showSideMenu,15,,,,,,
+clickButton,5,SideMenuSettings,,,,,
+login,5,,,,,,
+setBooleanValue,5,SettingsTerminalAddTipValue,no,,,,
+setBooleanValue,5,SettingsTerminalAddDescriptionValue,no,,,,
+showSideMenu,5,,,,,,
+clickButton,5,SideMenuPurchase,,,,,
+singlePurchase,200,none,,none,,,
+clickButton,0,PurchaseResultEmailReceipt,,,,,
+test,5,,,,equal,EmailReceiptForPurchaseTitle,Email receipt
+test,0,,,,equal,EmailReceiptForPurchaseEmail,Enter email
+test,0,,,,equal,EmailReceiptForPurchaseRememberEmailText,Remember this email
+test,0,,,,equal,EmailReceiptForPurchaseSkip,No receipt
+test,0,,,,equal,EmailReceiptForPurchaseNext,Send
+inputText,0,EmailReceiptForPurchaseEmail,ytao@mobeewave.com,,,,
+clickButton,0,EmailReceiptForPurchaseNext,,,,,
+test,5,,,,equal,ReceiptSentConfirmationTitle,Receipt sent
+test,0,,,,equal,ReceiptSentConfirmationTextBody,Thanks. A receipt's been sent to ytao@mobeewave.com
+test,0,,,,equal,ReceiptSentConfirmationDone,Done

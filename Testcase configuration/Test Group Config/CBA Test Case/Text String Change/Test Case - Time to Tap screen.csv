@@ -1,0 +1,32 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,5,,,,,,
+login,5,,,,,,
+showSideMenu,15,,,,,,
+clickButton,5,SideMenuSettings,,,,,
+login,5,,,,,,
+setBooleanValue,5,SettingsTerminalAddTipValue,no,,,,
+setBooleanValue,5,SettingsTerminalPINWhenCancelTransactionValue,no,,,,
+showSideMenu,5,,,,,,
+clickButton,5,SideMenuPurchase,,,,,
+enterNumPadOK,5,200,,,,,
+test,5,,,,equal,TapToPayTitle,Time to tap
+test,0,,,,equal,TapToPayProcessTitle,Purchase
+test,0,,,,equal,TapToPayPurchaseAmount,$2.00
+test,0,,,,equal,TapToPayTextBody,Hold card/phone to the back of the device
+clickButton,0,TapToPayCancel,,,,,
+test,5,,,,equal,CancelTransactionTitle,Cancel transaction
+test,0,,,,equal,CancelTransactionTextBody,Are you sure you want to cancel this transaction?
+test,0,,,,equal,CancelTransactionContinue,"No, continue"
+test,0,,,,equal,CancelTransactionStop,"Yes, cancel"
+clickButton,0,CancelTransactionStop,,,,,
+showSideMenu,15,,,,,,
+clickButton,5,SideMenuSettings,,,,,
+login,5,,,,,,
+setBooleanValue,5,SettingsTerminalPINWhenCancelTransactionValue,yes,,,,
+showSideMenu,5,,,,,,
+clickButton,5,SideMenuPurchase,,,,,
+enterNumPadOK,5,200,,,,,
+clickButton,10,TapToPayCancel,,,,,
+test,5,,,,equal,CancelTransactionEnterPINProcessTitle,Cancel transaction
+test,0,,,,equal,CancelTransactionEnterPINTextBody,element not found
+test,0,,,,equal,CancelTransactionEnterPINTitle,Enter PIN

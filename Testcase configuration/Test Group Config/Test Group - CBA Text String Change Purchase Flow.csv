@@ -1,0 +1,8 @@
+Active,test case,test case config file
+1,PurchaseFlow06,.\\src\\Testcase configuration\\Text String Change\\Test Case - Purchase Approved Screen.csv
+1,PurchaseFlow08&09&10,.\\src\\Testcase configuration\\Text String Change\\Test Case - Set Custom Tip screen.csv
+1,PurchaseFlow15&16,.\\src\\Testcase configuration\\Text String Change\\Test Case - Single Purchase without tip and description but with email.csv
+1,PurchaseFlow01,.\\src\\Testcase configuration\\Text String Change\\Test Case - Purchase Screen.csv
+1,PurchaseFlow02,".\\src\\Testcase configuration\\Text String Change\\Test Case - Purchase Screen, amount 50.csv"
+1,PurchaseFlow04,.\\src\\Testcase configuration\\Text String Change\\Test Case - Set Tip During Purchase screen.csv
+1,PurchaseFlow05,.\\src\\Testcase configuration\\Text String Change\\Test Case - Processing screen.csv

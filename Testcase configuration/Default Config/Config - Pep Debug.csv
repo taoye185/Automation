@@ -1,0 +1,4 @@
+Active,Capabilities Name,Capabilities Value
+1,appPackage,com.mobeewave.pep.test.debug
+1,appActivity,com.mobeewave.mpos2.login.LoginActivity
+1,app,C:\\Users\\YeTao\\eclipse-workspace\\automationTemplates\\apps\\pep-v1.4.1-198-integration-debug.apk

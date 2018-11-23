@@ -1,0 +1,4 @@
+Active,test case,test case config file
+1,TransactionHistoryFlow05&06&11&13&15,.\\src\\Testcase configuration\\Text String Change\\Test Case - Void Receipt screen.csv
+1,TransactionHistoryFlow12,.\\src\\Testcase configuration\\Text String Change\\Test Case - Void Receipt With Sales User screen.csv
+1,TransactionHistoryFlow03,.\\src\\Testcase configuration\\Text String Change\\Test Case - Search Criteria screen.csv

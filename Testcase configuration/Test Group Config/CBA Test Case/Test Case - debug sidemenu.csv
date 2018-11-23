@@ -1,0 +1,17 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,5,,,,,,
+login,5,,,,,,
+showSideMenu,3,,,,,,
+test,1,,,,equal,SideMenuChangePIN,123
+showSideMenu,3,,,,,,
+clickButton,1,SideMenuUserManagement,,,,,
+showSideMenu,3,,,,,,
+clickButton,1,SideMenuContactUs,,,,,
+showSideMenu,3,,,,,,
+clickButton,1,SideMenuTransactionReports,,,,,
+showSideMenu,3,,,,,,
+clickButton,1,SideMenuPurchase,,,,,
+showSideMenu,3,,,,,,
+clickButton,1,SideMenuLogout,,,,,
+showSideMenu,3,,,,,,
+clickButton,1,SideMenuSettings,,,,,

@@ -1,0 +1,6 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,5,,,,,,
+login,5,,,,,,
+enterNumPad,15,5000,,,,,
+test,5,,,,equal,PurchaseTitle,Enter amount
+test,5,,,,equal,PurchaseAmount,$50.00

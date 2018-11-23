@@ -1,0 +1,17 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+waitUntilPage,120,SignInSelection,,,,,
+clickButton,0,SignInSelectionSecondUser,,,,,
+waitUntilPage,120,EnterPIN,,,,,
+login,0,,,,,,
+waitUntilPage,120,Purchase,,,,,
+multiplePurchase,1,none,,none,,none,
+waitUntilPage,120,Purchase,,,,,
+clickButton,0,SideMenuShowMenu,,,,,
+clickButton,1,SideMenuTransactionHistory,,,,,
+waitUntilPage,120,TransactionHistory,,,,,
+clickButton,0,TransactionHistoryFirstTransaction,,,,,
+waitUntilPage,120,TransactionDetails,,,,,
+clickButton,0,TransactionDetailsVoid,,,,,
+test,5,,,,equal,EnterPINProcessTitle,Void transaction
+test,0,,,,equal,EnterPINTextBody,element not found
+test,0,,,,equal,EnterPINTitle,Enter administrator's PIN

@@ -1,0 +1,9 @@
+Active,Capabilities Name,Capabilities Value
+1,appPackage,com.mobeewave.cba.mpos
+1,appActivity,com.mobeewave.mpos2.login.LoginActivity
+1,app,C:\\Users\\YeTao\\eclipse-workspace\\automationTemplates\\apps\\cba_text_changes.apk
+1,MerchantID,taoye67890123008
+1,MerchantPassword,Thankyou1@
+1,MerchantPIN,123456
+1,Username,SignInSelectionFirstUser
+1,CustomerEmail,ytao@mobeewave.com

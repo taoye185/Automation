@@ -1,0 +1,3 @@
+Active,test case,test case config file
+1,TapCardScreenFlow01&02&03,.\\src\\Testcase configuration\\Text String Change\\Test Case - Time to Tap screen1.csv
+1,TapCardScreenFlow06,.\\src\\Testcase configuration\\Text String Change\\Test Case - Time Out screen1.csv

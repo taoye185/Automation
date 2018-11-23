@@ -1,0 +1,4 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,5,,,,,,
+login,5,,,,,,
+multiplePurchase,50,none,,none,,none,

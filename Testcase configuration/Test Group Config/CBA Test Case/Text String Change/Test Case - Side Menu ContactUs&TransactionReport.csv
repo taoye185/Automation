@@ -1,0 +1,39 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,1,,,,,,
+reachPageByProcess,10,login,Purchase,,,,
+clickButton,0,PurchaseSideMenu,,,,,
+logComment,0,"Testing Side menu Flow, screen 1",,,,,
+test,0,,,,equal,SideMenuUsername,Mr taoye the long given name taoye with a long name-1
+clickButton,1,SideMenuContactUs,,,,,
+waitUntilPage,120,ContactUs,,,,,
+logComment,0,"Testing Side menu Flow, screen 2",,,,,
+test,0,,,,isOnPage,,ContactUs
+test,0,,,,equal,ContactUsProcessTitle,Contact us
+test,0,,,,equal,ContactUsTitle,element not found
+test,0,,,,equal,ContactUsTextBody,element not found
+test,0,,,,equal,ContactUsCallnowButton,Call now
+clickButton,0,ContactUsSideMenu,,,,,
+clickButton,1,SideMenuTransactionReports,,,,,
+waitUntilPage,120,TransactionReports,,,,,
+logComment,0,"Testing Side menu Flow, screen 3",,,,,
+test,0,,,,isOnPage,,TransactionReports
+test,0,,,,equal,TransactionReportsEmailReport,Email report
+test,0,,,,equal,TransactionReportsProcessTitle,Transaction reports
+test,0,,,,equal,TransactionReportsTitle,element not found
+test,0,,,,equal,TransactionReportsDateRangeText,Date range
+test,0,,,,equal,TransactionReportsEmailText,Send report to
+test,0,,,,equal,TransactionReportsEmailValue,ytao@mobeewave.com
+clickButton,0,TransactionReportsFromDateValue,,,,,
+waitUntilPage,120,DatePicker,,,,,
+clickButton,0,DatePickerPreviousMonth,,,,,
+clickButton,2,DatePickerFirstDay,,,,,
+clickButton,1,DatePickerOK,,,,,
+waitUntilPage,120,TransactionReports,,,,,
+clickButton,0,TransactionReportsEmailReport,,,,,
+logComment,0,"Testing Side menu Flow, screen 4",,,,,
+test,5,,,,isOnPage,,ReportSentConfirmation
+test,0,,,,equal,ReportSentConfirmationTitle,Report sent
+test,0,,,,equal,ReportSentConfirmationTextBody,The report was sent to ytao@mobeewave.com
+test,0,,,,equal,ReportSentConfirmationDone,Done
+clickButton,0,ReportSentConfirmationDone,,,,,
+waitUntilPage,120,TransactionReports,,,,,
