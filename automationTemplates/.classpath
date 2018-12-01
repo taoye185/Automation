@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/charsets.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/deploy.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/javaws.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/jce.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/jfr.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/jfxswt.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/jsse.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/management-agent.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/plugin.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre1.8.0_181/lib/rt.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/gson-2.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/opencsv-4.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/jar_files/java-client-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/commons-lang3-3.8/commons-lang3-3.8.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/client-combined-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/client-combined-3.14.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/libs/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/libs/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/libs/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/libs/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/libs/httpclient-4.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/libs/httpcore-4.4.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/libs/okhttp-3.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/selenium-java-3.14.0/libs/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/javamail-1.4.5/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/javamail-1.4.5/lib/dsn.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/javamail-1.4.5/lib/imap.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/javamail-1.4.5/lib/mailapi.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/javamail-1.4.5/lib/pop3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/YeTao/Desktop/downloads/jar/javamail-1.4.5/lib/smtp.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

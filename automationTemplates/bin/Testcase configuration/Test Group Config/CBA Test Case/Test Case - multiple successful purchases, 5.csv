@@ -1,0 +1,4 @@
+Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+1,Android,launch,5,,,,,,
+1,Android,login,5,,,,,,
+1,Android,multiplePurchase,5,none,,none,,none,

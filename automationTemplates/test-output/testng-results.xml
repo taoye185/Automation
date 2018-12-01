@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<font color='null'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='grey'>App launched and awaiting for login.</font>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='grey'>User Authentication performed.</font>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='grey'>User Authentication performed.</font>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='grey'>Transaction is made, Processing time is: 16 seconds.</font>]]>
+    </line>
+    <line>
+      <![CDATA[Current page is equal to PurchaseResult, <font color='green'>test passed</font>.]]>
+    </line>
+    <line>
+      <![CDATA[PurchaseResultResultText is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.]]>
+    </line>
+    <line>
+      <![CDATA[Current page is equal to Purchase, <font color='green'>test passed</font>.]]>
+    </line>
+    <line>
+      <![CDATA[<font color='blue'>Test Case: 1 completed.</font>]]>
+    </line>
+    <line>
+      <![CDATA[-----------------------------------<br>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="133414" started-at="2018-11-30T21:53:00Z" finished-at="2018-11-30T21:55:13Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="133414" started-at="2018-11-30T21:53:00Z" finished-at="2018-11-30T21:55:13Z">
+      <class name="AutomationMain">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:AutomationMain@3f4d3d]" name="beforeTest" is-config="true" duration-ms="151" started-at="2018-11-30T21:53:00Z" finished-at="2018-11-30T21:53:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="appTesting()[pri:0, instance:AutomationMain@3f4d3d]" name="appTesting" duration-ms="133233" started-at="2018-11-30T21:53:00Z" finished-at="2018-11-30T21:55:13Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<font color='null'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='grey'>App launched and awaiting for login.</font>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='grey'>User Authentication performed.</font>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='grey'>User Authentication performed.</font>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='grey'>Transaction is made, Processing time is: 16 seconds.</font>]]>
+            </line>
+            <line>
+              <![CDATA[Current page is equal to PurchaseResult, <font color='green'>test passed</font>.]]>
+            </line>
+            <line>
+              <![CDATA[PurchaseResultResultText is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.]]>
+            </line>
+            <line>
+              <![CDATA[Current page is equal to Purchase, <font color='green'>test passed</font>.]]>
+            </line>
+            <line>
+              <![CDATA[<font color='blue'>Test Case: 1 completed.</font>]]>
+            </line>
+            <line>
+              <![CDATA[-----------------------------------<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- appTesting -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:AutomationMain@3f4d3d]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-11-30T21:55:13Z" finished-at="2018-11-30T21:55:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- AutomationMain -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

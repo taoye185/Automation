@@ -1,0 +1,3 @@
+Active,test case,test case config file
+1,TS_1,.\\src\\Testcase configuration\\Test Group Config\\GP Test Case\\Test Case - base purchase.csv
+1,TS_2&3&4,.\\src\\Testcase configuration\\Test Group Config\\GP Test Case\\Test Case - purchase with tips description and email receipt.csv

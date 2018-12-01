@@ -1,0 +1,36 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+logComment,0,Test Pre-req: App freshly installed and merchant has not been registered; Merchant already has at least two user created in previous usage,,,,,
+reachPageByProcess,20,launch,MerchantSignIn,,,,
+logComment,0,"Testing App Open Flow, screen 3",,,,,
+test,0,,,,isOnPage,,MerchantSignIn
+test,0,,,,equal,MerchantSignInID,Merchant ID
+test,0,,,,equal,MerchantSignInOK,Sign in
+test,0,,,,equal,MerchantSignInTitle,Merchant sign in
+test,0,,,,equal,MerchantSignInRegister,Register
+reachPageByProcess,20,launch,SignInSelection,,,,
+logComment,0,"Testing App Open Flow, screen 4",,,,,
+test,0,,,,isOnPage,,SignInSelection
+test,0,,,,equal,SignInSelectionTitle,Sign in
+clickButton,0,SignInSelectionSecondUser,,,,,
+reachPageByProcess,20,launch,EnterPIN,,,,
+logComment,0,"Testing App Open Flow, screen 6",,,,,
+test,0,,,,isOnPage,,EnterPIN
+test,0,,,,equal,EnterPINTitle,Enter PIN
+test,0,,,,equal,EnterPINForgotPIN,Forgot PIN
+clickButton,5,EnterPINSecurityImage,,,,,
+waitUntilPage,120,SecurityImage,,,,,
+logComment,0,"Testing App Open Flow, screen 21",,,,,
+test,0,,,,isOnPage,,SecurityImage
+test,0,,,,equal,SecurityImageTitle,Security image
+test,0,,,,equal,SecurityImageTextBody,"This image is assigned during registration and ensures the original, untampered app is being used."
+test,0,,,,equal,SecurityImageOK,Got it
+clickButton,0,SecurityImageOK,,,,,
+waitUntilPage,120,EnterPIN,,,,,
+clickButton,0,EnterPINForgotPIN,,,,,
+waitUntilPage,120,ForgotPIN,,,,,
+logComment,0,"Testing App Open Flow, screen 7",,,,,
+test,0,,,,isOnPage,,ForgotPIN
+test,0,,,,equal,ForgotPINTitle,Forgot PIN
+test,0,,,,equal,ForgotPINTextBody,Ask your administrator to sign in and go to User management to reset your PIN.
+test,0,,,,equal,ForgotPINCancel,Got it
+test,0,,,,equal,ForgotPINResetPIN,element not found

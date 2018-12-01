@@ -1,0 +1,6 @@
+		capabilities.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.4.16.1");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0.0");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"Appium");
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S9");
+		capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Browser");

@@ -1,0 +1,16 @@
+ID,Xpath,Page,Field,action,unique,value
+LoginLogo,"//*[@id=""root""]/main/div/div/div/img",Login,Logo,view,,
+LoginUsername,"//*[@id=""root""]/main/div/div/form/div/div[1]/div/input",Login,Username,view,,
+LoginPassword,"//*[@id=""root""]/main/div/div/form/div/div[2]/div/input",Login,Password,view,,
+LoginLogin,"//*[@id=""root""]/main/div/div/form/div/button",Login,Login,view,,
+LoginForgotpassword,"//*[@id=""root""]/main/div/div/form/div/a/div",Login,Forgotpassword,view,yes,Forgot Password?
+ProdLoginUsername,/html/body/div/div/div/div[2]/form[1]/div[2]/input,ProdLogin,Username,,,
+ProdLoginPassword,/html/body/div/div/div/div[2]/form[1]/div[3]/input,ProdLogin,Password,,,
+ProdLoginLogin,"//*[@id=""login""]",ProdLogin,Login,,,
+MerchantListDetails,/html/body/div/div[2]/div/div[2]/div/div[2]/div[1]/table/tbody/tr[1]/td[6]/button,MerchantList,Details,,,
+MerchantListSearch,"//*[@id=""filterByFieldValue""]",MerchantList,Search,,,
+MerchantDetailsAddTerminal,/html/body/div/div[2]/div/div[2]/div/div[2]/div/div[14]/div[1]/div/h3/button,MerchantDetails,AddTerminal,,,
+AddTerminalTerminalID,/html/body/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/input,AddTerminal,TerminalID,,,
+AddTerminalAdd,/html/body/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/span/button,AddTerminal,Add,,,
+AddTerminalSave,/html/body/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div[3]/div/span[1]/span,AddTerminal,Save,,,
+MerchantDetailsLock,/html/body/div/div[2]/div/div[2]/div/div[2]/div/div[8]/div/button[1],MerchantDetails,Lock,,,

@@ -1,0 +1,17 @@
+Active,Driver Type,Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+1,Android,launch,5,,,,,,
+1,Android,login,5,,,,,,
+1,Android,showSideMenu,3,,,,,,
+1,Android,test,1,,,,equal,SideMenuChangePIN,123
+1,Android,showSideMenu,3,,,,,,
+1,Android,clickButton,1,SideMenuUserManagement,,,,,
+1,Android,showSideMenu,3,,,,,,
+1,Android,clickButton,1,SideMenuContactUs,,,,,
+1,Android,showSideMenu,3,,,,,,
+1,Android,clickButton,1,SideMenuTransactionReports,,,,,
+1,Android,showSideMenu,3,,,,,,
+1,Android,clickButton,1,SideMenuPurchase,,,,,
+1,Android,showSideMenu,3,,,,,,
+1,Android,clickButton,1,SideMenuLogout,,,,,
+1,Android,showSideMenu,3,,,,,,
+1,Android,clickButton,1,SideMenuSettings,,,,,

@@ -1,0 +1,18 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,5,,,,,,
+login,5,,,,,,
+waitUntilPage,120,Purchase,,,,,
+showSideMenu,0,,,,,,
+clickButton,1,SideMenuSettings,,,,,
+login,5,,,,,,
+waitUntilPage,120,SettingsTerminal,,,,,
+setBooleanValue,0,SettingsTerminalAddTipValue,no,,,,
+showSideMenu,0,,,,,,
+clickButton,1,SideMenuPurchase,,,,,
+waitUntilPage,120,Purchase,,,,,
+enterNumPadOK,0,200,,,,,
+waitUntilPage,120,PurchaseTimedOut,,,,,
+test,0,,,,equal,PurchaseTimedOutProcessTitle,Purchase
+test,0,,,,equal,PurchaseTimedOutTitle,Transaction timed out
+test,0,,,,equal,PurchaseTimedOutTextBody,Hold card/phone closer to the back of the device for longer.
+test,0,,,,equal,PurchaseTimedOutRetry,Retry
