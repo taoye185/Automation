@@ -1,0 +1,14 @@
+Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+1,Android,logComment,0,Start of base purchase cancellation - please make sure NO card is placed behind the device!,,,,,
+1,Android,logComment,0,This case assumes the app starts from the Purchase page.,,,,,
+1,Android,reachPage,0,SettingsTerminal,,,,,
+1,Android,setBooleanValue,0,SettingsTerminalPINWhenCancelTransactionValue,yes,,,,
+1,Android,setBooleanValue,0,SettingsTerminalAddTipValue,no,,,,
+1,Android,setBooleanValue,0,SettingsTerminalPurchaseDesriptionValue,no,,,,
+1,Android,reachPage,0,Purchase,,,,,
+1,Android,enterNumPadOK,5,1200,,,,,
+1,Android,waitUntilPage,120,TapToPay,,,,,
+1,Android,clickButton,0,TapToPayCancel,,,,,
+1,Android,login,3,,,,,,
+1,Android,waitUntilPage,120,Purchase,,,,,
+1,Android,test,0,,,,isOnPage,,Purchase

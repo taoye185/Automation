@@ -1,0 +1,30 @@
+Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+1,Android,logComment,0,Start of base purchase test case - please have SUCCESS testing card placed at the back of device!,,,,,
+1,Android,launch,5,,,,,,
+1,Android,login,1,,,,,,
+1,Android,waitUntilPage,120,Purchase,,,,,
+1,Android,reachPage,0,SettingsTerminal,,,,,
+1,Android,setBooleanValue,0,SettingsTerminalPINWhenCancelTransactionValue,no,,,,
+1,Android,setBooleanValue,0,SettingsTerminalAddTipValue,no,,,,
+1,Android,reachPage,0,Purchase,,,,,
+1,Android,singlePurchase,1000,no,,no,,,
+1,Android,test,0,,,,isOnPage,,PurchaseResult
+1,Android,test,0,,,,equal,PurchaseResultResultText,Approved
+1,Android,clickButton,0,PurchaseResultNoReceipt,,,,,
+1,Android,waitUntilPage,120,Purchase,,,,,
+1,Android,test,0,,,,isOnPage,,Purchase
+1,Android,reachPage,0,TransactionHistory,,,,,
+1,Android,test,0,,,,isOnPage,,TransactionHistory
+1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,$10.00 
+1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
+1,Android,waitUntilPage,120,TransactionDetails,,,,,
+1,Android,test,0,,,,isOnPage,,TransactionDetails
+1,Android,test,0,,,,equal,TransactionDetailsTitle,Purchase approved
+1,Android,test,0,,,,equal,TransactionDetailsAmount,$10.00 
+1,Android,test,0,,,,equal,TransactionDetailsMerchantName,taoye008
+1,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,Email receipt
+1,Android,test,0,,,,equal,TransactionDetailsVoid,Void
+1,Android,clickButton,0,TransactionDetailsBack,,,,,
+1,Android,waitUntilPage,120,TransactionHistory,,,,,
+1,Android,reachPage,0,Purchase,,,,,
+1,Android,test,0,,,,isOnPage,,Purchase

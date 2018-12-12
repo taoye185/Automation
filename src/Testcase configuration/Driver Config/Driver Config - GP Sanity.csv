@@ -1,0 +1,8 @@
+Active,Driver Name,Element Config file corresponding to Driver
+1,Android,.\\src\\Testcase configuration\\Element Config\\app elements - GP Debug.csv
+0,iOS,
+0,Chrome,.\\src\\Testcase configuration\\Element Config\\browser elements - Hive V2.csv
+0,Firefox,
+0,Safari,
+0,Edge,
+0,IE,
