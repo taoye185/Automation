@@ -8,6 +8,8 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Properties;
@@ -27,6 +29,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -40,31 +43,73 @@ public class MWLogger {
 	static private String logCaseColor ="blue";
 	static private int logLevelConsole = 2;
 	static private int logLevelReport = 4;
-	static BufferedWriter writer;
+	static BufferedWriter logWriter;
+	static BufferedWriter reportWriter;
+	private String reportHeader="";
+	private String reportFooter="";
+	private String reportContent="";
+	private String reportName;
 	
 	//For Default: logLevel 1 = debug; 2 = console tracing; 4 = formal report
 	
 	public MWLogger (DesiredCapabilities cap) throws IOException {
-		logPassColor = (String) cap.getCapability("logPassColor");
-		logFailColor = (String) cap.getCapability("logFailColor");
-		logEmphasisColor = (String) cap.getCapability("logEmphasisColor");
-		logInfoColor = (String) cap.getCapability("logInfoColor");
-		logCaseColor = (String) cap.getCapability("logCaseColor");
+		if (cap.asMap().containsKey("logPassColor")) 		{	logPassColor = (String) cap.getCapability("logPassColor");}
+		if (cap.asMap().containsKey("logFailColor")) 		{	logFailColor = (String) cap.getCapability("logFailColor");}
+		if (cap.asMap().containsKey("logEmphasisColor"))	{	logEmphasisColor = (String) cap.getCapability("logEmphasisColor"); }
+		if (cap.asMap().containsKey("logInfoColor")) 		{	logInfoColor = (String) cap.getCapability("logInfoColor"); }
+		if (cap.asMap().containsKey("logCaseColor")) 		{	logCaseColor = (String) cap.getCapability("logCaseColor"); }
 		
-		String fileName = "Automation Log " + LocalDateTime.now().getYear()+LocalDateTime.now().getMonthValue()+LocalDateTime.now().getDayOfMonth()+LocalDateTime.now().getHour()+LocalDateTime.now().getMinute()+LocalDateTime.now().getSecond() + ".txt";
+		String fileName = ".\\logs\\Automation Log " + LocalDateTime.now().getYear()+LocalDateTime.now().getMonthValue()+LocalDateTime.now().getDayOfMonth()+LocalDateTime.now().getHour()+LocalDateTime.now().getMinute()+LocalDateTime.now().getSecond() + ".log";
 		File statText = new File(fileName);
         FileOutputStream is = new FileOutputStream(statText);
         OutputStreamWriter osw = new OutputStreamWriter(is);    
-        writer = new BufferedWriter(osw);
-		writer.write("---------Start of logs---------");
-		writer.newLine();
-		writer.flush();
+        logWriter = new BufferedWriter(osw);
+		logWriter.write("---------Start of logs---------");
+		logWriter.newLine();
+		logWriter.flush();
 
 
 	}
 	
-	public MWLogger () {
+	public MWLogger () throws IOException {
 		//use default color
+		String fileName = ".\\logs\\Automation Log " + LocalDateTime.now().getYear()+LocalDateTime.now().getMonthValue()+LocalDateTime.now().getDayOfMonth()+LocalDateTime.now().getHour()+LocalDateTime.now().getMinute()+LocalDateTime.now().getSecond() + ".log";
+		File statText = new File(fileName);
+        FileOutputStream is = new FileOutputStream(statText);
+        OutputStreamWriter osw = new OutputStreamWriter(is);    
+        logWriter = new BufferedWriter(osw);
+		logWriter.write("---------Start of logs---------");
+		logWriter.newLine();
+		logWriter.flush();
+	}
+	
+	public void initiateReport (DesiredCapabilities cap) throws FileNotFoundException {
+		reportName = ".\\reports\\Test Report " + LocalDateTime.now().getYear()+LocalDateTime.now().getMonthValue()+LocalDateTime.now().getDayOfMonth()+LocalDateTime.now().getHour()+LocalDateTime.now().getMinute()+LocalDateTime.now().getSecond() + ".html";
+		File reportText = new File(reportName);
+        FileOutputStream ris = new FileOutputStream(reportText);
+        OutputStreamWriter rosw = new OutputStreamWriter(ris); 
+        reportWriter = new BufferedWriter(rosw);
+	}
+	
+	public void publishReport () throws IOException {
+		String headerPath = ".\\reports\\default header.txt";
+		String footerPath = ".\\reports\\default footer.txt";
+		reportHeader = new String (Files.readAllBytes(Paths.get(headerPath)));
+		this.logFile("reportHeader is: "+ reportHeader);
+		reportFooter = new String (Files.readAllBytes(Paths.get(footerPath)));		
+		this.logFile("reportFooter is: "+ reportFooter);	
+		this.logFile("reportContent is: "+ reportContent);
+		
+		reportWriter.write(reportHeader+"<br>");
+		reportWriter.newLine();
+		reportWriter.write(reportContent+"<br>");
+		reportWriter.newLine();
+		reportWriter.write(reportFooter);
+		reportWriter.flush();
+		
+		ChromeDriver chd = new ChromeDriver();
+		chd.get(System.getProperty("user.dir")+reportName.substring(1));
+		
 	}
 	
 	public void log(int level, String text) {
@@ -73,14 +118,15 @@ public class MWLogger {
 //		}
 //		if (level >= logLevelReport) {
 			Reporter.log(text);
+			reportContent = reportContent + text + "\r\n";
 //		}
 	}
 
 	public void logFile (String comment) throws IOException {
 		String content = LocalTime.now()+":	" + comment;
-		writer.write(content);
-		writer.newLine();
-		writer.flush();
+		logWriter.write(content+"<br>");
+		logWriter.newLine();
+		logWriter.flush();
 	}
 	
 	public void logConsole (String comment) throws IOException {
@@ -91,6 +137,7 @@ public class MWLogger {
 	/***********Report related logs *****************************/
 	public void report(String text) throws IOException {
 			Reporter.log(text);
+			reportContent = reportContent + text + "\r\n";
 			System.out.println(text);
 			this.logFile(text);
 	}
@@ -119,19 +166,23 @@ public class MWLogger {
 				Assert.assertEquals(actualValue, expectedValue);
 				if (actualValue.equals(expectedValue)) {
 					testResult = true;
-					Reporter.log(fieldName + " is equal to " + expectedValue + ", <font color='green'>test passed</font>.");
+					Reporter.log(fieldName + " is equal to " + expectedValue + ", <font color='"+logPassColor+"'>test passed</font>.");
+					reportContent += fieldName + " is equal to " + expectedValue + ", <font color='"+logPassColor+"'>test passed</font>.<br>\r\n" ;
 					return testResult;
 				}
 				else {
 					testResult = false;
-					Reporter.log(fieldName + " is expected to be <font color='brown'>"+ expectedValue + "</font>, but is actually equal to: <font color='brown'>" + actualValue+ "</font>, <font color='red'>test failed</font>.");
+					Reporter.log(fieldName + " is expected to be <font color='"+logEmphasisColor+"'>"+ expectedValue + "</font>, but is actually equal to: <font color='"+logEmphasisColor+"'>" + actualValue+ "</font>, <font color='red'>test failed</font>.");
+					reportContent += fieldName + " is expected to be <font color='"+logEmphasisColor+"'>"+ expectedValue + "</font>, but is actually equal to: <font color='"+logEmphasisColor+"'>" + actualValue+ "</font>, <font color='red'>test failed</font>.<br>\r\n";
 					return testResult;
 				}
 			}
 			catch (AssertionError e) {
 			// assertion failed
 				testResult = false;
-				Reporter.log(fieldName + " is expected to be <font color='brown'>"+ expectedValue + "</font>, but is actually equal to: <font color='brown'>" + actualValue+ "</font>, <font color='red'>test failed</font>.");
+				Reporter.log(fieldName + " is expected to be <font color='"+logEmphasisColor+"'>"+ expectedValue + "</font>, but is actually equal to: <font color='"+logEmphasisColor+"'>" + actualValue+ "</font>, <font color='red'>test failed</font>.");
+				reportContent += fieldName + " is expected to be <font color='"+logEmphasisColor+"'>"+ expectedValue + "</font>, but is actually equal to: <font color='"+logEmphasisColor+"'>" + actualValue+ "</font>, <font color='red'>test failed</font>.<br>\r\n";
+
 				return testResult; 
 			}
 		}
@@ -203,6 +254,11 @@ public class MWLogger {
     }
     
     public void close() throws IOException {
-    	writer.close();
+    	logWriter.close();
+    	reportWriter.close();
     }
+
+	public String getLogCaseColor() {
+		return logCaseColor;
+	}
 }

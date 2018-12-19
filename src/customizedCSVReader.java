@@ -28,13 +28,13 @@ public class customizedCSVReader {
 	MWLogger log;
 
 	
-	public customizedCSVReader (String csvFilePath) {
+	public customizedCSVReader (String csvFilePath) throws IOException {
 		filePath = csvFilePath;
 		pairing = new DesiredCapabilities();
 		log = new MWLogger();
 	}
 	
-	public customizedCSVReader () {
+	public customizedCSVReader () throws IOException {
 		filePath = "";
 		pairing = new DesiredCapabilities();
 		log = new MWLogger();
@@ -113,6 +113,7 @@ public class customizedCSVReader {
         String[] nextCase; 
         int caseRow = 0;
         MWDriver mwd = new MWDriver (cap, log);
+        log.initiateReport(cap);
         while ((nextCase = csvReader.readNext()) != null) { 
             if (caseRow > 0 && (nextCase[0].equals("1"))) { 	            //unless it is title row, construct and execute the method
             	String casefile = nextCase[2];
@@ -151,7 +152,7 @@ public class customizedCSVReader {
     	            row++;
     	        } 
     	        casecsvReader.close();
-    			log.logColorText("blue", "Test Case: " + nextCase[1] + " completed.");
+    			log.logColorText(log.getLogCaseColor(), "Test Case: " + nextCase[1] + " completed.");
 //    	        Reporter.log("<font color='blue'>Test Case: " + nextCase[0] + " completed.</font>");
     			log.report("-----------------------------------<br>");
 //    			androidMobileDriver.quit();
@@ -162,6 +163,7 @@ public class customizedCSVReader {
         } 
         csvReader.close();	
         mwd.close("Android");
+        log.publishReport();
  //       this.test(mwd);
 	}
 	
@@ -203,11 +205,11 @@ catch (Exception e) {
         while ((nextRecord = csvReader.readNext()) != null) { 
         	nextRecord = this.padArray(nextRecord, 8);
         	if(i>0) {
-        		pageElement pe = new pageElement(nextRecord);
+        		pageElement pe = new pageElement(nextRecord, log);
         		elements.setCapability(nextRecord[0], pe);
         		//establish the ElementName->ElementXPath mapping
         		if (!page.asMap().containsKey(nextRecord[2])) {
-        			mobilePage newPage = new mobilePage(nextRecord[2], pe);
+        			mobilePage newPage = new mobilePage(nextRecord[2], pe, log);
         			page.setCapability(nextRecord[2], newPage);
   //      			pageName.put(nextRecord[2], newPage);
         			//establish the PageName -> mobilePage object mapping
@@ -244,9 +246,10 @@ catch (Exception e) {
 	
 	
 	
-	public void writeElementFile (String filePath, DesiredCapabilities cap) throws IOException {
+	public void writeElementFile (String filePath, DesiredCapabilities cap, ElementList page) throws IOException {
+		log.logConsole("writeElement is called");
 		DesiredCapabilities elements = new DesiredCapabilities();
-		DesiredCapabilities page = new DesiredCapabilities();
+//		DesiredCapabilities page = new DesiredCapabilities();
 		
         FileReader filereader = new FileReader(filePath);  
         CSVReader csvReader = new CSVReader(filereader); 
@@ -261,7 +264,7 @@ catch (Exception e) {
         	output += this.writeArrayAsCSV(nextRecord,7);
         	if(i>0 && (nextRecord[5].equals("yes"))) {
         		int weight=0;
-        		
+ /*       		
         		if(nextRecord.length>=8) {
         			if (!nextRecord[7].equals(null)) {
         				if(!nextRecord[7].equals("")) {
@@ -270,7 +273,12 @@ catch (Exception e) {
         			}
 
         		}
-        		weight += ((mobilePage) cap.getCapability(nextRecord[2])).returnCount();
+*/
+        		mobilePage tempPage = (mobilePage) page.getElement(nextRecord[2]);
+        		if (!tempPage.equals(null)) {
+        			weight = tempPage.returnCount();
+        		}
+//        		weight += ((mobilePage) cap.getCapability(nextRecord[2])).returnCount();
         		log.logConsole("weight is: " + weight);
         		output = output  + weight;
  

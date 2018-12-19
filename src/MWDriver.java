@@ -380,13 +380,20 @@ public class MWDriver {
 
 	}
 	
-	public WebElement waitUntilElement (String driverName, int timeOutSec, String URI) throws IOException {
+	public WebElement waitUntilElement (String driverName, int timeOutSec, String URI) throws IOException, InterruptedException {
 		Object obj = this.chooseDriver(driverName);
 		if (timeOutSec==0 ) {
 			timeOutSec = 10;
 		}
-		WebElement waitElement = (new WebDriverWait(((WebDriver) obj), timeOutSec)).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) this.chooseCap(driverName).getCapability(URI))));	
-		return waitElement;
+		switch (driverName) {
+		case "Android": {
+			return and.waitUntilElement(timeOutSec, URI);
+		}
+		default: {
+			WebElement waitElement = (new WebDriverWait(((WebDriver) obj), timeOutSec)).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) this.chooseCap(driverName).getCapability(URI))));	
+			return waitElement;
+		}
+		}
 	}
 	
 	public void nothing () {
@@ -649,7 +656,7 @@ try {
 	DesiredCapabilities page = this.choosePage(driverName);
 	String filePath = (String)cap.getCapability(driverName);
 	customizedCSVReader cr = new customizedCSVReader("");
-	cr.writeElementFile(filePath, page);
+	cr.writeElementFile(filePath, page, mPageList);
 	((WebDriver) obj).close();
 }
 catch (Exception e) {

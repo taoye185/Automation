@@ -1,6 +1,12 @@
 import java.io.IOException;
 import java.util.Vector;
 
+/*	This class extends Vector and provide the functionality to sort Objects (mobilePages or pageElements)
+ *  according to the value of one of its attributes 
+ * 
+ * 
+ * 
+ */
 public class ElementList extends Vector {
 	String elementType;
 	Vector list;
@@ -8,18 +14,35 @@ public class ElementList extends Vector {
 	
 	
 	public ElementList(String type, Vector vl,MWLogger logs) {
+		//constructor
 		elementType = type;
 		list = vl;
 		log = logs;
 	}
 	public ElementList(String type,MWLogger logs) {
+		//constructor
 		elementType = type;
 		list = new Vector();
 		log = logs;
 	}
+
 	
+	/*****************Get methods*************************************/
 	public String get(int pos, String fieldName) throws IOException {
+/* Pre: pos is an index number that does not exceed the length of the ElementList, 
+ * fieldName matches the variable name of the data type specified by the "elementType" variable.
+ * Post: The value of the desired variable at the specified position is specified. 
+ * If pos exceeds the length of the ElementList, or if the elementType does not match,
+ * an empty string is returned;
+ */
 		log.logFile("method get ("+pos + ", " + fieldName  +") is called.");
+		if (this.size()==0) {
+			return "";	//return empty string if the ElementList is empty
+		}
+		if (pos<this.size()) {
+			log.logConsole("Index " + pos + " exceeds the size of current ElementList, which is " + this.size());
+			pos = Math.max(0, this.size()-1); 	//find the last element if the index exceeds ElementList size
+		}
 		switch (elementType) {
 		case "pageElement": {
 			return ((pageElement) this.elementAt(pos)).get(fieldName);
@@ -28,11 +51,36 @@ public class ElementList extends Vector {
 			return ((mobilePage) this.elementAt(pos)).get(fieldName);		
 		}
 		default: {
-			return null;
+			log.logConsole("elementType not recognized.");
+			return "";
 		}
 		}
 	}
 	
+	public Object getElement(String ID) throws IOException {
+		log.logFile("method get ("+ID   +") is called.");
+		switch (elementType) {
+		case "pageElement": {
+			for (int i=0; i<this.size(); i++) {
+				if (((pageElement) this.elementAt(i)).getID().equals(ID)) {
+					return (pageElement) this.elementAt(i);
+				}
+			}
+			return null;
+		}
+		case "mobilePage": {
+			for (int i=0; i<this.size(); i++) {
+				if (((mobilePage) this.elementAt(i)).getPageName().equals(ID)) {
+					return (mobilePage) this.elementAt(i);
+				}
+			}
+			return null;
+		}
+		default: {
+			return null;
+		}
+		}
+	}
 	
 	public ElementList sortby (String elementType, String fieldName, String order, String fieldType) throws IOException {
 		log.logFile("method sortby ("+elementType + ", " + fieldName +","+ order +") is called.");

@@ -1,9 +1,10 @@
 Active,Capabilities Name,Capabilities Value
-1,appPackage,com.mobeewave.cba.mpos.debug
+1,appPackage,com.mobeewave.pep.mpos.debug
 1,appActivity,com.mobeewave.mpos2.login.LoginActivity
-1,app,C:\\Users\\YeTao\\eclipse-workspace\\automationTemplates\\apps\\app-secureelement-cba-integration-debug-v1.4.5.406.apk
-1,MerchantID,taoye67890123008
-1,MerchantPassword,Thankyou1@
+1,app,C:\\Users\\YeTao\\eclipse-workspace\\automationTemplates\\apps\\pep-v1.4.1-198-integration-debug.apk
+1,StartingURL,http://integration-tms.mobeewave-hive.com/
+1,MerchantID,005040100000004
+1,MerchantPassword,qR*7t)2z
 1,MerchantNewPassword,Thankyou1@
 1,MerchantPIN,123456
 1,Username,SignInSelectionFirstUser

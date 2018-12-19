@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 12 11:15:57 EST 2018</td>
+<td>Started on:</td><td>Fri Dec 14 11:31:03 EST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18254 ms)</td>
+<tr><td>Total time:</td><td>168 seconds (168954 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,94 +67,37 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='AutomationMain.appTesting()'><b>appTesting</b><br>Test class: AutomationMain</td>
-<td><div><pre>java.lang.ArrayIndexOutOfBoundsException: 7 &gt;= 7
-	at java.util.Vector.elementAt(Unknown Source)
-	at ElementList.get(ElementList.java:28)
-	at ElementList.compareInVector(ElementList.java:156)
-	at ElementList.addObjectToSortedList(ElementList.java:72)
-	at ElementList.addObjectToSortedList(ElementList.java:114)
-	at ElementList.addObjectToSortedList(ElementList.java:114)
-	at ElementList.addObjectToSortedList(ElementList.java:114)
-	at ElementList.sortby(ElementList.java:41)
-	at MWAndroidDriver.&lt;init&gt;(MWAndroidDriver.java:160)
-	at MWDriver.&lt;init&gt;(MWDriver.java:168)
-	at customizedCSVReader.readAndExecuteTestGroup(customizedCSVReader.java:115)
-	at AutomationMain.appTesting(AutomationMain.java:105)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace26118813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace26118813'><pre>java.lang.ArrayIndexOutOfBoundsException: 7 &gt;= 7
-	at java.util.Vector.elementAt(Unknown Source)
-	at ElementList.get(ElementList.java:28)
-	at ElementList.compareInVector(ElementList.java:156)
-	at ElementList.addObjectToSortedList(ElementList.java:72)
-	at ElementList.addObjectToSortedList(ElementList.java:114)
-	at ElementList.addObjectToSortedList(ElementList.java:114)
-	at ElementList.addObjectToSortedList(ElementList.java:114)
-	at ElementList.sortby(ElementList.java:41)
-	at MWAndroidDriver.&lt;init&gt;(MWAndroidDriver.java:160)
-	at MWDriver.&lt;init&gt;(MWDriver.java:168)
-	at customizedCSVReader.readAndExecuteTestGroup(customizedCSVReader.java:115)
-	at AutomationMain.appTesting(AutomationMain.java:105)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>18</td>
+<td title='AutomationMain.appTesting()'><b>appTesting</b><br>Test class: AutomationMain<br/>
+<a href="#Output-22648384" onClick='toggleBox("Output-22648384", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-22648384" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-22648384">
+<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font><br/>
+<font color='grey'>App launched and awaiting for login.</font><br/>
+<font color='grey'>User Authentication performed.</font><br/>
+<font color='grey'>User Authentication performed.</font><br/>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br/>
+<font color='blue'>Test Case: TS_5 completed.</font><br/>
+-----------------------------------<br><br/>
+<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font><br/>
+<font color='grey'>This case assumes the app starts from the Purchase page.</font><br/>
+<font color='grey'>User Authentication performed.</font><br/>
+<font color='grey'>User Authentication performed.</font><br/>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br/>
+<font color='blue'>Test Case: TS_6 completed.</font><br/>
+-----------------------------------<br><br/>
+</div>
+</td>
+<td></td>
+<td>168</td>
 <td>AutomationMain@3f4d3d</td></tr>
 </table><p>
 </body>

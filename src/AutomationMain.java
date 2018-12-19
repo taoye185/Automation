@@ -64,7 +64,7 @@ public class AutomationMain{
 	static DesiredCapabilities capabilities = new DesiredCapabilities();
 	
 	@BeforeTest
-	public void beforeTest( ) throws MalformedURLException {
+	public void beforeTest( ) throws IOException {
 		customizedCSVReader cr = new customizedCSVReader();	
 		try { 	
 			DesiredCapabilities config = cr.readPairing(testManagementFile);	//read Test Management Configuration File

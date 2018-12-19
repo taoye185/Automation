@@ -1518,6 +1518,23 @@ touch.singleTap((Coordinates) this.find(URI).getLocation().moveBy(10, 10));
 	public ElementList getMPageList() {
 		return mPageList;
 	}
+
+	public WebElement waitUntilElement(int timeOutSec, String URI) throws InterruptedException {
+		try {
+			return this.find(URI);
+		}
+		catch (Exception e) {
+			if (timeOutSec > 0) {
+				Thread.sleep(1000);
+				timeOutSec --;
+				return this.waitUntilElement(timeOutSec, URI);
+			}
+		
+			else {
+				return null;
+			}
+		}
+	}
 	
 	
 }

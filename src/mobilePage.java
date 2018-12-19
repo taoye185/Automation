@@ -4,41 +4,41 @@ import org.openqa.selenium.WebElement;
 
 public class mobilePage  {
 	
-	private Vector pe = new Vector();
+//	private Vector pe = new Vector();
+	private ElementList pe;
 	String name;
 	String uID = "";
 	String uValue = "";
 	int findCount;
+	MWLogger logs;
 
-	public mobilePage (String[] elements) {
+	public mobilePage (String[] elements, MWLogger log) {
+		//constructor
+		pe = new ElementList("pageElement", log);
+		logs = log;
 		for (int i=0;i<elements.length;i++) {
 			pe.addElement(elements[i]);
 		}
 		findCount = 0;
 	}
 	
-	public mobilePage (String pageName, pageElement elements) {
+	public mobilePage (String pageName, pageElement elements, MWLogger log) {
+		//constructor
 		name = pageName;
+		logs = log;
 		pe.addElement(elements);
 	}
 	
 	
-	public mobilePage (String pageName, pageElement[] elements) {
+	public mobilePage (String pageName, pageElement[] elements, MWLogger log) {
+		//constructor
 		name = pageName;
+		logs = log;
+		pe = new ElementList("pageElement", log);
 		for (int i=0;i<elements.length;i++) {
 			pe.addElement(elements[i]);
 		}
-/*
-		int totalLength = elements.length;
-		int elementInPage = 0;
-		for (int i=0;i<totalLength;i++) {
-			if (elements[i].getPage()==pageName) {
-				pe[elementInPage] = elements[i];
-				elementInPage ++;
-			}
-		}
-		//constructor to be implemented
-*/	}
+	}
 
 	public boolean checkPageOverlap() {
 		boolean isOverlapping = false;
@@ -54,6 +54,8 @@ public class mobilePage  {
 	public boolean isOverlap(Object pe1, Object pe2) {
 		return true;
 	}
+	
+/*****************Get methods*************************************/
 	
 	public pageElement getElementByName (String URI) {
 		pageElement pe = new pageElement("a","b");
