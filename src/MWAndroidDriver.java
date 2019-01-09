@@ -14,8 +14,10 @@ import java.util.Set;
 import java.util.Vector;
 
 import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.HasTouchScreen;
+import org.openqa.selenium.interactions.Locatable;
 import org.openqa.selenium.interactions.TouchScreen;
 import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.interactions.touch.TouchActions;
@@ -132,6 +134,7 @@ public class MWAndroidDriver extends AndroidDriver implements HasTouchScreen {
 	static private String logEmphasisColor ="brown";
 	static private String logInfoColor ="grey";
 	static private String logCaseColor ="blue";
+	
 	static private int defaultTimeOutSec = 15;
 	MWLogger log = new MWLogger();
 	public RemoteTouchScreen touch;
@@ -173,6 +176,7 @@ public class MWAndroidDriver extends AndroidDriver implements HasTouchScreen {
 		
 		
 		}
+
 	
 	public void testScenarioConstructor (String[] parameters) throws InterruptedException, IOException {
 /* Pre: parameters[0] is a string that can be parsed into a non-negative integer
@@ -935,6 +939,10 @@ public class MWAndroidDriver extends AndroidDriver implements HasTouchScreen {
 						tempPage.incrementCount();
 						return name;
 					}
+					else {
+						System.out.print(".");
+//						log.logFile("match not found: " + id + " is not equal to " + value + " , but equal to " + title);
+					}
 				}
 			}
 			catch (Exception e) {
@@ -1495,11 +1503,78 @@ System.out.println("exception caught when comparing overlaps");
 		this.closeApp();
 	}
 	
-	public void tap(String URI) {
+	public void tap(String URI) throws IOException {
+		log.logConsole("starting to tap " + URI);
+		Coordinates coord = null;
 		try {
+			System.out.println("find element");
+			WebElement el = this.find(URI);
+//			System.out.println("find location");
+//			Point pt = el.getLocation();
+//			int x = pt.getX();
+//			int y = pt.getY();
+			System.out.println("find coord");
+			Thread.sleep(5000);
+			coord = ((Locatable)el).getCoordinates();
+			System.out.println(coord.toString());
+		}
+		catch (Exception e) {
+			System.out.println("error duing coordinates finding");
+		}
+		try {
+		System.out.println("stap");
+		Thread.sleep(5000);
+		touch.singleTap(coord);
+		}
+		catch (Exception e) {
+			System.out.println("error duing coordinates stap");	
+			System.out.println(e);
+		}		
+		try {
+			System.out.println("dtap");			
+			Thread.sleep(5000);
+			touch.doubleTap(coord);
+		}
+		catch (Exception e) {
+			System.out.println("error duing coordinates dtap");		
+			System.out.println(e);
+		}		
+		try {
+			System.out.println("flick");
+			Thread.sleep(5000);
+			touch.flick(coord, 1, 1, 300);
+		}
+		catch (Exception e) {
+			System.out.println("error duing coordinates flick");	
+			System.out.println(e);
+		}		
+		try {
+			System.out.println("move");
+			Thread.sleep(5000);
+			touch.move(5, 5);
+		}
+		catch (Exception e) {
+			System.out.println("error duing coordinates move");		
+			System.out.println(e);
+		}		
+		try {
+			System.out.println("scroll");
+			Thread.sleep(5000);
+			touch.scroll(coord, 5, 5);
+		}
+		catch (Exception e) {
+			System.out.println("error duing coordinates scroll");	
+			System.out.println(e);
+		}
+		try {
+			
+			
+			
+		
+		
+//touch.singleTap((Coordinates) this.find(URI).getLocation());
+//touch.singleTap((Coordinates) this.find(URI).getLocation().moveBy(10, 10));
 
-touch.singleTap((Coordinates) this.find(URI).getLocation());
-touch.singleTap((Coordinates) this.find(URI).getLocation().moveBy(10, 10));
 //		touch.down(x, y).move(moveX, moveY).perform();
 		}
 		catch (Exception e) {
@@ -1507,7 +1582,7 @@ touch.singleTap((Coordinates) this.find(URI).getLocation().moveBy(10, 10));
 		}
 	}
 	
-	public void sign() {
+	public void sign() throws IOException {
 		this.tap("SignatureSignArea"); 
 	}
 	

@@ -1,5 +1,5 @@
 Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
-1,Android,logComment,0,Start of purchase void testing - please have SUCCESS testing card placed at the back of device!,,,,,
+1,Android,logComment,0,Start of refund and void refund testing - please have SUCCESS testing card placed at the back of device!,,,,,
 1,Android,logComment,0,This case assumes the app starts from the Purchase page.,,,,,
 1,Android,launch,5,,,,,,
 1,Android,login,1,,,,,,
@@ -17,13 +17,13 @@ Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation,
 1,Android,test,0,,,,isOnPage,,Purchase
 1,Android,reachPage,0,TransactionHistory,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionHistory
-1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,CA$14.00
+1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,PLN14.00
 1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
 1,Android,waitUntilPage,120,TransactionDetails,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionDetails
 1,Android,test,0,,,,equal,TransactionDetailsTitle,PURCHASE APPROVED
-1,Android,test,0,,,,equal,TransactionDetailsAmount,CA$14.00
-1,Android,test,0,,,,equal,TransactionDetailsMerchantName,taoye
+1,Android,test,0,,,,equal,TransactionDetailsAmount,PLN14.00
+1,Android,test,0,,,,equal,TransactionDetailsMerchantName,Business
 1,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,EMAIL RECEIPT
 1,Android,test,0,,,,equal,TransactionDetailsVoid,VOID
 1,Android,clickButton,0,TransactionDetailsBack,,,,,
@@ -34,17 +34,22 @@ Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation,
 1,Android,waitUntilPage,120,SettingsAdvanced,,,,,
 1,Android,test,0,,,,isOnPage,,SettingsAdvanced
 1,Android,logComment,0,Testing Version Number Display,,,,,
-1,Android,test,0,,,,equal,SettingsAdvancedAppVersionValue,1.4.7(4)
+1,Android,test,0,,,,equal,SettingsAdvancedAppVersionValue,1.4.9(159)
 1,Android,clickButton,0,SettingsAdvancedsettlementButton,,,,,
+1,Android,waitUntilPage,120,ConfirmSettlement,,,,,
+1,Android,test,0,,,,isOnPage,,ConfirmSettlement
+1,Android,clickButton,0,ConfirmSettlementSettle,,,,,
+1,Android,waitUntilPage,120,SettingsAdvanced,,,,,
+1,Android,test,0,,,,isOnPage,,SettingsAdvanced
 1,Android,reachPage,0,TransactionHistory,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionHistory
-1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,CA$14.00
+1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,PLN14.00
 1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
 1,Android,waitUntilPage,120,TransactionDetails,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionDetails
 1,Android,test,0,,,,equal,TransactionDetailsTitle,PURCHASE APPROVED
-1,Android,test,0,,,,equal,TransactionDetailsAmount,CA$14.00
-1,Android,test,0,,,,equal,TransactionDetailsMerchantName,taoye
+1,Android,test,0,,,,equal,TransactionDetailsAmount,PLN14.00
+1,Android,test,0,,,,equal,TransactionDetailsMerchantName,Business
 1,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,EMAIL RECEIPT
 1,Android,test,0,,,,equal,TransactionDetailsVoid,REFUND
 1,Android,clickButton,0,TransactionDetailsVoid,,,,,
@@ -61,13 +66,13 @@ Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation,
 1,Android,waitUntilPage,120,Purchase,,,,,
 1,Android,reachPage,0,TransactionHistory,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionHistory
-1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,- CA$14.00
+1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,#NAME?
 1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
 1,Android,waitUntilPage,120,TransactionDetails,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionDetails
 1,Android,test,0,,,,equal,TransactionDetailsTitle,REFUND APPROVED
-1,Android,test,0,,,,equal,TransactionDetailsAmount,- CA$14.00
-1,Android,test,0,,,,equal,TransactionDetailsMerchantName,taoye
+1,Android,test,0,,,,equal,TransactionDetailsAmount,#NAME?
+1,Android,test,0,,,,equal,TransactionDetailsMerchantName,Business
 1,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,EMAIL RECEIPT
 1,Android,test,0,,,,equal,TransactionDetailsVoid,VOID
 1,Android,logComment,0,Refund testing completed.,,,,,
@@ -79,13 +84,13 @@ Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation,
 1,Android,clickButton,0,PurchaseResultNoReceipt,,,,,
 1,Android,waitUntilPage,120,TransactionHistory,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionHistory
-1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,CA$14.00
+1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,PLN14.00
 1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
 1,Android,waitUntilPage,120,TransactionDetails,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionDetails
 1,Android,test,0,,,,equal,TransactionDetailsTitle,VOID APPROVED
-1,Android,test,0,,,,equal,TransactionDetailsAmount,CA$14.00
-1,Android,test,0,,,,equal,TransactionDetailsMerchantName,taoye
+1,Android,test,0,,,,equal,TransactionDetailsAmount,PLN14.00
+1,Android,test,0,,,,equal,TransactionDetailsMerchantName,Business
 1,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,EMAIL RECEIPT
 1,Android,test,0,,,,equal,TransactionDetailsVoid,element not found
 1,Android,clickButton,0,TransactionDetailsBack,,,,,

@@ -10,6 +10,7 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.Iterator;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Reporter;
 
@@ -24,7 +25,7 @@ public class customizedCSVReader {
  */
 	String filePath;
 	DesiredCapabilities pairing;
-	String[][] temp;
+//	String[][] temp;
 	MWLogger log;
 
 	
@@ -56,6 +57,23 @@ public class customizedCSVReader {
 	    }
 	    csvReader.close();
 		return pairing; 
+	}
+	
+	public DesiredCapabilities readAndCreateDriver (String path, DesiredCapabilities cap, MWLogger log) throws IOException {
+		FileReader fileReader = new FileReader(path); 
+	    CSVReader csvReader = new CSVReader(fileReader); 
+	    String[] nextRecord; 
+	    int i = 0;
+	    DesiredCapabilities driverCap = new DesiredCapabilities();
+	    while ((nextRecord = csvReader.readNext()) != null) { 
+	     	if (i>0 && nextRecord[0].equals("1")) {		//ignore title row(i==0) and inactive row (nextRecord[0]!=1)
+	     		MWDriver driver = new MWDriver (nextRecord[1],nextRecord[3],cap,log);
+	     		driverCap.setCapability(nextRecord[1], driver);
+	  		} //if
+	        i++;
+	    }
+	    csvReader.close();
+		return driverCap; 
 	}
 	
 	public String returnPairingValue (String key) {
@@ -103,7 +121,7 @@ public class customizedCSVReader {
 		filePath = path;
 	}
 	
-	public void readAndExecuteTestGroup (DesiredCapabilities cap, MWLogger log) throws MalformedURLException, IOException, InterruptedException {
+	public void readAndExecuteTestGroup (DesiredCapabilities cap, DesiredCapabilities driver, MWLogger log) throws MalformedURLException, IOException, InterruptedException {
 /*	Pre: cap is a DesiredCapability with the relevant configurations already set correctly.
  *  path is a valid relative filepath that the corresponding configuration file would be read
 * 	Post: The configuration settings are read and stored in the "paring" DesiredCapabilities
@@ -112,13 +130,13 @@ public class customizedCSVReader {
         CSVReader csvReader = new CSVReader(filereader); 
         String[] nextCase; 
         int caseRow = 0;
-        MWDriver mwd = new MWDriver (cap, log);
+//        MWDriver mwd = new MWDriver (cap, log);
         log.initiateReport(cap);
         while ((nextCase = csvReader.readNext()) != null) { 
             if (caseRow > 0 && (nextCase[0].equals("1"))) { 	            //unless it is title row, construct and execute the method
             	String casefile = nextCase[2];
             	
-//            	MWDriver mwd = new MWDriver (cap, log);
+
  /*
             	MWAndroidDriver androidMobileDriver = null;
             	if (cap.getCapability("Android") != null) {
@@ -134,12 +152,13 @@ public class customizedCSVReader {
     	        int row = 0;
     	        while ((nextRecord = casecsvReader.readNext()) != null) { 
     	            if (row > 0 && (nextRecord[0].equals("1"))) { 	            //unless it is title row, construct and execute the method
+    	            	MWDriver mwd = (MWDriver) driver.getCapability(nextRecord[1]);
     	            	switch (nextRecord[2]) {
-    	            	case "open": {
+/*    	            	case "open": {
     	            		mwd = new MWDriver (cap, log);
     	            	}
-    	            	case "close": {
-    	            		mwd.close(nextRecord[1]);
+*/    	            	case "close": {
+    	            		mwd.close();
     	            	}
     	            	default: {
     	    	            mwd.testScenarioConstructor(nextRecord); 
@@ -162,11 +181,12 @@ public class customizedCSVReader {
             caseRow++;
         } 
         csvReader.close();	
-        mwd.close("Android");
-        log.publishReport();
+ //       mwd.close();
+ //       log.publishReport();
  //       this.test(mwd);
 	}
-	
+
+	/*
 	public void test(MWDriver mwd) throws IOException {
 		
 		String fileName = ".\\Test CSV.csv";
@@ -193,6 +213,18 @@ catch (Exception e) {
 				
 			}	//try
 	}
+	*/
+
+	public void close(DesiredCapabilities driver, MWLogger log) throws IOException {
+
+		Iterator<Object> dr =  driver.asMap().values().iterator();
+		while (dr.hasNext()) {				//create an ElementList containing all pages
+			((MWDriver)dr.next()).close();
+		}
+        log.publishReport();
+	}
+	
+	
 	
 	public DesiredCapabilities[] readElementFile (String filePath) throws IOException {
 		DesiredCapabilities elements = new DesiredCapabilities();
@@ -209,6 +241,7 @@ catch (Exception e) {
         		elements.setCapability(nextRecord[0], pe);
         		//establish the ElementName->ElementXPath mapping
         		if (!page.asMap().containsKey(nextRecord[2])) {
+ //       			log.logFile("pe is: " +pe.getID());
         			mobilePage newPage = new mobilePage(nextRecord[2], pe, log);
         			page.setCapability(nextRecord[2], newPage);
   //      			pageName.put(nextRecord[2], newPage);
@@ -246,7 +279,7 @@ catch (Exception e) {
 	
 	
 	
-	public void writeElementFile (String filePath, DesiredCapabilities cap, ElementList page) throws IOException {
+	public void writeElementFile (String filePath, ElementList page) throws IOException {
 		log.logConsole("writeElement is called");
 		DesiredCapabilities elements = new DesiredCapabilities();
 //		DesiredCapabilities page = new DesiredCapabilities();

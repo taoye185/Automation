@@ -26,7 +26,13 @@ public class mobilePage  {
 		//constructor
 		name = pageName;
 		logs = log;
-		pe.addElement(elements);
+
+		try {pe.addElement(elements);
+		}
+		catch (Exception e) {
+			pe = new ElementList("pageElement", log);
+			pe.addElement(elements);
+		}
 	}
 	
 	
@@ -69,6 +75,7 @@ public class mobilePage  {
 	public String getPageName() {
 		return name;
 	}
+	
 	
 	public void addElement(pageElement we) {
 		pe.addElement(we);

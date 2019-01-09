@@ -15,12 +15,12 @@ Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation,
 1,Android,test,0,,,,isOnPage,,Purchase
 1,Android,reachPage,0,TransactionHistory,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionHistory
-1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,$10.00 
+1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,$10.00
 1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
 1,Android,waitUntilPage,120,TransactionDetails,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionDetails
 1,Android,test,0,,,,equal,TransactionDetailsTitle,Purchase approved
-1,Android,test,0,,,,equal,TransactionDetailsAmount,$10.00 
+1,Android,test,0,,,,equal,TransactionDetailsAmount,$10.00
 1,Android,test,0,,,,equal,TransactionDetailsMerchantName,taoye008
 1,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,Email receipt
 1,Android,test,0,,,,equal,TransactionDetailsVoid,Void

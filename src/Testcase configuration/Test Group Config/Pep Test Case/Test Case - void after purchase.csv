@@ -14,19 +14,19 @@ Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation,
 1,Android,waitUntilPage,120,PurchaseResult,,,,,
 1,Android,test,0,,,,isOnPage,,PurchaseResult
 1,Android,test,0,,,,equal,PurchaseResultResultText,VOID APPROVED
-1,Android,test,0,,,,equal,PurchaseResultAmount,- CA$14.00
+1,Android,test,0,,,,equal,PurchaseResultAmount,- PLN14.00
 1,Android,clickButton,0,PurchaseResultNoReceipt,,,,,
 1,Android,waitUntilPage,120,Purchase,,,,,
 1,Android,test,0,,,,isOnPage,,Purchase
 1,Android,reachPage,0,TransactionHistory,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionHistory
-1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,- CA$14.00
+1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,- PLN14.00
 1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
 1,Android,waitUntilPage,120,TransactionDetails,,,,,
 1,Android,test,0,,,,isOnPage,,TransactionDetails
 1,Android,test,0,,,,equal,TransactionDetailsTitle,VOID APPROVED
-1,Android,test,0,,,,equal,TransactionDetailsAmount,- CA$14.00
-1,Android,test,0,,,,equal,TransactionDetailsMerchantName,taoye
+1,Android,test,0,,,,equal,TransactionDetailsAmount,- PLN14.00
+1,Android,test,0,,,,equal,TransactionDetailsMerchantName,Business
 1,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,EMAIL RECEIPT
 1,Android,test,0,,,,equal,TransactionDetailsVoid,element not found
 1,Android,test,0,,,,equal,TransactionDetailsDescription,element not found

@@ -39,8 +39,9 @@ public class ElementList extends Vector {
 		if (this.size()==0) {
 			return "";	//return empty string if the ElementList is empty
 		}
-		if (pos<this.size()) {
+		if (pos>=this.size()) {
 			log.logConsole("Index " + pos + " exceeds the size of current ElementList, which is " + this.size());
+		
 			pos = Math.max(0, this.size()-1); 	//find the last element if the index exceeds ElementList size
 		}
 		switch (elementType) {

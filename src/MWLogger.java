@@ -17,6 +17,7 @@ import java.util.Properties;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
+/*
 import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -28,7 +29,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-
+*/
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -89,6 +90,7 @@ public class MWLogger {
         FileOutputStream ris = new FileOutputStream(reportText);
         OutputStreamWriter rosw = new OutputStreamWriter(ris); 
         reportWriter = new BufferedWriter(rosw);
+        System.out.println("reportName is " + reportName);
 	}
 	
 	public void publishReport () throws IOException {
@@ -108,12 +110,14 @@ public class MWLogger {
 		reportWriter.flush();
 		
 		ChromeDriver chd = new ChromeDriver();
+		System.out.println(reportName);
 		chd.get(System.getProperty("user.dir")+reportName.substring(1));
 		
 	}
 	
 	public void log(int level, String text) {
 //		if (level >= logLevelConsole) {
+	
 //			this.logComment(text);
 //		}
 //		if (level >= logLevelReport) {
@@ -124,7 +128,7 @@ public class MWLogger {
 
 	public void logFile (String comment) throws IOException {
 		String content = LocalTime.now()+":	" + comment;
-		logWriter.write(content+"<br>");
+		logWriter.write(content);
 		logWriter.newLine();
 		logWriter.flush();
 	}
@@ -140,6 +144,7 @@ public class MWLogger {
 			reportContent = reportContent + text + "\r\n";
 			System.out.println(text);
 			this.logFile(text);
+			reportContent = reportContent +"<br>";
 	}
 	
 	public void logColorText (String color, String text) throws IOException {
@@ -199,7 +204,10 @@ public class MWLogger {
 		outputArray = outputArray + "]";
 		return outputArray;
 	}
+
 	
+	
+	/*
     private static void sendPDFReportByGMail(String from, String pass, String to, String subject, String body) {
     //The email functionality to send out reports through emails after testings are done. 
 
@@ -252,6 +260,8 @@ public class MWLogger {
     	}
 
     }
+    
+    */
     
     public void close() throws IOException {
     	logWriter.close();

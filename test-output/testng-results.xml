@@ -44,16 +44,16 @@
       <![CDATA[-----------------------------------<br>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="168954" started-at="2018-12-14T16:31:03Z" finished-at="2018-12-14T16:33:52Z">
+  <suite name="Default suite" duration-ms="118298" started-at="2019-01-09T14:58:14Z" finished-at="2019-01-09T15:00:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="168954" started-at="2018-12-14T16:31:03Z" finished-at="2018-12-14T16:33:52Z">
+    <test name="Default test" duration-ms="118298" started-at="2019-01-09T14:58:14Z" finished-at="2019-01-09T15:00:13Z">
       <class name="AutomationMain">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:AutomationMain@3f4d3d]" name="beforeTest" is-config="true" duration-ms="87" started-at="2018-12-14T16:31:03Z" finished-at="2018-12-14T16:31:03Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:AutomationMain@19d1a19]" name="beforeTest" is-config="true" duration-ms="18379" started-at="2019-01-09T14:58:14Z" finished-at="2019-01-09T14:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="appTesting()[pri:0, instance:AutomationMain@3f4d3d]" name="appTesting" duration-ms="168850" started-at="2018-12-14T16:31:03Z" finished-at="2018-12-14T16:33:52Z">
+        <test-method status="PASS" signature="appTesting()[pri:0, instance:AutomationMain@19d1a19]" name="appTesting" duration-ms="99905" started-at="2019-01-09T14:58:33Z" finished-at="2019-01-09T15:00:13Z">
           <reporter-output>
             <line>
               <![CDATA[<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font>]]>
@@ -99,7 +99,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- appTesting -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:AutomationMain@3f4d3d]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-12-14T16:33:52Z" finished-at="2018-12-14T16:33:52Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:AutomationMain@19d1a19]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-01-09T15:00:13Z" finished-at="2019-01-09T15:00:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
