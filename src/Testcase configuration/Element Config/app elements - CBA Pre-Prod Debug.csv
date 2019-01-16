@@ -38,7 +38,7 @@ EnterPINDelete,//android.widget.LinearLayout[@resource-id='com.mobeewave.cba.mpo
 EnterPIN0,//android.widget.Button[@resource-id='com.mobeewave.cba.mpos.debug:id/numpad_button_0'],EnterPIN,0,click,,,
 EnterPINOK,//android.widget.LinearLayout[@resource-id='com.mobeewave.cba.mpos.debug:id/numpad_button_ok'],EnterPIN,OK,click,,,
 EnterPINSecurityImage,//android.widget.ImageView[@resource-id='com.mobeewave.cba.mpos.debug:id/lock_merchant_image'],EnterPIN,SecurityImage,click,,,
-EnterPINForgotPIN,//android.widget.Button[@resource-id='com.mobeewave.cba.mpos.debug:id/base_tertiary_button'],EnterPIN,ForgotPIN,click,yes,Forgot PIN,6
+EnterPINForgotPIN,//android.widget.Button[@resource-id='com.mobeewave.cba.mpos.debug:id/base_tertiary_button'],EnterPIN,ForgotPIN,click,yes,Forgot PIN,7
 MerchantPasswordpassword,//android.widget.EditText[@text='Password'],MerchantPassword,password,text input,yes,Password,1
 MerchantPasswordContinue,//android.widget.Button[@text='Continue'],MerchantPassword,Continue,click,,,
 MerchantSignInID,//android.widget.EditText[@resource-id='com.mobeewave.cba.mpos.debug:id/sign_up_account_number'],MerchantSignIn,ID,text input,,,
@@ -72,7 +72,7 @@ SettingsTerminalSideMenu,//android.widget.TextView[@resource-id='com.mobeewave.c
 SettingsTerminalTitle,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/toolbar_title'],SettingsTerminal,Title,view,,,
 SettingsTerminalTerminalTab,//android.widget.TextView[@text='Terminal'],SettingsTerminal,TerminalTab,click,,,
 SettingsTerminalAdvancedTab,//android.widget.TextView[@text='Advanced'],SettingsTerminal,AdvancedTab,click,,,
-SettingsTerminalTerminalIDText,//android.widget.TextView[@text='Terminal ID'],SettingsTerminal,TerminalIDText,view,yes,Terminal ID,21
+SettingsTerminalTerminalIDText,//android.widget.TextView[@text='Terminal ID'],SettingsTerminal,TerminalIDText,view,yes,Terminal ID,27
 SettingsTerminalTerminalIDValue,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/terminal_id'],SettingsTerminal,TerminalIDValue,view,,,
 SettingsTerminalPINWhenCancelTransactionText,//android.widget.TextView[@text='Ask for PIN when cancelling a transaction.'],SettingsTerminal,PINWhenCancelTransactionText,view,,,
 SettingsTerminalPINWhenCancelTransactionValue,//android.widget.Switch[@resource-id='com.mobeewave.cba.mpos.debug:id/pin_switch'],SettingsTerminal,PINWhenCancelTransactionValue,click,,,
@@ -99,7 +99,7 @@ SideMenuHelp,//android.support.v7.widget.RecyclerView[@resource-id='com.mobeewav
 SideMenuLogout,//android.support.v7.widget.RecyclerView[@resource-id='com.mobeewave.cba.mpos.debug:id/material_drawer_recycler_view']/android.widget.LinearLayout[@index=7],SideMenu,Logout,click,,,
 SignInSelectionFirstUser,//android.support.v7.widget.RecyclerView[@resource-id='com.mobeewave.cba.mpos.debug:id/user_list_recycler']/android.widget.LinearLayout[@index=0],SignInSelection,FirstUser,click,,,
 SignInSelectionSecondUser,//android.support.v7.widget.RecyclerView[@resource-id='com.mobeewave.cba.mpos.debug:id/user_list_recycler']/android.widget.LinearLayout[@index=1],SignInSelection,SecondUser,click,,,
-SignInSelectionTitle,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/lock_header'],SignInSelection,Title,view,yes,Sign in,5
+SignInSelectionTitle,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/lock_header'],SignInSelection,Title,view,yes,Sign in,6
 PurchaseResultNoReceipt,//android.widget.Button[@text='No receipt'],PurchaseResult,NoReceipt,click,,,
 PurchaseResultEmailReceipt,//android.widget.Button[@resource-id='com.mobeewave.cba.mpos.debug:id/base_primary_button'],PurchaseResult,EmailReceipt,click,yes,Email receipt,202
 PurchaseResultVoid,//android.widget.Button[@text='Void'],PurchaseResult,Void,click,,,
@@ -204,7 +204,7 @@ TransactionHistorySecondTransaction,//android.support.v7.widget.RecyclerView[@re
 NewTagScannedTitle,//android.widget.TextView[@text='NEW TAG SCANNED'],NewTagScanned,Title,view,yes,NEW TAG SCANNED,0
 AllAppListingCBADebug,//android.widget.FrameLayout[@content-desc='CBA debug'],AllAppListing,CBADebug,click,,,
 PurchaseSideMenu,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/toolbar_title']/../android.widget.ImageButton[@index=0],Purchase,SideMenu,view,,,
-PurchaseTitle,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/lock_header'],Purchase,Title,view,yes,Enter amount,146
+PurchaseTitle,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/lock_header'],Purchase,Title,view,yes,Enter amount,157
 PurchaseAmount,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/amount_label_amount'],Purchase,Amount,view,,,
 Purchase1,//android.widget.Button[@resource-id='com.mobeewave.cba.mpos.debug:id/numpad_button_1'],Purchase,1,click,,,
 Purchase2,//android.widget.Button[@resource-id='com.mobeewave.cba.mpos.debug:id/numpad_button_2'],Purchase,2,click,,,
@@ -273,7 +273,7 @@ ConfirmNewPINProcessTitle,//android.widget.TextView[@resource-id='com.mobeewave.
 ConfirmNewPINTextBody,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/lock_text'],ConfirmNewPIN,TextBody,view,,,
 ConfirmNewPINBack,//android.widget.ImageView[@resource-id='com.mobeewave.cba.mpos.debug:id/toolbar_back_button'],ConfirmNewPIN,Back,click,,,
 ConfirmNewPINTitle,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/lock_header'],ConfirmNewPIN,Title,view,yes,Confirm new PIN,0
-CancelTransactionTitle,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/popup_header'],CancelTransaction,Title,view,yes,Cancel transaction,3
+CancelTransactionTitle,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/popup_header'],CancelTransaction,Title,view,yes,Cancel transaction,4
 CancelTransactionTextBody,//android.widget.TextView[@resource-id='com.mobeewave.cba.mpos.debug:id/popup_text'],CancelTransaction,TextBody,view,,,
 CancelTransactionContinue,//android.widget.Button[@resource-id='com.mobeewave.cba.mpos.debug:id/base_secondary_button'],CancelTransaction,Continue,click,,,
 CancelTransactionStop,//android.widget.Button[@resource-id='com.mobeewave.cba.mpos.debug:id/base_primary_button'],CancelTransaction,Stop,click,,,

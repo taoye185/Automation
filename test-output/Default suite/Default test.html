@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 09 09:58:14 EST 2019</td>
+<td>Started on:</td><td>Tue Jan 15 14:21:09 EST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>118 seconds (118298 ms)</td>
+<tr><td>Total time:</td><td>189 seconds (189596 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,28 +76,70 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='AutomationMain.appTesting()'><b>appTesting</b><br>Test class: AutomationMain<br/>
-<a href="#Output-3177100" onClick='toggleBox("Output-3177100", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-26540753" onClick='toggleBox("Output-26540753", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-3177100" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-3177100">
-<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font><br/>
+<a href="#Output-26540753" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-26540753">
+<font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font><br/>
+<font color='grey'>This case assumes the app starts from the Purchase page.</font><br/>
 <font color='grey'>App launched and awaiting for login.</font><br/>
 <font color='grey'>User Authentication performed.</font><br/>
 <font color='grey'>User Authentication performed.</font><br/>
+<font color='grey'>Transaction is made, Processing time is: 16 seconds.</font><br/>
+Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br/>
+PurchaseResultResultText is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br/>
 Current page is equal to Purchase, <font color='green'>test passed</font>.<br/>
-<font color='blue'>Test Case: TS_5 completed.</font><br/>
------------------------------------<br><br/>
-<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font><br/>
-<font color='grey'>This case assumes the app starts from the Purchase page.</font><br/>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br/>
+TransactionHistoryTransactionAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br/>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br/>
+TransactionDetailsAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br/>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br/>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br/>
 <font color='grey'>User Authentication performed.</font><br/>
+Current page is equal to SettingsTerminal, <font color='green'>test passed</font>.<br/>
+Current page is equal to SettingsAdvanced, <font color='green'>test passed</font>.<br/>
+<font color='grey'>Testing Version Number Display</font><br/>
+SettingsAdvancedAppVersionValue is expected to be <font color='brown'>1.4.7(4)</font>, but is actually equal to: <font color='brown'>1.4.9(12)</font>, <font color='red'>test failed</font>.<br/>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br/>
+TransactionHistoryTransactionAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br/>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br/>
+TransactionDetailsAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br/>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br/>
+TransactionDetailsVoid is equal to REFUND, <font color='green'>test passed</font>.<br/>
 <font color='grey'>User Authentication performed.</font><br/>
+Current page is equal to EnterRefundAmount, <font color='green'>test passed</font>.<br/>
+<font color='grey'>Making Signature</font><br/>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br/>
+TransactionHistoryTransactionAmount is equal to - CA$14.00, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br/>
+TransactionDetailsTitle is equal to REFUND APPROVED, <font color='green'>test passed</font>.<br/>
+TransactionDetailsAmount is equal to - CA$14.00, <font color='green'>test passed</font>.<br/>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br/>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br/>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br/>
+<font color='grey'>Refund testing completed.</font><br/>
+<font color='grey'>User Authentication performed.</font><br/>
+Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br/>
+PurchaseResultResultText is equal to VOID APPROVED, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br/>
+TransactionHistoryTransactionAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br/>
+TransactionDetailsTitle is equal to VOID APPROVED, <font color='green'>test passed</font>.<br/>
+TransactionDetailsAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br/>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br/>
+TransactionDetailsVoid is equal to element not found, <font color='green'>test passed</font>.<br/>
 Current page is equal to Purchase, <font color='green'>test passed</font>.<br/>
-<font color='blue'>Test Case: TS_6 completed.</font><br/>
+<font color='blue'>Test Case: TS_8&TS_9 completed.</font><br/>
 -----------------------------------<br><br/>
 </div>
 </td>
 <td></td>
-<td>99</td>
+<td>165</td>
 <td>AutomationMain@19d1a19</td></tr>
 </table><p>
 </body>

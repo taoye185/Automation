@@ -1,14 +1,12 @@
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import java.util.Vector;
 
 import org.openqa.selenium.By;
@@ -17,24 +15,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.*;
-import org.openqa.selenium.safari.*;
-import org.openqa.selenium.edge.*;
-import org.openqa.selenium.ie.*;
-import org.openqa.selenium.interactions.Locatable;
-import org.openqa.selenium.interactions.TouchScreen;
-import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteTouchScreen;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.Reporter;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 
-import io.appium.java_client.MobileElement;
-
-public class MWDriver {
+public class MWDriver extends RemoteWebDriver {
 	/* This class needs further restructure - as it currently stands, it represents both the concept of a "testable project"
 	 * (ie. an app or a portal system accessible by browser, or a combination of such) as well as the concept of a
 	 * "group of different driver actions" that has Android/Chrome/Firefox actions implemented.
@@ -58,7 +47,7 @@ public class MWDriver {
 	private String driverType;
 	private String driverName;
 	
-	private MWAndroidDriver and;
+	private AndroidDriver and;
 	private WebDriver ffd;
 	private WebDriver chd;
 	
@@ -71,7 +60,7 @@ public class MWDriver {
 	
 	static private int defaultTimeOutSec = 15;
 
-	public RemoteTouchScreen touch;
+
 
 	
 //	WebDriver sfd = new SafariDriver();
@@ -79,7 +68,7 @@ public class MWDriver {
 //	WebDriver ied = new InternetExplorerDriver();
 //	WebElementWait wew = new WebElementWait();
 	
-	public MWDriver (String dName, String dType, DesiredCapabilities capabilities, MWLogger logs) throws IOException {
+	public MWDriver (String dName, String dType, DesiredCapabilities capabilities, MWLogger logs)  throws IOException {
 /* Pre: elementConfig is the path of a configuration file, listing all relevant URIs for the test project
  * Post: a MWAndroidDriver is constructed, while an URI-XPath mapping is established for all the relevant
  * 		elements
@@ -108,13 +97,19 @@ public class MWDriver {
 		switch (dType) {
 		case "Chrome": {
 			chd = new ChromeDriver();			
-			log.logConsole("ChromeDriver created.");		}
+			log.logConsole("ChromeDriver created.");
+			break;
+			}
 		case "Firefox": {
 			ffd = new FirefoxDriver();
-			log.logConsole("FirefoxDriver created.");		}
+			log.logConsole("FirefoxDriver created.");		
+			break;
+			}
 		case "Android": {
-			and = new MWAndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities, log);
-			log.logConsole("AndroidDriver created.");		}
+			and = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			log.logConsole("AndroidDriver created.");		
+			break;
+			}
 		default: {
 			log.logConsole("unrecognized driver type " + dType + "specified.");
 		}
@@ -213,9 +208,39 @@ public class MWDriver {
 	
 	
 	
-	/********************"Driver" related methods ********************************/	
+	/********************private methods ********************************/	
 	
-	public WebElement findByXPath(String xpath) throws IOException {
+	private PointOption getPO(String URI) throws IOException {
+		/* Pre: URI is a unique valid string corresponding to a visible WebElement on page
+		 * Post: the location of the WebElement is returned as a PointOption object. Unexpected URIs would result null being returned.
+		 */
+		log.logFile("The method getPO( " + URI + " is called.");
+		try {
+		WebElement el = this.findByURI(URI);
+		PointOption po = new PointOption();
+		po.withCoordinates(el.getLocation().getX(), el.getLocation().getY());
+		return po;
+		}
+		catch (Exception e) {
+		log.logConsole(URI + " is not found.");
+		System.out.println(e);
+			return null;
+		}
+	}
+
+	private PointOption getPO(int x, int y) {
+//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//		int maxX = screenSize.width;
+//		int maxY = screenSize.height;
+		PointOption po = new PointOption();
+		po.withCoordinates(x, y);
+		return po;
+	}
+	
+	private WebElement findByXPath(String xpath) throws IOException {
+		/* Pre: xpath is a valid string corresponding to a visible WebElement on page
+		 * Post: the location of the WebElement is returned as a PointOption object. Unexpected xpath would result null being returned.
+		 */
 		switch (driverType) {
 		case "Android": {
 			return and.findElementByXPath(xpath);
@@ -233,40 +258,49 @@ public class MWDriver {
 		}		
 	}
 	
-	
-	public WebElement findByURI(String URI) throws IOException {
-/*	Pre: 	driverName is a valid, case sensitive string that corresponds to one of the supported drivers
- * 			URI is a string defined in the element configuration file and is a unique identifier for the WebElement in question
- * 	Post:	The WebElement whose xpath matching the xpath attribute of the URI is returned
- * 
- * 			Note that android and web browsers use slightly different methods in determining such WebElement.
- */
+	private WebElement findByURI(String URI) throws IOException {
+		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement on page
+		 * 	Post:	The WebElement whose xpath matching the xpath attribute of the URI is returned, a null is returned if no WebElement is found.
+		 */
 		String xpath = ((pageElement) elementList.getCapability(URI)).getPath();
 		return this.findByXPath(xpath);
 	}
 	
 	
+	/********************driver independent methods ********************************/	
+	
 	public void clickButton(String URI) throws IOException {
+		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement on page
+		 * 	Post:	The WebElement is clicked.
+		 */
+		log.logFile(URI + " is being clicked.");
 		try {
 			this.findByURI(URI).click();
 		}
 		catch (Exception e) {
 			log.logConsole("exception caught during button click, failed to find " + URI);
+			System.out.println(e);
 		}
 	}
 	
 	public void inputText(String URI, String value) throws IOException {
+		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement on page
+		 * 	Post:	The value string is being entered into the URI text field.
+		 */
 		try {
-
 			this.findByURI(URI).sendKeys(value);
 		}
 		catch (Exception e) {
 			log.logConsole("exception caught during text entry, failed to find " + URI);
+			System.out.println(e);
 		}
-			
 	}
 	
 	public void setBooleanValue(String URI, String value) throws IOException {
+		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement with a boolean "checked" attributes control (checkbox/switch, etc) on page
+		 * 			value is a case sensitive string that equals to either "yes" or "no" (non-"yes" string is regarded as "no")
+		 * 	Post:	The WebElement is set to the state in which the "checked" attributes correspondsi to the value parameter specified.
+		 */
 		String expectedValue = "false";
 		if (value.equals("yes")) {
 			expectedValue = "true";
@@ -284,22 +318,11 @@ public class MWDriver {
 		}
 	}
 	
-	public void launch() throws InterruptedException, IOException {
-		switch (driverType) {
-		case "Android": {
-			and.launch(120);
-			break;
-		}
-		default: {
-			((WebDriver)this.chooseDriver()).get((String) cap.getCapability("StartingURL"));
-		}
-		}
-
-	}
-	
-
-	
 	public String findCurrentPage () throws InterruptedException, IOException {
+		/*	Pre:	A list of all available pages with unique identifiers have been loaded into the mPageList data structure	
+		 * 	Post:	returns the name of the current page. an empty string is returned if the current page is not recognized
+		 * 			The visiting count of the corresponding current page is incremented to reflect the corresponding visiting frequencies for the specific page
+		 */
 			String currentPage = "";
 			System.out.print("Current Page Verification in progress");
 			for (int i=0; i<mPageList.size(); i++) {
@@ -327,7 +350,25 @@ public class MWDriver {
 			log.logConsole("Current page is: "+currentPage);
 			return currentPage;
 		}
+	
+	/********************driver dependent methods ********************************/	
+	public void launch() throws InterruptedException, IOException {
+		/* Pre:		If the driverType is "Android", the app to be tested is one of CBA/Pep/NBC/GP, and it has not been logged in yet
+		 * 			If the driverType is some other WebDriver, the StartingURL configuration was already set and read in from the configuration file
+		 * Post:	If the driverType is "Android", the app is launched and reachs the EnterPIN page; If the driverType is some other browser,
+		 * 			the browser is open with the default StartingURL read from configuration file
+		 */
+		switch (driverType) {
+		case "Android": {
+			this.launch(120);
+			break;
+		}
+		default: {
+			((WebDriver)this.chooseDriver()).get((String) cap.getCapability("StartingURL"));
+		}
+		}
 
+	}
 	
 	
 public String reachPageByProcess (int timeoutIteration,String processName, String targetPage) throws InterruptedException, IOException {
@@ -468,7 +509,7 @@ public void scrollUp() throws IOException {
     js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 }
 
-public void close() throws IOException {
+public void close() {
 		try {
 			Object obj = this.chooseDriver();
 			String filePath = (String)cap.getCapability(driverName);
@@ -477,6 +518,7 @@ public void close() throws IOException {
 			switch (driverType) {
 			case "Android": {
 				and.closeApp();
+				break;
 			}
 			default: {
 				((WebDriver) obj).close();				
@@ -485,7 +527,12 @@ public void close() throws IOException {
 
 		}
 		catch (Exception e) {
-			log.logConsole("error encountered when closing "+driverName);
+			try {
+				log.logConsole("error encountered when closing "+driverName);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 	}
 
@@ -511,6 +558,7 @@ public void merchantSignin(String ID) throws InterruptedException, IOException {
 		catch(Exception e) {
 			log.logConsole("exception caught, not on Merchant Sign IN page");
 			}
+		break;
 	}
 	default: {
 			log.logConsole("driverType " + driverType + "not implemented for this method");
@@ -539,6 +587,7 @@ public void merchantPassword(String password) throws InterruptedException, IOExc
 		catch(Exception e) {
 			log.logConsole("exception caught, not on Merchant Password page.");
 		}
+		break;
 	}
 	default: {
 		log.logConsole("driverType " + driverType + "not implemented for this method");
@@ -739,7 +788,7 @@ public void launch (String appName, int waitSec) throws InterruptedException, IO
 log.logFile("method launch ("+appName + ", " + waitSec  +") is called.");
 String currentPage = "";
 int iteration = 0;
-while ((!currentPage.equals("EnterPIN")) && (iteration<10)) {
+while ((!currentPage.equals("EnterPIN")) && (iteration<waitSec)) {
 	iteration ++;
 	currentPage = this.findCurrentPage(waitSec); //decide what to do depending on which page the user is on
 	switch (currentPage) {
@@ -803,7 +852,7 @@ while ((!currentPage.equals("EnterPIN")) && (iteration<10)) {
 		}
 		default: {
 			log.logConsole("This page "+currentPage+ " is not recognized.");
-			iteration++;
+//			iteration++;
 			//current page not one of the above
 		}
 	}
@@ -1125,8 +1174,7 @@ for (int i=0; i<mPageList.size(); i++) {
 		String id =  tempPage.getUID();
 		String value =  tempPage.getUValue();
 		if (!(id.isEmpty())) {
-		DesiredCapabilities andEle = (DesiredCapabilities) cap.getCapability("AndroidElement");
-		pageElement pEle = (pageElement) andEle.getCapability(id);
+		pageElement pEle = (pageElement) elementList.getCapability(id);
 		String xp = pEle.getPath();
 		String title = this.findByXPath(xp).getText();
 			if (title.equals(value)) {
@@ -1692,91 +1740,75 @@ return true;
 
 
 
+public void tap(int xPos, int yPos) throws IOException {
+	log.logConsole("starting to tap " + xPos + " , " + yPos);
+	switch(driverType) {
+	case "Android": {
+		try {
+			io.appium.java_client.TouchAction ta = new io.appium.java_client.TouchAction(and);
+			ta.press(this.getPO(xPos, yPos)).release().perform();
+			return;
+		}
+		catch (Exception e) {
+			log.logConsole("error during tapping");
+			System.out.println(e);
+			return;
+		}
+	}
+	default: {
+		log.logConsole("driver type " + driverType + " not implemented for this function.");
+	}
+	}
+}
+
 public void tap(String URI) throws IOException {
-log.logConsole("starting to tap " + URI);
-Coordinates coord = null;
-try {
-	System.out.println("find element");
-	WebElement el = this.findByURI(URI);
-//	System.out.println("find location");
-//	Point pt = el.getLocation();
-//	int x = pt.getX();
-//	int y = pt.getY();
-	System.out.println("find coord");
-	Thread.sleep(5000);
-	coord = ((Locatable)el).getCoordinates();
-	System.out.println(coord.toString());
+	log.logConsole("starting to tap " + URI);
+	switch(driverType) {
+	case "Android": {
+		try {
+			io.appium.java_client.TouchAction ta = new io.appium.java_client.TouchAction(and);
+			ta.press(this.getPO(URI)).release().perform();
+			return;
+		}
+		catch (Exception e) {
+			log.logConsole("error during tapping");
+			System.out.println(e);
+			return;
+		}
+	}
+	default: {
+		log.logConsole("driver type " + driverType + " not implemented for this function.");
+	}
+	}
 }
-catch (Exception e) {
-	System.out.println("error duing coordinates finding");
-}
-try {
-System.out.println("stap");
-Thread.sleep(5000);
-touch.singleTap(coord);
-}
-catch (Exception e) {
-	System.out.println("error duing coordinates stap");	
-	System.out.println(e);
-}		
-try {
-	System.out.println("dtap");			
-	Thread.sleep(5000);
-	touch.doubleTap(coord);
-}
-catch (Exception e) {
-	System.out.println("error duing coordinates dtap");		
-	System.out.println(e);
-}		
-try {
-	System.out.println("flick");
-	Thread.sleep(5000);
-	touch.flick(coord, 1, 1, 300);
-}
-catch (Exception e) {
-	System.out.println("error duing coordinates flick");	
-	System.out.println(e);
-}		
-try {
-	System.out.println("move");
-	Thread.sleep(5000);
-	touch.move(5, 5);
-}
-catch (Exception e) {
-	System.out.println("error duing coordinates move");		
-	System.out.println(e);
-}		
-try {
-	System.out.println("scroll");
-	Thread.sleep(5000);
-	touch.scroll(coord, 5, 5);
-}
-catch (Exception e) {
-	System.out.println("error duing coordinates scroll");	
-	System.out.println(e);
-}
-try {
-	
-	
-	
 
 
-//touch.singleTap((Coordinates) this.find(URI).getLocation());
-//touch.singleTap((Coordinates) this.find(URI).getLocation().moveBy(10, 10));
 
-//touch.down(x, y).move(moveX, moveY).perform();
-}
-catch (Exception e) {
-
-}
+public void swipe(String startURI, String endURI) throws IOException {
+	log.logConsole("starting to swipe " + startURI + ", " + endURI);
+	switch(driverType) {
+	case "Android": {
+		try {
+			io.appium.java_client.TouchAction ta = new io.appium.java_client.TouchAction(and);
+			WaitOptions wo = new WaitOptions();
+			wo.withDuration(Duration.ofSeconds(1));
+			ta.press(this.getPO(startURI)).waitAction(wo).moveTo(this.getPO(endURI)).release().perform();
+			return;
+		}
+		catch (Exception e) {
+			System.out.println("error duing swiping");
+			return;
+		}
+	}
+	default: {
+		log.logConsole("driver type " + driverType + " not implemented for this function.");
+	}
+	}
 }
 
 public void sign() throws IOException {
 this.tap("SignatureSignArea"); 
-}
-
-public TouchScreen getTouch() {
-return touch;
+this.swipe("SignatureSignArea", "SignatureConfirm");
 }
 
 public ElementList getMPageList() {

@@ -90,7 +90,6 @@ public class MWLogger {
         FileOutputStream ris = new FileOutputStream(reportText);
         OutputStreamWriter rosw = new OutputStreamWriter(ris); 
         reportWriter = new BufferedWriter(rosw);
-        System.out.println("reportName is " + reportName);
 	}
 	
 	public void publishReport () throws IOException {

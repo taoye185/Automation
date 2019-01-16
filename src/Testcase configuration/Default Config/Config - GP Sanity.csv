@@ -3,9 +3,9 @@ Active,Capabilities Name,Capabilities Value
 1,appActivity,com.mobeewave.mpos2.login.LoginActivity
 1,app,C:\\Users\\YeTao\\eclipse-workspace\\automationTemplates\\apps\\app-secureelement-cba-integration-debug-v1.4.5.406.apk
 1,StartingURL,http://integration-tms.mobeewave-hive.com/
-1,MerchantID,taoyesim90123001
-1,MerchantPassword,DAXpf_2q
-1,MerchantNewPassword,Thankyou1@
+1,MerchantID,taoyegp890123001
+1,MerchantPassword,xKHDc+9-
+1,MerchantNewPassword,xKHDc+9-
 1,MerchantPIN,123456
 1,Username,SignInSelectionFirstUser
 1,CustomerEmail,ytao@mobeewave.com

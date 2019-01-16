@@ -67,7 +67,7 @@ public class customizedCSVReader {
 	    DesiredCapabilities driverCap = new DesiredCapabilities();
 	    while ((nextRecord = csvReader.readNext()) != null) { 
 	     	if (i>0 && nextRecord[0].equals("1")) {		//ignore title row(i==0) and inactive row (nextRecord[0]!=1)
-	     		MWDriver driver = new MWDriver (nextRecord[1],nextRecord[3],cap,log);
+	     		MWDriver driver = new MWDriver (nextRecord[1], nextRecord[3], cap, log);
 	     		driverCap.setCapability(nextRecord[1], driver);
 	  		} //if
 	        i++;

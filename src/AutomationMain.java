@@ -46,8 +46,8 @@ import java.util.logging.Logger;
 
 
 public class AutomationMain{
-	public static MWAndroidDriver androidMobileDriver;
-	public static MWDriver browserDriver;
+//	public static MWAndroidDriver androidMobileDriver;
+//	public static MWDriver browserDriver;
 	static String testManagementFile = ".\\src\\Testcase configuration\\Test Management.csv";
 	static String groupFile = "";
 	//This configuration file contains all the test cases to be run during the test - QA engineers should update this file
@@ -55,12 +55,12 @@ public class AutomationMain{
 	static String appFile = "";
 	//This configuration file contains the app configurations and apk locations - QA engineers should update this file
 	//any time a different app is to be tested.
-	static String androidElementFile = "";
+//	static String androidElementFile = "";
 	//This configuration file contains the URI for all the relevant WebElement that the mobile app contains - QA engineers
 	//should update this file whenever the app is modified in a way such that one or more WebElement has been created or changed
 	//to a new URI.
 	static String driverFile = "";
-	static String chromeElementFile = "";
+//	static String chromeElementFile = "";
 	static String deviceFile = "";
 	static MWLogger log;
 
