@@ -1,0 +1,26 @@
+---------Start of logs---------
+14:17:24.362:	The method "logComment()" are called
+14:17:24.362:	<font color='grey'>Start of refund and void refund testing - please have SUCCESS testing card placed at the back of device!</font>
+14:17:24.362:	The method "logComment()" are called
+14:17:24.362:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+14:17:24.362:	The method "launch()" are called
+14:17:24.362:	method launch (120) is called.
+14:17:24.362:	method launch (CBA, 120) is called.
+14:17:24.362:	method findCurrentPage(120) is called.
+14:17:24.866:	
+14:17:33.244:	Current page is: 
+14:17:33.244:	This page  is not recognized.
+14:17:33.244:	method findCurrentPage(120) is called.
+14:17:33.745:	
+14:17:38.762:	Current page is: 
+14:17:38.762:	This page  is not recognized.
+14:17:38.762:	method findCurrentPage(120) is called.
+14:17:39.263:	
+14:17:43.956:	Current page is: 
+14:17:43.956:	This page  is not recognized.
+14:17:43.956:	method findCurrentPage(120) is called.
+14:17:44.457:	
+14:17:49.137:	Current page is: 
+14:17:49.137:	This page  is not recognized.
+14:17:49.137:	method findCurrentPage(120) is called.
+14:17:49.637:	

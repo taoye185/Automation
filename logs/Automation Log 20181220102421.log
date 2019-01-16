@@ -1,0 +1,290 @@
+---------Start of logs---------
+10:24:21.773:	pe is: ActivatingSecureElementProcessTitle<br>
+10:24:21.773:	pe is: AllowBatterySettingsChangeTitle<br>
+10:24:21.773:	pe is: AllowTimeoutSettingsChangeTitle<br>
+10:24:21.773:	pe is: AndroidAlertTitle<br>
+10:24:21.773:	pe is: AndroidDeviceSettingsback<br>
+10:24:21.774:	pe is: EnterPINPepImage<br>
+10:24:21.774:	pe is: MerchantPasswordpassword<br>
+10:24:21.774:	pe is: MerchantSignInID<br>
+10:24:21.774:	pe is: NoNetworkConnectionTitle<br>
+10:24:21.774:	pe is: ProvisionUpdateCompleteProcessTitle<br>
+10:24:21.774:	pe is: PurchaseDescriptionNext<br>
+10:24:21.774:	pe is: SettingsAdvancedSideMenu<br>
+10:24:21.774:	pe is: SettingsTerminalSideMenu<br>
+10:24:21.775:	pe is: SideMenuPepImage<br>
+10:24:21.775:	pe is: SignInSelectionFirstUser<br>
+10:24:21.775:	pe is: PurchaseResultNoReceipt<br>
+10:24:21.775:	pe is: UpdateRequiredProcessTitle<br>
+10:24:21.775:	pe is: ConnectionErrorDuringProvisionImage<br>
+10:24:21.775:	pe is: PleaseRestartYourPhoneTitle<br>
+10:24:21.775:	pe is: UpdatingSecureElementProcessTitle<br>
+10:24:21.776:	pe is: TermsAndConditionsTitle<br>
+10:24:21.776:	pe is: ContactUsProcessTitle<br>
+10:24:21.776:	pe is: UserManagementSideMenu<br>
+10:24:21.776:	pe is: EditUserProcessTitle<br>
+10:24:21.776:	pe is: DeleteUserConfirmationTitle<br>
+10:24:21.776:	pe is: AddNewUserProcessTitle<br>
+10:24:21.776:	pe is: UserCreatedTitle<br>
+10:24:21.776:	pe is: TransactionReportsEmailReport<br>
+10:24:21.776:	pe is: TransactionHistorySideMenu<br>
+10:24:21.776:	pe is: NewTagScannedTitle<br>
+10:24:21.776:	pe is: AllAppListingCBADebug<br>
+10:24:21.776:	pe is: PurchaseSideMenu<br>
+10:24:21.777:	pe is: TapToPayTitle<br>
+10:24:21.777:	pe is: CardNotSupportedTitle<br>
+10:24:21.777:	pe is: EmailReceiptForPurchaseTitle<br>
+10:24:21.777:	pe is: ReceiptSentConfirmationTitle<br>
+10:24:21.777:	pe is: ProcessingPaymentTitle<br>
+10:24:21.777:	pe is: PurchaseNotCompletedTitle<br>
+10:24:21.777:	pe is: SetTipDuringPurchaseTitle<br>
+10:24:21.777:	pe is: AddTipProcessTitle<br>
+10:24:21.777:	pe is: CreateNewPasswordProcessTitle<br>
+10:24:21.777:	pe is: EnterNewPINTitle<br>
+10:24:21.777:	pe is: ConfirmNewPINProcessTitle<br>
+10:24:21.777:	pe is: CancelTransactionTitle<br>
+10:24:21.777:	pe is: CancelTransactionEnterPINProcessTitle<br>
+10:24:21.777:	pe is: PurchaseTimedOutProcessTitle<br>
+10:24:21.777:	pe is: TransactionSearchBack<br>
+10:24:21.778:	pe is: TransactionDetailsBack<br>
+10:24:21.778:	pe is: AccountLockedBack<br>
+10:24:21.778:	pe is: ForgotPINTitle<br>
+10:24:21.778:	pe is: ResetPINBack<br>
+10:24:21.778:	pe is: InvalidCredentialsTitle<br>
+10:24:21.778:	pe is: VoidProcessingPaymentProcessTitle<br>
+10:24:21.778:	pe is: SecurityImageTitle<br>
+10:24:21.778:	pe is: ProvisionActivateCompleteProcessTitle<br>
+10:24:21.778:	pe is: <br>
+10:24:21.778:	pe is: PaymentAcceptanceSetupProcessTitle<br>
+10:24:21.778:	pe is: DatePickerPreviousMonth<br>
+10:24:21.778:	pe is: ReportSentConfirmationTitle<br>
+10:24:21.778:	pe is: EnterOldPINProcessTitle<br>
+10:24:21.778:	pe is: PINUpdatedTitle<br>
+10:24:21.778:	pe is: TransactionSearchResultProcessTitle<br>
+10:24:21.778:	pe is: SignatureTitle<br>
+10:24:21.779:	AndroidDriver created.<br>
+10:24:21.781:	The method "logComment()" are called<br>
+10:24:21.781:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font><br>
+10:24:21.781:	The method "launch()" are called<br>
+10:24:21.781:	method launch (120) is called.<br>
+10:24:21.781:	method launch (CBA, 120) is called.<br>
+10:24:21.781:	method findCurrentPage(120) is called.<br>
+10:24:22.282:	<br>
+10:24:29.802:	Current page is: <br>
+10:24:29.802:	This page  is not recognized.<br>
+10:24:29.802:	method findCurrentPage(120) is called.<br>
+10:24:30.303:	<br>
+10:24:34.624:	Current page is: <br>
+10:24:34.624:	This page  is not recognized.<br>
+10:24:34.624:	method findCurrentPage(120) is called.<br>
+10:24:35.124:	<br>
+10:24:39.128:	Current page is: <br>
+10:24:39.128:	This page  is not recognized.<br>
+10:24:39.129:	method findCurrentPage(120) is called.<br>
+10:24:39.630:	<br>
+10:24:41.376:	Current page is: SignInSelection<br>
+10:24:41.376:	method clickButton (0, SignInSelectionFirstUser) is called.<br>
+10:24:41.377:	method find(SignInSelectionFirstUser) is called.<br>
+10:24:41.553:	method findCurrentPage(120) is called.<br>
+10:24:42.054:	<br>
+10:24:43.258:	Current page is: EnterPIN<br>
+10:24:43.259:	<font color='grey'>App launched and awaiting for login.</font><br>
+10:24:43.259:	The method "login()" are called<br>
+10:24:43.259:	method login(1) is called.<br>
+10:24:43.259:	method enterNumPadOK (1, 123456) is called.<br>
+10:24:44.259:	method enterNumPad (1, 123456) is called.<br>
+10:24:45.260:	Number to be entered is: 123456<br>
+10:24:45.260:	method find(EnterPIN1) is called.<br>
+10:24:45.474:	method find(EnterPIN2) is called.<br>
+10:24:46.099:	method find(EnterPIN3) is called.<br>
+10:24:46.830:	method find(EnterPIN4) is called.<br>
+10:24:47.456:	method find(EnterPIN5) is called.<br>
+10:24:48.285:	method find(EnterPIN6) is called.<br>
+10:24:48.939:	method find(EnterPINOK) is called.<br>
+10:24:49.215:	exception caught, not on PIN entering page.<br>
+10:24:49.215:	<font color='grey'>User Authentication performed.</font><br>
+10:24:49.215:	The method "waitUntilPage()" are called<br>
+10:24:49.215:	<br>
+10:24:51.236:	Current page is: Purchase<br>
+10:24:51.236:	page count is: 45<br>
+10:24:51.236:	page count is: 46<br>
+10:24:51.236:	The method "reachPage()" are called<br>
+10:24:51.236:	method reachPage(GP, SettingsTerminal) is called.<br>
+10:24:51.236:	method reachPage(GP, Purchase) is called.<br>
+10:24:51.236:	method find(PurchaseSideMenu) is called.<br>
+10:24:51.319:	method goToSidemenuPage(Purchase) is called.<br>
+10:24:51.319:	method findCurrentPage(0) is called.<br>
+10:24:51.820:	<br>
+10:24:52.002:	Current page is: Purchase<br>
+10:24:52.002:	method findCurrentPage(0) is called.<br>
+10:24:52.502:	<br>
+10:24:52.673:	Current page is: Purchase<br>
+10:24:52.673:	method clickButton (0, PurchaseSideMenu) is called.<br>
+10:24:52.673:	method find(PurchaseSideMenu) is called.<br>
+10:24:52.846:	method clickButton (1, SideMenuSettings) is called.<br>
+10:24:53.847:	method find(SideMenuSettings) is called.<br>
+10:24:54.046:	method login(1) is called.<br>
+10:24:54.046:	method enterNumPadOK (1, 123456) is called.<br>
+10:24:55.048:	method enterNumPad (1, 123456) is called.<br>
+10:24:56.048:	Number to be entered is: 123456<br>
+10:24:56.048:	method find(EnterPIN1) is called.<br>
+10:24:56.240:	method find(EnterPIN2) is called.<br>
+10:24:56.932:	method find(EnterPIN3) is called.<br>
+10:24:57.821:	method find(EnterPIN4) is called.<br>
+10:24:58.477:	method find(EnterPIN5) is called.<br>
+10:24:59.172:	method find(EnterPIN6) is called.<br>
+10:24:59.855:	method find(EnterPINOK) is called.<br>
+10:25:00.449:	<font color='grey'>User Authentication performed.</font><br>
+10:25:00.449:	method waitUntilPage(30, SettingsTerminal) is called.<br>
+10:25:00.449:	method findCurrentPage(0) is called.<br>
+10:25:00.950:	<br>
+10:25:01.954:	Current page is: SettingsTerminal<br>
+10:25:01.954:	The method "setBooleanValue(no)" are called<br>
+10:25:02.226:	The method "setBooleanValue(no)" are called<br>
+10:25:02.859:	The method "reachPage()" are called<br>
+10:25:02.859:	method reachPage(GP, Purchase) is called.<br>
+10:25:02.859:	method find(PurchaseSideMenu) is called.<br>
+10:25:02.959:	method goToSidemenuPage(Purchase) is called.<br>
+10:25:02.959:	method findCurrentPage(0) is called.<br>
+10:25:03.460:	<br>
+10:25:03.711:	Current page is: SettingsTerminal<br>
+10:25:03.712:	method clickOnPage(SettingsTerminal, Purchase, [Ljava.lang.String;@da0432) is called.<br>
+10:25:03.712:	method findCurrentPage(0) is called.<br>
+10:25:04.213:	<br>
+10:25:04.435:	Current page is: SettingsTerminal<br>
+10:25:04.435:	method clickButton (0, PurchaseSideMenu) is called.<br>
+10:25:04.435:	method find(PurchaseSideMenu) is called.<br>
+10:25:05.095:	method clickButton (0, SideMenuPurchase) is called.<br>
+10:25:05.095:	method find(SideMenuPurchase) is called.<br>
+10:25:06.287:	method waitUntilPage(30, Purchase) is called.<br>
+10:25:06.287:	method findCurrentPage(0) is called.<br>
+10:25:06.788:	<br>
+10:25:06.981:	Current page is: Purchase<br>
+10:25:06.981:	The method "singlePurchase()" are called<br>
+10:25:06.981:	method singlePurchase(1000, no, , no, ) is called.<br>
+10:25:06.981:	method findCurrentPage(1) is called.<br>
+10:25:07.482:	<br>
+10:25:07.625:	Current page is: Purchase<br>
+10:25:07.625:	method enterPurchaseAmount(0, 1000) is called.<br>
+10:25:07.625:	method enterNumPadOK (0, 1000) is called.<br>
+10:25:07.625:	method enterNumPad (0, 1000) is called.<br>
+10:25:07.625:	Number to be entered is: 1000<br>
+10:25:07.625:	method find(EnterPIN1) is called.<br>
+10:25:07.786:	method find(EnterPIN0) is called.<br>
+10:25:08.392:	method find(EnterPIN0) is called.<br>
+10:25:08.989:	method find(EnterPIN0) is called.<br>
+10:25:09.607:	method find(EnterPINOK) is called.<br>
+10:25:10.273:	method findCurrentPage(1) is called.<br>
+10:25:10.773:	<br>
+10:25:13.587:	Current page is: ProcessingPayment<br>
+10:25:13.587:	processing payment<br>
+10:25:13.587:	method findCurrentPage(1) is called.<br>
+10:25:14.087:	<br>
+10:25:14.816:	Current page is: ProcessingPayment<br>
+10:25:14.816:	processing payment<br>
+10:25:14.816:	method findCurrentPage(1) is called.<br>
+10:25:15.317:	<br>
+10:25:16.309:	Current page is: ProcessingPayment<br>
+10:25:16.309:	processing payment<br>
+10:25:16.309:	method findCurrentPage(1) is called.<br>
+10:25:16.809:	<br>
+10:25:17.773:	Current page is: ProcessingPayment<br>
+10:25:17.773:	processing payment<br>
+10:25:17.773:	method findCurrentPage(1) is called.<br>
+10:25:18.273:	<br>
+10:25:19.272:	Current page is: ProcessingPayment<br>
+10:25:19.272:	processing payment<br>
+10:25:19.272:	method findCurrentPage(1) is called.<br>
+10:25:19.773:	<br>
+10:25:20.731:	Current page is: ProcessingPayment<br>
+10:25:20.731:	processing payment<br>
+10:25:20.731:	method findCurrentPage(1) is called.<br>
+10:25:21.231:	<br>
+10:25:22.213:	Current page is: ProcessingPayment<br>
+10:25:22.213:	processing payment<br>
+10:25:22.213:	method findCurrentPage(1) is called.<br>
+10:25:22.714:	<br>
+10:25:23.611:	Current page is: ProcessingPayment<br>
+10:25:23.611:	processing payment<br>
+10:25:23.611:	method findCurrentPage(1) is called.<br>
+10:25:24.111:	<br>
+10:25:25.111:	Current page is: ProcessingPayment<br>
+10:25:25.111:	processing payment<br>
+10:25:25.111:	The method "test()" are called<br>
+10:25:25.111:	<br>
+10:25:26.081:	Current page is: ProcessingPayment<br>
+10:25:26.081:	page count is: 11<br>
+10:25:26.081:	page count is: 12<br>
+10:25:26.083:	The method "test()" are called<br>
+10:25:26.164:	The method "clickButton()" are called<br>
+10:25:26.240:	exception caught during button click, failed to find PurchaseResultNoReceipt<br>
+10:25:26.240:	The method "waitUntilPage()" are called<br>
+10:25:26.240:	<br>
+10:25:29.024:	Current page is: PurchaseResult<br>
+10:25:29.024:	page count is: 2<br>
+10:25:29.024:	page count is: 3<br>
+10:25:29.026:	<br>
+10:25:30.440:	Current page is: PurchaseResult<br>
+10:25:30.441:	page count is: 3<br>
+10:25:30.441:	page count is: 4<br>
+10:25:30.942:	<br>
+10:25:32.378:	Current page is: PurchaseResult<br>
+10:25:32.378:	page count is: 4<br>
+10:25:32.378:	page count is: 5<br>
+10:25:32.878:	<br>
+10:25:34.243:	Current page is: PurchaseResult<br>
+10:25:34.243:	page count is: 5<br>
+10:25:34.243:	page count is: 6<br>
+10:25:34.743:	<br>
+10:25:36.145:	Current page is: PurchaseResult<br>
+10:25:36.145:	page count is: 6<br>
+10:25:36.145:	page count is: 7<br>
+10:25:36.646:	<br>
+10:25:38.066:	Current page is: PurchaseResult<br>
+10:25:38.066:	page count is: 7<br>
+10:25:38.066:	page count is: 8<br>
+10:25:38.567:	<br>
+10:25:39.930:	Current page is: PurchaseResult<br>
+10:25:39.930:	page count is: 8<br>
+10:25:39.930:	page count is: 9<br>
+10:25:40.431:	<br>
+10:25:41.782:	Current page is: PurchaseResult<br>
+10:25:41.782:	page count is: 9<br>
+10:25:41.782:	page count is: 10<br>
+10:25:42.283:	<br>
+10:25:43.576:	Current page is: PurchaseResult<br>
+10:25:43.576:	page count is: 10<br>
+10:25:43.576:	page count is: 11<br>
+10:25:44.077:	<br>
+10:25:45.543:	Current page is: PurchaseResult<br>
+10:25:45.543:	page count is: 11<br>
+10:25:45.543:	page count is: 12<br>
+10:25:46.044:	<br>
+10:25:47.437:	Current page is: PurchaseResult<br>
+10:25:47.437:	page count is: 12<br>
+10:25:47.437:	page count is: 13<br>
+10:25:47.937:	<br>
+10:25:49.542:	Current page is: PurchaseResult<br>
+10:25:49.542:	page count is: 13<br>
+10:25:49.542:	page count is: 14<br>
+10:25:50.043:	<br>
+10:25:51.434:	Current page is: PurchaseResult<br>
+10:25:51.434:	page count is: 14<br>
+10:25:51.434:	page count is: 15<br>
+10:25:51.935:	<br>
+10:25:53.334:	Current page is: PurchaseResult<br>
+10:25:53.334:	page count is: 15<br>
+10:25:53.334:	page count is: 16<br>
+10:25:53.836:	<br>
+10:25:55.234:	Current page is: PurchaseResult<br>
+10:25:55.234:	page count is: 16<br>
+10:25:55.234:	page count is: 17<br>
+10:25:55.735:	<br>
+10:25:57.153:	Current page is: PurchaseResult<br>
+10:25:57.153:	page count is: 17<br>
+10:25:57.153:	page count is: 18<br>
+10:25:57.654:	<br>
+10:25:59.022:	Current page is: PurchaseResult<br>
+10:25:59.022:	page count is: 18<br>
+10:25:59.022:	page count is: 19<br>
+10:25:59.523:	<br>

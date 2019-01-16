@@ -1,0 +1,85 @@
+---------Start of logs---------
+05:47:36.611:	The method "logComment()" are called
+05:47:36.611:	<font color='grey'>Start of refund and void refund testing - please have SUCCESS testing card placed at the back of device!</font>
+05:47:36.612:	The method "logComment()" are called
+05:47:36.612:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+05:47:36.612:	The method "launch()" are called
+05:47:36.612:	method launch (120) is called.
+05:47:36.612:	method launch (CBA, 120) is called.
+05:47:36.612:	method findCurrentPage(120) is called.
+05:47:37.113:	
+05:47:40.519:	Current page is: MerchantSignIn
+05:47:40.519:	method merchantSignin (0, 005040100000004) is called.
+05:47:40.519:	method inputText (0, MerchantSignInID, 005040100000004) is called.
+05:47:40.519:	method find(MerchantSignInID) is called.
+05:47:41.275:	method clickButton (0, MerchantSignInOK) is called.
+05:47:41.275:	method find(MerchantSignInOK) is called.
+05:47:41.968:	method findCurrentPage(120) is called.
+05:47:42.469:	
+05:47:50.374:	Current page is: 
+05:47:50.374:	This page  is not recognized.
+05:47:50.374:	method findCurrentPage(120) is called.
+05:47:50.875:	
+05:47:52.708:	Current page is: MerchantPassword
+05:47:52.708:	method merchantPassword (0, 6H*+r*43) is called.
+05:47:52.708:	method inputText (0, MerchantPasswordpassword, 6H*+r*43) is called.
+05:47:52.708:	method find(MerchantPasswordpassword) is called.
+05:47:53.483:	method clickButton (0, MerchantPasswordContinue) is called.
+05:47:53.483:	method find(MerchantPasswordContinue) is called.
+05:47:54.112:	method findCurrentPage(120) is called.
+05:47:54.613:	
+05:47:57.151:	Current page is: SignInSelection
+05:47:57.151:	method clickButton (0, SignInSelectionFirstUser) is called.
+05:47:57.151:	method find(SignInSelectionFirstUser) is called.
+05:47:57.293:	method findCurrentPage(120) is called.
+05:47:57.794:	
+05:47:59.667:	Current page is: UpdateRequired
+05:47:59.667:	method clickButton (0, UpdateRequiredUpdatenow) is called.
+05:47:59.667:	method find(UpdateRequiredUpdatenow) is called.
+05:47:59.817:	method findCurrentPage(120) is called.
+05:48:00.318:	
+05:48:03.541:	Current page is: UpdatingSecureElement
+05:48:33.541:	method findCurrentPage(120) is called.
+05:48:34.042:	
+05:49:06.504:	Current page is: UpdatingSecureElement
+05:49:36.504:	method findCurrentPage(120) is called.
+05:49:37.004:	
+05:49:53.129:	Current page is: UpdatingSecureElement
+05:50:23.130:	method findCurrentPage(120) is called.
+05:50:23.630:	
+05:50:24.858:	Current page is: ProvisionUpdateComplete
+05:50:24.858:	method clickButton (0, ProvisionUpdateCompleteDone) is called.
+05:50:24.858:	method find(ProvisionUpdateCompleteDone) is called.
+05:50:24.981:	The method "login()" are called
+05:50:24.981:	method login(1) is called.
+05:50:25.982:	method enterNumPadOK (null) is called.
+05:50:25.982:	method enterNumPad (null) is called.
+05:50:25.982:	Number to be entered is: null
+05:50:25.982:	exception caught, not on PIN entering page.
+05:50:26.403:	exception caught, not on PIN entering page.
+05:50:26.404:	<font color='grey'>User Authentication performed.</font>
+05:50:26.404:	The method "waitUntilPage()" are called
+05:50:27.538:	Current page is: SignInSelection
+05:50:27.538:	page count is: 3
+05:50:29.190:	Current page is: SignInSelection
+05:50:29.190:	page count is: 4
+05:50:30.824:	Current page is: SignInSelection
+05:50:30.824:	page count is: 5
+05:50:32.372:	Current page is: SignInSelection
+05:50:32.372:	page count is: 6
+05:50:33.969:	Current page is: SignInSelection
+05:50:33.969:	page count is: 7
+05:50:35.650:	Current page is: SignInSelection
+05:50:35.650:	page count is: 8
+05:50:37.313:	Current page is: SignInSelection
+05:50:37.313:	page count is: 9
+05:50:38.953:	Current page is: SignInSelection
+05:50:38.953:	page count is: 10
+05:50:40.498:	Current page is: SignInSelection
+05:50:40.498:	page count is: 11
+05:50:42.032:	Current page is: SignInSelection
+05:50:42.032:	page count is: 12
+05:50:43.534:	Current page is: SignInSelection
+05:50:43.534:	page count is: 13
+05:50:45.013:	Current page is: SignInSelection
+05:50:45.013:	page count is: 14

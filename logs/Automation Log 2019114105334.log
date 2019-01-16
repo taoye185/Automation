@@ -1,0 +1,38 @@
+---------Start of logs---------
+10:53:34.960:	The method "logComment()" are called
+10:53:34.961:	<font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font>
+10:53:34.961:	The method "logComment()" are called
+10:53:34.961:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+10:53:34.961:	The method "reachPage()" are called
+10:53:34.961:	method reachPage(GP, SettingsTerminal) is called.
+10:53:34.961:	method reachPage(GP, Purchase) is called.
+10:53:35.392:	method reachPage(GP, EnterPIN) is called.
+10:53:35.393:	method launch (GP, 1) is called.
+10:53:35.393:	method findCurrentPage(1) is called.
+10:53:35.893:	
+10:53:45.179:	Current page is: 
+10:53:45.180:	This page  is not recognized.
+10:53:46.731:	Current page is: SignInSelection
+10:53:46.731:	page count is: 3
+10:53:48.046:	Current page is: SignInSelection
+10:53:48.046:	page count is: 4
+10:53:49.898:	Current page is: SignInSelection
+10:53:49.899:	page count is: 5
+10:53:51.728:	Current page is: SignInSelection
+10:53:51.728:	page count is: 6
+10:53:53.555:	Current page is: SignInSelection
+10:53:53.555:	page count is: 7
+10:53:55.393:	Current page is: SignInSelection
+10:53:55.393:	page count is: 8
+10:53:56.727:	Current page is: SignInSelection
+10:53:56.727:	page count is: 9
+10:53:58.591:	Current page is: SignInSelection
+10:53:58.591:	page count is: 10
+10:54:00.560:	Current page is: SignInSelection
+10:54:00.560:	page count is: 11
+10:54:02.396:	Current page is: SignInSelection
+10:54:02.396:	page count is: 12
+10:54:04.203:	Current page is: SignInSelection
+10:54:04.203:	page count is: 13
+10:54:05.992:	Current page is: SignInSelection
+10:54:05.992:	page count is: 14

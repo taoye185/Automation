@@ -1,0 +1,32 @@
+---------Start of logs---------
+13:20:19.581:	The method "logComment()" are called
+13:20:19.581:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+13:20:19.582:	The method "launch()" are called
+13:20:19.582:	method launch (120) is called.
+13:20:19.582:	method launch (CBA, 120) is called.
+13:20:19.582:	method findCurrentPage(120) is called.
+13:20:20.082:	
+13:20:23.385:	Current page is: MerchantSignIn
+13:20:23.385:	method merchantSignin (taoyenbc90123101) is called.
+13:20:24.897:	method findCurrentPage(120) is called.
+13:20:25.399:	
+13:20:33.497:	Current page is: 
+13:20:33.497:	This page  is not recognized.
+13:20:33.497:	method findCurrentPage(120) is called.
+13:20:33.998:	
+13:20:35.597:	Current page is: MerchantPassword
+13:20:35.597:	method merchantPassword (WU-Au*5J) is called.
+13:20:36.937:	method findCurrentPage(120) is called.
+13:20:37.437:	
+13:20:47.159:	Current page is: 
+13:20:47.159:	This page  is not recognized.
+13:20:47.159:	method findCurrentPage(120) is called.
+13:20:47.660:	
+13:20:54.749:	Current page is: 
+13:20:54.749:	This page  is not recognized.
+13:20:54.749:	method findCurrentPage(120) is called.
+13:20:55.249:	
+13:21:02.089:	Current page is: 
+13:21:02.089:	This page  is not recognized.
+13:21:02.089:	method findCurrentPage(120) is called.
+13:21:02.590:	

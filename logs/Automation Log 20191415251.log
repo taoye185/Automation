@@ -1,0 +1,262 @@
+---------Start of logs---------
+15:02:51.898:	writeElement is called
+15:02:51.899:	method get (ActivatingSecureElement) is called.
+15:02:51.900:	weight is: 0
+15:02:51.900:	method get (AllowBatterySettingsChange) is called.
+15:02:51.900:	weight is: 0
+15:02:51.900:	method get (AllowTimeoutSettingsChange) is called.
+15:02:51.900:	weight is: 0
+15:02:51.900:	method get (AndroidAlert) is called.
+15:02:51.901:	weight is: 0
+15:02:51.901:	method get (AndroidDeviceSettings) is called.
+15:02:51.901:	weight is: 0
+15:02:51.901:	method get (EnterPIN) is called.
+15:02:51.901:	weight is: 10
+15:02:51.905:	method get (MerchantPassword) is called.
+15:02:51.905:	weight is: 1
+15:02:51.905:	method get (MerchantSignIn) is called.
+15:02:51.905:	weight is: 1
+15:02:51.905:	method get (NoNetworkConnection) is called.
+15:02:51.905:	weight is: 0
+15:02:51.905:	method get (ProvisionUpdateComplete) is called.
+15:02:51.905:	weight is: 1
+15:02:51.906:	method get (PurchaseDescription) is called.
+15:02:51.906:	weight is: 1
+15:02:51.906:	method get (SettingsAdvanced) is called.
+15:02:51.906:	weight is: 11
+15:02:51.907:	method get (SettingsTerminal) is called.
+15:02:51.907:	weight is: 73
+15:02:51.909:	method get (SignInSelection) is called.
+15:02:51.909:	weight is: 2
+15:02:51.910:	method get (PurchaseResult) is called.
+15:02:51.910:	weight is: 85
+15:02:51.911:	method get (UpdateRequired) is called.
+15:02:51.911:	weight is: 1
+15:02:51.911:	method get (ConnectionErrorDuringProvision) is called.
+15:02:51.911:	weight is: 0
+15:02:51.913:	method get (PleaseRestartYourPhone) is called.
+15:02:51.913:	weight is: 0
+15:02:51.913:	method get (UpdatingSecureElement) is called.
+15:02:51.913:	weight is: 2
+15:02:51.913:	method get (TermsAndConditions) is called.
+15:02:51.914:	weight is: 0
+15:02:51.914:	method get (ContactUs) is called.
+15:02:51.914:	weight is: 0
+15:02:51.915:	method get (UserManagement) is called.
+15:02:51.915:	weight is: 0
+15:02:51.916:	method get (EditUser) is called.
+15:02:51.916:	weight is: 0
+15:02:51.917:	method get (DeleteUserConfirmation) is called.
+15:02:51.918:	weight is: 0
+15:02:51.918:	method get (AddNewUser) is called.
+15:02:51.918:	weight is: 0
+15:02:51.920:	method get (UserCreated) is called.
+15:02:51.920:	weight is: 0
+15:02:51.922:	method get (TransactionReports) is called.
+15:02:51.922:	weight is: 0
+15:02:51.924:	method get (TransactionHistory) is called.
+15:02:51.924:	weight is: 43
+15:02:51.925:	method get (NewTagScanned) is called.
+15:02:51.925:	weight is: 0
+15:02:51.926:	method get (Purchase) is called.
+15:02:51.926:	weight is: 171
+15:02:51.928:	method get (TapToPay) is called.
+15:02:51.928:	weight is: 27
+15:02:51.930:	method get (CardNotSupported) is called.
+15:02:51.930:	weight is: 0
+15:02:51.930:	method get (EmailReceiptForPurchase) is called.
+15:02:51.930:	weight is: 30
+15:02:51.931:	method get (ReceiptSentConfirmation) is called.
+15:02:51.931:	weight is: 1
+15:02:51.932:	method get (ProcessingPayment) is called.
+15:02:51.932:	weight is: 0
+15:02:51.932:	method get (PurchaseNotCompleted) is called.
+15:02:51.933:	weight is: 0
+15:02:51.933:	method get (SetTipDuringPurchase) is called.
+15:02:51.933:	weight is: 0
+15:02:51.935:	method get (AddTip) is called.
+15:02:51.935:	weight is: 0
+15:02:51.937:	method get (CreateNewPassword) is called.
+15:02:51.937:	weight is: 0
+15:02:51.938:	method get (EnterNewPIN) is called.
+15:02:51.939:	weight is: 0
+15:02:51.940:	method get (ConfirmNewPIN) is called.
+15:02:51.940:	weight is: 0
+15:02:51.940:	method get (CancelTransaction) is called.
+15:02:51.940:	weight is: 9
+15:02:51.942:	method get (PurchaseTimedOut) is called.
+15:02:51.943:	weight is: 0
+15:02:51.944:	method get (TransactionSearch) is called.
+15:02:51.944:	weight is: 0
+15:02:51.948:	method get (TransactionDetails) is called.
+15:02:51.948:	weight is: 22
+15:02:51.951:	method get (AccountLocked) is called.
+15:02:51.951:	weight is: 0
+15:02:51.952:	method get (ForgotPIN) is called.
+15:02:51.952:	weight is: 0
+15:02:51.953:	method get (ResetPIN) is called.
+15:02:51.953:	weight is: 0
+15:02:51.955:	method get (InvalidCredentials) is called.
+15:02:51.955:	weight is: 0
+15:02:51.957:	method get (VoidProcessingPayment) is called.
+15:02:51.957:	weight is: 0
+15:02:51.957:	method get (SecurityImage) is called.
+15:02:51.957:	weight is: 0
+15:02:51.959:	method get (ProvisionActivateComplete) is called.
+15:02:51.959:	weight is: 0
+15:02:51.961:	method get (PaymentAcceptanceSetup) is called.
+15:02:51.961:	weight is: 0
+15:02:51.963:	method get (DatePicker) is called.
+15:02:51.963:	weight is: 0
+15:02:51.963:	method get (ReportSentConfirmation) is called.
+15:02:51.963:	weight is: 0
+15:02:51.964:	method get (EnterOldPIN) is called.
+15:02:51.965:	weight is: 0
+15:02:51.965:	method get (PINUpdated) is called.
+15:02:51.965:	weight is: 0
+15:02:51.966:	method get (EnterRefundAmount) is called.
+15:02:51.966:	weight is: 4
+15:02:51.966:	method get (Signature) is called.
+15:02:51.967:	weight is: 6
+15:02:51.968:	method get (ConfirmSettlement) is called.
+15:02:51.968:	weight is: 2
+15:02:51.969:	.\src\Testcase configuration\Element Config\app elements - Pep Debug.csvhas been read.
+15:02:51.970:	error encountered when closing Android
+15:02:51.976:	reportHeader is: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Mobeewave Automation Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th colspan="7">Test Statistics</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">18,571</td></tr>
+</table>
+<h2>Default test</h2>
+<table class="result"><tr><th>Result</th></tr><tr><td><div class="stacktrace">
+15:02:51.976:	reportFooter is: </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
+15:02:51.976:	reportContent is: <font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+<br><font color='grey'>App launched and awaiting for login.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>Transaction is made, Processing time is: 14 seconds.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to PLN10.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to PLN10.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to Business, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br>
+TransactionDetailsDescription is equal to element not found, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='blue'>Test Case: TS_1 completed.</font>
+<br>-----------------------------------<br>
+<br><font color='grey'>Start of base purchase with tips/desription/email receipt - please have SUCCESS testing card placed at the back of device!</font>
+<br><font color='grey'>This case assumes the app starts from the Purchase page.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>Transaction is made, Processing time is: 8 seconds.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+PurchaseResultDescription is equal to This is a purchase description test., <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is expected to be <font color='brown'>PLN99.99</font>, but is actually equal to: <font color='brown'>PLN11.00</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is expected to be <font color='brown'>PLN99.99</font>, but is actually equal to: <font color='brown'>PLN11.00</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsMerchantName is equal to Business, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br>
+TransactionDetailsDescription is equal to This is a purchase description test., <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='grey'>Email Receipt sent. Please check manually the email receipt is received and correct.</font>
+<br><font color='blue'>Test Case: TS_2&3&4 completed.</font>
+<br>-----------------------------------<br>
+<br><font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font>
+<br><font color='grey'>This case assumes the app starts from the Purchase page.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>Transaction is made, Processing time is: 19 seconds.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+<font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is equal to VOID APPROVED, <font color='green'>test passed</font>.<br>
+PurchaseResultAmount is equal to - PLN14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to - PLN14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to VOID APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to - PLN14.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to Business, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to element not found, <font color='green'>test passed</font>.<br>
+TransactionDetailsDescription is equal to element not found, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='blue'>Test Case: TS_7 completed.</font>
+<br>-----------------------------------<br>
+<br><font color='grey'>Start of refund and void refund testing - please have SUCCESS testing card placed at the back of device!</font>
+<br><font color='grey'>This case assumes the app starts from the Purchase page.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>Transaction is made, Processing time is: 20 seconds.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to PLN14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to PLN14.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to Business, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br>
+<font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to SettingsTerminal, <font color='green'>test passed</font>.<br>
+Current page is equal to SettingsAdvanced, <font color='green'>test passed</font>.<br>
+<font color='grey'>Testing Version Number Display</font>
+<br>SettingsAdvancedAppVersionValue is equal to 1.4.9(159), <font color='green'>test passed</font>.<br>
+Current page is equal to ConfirmSettlement, <font color='green'>test passed</font>.<br>
+Current page is equal to SettingsAdvanced, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to PLN14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to PLN14.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to Business, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to REFUND, <font color='green'>test passed</font>.<br>
+<font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to EnterRefundAmount, <font color='green'>test passed</font>.<br>
+<font color='grey'>Making Signature</font>
+<br>Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to - PLN14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to REFUND APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to - PLN14.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to Business, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br>
+<font color='grey'>Refund testing completed.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is equal to VOID APPROVED, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to PLN14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to VOID APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to PLN14.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to Business, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to element not found, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='blue'>Test Case: TS_8&TS_9 completed.</font>
+<br>-----------------------------------<br>
+<br>

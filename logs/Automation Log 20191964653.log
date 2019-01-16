@@ -1,0 +1,46 @@
+---------Start of logs---------
+06:46:53.796:	The method "logComment()" are called
+06:46:53.796:	<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font>
+06:46:53.796:	The method "launch()" are called
+06:46:53.796:	method launch (120) is called.
+06:46:53.796:	method launch (CBA, 120) is called.
+06:46:53.796:	method findCurrentPage(120) is called.
+06:46:54.297:	
+06:46:57.738:	Current page is: SignInSelection
+06:46:57.738:	method clickButton (0, SignInSelectionFirstUser) is called.
+06:46:57.738:	method find(SignInSelectionFirstUser) is called.
+06:46:58.061:	method findCurrentPage(120) is called.
+06:46:58.562:	
+06:47:02.136:	Current page is: EnterPIN
+06:47:02.136:	<font color='grey'>App launched and awaiting for login.</font>
+06:47:02.136:	The method "login()" are called
+06:47:02.136:	method login(1) is called.
+06:47:03.136:	method enterNumPadOK (123456) is called.
+06:47:03.136:	method enterNumPad (123456) is called.
+06:47:03.136:	Number to be entered is: 123456
+06:47:07.681:	<font color='grey'>User Authentication performed.</font>
+06:47:07.681:	The method "waitUntilPage()" are called
+06:47:19.263:	Current page is: 
+06:47:19.422:	Current page is: Purchase
+06:47:19.422:	page count is: 501
+06:47:19.923:	The method "reachPage()" are called
+06:47:19.923:	method reachPage(GP, SettingsTerminal) is called.
+06:47:19.923:	method reachPage(GP, Purchase) is called.
+06:47:20.029:	method goToSidemenuPage(Purchase) is called.
+06:47:20.029:	method findCurrentPage(0) is called.
+06:47:20.529:	
+06:47:20.682:	Current page is: Purchase
+06:47:20.682:	method findCurrentPage(0) is called.
+06:47:21.183:	
+06:47:21.341:	Current page is: Purchase
+06:47:22.690:	method login(1) is called.
+06:47:23.690:	method enterNumPadOK (123456) is called.
+06:47:23.690:	method enterNumPad (123456) is called.
+06:47:23.690:	Number to be entered is: 123456
+06:47:24.997:	exception caught, not on PIN entering page.
+06:47:25.092:	exception caught, not on PIN entering page.
+06:47:25.092:	<font color='grey'>User Authentication performed.</font>
+06:47:27.212:	Current page is: 
+06:47:28.176:	Current page is: 
+06:47:32.615:	Current page is: 
+06:47:34.052:	Current page is: 

@@ -1,0 +1,8 @@
+---------Start of logs---------
+06:25:17.308:	The method "logComment()" are called
+06:25:17.308:	<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font>
+06:25:17.308:	The method "launch()" are called
+06:25:17.308:	method launch (120) is called.
+06:25:17.308:	method launch (CBA, 120) is called.
+06:25:17.308:	method findCurrentPage(120) is called.
+06:25:17.808:	

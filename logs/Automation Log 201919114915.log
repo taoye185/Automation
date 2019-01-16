@@ -1,0 +1,26 @@
+---------Start of logs---------
+11:49:15.655:	The method "logComment()" are called
+11:49:15.656:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+11:49:15.656:	The method "launch()" are called
+11:49:15.656:	method launch (120) is called.
+11:49:15.656:	method launch (CBA, 120) is called.
+11:49:15.656:	method findCurrentPage(120) is called.
+11:49:16.157:	
+11:49:19.529:	Current page is: MerchantSignIn
+11:49:19.530:	method merchantSignin (taoye67890123008) is called.
+11:49:21.078:	driverType Androidnot implemented for this method
+11:49:21.079:	method findCurrentPage(120) is called.
+11:49:21.580:	
+11:49:31.579:	Current page is: 
+11:49:31.579:	This page  is not recognized.
+11:49:31.580:	method findCurrentPage(120) is called.
+11:49:32.081:	
+11:49:33.560:	Current page is: MerchantPassword
+11:49:33.560:	method merchantPassword (Thankyou1@) is called.
+11:49:34.916:	driverType Androidnot implemented for this method
+11:49:34.916:	method findCurrentPage(120) is called.
+11:49:35.417:	
+11:49:40.696:	Current page is: 
+11:49:40.696:	This page  is not recognized.
+11:49:40.696:	method findCurrentPage(120) is called.
+11:49:41.196:	

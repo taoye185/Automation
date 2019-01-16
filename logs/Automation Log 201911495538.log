@@ -1,0 +1,194 @@
+---------Start of logs---------
+09:55:38.745:	The method "logComment()" are called
+09:55:38.745:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+09:55:38.745:	The method "launch()" are called
+09:55:38.745:	method launch (120) is called.
+09:55:38.745:	method launch (CBA, 120) is called.
+09:55:38.745:	method findCurrentPage(120) is called.
+09:55:39.246:	
+09:55:48.397:	Current page is: 
+09:55:48.397:	This page  is not recognized.
+09:55:48.397:	method findCurrentPage(120) is called.
+09:55:48.900:	
+09:55:50.224:	Current page is: SignInSelection
+09:55:50.381:	method findCurrentPage(120) is called.
+09:55:50.882:	
+09:55:52.316:	Current page is: EnterPIN
+09:55:52.316:	<font color='grey'>App launched and awaiting for login.</font>
+09:55:52.317:	The method "login()" are called
+09:55:52.317:	method login(1) is called.
+09:55:53.318:	method enterNumPadOK (123456) is called.
+09:55:53.318:	method enterNumPad (123456) is called.
+09:55:53.318:	Number to be entered is: 123456
+09:55:57.266:	<font color='grey'>User Authentication performed.</font>
+09:55:57.266:	The method "waitUntilPage()" are called
+09:56:06.056:	Current page is: 
+09:56:06.170:	Current page is: Purchase
+09:56:06.170:	page count is: 534
+09:56:06.671:	The method "reachPage()" are called
+09:56:06.671:	method reachPage(GP, SettingsTerminal) is called.
+09:56:06.671:	method reachPage(GP, Purchase) is called.
+09:56:06.789:	method goToSidemenuPage(Purchase) is called.
+09:56:06.789:	method findCurrentPage(0) is called.
+09:56:07.290:	
+09:56:07.446:	Current page is: Purchase
+09:56:07.446:	method findCurrentPage(0) is called.
+09:56:07.947:	
+09:56:08.094:	Current page is: Purchase
+09:56:09.272:	method login(1) is called.
+09:56:10.272:	method enterNumPadOK (123456) is called.
+09:56:10.272:	method enterNumPad (123456) is called.
+09:56:10.272:	Number to be entered is: 123456
+09:56:15.027:	<font color='grey'>User Authentication performed.</font>
+09:56:24.342:	Current page is: 
+09:56:30.939:	Current page is: 
+09:56:38.087:	Current page is: 
+09:56:45.073:	Current page is: 
+09:56:45.573:	The method "setBooleanValue(no)" are called
+09:56:45.870:	The method "setBooleanValue(no)" are called
+09:56:46.512:	The method "reachPage()" are called
+09:56:46.512:	method reachPage(GP, Purchase) is called.
+09:56:46.622:	method goToSidemenuPage(Purchase) is called.
+09:56:46.622:	method findCurrentPage(0) is called.
+09:56:47.122:	
+09:56:53.478:	Current page is: 
+09:56:53.478:	method clickOnPage(, Purchase, [Ljava.lang.String;@1736a16) is called.
+09:56:53.478:	method findCurrentPage(0) is called.
+09:56:53.979:	
+09:57:00.327:	Current page is: 
+09:57:02.932:	Current page is: Purchase
+09:57:02.932:	page count is: 537
+09:57:02.932:	The method "singlePurchase()" are called
+09:57:02.932:	method singlePurchase(1000, no, , no, ) is called.
+09:57:02.932:	method findCurrentPage(1) is called.
+09:57:03.432:	
+09:57:03.569:	Current page is: Purchase
+09:57:03.569:	method enterPurchaseAmount(1000) is called.
+09:57:03.569:	method enterNumPadOK (1000) is called.
+09:57:03.569:	method enterNumPad (1000) is called.
+09:57:03.569:	Number to be entered is: 1000
+09:57:06.215:	method findCurrentPage(1) is called.
+09:57:06.716:	
+09:57:09.416:	Current page is: PurchaseDescription
+09:57:09.522:	method findCurrentPage(1) is called.
+09:57:10.023:	
+09:57:12.268:	Current page is: TapToPay
+09:57:12.268:	waiting for card tap
+09:57:12.268:	method findCurrentPage(1) is called.
+09:57:12.769:	
+09:57:14.151:	Current page is: TapToPay
+09:57:14.151:	waiting for card tap
+09:57:14.151:	method findCurrentPage(1) is called.
+09:57:14.651:	
+09:57:16.149:	Current page is: TapToPay
+09:57:16.149:	waiting for card tap
+09:57:16.149:	method findCurrentPage(1) is called.
+09:57:16.649:	
+09:57:17.464:	Current page is: TapToPay
+09:57:17.464:	waiting for card tap
+09:57:17.464:	method findCurrentPage(1) is called.
+09:57:17.965:	
+09:57:19.179:	Current page is: TapToPay
+09:57:19.179:	waiting for card tap
+09:57:19.179:	method findCurrentPage(1) is called.
+09:57:19.680:	
+09:57:21.182:	Current page is: TapToPay
+09:57:21.182:	waiting for card tap
+09:57:21.182:	method findCurrentPage(1) is called.
+09:57:21.683:	
+09:57:27.627:	Current page is: 
+09:57:27.627:	reached an unrecognized page: 
+09:57:27.628:	exception caught during button click, failed to find NoNetworkConnectionretry
+09:57:27.628:	method findCurrentPage(1) is called.
+09:57:28.128:	
+09:57:36.345:	Current page is: 
+09:57:36.345:	reached an unrecognized page: 
+09:57:36.345:	exception caught during button click, failed to find NoNetworkConnectionretry
+09:57:36.345:	The method "test()" are called
+09:57:36.995:	Current page is: PurchaseResult
+09:57:36.996:	page count is: 19
+09:57:36.998:	The method "test()" are called
+09:57:37.151:	The method "clickButton()" are called
+09:57:37.326:	The method "waitUntilPage()" are called
+09:57:38.470:	Current page is: Purchase
+09:57:38.470:	page count is: 539
+09:57:38.470:	The method "test()" are called
+09:57:38.605:	Current page is: Purchase
+09:57:38.605:	page count is: 540
+09:57:38.605:	The method "reachPage()" are called
+09:57:38.605:	method reachPage(GP, TransactionHistory) is called.
+09:57:38.605:	method reachPage(GP, Purchase) is called.
+09:57:38.698:	method goToSidemenuPage(Purchase) is called.
+09:57:38.698:	method findCurrentPage(0) is called.
+09:57:39.198:	
+09:57:39.336:	Current page is: Purchase
+09:57:39.336:	method goToSidemenuPage(TransactionHistory) is called.
+09:57:39.336:	method findCurrentPage(0) is called.
+09:57:39.837:	
+09:57:39.990:	Current page is: Purchase
+09:57:39.990:	method clickOnPage(Purchase, TransactionHistory, [Ljava.lang.String;@11d7fdd) is called.
+09:57:39.990:	method findCurrentPage(0) is called.
+09:57:40.491:	
+09:57:40.639:	Current page is: Purchase
+09:57:44.297:	Current page is: TransactionHistory
+09:57:44.298:	page count is: 29
+09:57:44.298:	The method "test()" are called
+09:57:44.915:	Current page is: TransactionHistory
+09:57:44.915:	page count is: 30
+09:57:44.915:	The method "test()" are called
+09:57:45.095:	The method "clickButton()" are called
+09:57:46.007:	The method "waitUntilPage()" are called
+09:57:48.196:	Current page is: TransactionDetails
+09:57:48.196:	page count is: 17
+09:57:48.197:	The method "test()" are called
+09:57:49.216:	Current page is: TransactionDetails
+09:57:49.216:	page count is: 18
+09:57:49.216:	The method "test()" are called
+09:57:49.379:	The method "test()" are called
+09:57:49.549:	The method "test()" are called
+09:57:49.720:	The method "test()" are called
+09:57:49.882:	The method "test()" are called
+09:57:50.039:	The method "clickButton()" are called
+09:57:50.222:	The method "waitUntilPage()" are called
+09:57:52.019:	Current page is: TransactionHistory
+09:57:52.019:	page count is: 31
+09:57:52.019:	The method "reachPage()" are called
+09:57:52.019:	method reachPage(GP, Purchase) is called.
+09:57:52.212:	method goToSidemenuPage(Purchase) is called.
+09:57:52.212:	method findCurrentPage(0) is called.
+09:57:52.712:	
+09:57:53.376:	Current page is: TransactionHistory
+09:57:53.376:	method clickOnPage(TransactionHistory, Purchase, [Ljava.lang.String;@19e25bd) is called.
+09:57:53.376:	method findCurrentPage(0) is called.
+09:57:53.877:	
+09:57:54.626:	Current page is: TransactionHistory
+09:57:57.367:	Current page is: Purchase
+09:57:57.367:	page count is: 544
+09:57:57.367:	The method "test()" are called
+09:57:57.503:	Current page is: Purchase
+09:57:57.503:	page count is: 545
+09:57:57.503:	<font color='blue'>Test Case: TS_1 completed.</font>
+09:57:57.503:	-----------------------------------<br>
+09:57:57.512:	The method "logComment()" are called
+09:57:57.512:	<font color='grey'>Start of base purchase with tips/desription/email receipt - please have SUCCESS testing card placed at the back of device!</font>
+09:57:57.512:	The method "logComment()" are called
+09:57:57.512:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+09:57:57.512:	The method "reachPage()" are called
+09:57:57.512:	method reachPage(GP, SettingsTerminal) is called.
+09:57:57.512:	method reachPage(GP, Purchase) is called.
+09:57:57.599:	method goToSidemenuPage(Purchase) is called.
+09:57:57.599:	method findCurrentPage(0) is called.
+09:57:58.099:	
+09:57:58.249:	Current page is: Purchase
+09:57:58.249:	method findCurrentPage(0) is called.
+09:57:58.750:	
+09:57:58.895:	Current page is: Purchase
+09:58:00.125:	method login(1) is called.
+09:58:01.125:	method enterNumPadOK (123456) is called.
+09:58:01.125:	method enterNumPad (123456) is called.
+09:58:01.125:	Number to be entered is: 123456
+09:58:05.420:	<font color='grey'>User Authentication performed.</font>
+09:58:13.723:	Current page is: 
+09:58:19.609:	Current page is: 
+09:58:25.920:	Current page is: 
+09:58:32.437:	Current page is: 

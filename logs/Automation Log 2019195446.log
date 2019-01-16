@@ -1,0 +1,37 @@
+---------Start of logs---------
+05:44:06.620:	The method "logComment()" are called
+05:44:06.620:	<font color='grey'>Start of refund and void refund testing - please have SUCCESS testing card placed at the back of device!</font>
+05:44:06.621:	The method "logComment()" are called
+05:44:06.621:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+05:44:06.621:	The method "launch()" are called
+05:44:06.621:	method launch (120) is called.
+05:44:06.621:	method launch (CBA, 120) is called.
+05:44:06.621:	method findCurrentPage(120) is called.
+05:44:07.121:	
+05:44:20.623:	Current page is: 
+05:44:20.623:	This page  is not recognized.
+05:44:20.623:	method findCurrentPage(120) is called.
+05:44:21.124:	
+05:44:22.431:	Current page is: MerchantSignIn
+05:44:22.431:	method merchantSignin (0, 005040100000004) is called.
+05:44:22.431:	method inputText (0, MerchantSignInID, 005040100000004) is called.
+05:44:22.431:	method find(MerchantSignInID) is called.
+05:44:23.147:	method clickButton (0, MerchantSignInOK) is called.
+05:44:23.147:	method find(MerchantSignInOK) is called.
+05:44:23.802:	method findCurrentPage(120) is called.
+05:44:24.302:	
+05:44:30.533:	Current page is: 
+05:44:30.533:	This page  is not recognized.
+05:44:30.533:	method findCurrentPage(120) is called.
+05:44:31.033:	
+05:44:32.535:	Current page is: MerchantPassword
+05:44:32.535:	method merchantPassword (0, JFnBd&1$) is called.
+05:44:32.535:	method inputText (0, MerchantPasswordpassword, JFnBd&1$) is called.
+05:44:32.535:	method find(MerchantPasswordpassword) is called.
+05:44:33.191:	method clickButton (0, MerchantPasswordContinue) is called.
+05:44:33.191:	method find(MerchantPasswordContinue) is called.
+05:44:33.819:	method findCurrentPage(120) is called.
+05:44:34.319:	
+05:44:39.652:	Current page is: 
+05:44:39.652:	This page  is not recognized.
+05:44:39.652:	method findCurrentPage(120) is called.

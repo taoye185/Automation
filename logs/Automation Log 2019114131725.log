@@ -1,0 +1,56 @@
+---------Start of logs---------
+13:17:25.938:	The method "logComment()" are called
+13:17:25.938:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+13:17:25.938:	The method "launch()" are called
+13:17:25.938:	method launch (120) is called.
+13:17:25.938:	method launch (CBA, 120) is called.
+13:17:25.938:	method findCurrentPage(120) is called.
+13:17:26.439:	
+13:17:29.688:	Current page is: MerchantSignIn
+13:17:29.688:	method merchantSignin (taoyenbc90123101) is called.
+13:17:31.141:	method findCurrentPage(120) is called.
+13:17:31.643:	
+13:17:39.470:	Current page is: 
+13:17:39.470:	This page  is not recognized.
+13:17:39.470:	method findCurrentPage(120) is called.
+13:17:39.971:	
+13:17:41.435:	Current page is: MerchantPassword
+13:17:41.435:	method merchantPassword (EJ4;q=2Y) is called.
+13:17:42.741:	method findCurrentPage(120) is called.
+13:17:43.242:	
+13:17:48.304:	Current page is: 
+13:17:48.304:	This page  is not recognized.
+13:17:48.305:	method findCurrentPage(120) is called.
+13:17:48.805:	
+13:17:52.936:	Current page is: 
+13:17:52.936:	This page  is not recognized.
+13:17:52.936:	method findCurrentPage(120) is called.
+13:17:53.437:	
+13:17:57.442:	Current page is: 
+13:17:57.442:	This page  is not recognized.
+13:17:57.442:	method findCurrentPage(120) is called.
+13:17:57.943:	
+13:18:01.798:	Current page is: 
+13:18:01.798:	This page  is not recognized.
+13:18:01.798:	method findCurrentPage(120) is called.
+13:18:02.298:	
+13:18:06.188:	Current page is: 
+13:18:06.188:	This page  is not recognized.
+13:18:06.188:	method findCurrentPage(120) is called.
+13:18:06.688:	
+13:18:10.334:	Current page is: 
+13:18:10.334:	This page  is not recognized.
+13:18:10.334:	method findCurrentPage(120) is called.
+13:18:10.834:	
+13:18:14.721:	Current page is: 
+13:18:14.721:	This page  is not recognized.
+13:18:14.721:	method findCurrentPage(120) is called.
+13:18:15.221:	
+13:18:19.160:	Current page is: 
+13:18:19.160:	This page  is not recognized.
+13:18:19.160:	method findCurrentPage(120) is called.
+13:18:19.661:	
+13:18:24.029:	Current page is: 
+13:18:24.029:	This page  is not recognized.
+13:18:24.029:	method findCurrentPage(120) is called.
+13:18:24.529:	

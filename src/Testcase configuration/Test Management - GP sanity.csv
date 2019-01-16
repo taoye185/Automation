@@ -1,0 +1,5 @@
+Active,Config,File name
+1,groupFile,.\\src\\Testcase configuration\\Test Group Config\\Test Group - GP Sanity with card.csv
+1,appFile,.\\src\\Testcase configuration\\Default Config\\Config - GP Sanity.csv
+1,driverFile,.\\src\\Testcase configuration\\Driver Config\\Driver Config - GP Sanity.csv
+1,deviceFile,.\\src\\Testcase configuration\\Device Config\\device list.csv

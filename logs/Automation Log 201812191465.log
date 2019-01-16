@@ -1,0 +1,153 @@
+---------Start of logs---------
+14:06:05.298:	writeElement is called<br>
+14:06:05.298:	method get (ActivatingSecureElement) is called.<br>
+14:06:05.299:	weight is: 0<br>
+14:06:05.299:	method get (AllowBatterySettingsChange) is called.<br>
+14:06:05.299:	weight is: 0<br>
+14:06:05.299:	method get (AllowTimeoutSettingsChange) is called.<br>
+14:06:05.299:	weight is: 0<br>
+14:06:05.299:	method get (AndroidAlert) is called.<br>
+14:06:05.299:	weight is: 0<br>
+14:06:05.299:	method get (AndroidDeviceSettings) is called.<br>
+14:06:05.299:	weight is: 0<br>
+14:06:05.300:	method get (EnterPIN) is called.<br>
+14:06:05.301:	weight is: 7<br>
+14:06:05.301:	method get (MerchantPassword) is called.<br>
+14:06:05.301:	weight is: 1<br>
+14:06:05.302:	method get (MerchantSignIn) is called.<br>
+14:06:05.302:	weight is: 1<br>
+14:06:05.303:	method get (NoNetworkConnection) is called.<br>
+14:06:05.303:	weight is: 0<br>
+14:06:05.303:	method get (ProvisionUpdateComplete) is called.<br>
+14:06:05.303:	weight is: 1<br>
+14:06:05.303:	method get (PurchaseDescription) is called.<br>
+14:06:05.303:	weight is: 0<br>
+14:06:05.303:	method get (SettingsAdvanced) is called.<br>
+14:06:05.303:	weight is: 0<br>
+14:06:05.303:	method get (SettingsTerminal) is called.<br>
+14:06:05.304:	weight is: 48<br>
+14:06:05.305:	method get (SignInSelection) is called.<br>
+14:06:05.305:	weight is: 2<br>
+14:06:05.305:	method get (PurchaseResult) is called.<br>
+14:06:05.305:	weight is: 0<br>
+14:06:05.307:	method get (UpdateRequired) is called.<br>
+14:06:05.307:	weight is: 1<br>
+14:06:05.307:	method get (ConnectionErrorDuringProvision) is called.<br>
+14:06:05.307:	weight is: 0<br>
+14:06:05.308:	method get (PleaseRestartYourPhone) is called.<br>
+14:06:05.308:	weight is: 0<br>
+14:06:05.308:	method get (UpdatingSecureElement) is called.<br>
+14:06:05.308:	weight is: 2<br>
+14:06:05.308:	method get (TermsAndConditions) is called.<br>
+14:06:05.308:	weight is: 0<br>
+14:06:05.309:	method get (ContactUs) is called.<br>
+14:06:05.309:	weight is: 0<br>
+14:06:05.310:	method get (UserManagement) is called.<br>
+14:06:05.310:	weight is: 0<br>
+14:06:05.310:	method get (EditUser) is called.<br>
+14:06:05.310:	weight is: 0<br>
+14:06:05.312:	method get (DeleteUserConfirmation) is called.<br>
+14:06:05.312:	weight is: 0<br>
+14:06:05.312:	method get (AddNewUser) is called.<br>
+14:06:05.312:	weight is: 0<br>
+14:06:05.314:	method get (UserCreated) is called.<br>
+14:06:05.314:	weight is: 0<br>
+14:06:05.315:	method get (TransactionReports) is called.<br>
+14:06:05.315:	weight is: 0<br>
+14:06:05.317:	method get (TransactionHistory) is called.<br>
+14:06:05.317:	weight is: 0<br>
+14:06:05.317:	method get (NewTagScanned) is called.<br>
+14:06:05.317:	weight is: 0<br>
+14:06:05.318:	method get (Purchase) is called.<br>
+14:06:05.318:	weight is: 88<br>
+14:06:05.320:	method get (TapToPay) is called.<br>
+14:06:05.320:	weight is: 16<br>
+14:06:05.321:	method get (CardNotSupported) is called.<br>
+14:06:05.322:	weight is: 0<br>
+14:06:05.322:	method get (EmailReceiptForPurchase) is called.<br>
+14:06:05.322:	weight is: 0<br>
+14:06:05.322:	method get (ReceiptSentConfirmation) is called.<br>
+14:06:05.322:	weight is: 0<br>
+14:06:05.323:	method get (ProcessingPayment) is called.<br>
+14:06:05.323:	weight is: 0<br>
+14:06:05.324:	method get (PurchaseNotCompleted) is called.<br>
+14:06:05.324:	weight is: 0<br>
+14:06:05.324:	method get (SetTipDuringPurchase) is called.<br>
+14:06:05.324:	weight is: 0<br>
+14:06:05.325:	method get (AddTip) is called.<br>
+14:06:05.326:	weight is: 0<br>
+14:06:05.327:	method get (CreateNewPassword) is called.<br>
+14:06:05.327:	weight is: 0<br>
+14:06:05.329:	method get (EnterNewPIN) is called.<br>
+14:06:05.329:	weight is: 0<br>
+14:06:05.330:	method get (ConfirmNewPIN) is called.<br>
+14:06:05.331:	weight is: 0<br>
+14:06:05.331:	method get (CancelTransaction) is called.<br>
+14:06:05.331:	weight is: 8<br>
+14:06:05.332:	method get (PurchaseTimedOut) is called.<br>
+14:06:05.332:	weight is: 0<br>
+14:06:05.333:	method get (TransactionSearch) is called.<br>
+14:06:05.334:	weight is: 0<br>
+14:06:05.337:	method get (TransactionDetails) is called.<br>
+14:06:05.337:	weight is: 0<br>
+14:06:05.338:	method get (AccountLocked) is called.<br>
+14:06:05.338:	weight is: 0<br>
+14:06:05.340:	method get (ForgotPIN) is called.<br>
+14:06:05.340:	weight is: 0<br>
+14:06:05.340:	method get (ResetPIN) is called.<br>
+14:06:05.340:	weight is: 0<br>
+14:06:05.342:	method get (InvalidCredentials) is called.<br>
+14:06:05.342:	weight is: 0<br>
+14:06:05.343:	method get (VoidProcessingPayment) is called.<br>
+14:06:05.343:	weight is: 0<br>
+14:06:05.343:	method get (SecurityImage) is called.<br>
+14:06:05.343:	weight is: 0<br>
+14:06:05.345:	method get (ProvisionActivateComplete) is called.<br>
+14:06:05.345:	weight is: 0<br>
+14:06:05.346:	method get (PaymentAcceptanceSetup) is called.<br>
+14:06:05.346:	weight is: 0<br>
+14:06:05.348:	method get (DatePicker) is called.<br>
+14:06:05.348:	weight is: 0<br>
+14:06:05.348:	method get (ReportSentConfirmation) is called.<br>
+14:06:05.348:	weight is: 0<br>
+14:06:05.350:	method get (EnterOldPIN) is called.<br>
+14:06:05.350:	weight is: 0<br>
+14:06:05.350:	method get (PINUpdated) is called.<br>
+14:06:05.350:	weight is: 0<br>
+14:06:05.352:	method get (EnterRefundAmount) is called.<br>
+14:06:05.352:	weight is: 0<br>
+14:06:05.352:	method get (Signature) is called.<br>
+14:06:05.352:	weight is: 0<br>
+14:06:05.353:	.\src\Testcase configuration\Element Config\app elements - Pep Debug.csvhas been read.<br>
+14:06:05.354:	.\src\Testcase configuration\Element Config\app elements - Pep Debug.csvhas been written.<br>
+14:06:05.612:	reportHeader is: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Mobeewave Automation Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th colspan="7">Test Statistics</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">18,571</td></tr>
+</table>
+<h2>Default test</h2>
+<table class="result"><tr><th>Result</th></tr><tr><td><div class="stacktrace"><br>
+14:06:05.618:	reportFooter is: </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html><br>
+14:06:05.618:	reportContent is: <font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font>
+<font color='grey'>User Authentication performed.</font>
+<font color='grey'>User Authentication performed.</font>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='blue'>Test Case: TS_5 completed.</font>
+-----------------------------------<br>
+<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font>
+<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+<font color='grey'>User Authentication performed.</font>
+<font color='grey'>User Authentication performed.</font>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='blue'>Test Case: TS_6 completed.</font>
+-----------------------------------<br>
+<br>

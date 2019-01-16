@@ -1,0 +1,100 @@
+---------Start of logs---------
+13:58:15.391:	pe is: ActivatingSecureElementProcessTitle<br>
+13:58:15.391:	pe is: AllowBatterySettingsChangeTitle<br>
+13:58:15.391:	pe is: AllowTimeoutSettingsChangeTitle<br>
+13:58:15.392:	pe is: AndroidAlertTitle<br>
+13:58:15.392:	pe is: AndroidDeviceSettingsback<br>
+13:58:15.392:	pe is: EnterPINPepImage<br>
+13:58:15.392:	pe is: MerchantPasswordpassword<br>
+13:58:15.392:	pe is: MerchantSignInID<br>
+13:58:15.392:	pe is: NoNetworkConnectionTitle<br>
+13:58:15.392:	pe is: ProvisionUpdateCompleteProcessTitle<br>
+13:58:15.392:	pe is: PurchaseDescriptionNext<br>
+13:58:15.392:	pe is: SettingsAdvancedSideMenu<br>
+13:58:15.392:	pe is: SettingsTerminalSideMenu<br>
+13:58:15.392:	pe is: SideMenuPepImage<br>
+13:58:15.392:	pe is: SignInSelectionFirstUser<br>
+13:58:15.392:	pe is: PurchaseResultNoReceipt<br>
+13:58:15.393:	pe is: UpdateRequiredProcessTitle<br>
+13:58:15.393:	pe is: ConnectionErrorDuringProvisionImage<br>
+13:58:15.393:	pe is: PleaseRestartYourPhoneTitle<br>
+13:58:15.393:	pe is: UpdatingSecureElementProcessTitle<br>
+13:58:15.393:	pe is: TermsAndConditionsTitle<br>
+13:58:15.393:	pe is: ContactUsProcessTitle<br>
+13:58:15.393:	pe is: UserManagementSideMenu<br>
+13:58:15.393:	pe is: EditUserProcessTitle<br>
+13:58:15.393:	pe is: DeleteUserConfirmationTitle<br>
+13:58:15.393:	pe is: AddNewUserProcessTitle<br>
+13:58:15.393:	pe is: UserCreatedTitle<br>
+13:58:15.393:	pe is: TransactionReportsEmailReport<br>
+13:58:15.393:	pe is: TransactionHistorySideMenu<br>
+13:58:15.394:	pe is: NewTagScannedTitle<br>
+13:58:15.394:	pe is: AllAppListingCBADebug<br>
+13:58:15.394:	pe is: PurchaseSideMenu<br>
+13:58:15.394:	pe is: TapToPayTitle<br>
+13:58:15.394:	pe is: CardNotSupportedTitle<br>
+13:58:15.394:	pe is: EmailReceiptForPurchaseTitle<br>
+13:58:15.394:	pe is: ReceiptSentConfirmationTitle<br>
+13:58:15.394:	pe is: ProcessingPaymentTitle<br>
+13:58:15.394:	pe is: PurchaseNotCompletedTitle<br>
+13:58:15.394:	pe is: SetTipDuringPurchaseTitle<br>
+13:58:15.394:	pe is: AddTipProcessTitle<br>
+13:58:15.394:	pe is: CreateNewPasswordProcessTitle<br>
+13:58:15.394:	pe is: EnterNewPINTitle<br>
+13:58:15.395:	pe is: ConfirmNewPINProcessTitle<br>
+13:58:15.395:	pe is: CancelTransactionTitle<br>
+13:58:15.395:	pe is: CancelTransactionEnterPINProcessTitle<br>
+13:58:15.395:	pe is: PurchaseTimedOutProcessTitle<br>
+13:58:15.395:	pe is: TransactionSearchBack<br>
+13:58:15.395:	pe is: TransactionDetailsBack<br>
+13:58:15.395:	pe is: AccountLockedBack<br>
+13:58:15.395:	pe is: ForgotPINTitle<br>
+13:58:15.395:	pe is: ResetPINBack<br>
+13:58:15.395:	pe is: InvalidCredentialsTitle<br>
+13:58:15.395:	pe is: VoidProcessingPaymentProcessTitle<br>
+13:58:15.395:	pe is: SecurityImageTitle<br>
+13:58:15.395:	pe is: ProvisionActivateCompleteProcessTitle<br>
+13:58:15.395:	pe is: <br>
+13:58:15.395:	pe is: PaymentAcceptanceSetupProcessTitle<br>
+13:58:15.395:	pe is: DatePickerPreviousMonth<br>
+13:58:15.395:	pe is: ReportSentConfirmationTitle<br>
+13:58:15.396:	pe is: EnterOldPINProcessTitle<br>
+13:58:15.396:	pe is: PINUpdatedTitle<br>
+13:58:15.396:	pe is: EnterRefundAmountProcessTitle<br>
+13:58:15.396:	pe is: SignatureTitle<br>
+13:58:15.396:	AndroidDriver created.<br>
+13:58:15.397:	The method "logComment()" are called<br>
+13:58:15.397:	<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font><br>
+13:58:15.397:	The method "launch()" are called<br>
+13:58:15.397:	method launch (120) is called.<br>
+13:58:15.397:	method launch (CBA, 120) is called.<br>
+13:58:15.397:	method findCurrentPage(120) is called.<br>
+13:58:15.897:	<br>
+13:58:23.456:	Current page is: MerchantSignIn<br>
+13:58:23.456:	method merchantSignin (0, 005040100000004) is called.<br>
+13:58:23.456:	method inputText (0, MerchantSignInID, 005040100000004) is called.<br>
+13:58:23.456:	method find(MerchantSignInID) is called.<br>
+13:58:24.218:	method clickButton (0, MerchantSignInOK) is called.<br>
+13:58:24.218:	method find(MerchantSignInOK) is called.<br>
+13:58:24.888:	method findCurrentPage(120) is called.<br>
+13:58:25.389:	<br>
+13:58:32.584:	Current page is: <br>
+13:58:32.584:	This page  is not recognized.<br>
+13:58:32.584:	method findCurrentPage(120) is called.<br>
+13:58:33.085:	<br>
+13:58:34.513:	Current page is: MerchantPassword<br>
+13:58:34.513:	method merchantPassword (0, Thankyou1@) is called.<br>
+13:58:34.513:	method inputText (0, MerchantPasswordpassword, Thankyou1@) is called.<br>
+13:58:34.513:	method find(MerchantPasswordpassword) is called.<br>
+13:58:35.188:	method clickButton (0, MerchantPasswordContinue) is called.<br>
+13:58:35.188:	method find(MerchantPasswordContinue) is called.<br>
+13:58:35.802:	method findCurrentPage(120) is called.<br>
+13:58:36.303:	<br>
+13:58:41.123:	Current page is: <br>
+13:58:41.124:	This page  is not recognized.<br>
+13:58:41.124:	method findCurrentPage(120) is called.<br>
+13:58:41.624:	<br>
+13:58:46.675:	Current page is: <br>
+13:58:46.675:	This page  is not recognized.<br>
+13:58:46.675:	method findCurrentPage(120) is called.<br>
+13:58:47.176:	<br>

@@ -1,0 +1,269 @@
+---------Start of logs---------
+14:07:01.490:	pe is: ActivatingSecureElementProcessTitle<br>
+14:07:01.490:	pe is: AllowBatterySettingsChangeTitle<br>
+14:07:01.490:	pe is: AllowTimeoutSettingsChangeTitle<br>
+14:07:01.491:	pe is: AndroidAlertTitle<br>
+14:07:01.491:	pe is: AndroidDeviceSettingsback<br>
+14:07:01.491:	pe is: EnterPINPepImage<br>
+14:07:01.491:	pe is: MerchantPasswordpassword<br>
+14:07:01.491:	pe is: MerchantSignInID<br>
+14:07:01.491:	pe is: NoNetworkConnectionTitle<br>
+14:07:01.491:	pe is: ProvisionUpdateCompleteProcessTitle<br>
+14:07:01.491:	pe is: PurchaseDescriptionNext<br>
+14:07:01.491:	pe is: SettingsAdvancedSideMenu<br>
+14:07:01.491:	pe is: SettingsTerminalSideMenu<br>
+14:07:01.492:	pe is: SideMenuPepImage<br>
+14:07:01.492:	pe is: SignInSelectionFirstUser<br>
+14:07:01.492:	pe is: PurchaseResultNoReceipt<br>
+14:07:01.492:	pe is: UpdateRequiredProcessTitle<br>
+14:07:01.492:	pe is: ConnectionErrorDuringProvisionImage<br>
+14:07:01.492:	pe is: PleaseRestartYourPhoneTitle<br>
+14:07:01.492:	pe is: UpdatingSecureElementProcessTitle<br>
+14:07:01.492:	pe is: TermsAndConditionsTitle<br>
+14:07:01.492:	pe is: ContactUsProcessTitle<br>
+14:07:01.492:	pe is: UserManagementSideMenu<br>
+14:07:01.493:	pe is: EditUserProcessTitle<br>
+14:07:01.493:	pe is: DeleteUserConfirmationTitle<br>
+14:07:01.493:	pe is: AddNewUserProcessTitle<br>
+14:07:01.493:	pe is: UserCreatedTitle<br>
+14:07:01.493:	pe is: TransactionReportsEmailReport<br>
+14:07:01.493:	pe is: TransactionHistorySideMenu<br>
+14:07:01.493:	pe is: NewTagScannedTitle<br>
+14:07:01.493:	pe is: AllAppListingCBADebug<br>
+14:07:01.493:	pe is: PurchaseSideMenu<br>
+14:07:01.493:	pe is: TapToPayTitle<br>
+14:07:01.493:	pe is: CardNotSupportedTitle<br>
+14:07:01.493:	pe is: EmailReceiptForPurchaseTitle<br>
+14:07:01.493:	pe is: ReceiptSentConfirmationTitle<br>
+14:07:01.494:	pe is: ProcessingPaymentTitle<br>
+14:07:01.494:	pe is: PurchaseNotCompletedTitle<br>
+14:07:01.494:	pe is: SetTipDuringPurchaseTitle<br>
+14:07:01.494:	pe is: AddTipProcessTitle<br>
+14:07:01.494:	pe is: CreateNewPasswordProcessTitle<br>
+14:07:01.494:	pe is: EnterNewPINTitle<br>
+14:07:01.494:	pe is: ConfirmNewPINProcessTitle<br>
+14:07:01.494:	pe is: CancelTransactionTitle<br>
+14:07:01.494:	pe is: CancelTransactionEnterPINProcessTitle<br>
+14:07:01.494:	pe is: PurchaseTimedOutProcessTitle<br>
+14:07:01.494:	pe is: TransactionSearchBack<br>
+14:07:01.494:	pe is: TransactionDetailsBack<br>
+14:07:01.494:	pe is: AccountLockedBack<br>
+14:07:01.494:	pe is: ForgotPINTitle<br>
+14:07:01.494:	pe is: ResetPINBack<br>
+14:07:01.494:	pe is: InvalidCredentialsTitle<br>
+14:07:01.495:	pe is: VoidProcessingPaymentProcessTitle<br>
+14:07:01.495:	pe is: SecurityImageTitle<br>
+14:07:01.495:	pe is: ProvisionActivateCompleteProcessTitle<br>
+14:07:01.495:	pe is: <br>
+14:07:01.495:	pe is: PaymentAcceptanceSetupProcessTitle<br>
+14:07:01.495:	pe is: DatePickerPreviousMonth<br>
+14:07:01.495:	pe is: ReportSentConfirmationTitle<br>
+14:07:01.495:	pe is: EnterOldPINProcessTitle<br>
+14:07:01.495:	pe is: PINUpdatedTitle<br>
+14:07:01.495:	pe is: EnterRefundAmountProcessTitle<br>
+14:07:01.495:	pe is: SignatureTitle<br>
+14:07:01.495:	AndroidDriver created.<br>
+14:07:01.496:	The method "logComment()" are called<br>
+14:07:01.496:	<font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font><br>
+14:07:01.496:	The method "logComment()" are called<br>
+14:07:01.496:	<font color='grey'>This case assumes the app starts from the Purchase page.</font><br>
+14:07:01.496:	The method "launch()" are called<br>
+14:07:01.496:	method launch (120) is called.<br>
+14:07:01.497:	method launch (CBA, 120) is called.<br>
+14:07:01.497:	method findCurrentPage(120) is called.<br>
+14:07:01.998:	<br>
+14:07:16.207:	Current page is: <br>
+14:07:16.207:	This page  is not recognized.<br>
+14:07:16.208:	method findCurrentPage(120) is called.<br>
+14:07:16.708:	<br>
+14:07:17.867:	Current page is: MerchantSignIn<br>
+14:07:17.867:	method merchantSignin (0, 005040100000004) is called.<br>
+14:07:17.867:	method inputText (0, MerchantSignInID, 005040100000004) is called.<br>
+14:07:17.867:	method find(MerchantSignInID) is called.<br>
+14:07:18.641:	method clickButton (0, MerchantSignInOK) is called.<br>
+14:07:18.641:	method find(MerchantSignInOK) is called.<br>
+14:07:19.310:	method findCurrentPage(120) is called.<br>
+14:07:19.810:	<br>
+14:07:26.582:	Current page is: <br>
+14:07:26.582:	This page  is not recognized.<br>
+14:07:26.582:	method findCurrentPage(120) is called.<br>
+14:07:27.082:	<br>
+14:07:28.263:	Current page is: MerchantPassword<br>
+14:07:28.263:	method merchantPassword (0, {FXVo~9B) is called.<br>
+14:07:28.263:	method inputText (0, MerchantPasswordpassword, {FXVo~9B) is called.<br>
+14:07:28.263:	method find(MerchantPasswordpassword) is called.<br>
+14:07:29.008:	method clickButton (0, MerchantPasswordContinue) is called.<br>
+14:07:29.008:	method find(MerchantPasswordContinue) is called.<br>
+14:07:29.660:	method findCurrentPage(120) is called.<br>
+14:07:30.161:	<br>
+14:07:32.547:	Current page is: SignInSelection<br>
+14:07:32.547:	method clickButton (0, SignInSelectionFirstUser) is called.<br>
+14:07:32.547:	method find(SignInSelectionFirstUser) is called.<br>
+14:07:32.727:	method findCurrentPage(120) is called.<br>
+14:07:33.227:	<br>
+14:07:34.257:	Current page is: EnterPIN<br>
+14:07:34.258:	<font color='grey'>App launched and awaiting for login.</font><br>
+14:07:34.258:	The method "login()" are called<br>
+14:07:34.258:	method login(1) is called.<br>
+14:07:34.258:	method enterNumPadOK (1, 123456) is called.<br>
+14:07:35.258:	method enterNumPad (1, 123456) is called.<br>
+14:07:36.259:	Number to be entered is: 123456<br>
+14:07:36.259:	method find(EnterPIN1) is called.<br>
+14:07:36.594:	method find(EnterPIN2) is called.<br>
+14:07:37.230:	method find(EnterPIN3) is called.<br>
+14:07:37.936:	method find(EnterPIN4) is called.<br>
+14:07:38.635:	method find(EnterPIN5) is called.<br>
+14:07:39.279:	method find(EnterPIN6) is called.<br>
+14:07:40.002:	method find(EnterPINOK) is called.<br>
+14:07:40.639:	<font color='grey'>User Authentication performed.</font><br>
+14:07:40.639:	The method "waitUntilPage()" are called<br>
+14:07:40.639:	<br>
+14:07:46.975:	Current page is: <br>
+14:07:46.977:	<br>
+14:07:51.585:	Current page is: <br>
+14:07:52.085:	<br>
+14:07:55.871:	Current page is: <br>
+14:07:56.371:	<br>
+14:08:01.209:	Current page is: AndroidDeviceSettings<br>
+14:08:01.209:	page count is: 0<br>
+14:08:01.209:	page count is: 1<br>
+14:08:01.709:	<br>
+14:08:02.657:	Current page is: Purchase<br>
+14:08:02.657:	page count is: 88<br>
+14:08:02.657:	page count is: 89<br>
+14:08:03.158:	The method "reachPage()" are called<br>
+14:08:03.158:	method reachPage(GP, SettingsTerminal) is called.<br>
+14:08:03.158:	method reachPage(GP, Purchase) is called.<br>
+14:08:03.158:	method find(PurchaseSideMenu) is called.<br>
+14:08:03.260:	method goToSidemenuPage(Purchase) is called.<br>
+14:08:03.260:	method findCurrentPage(0) is called.<br>
+14:08:03.761:	<br>
+14:08:03.900:	Current page is: Purchase<br>
+14:08:03.900:	method findCurrentPage(0) is called.<br>
+14:08:04.401:	<br>
+14:08:04.562:	Current page is: Purchase<br>
+14:08:04.562:	method clickButton (0, PurchaseSideMenu) is called.<br>
+14:08:04.562:	method find(PurchaseSideMenu) is called.<br>
+14:08:04.714:	method clickButton (1, SideMenuSettings) is called.<br>
+14:08:05.714:	method find(SideMenuSettings) is called.<br>
+14:08:05.937:	method login(1) is called.<br>
+14:08:05.937:	method enterNumPadOK (1, 123456) is called.<br>
+14:08:06.938:	method enterNumPad (1, 123456) is called.<br>
+14:08:07.938:	Number to be entered is: 123456<br>
+14:08:07.938:	method find(EnterPIN1) is called.<br>
+14:08:08.146:	method find(EnterPIN2) is called.<br>
+14:08:08.838:	method find(EnterPIN3) is called.<br>
+14:08:10.045:	method find(EnterPIN4) is called.<br>
+14:08:10.676:	method find(EnterPIN5) is called.<br>
+14:08:12.129:	method find(EnterPIN6) is called.<br>
+14:08:12.649:	method find(EnterPINOK) is called.<br>
+14:08:13.352:	<font color='grey'>User Authentication performed.</font><br>
+14:08:13.353:	method waitUntilPage(30, SettingsTerminal) is called.<br>
+14:08:13.353:	method findCurrentPage(0) is called.<br>
+14:08:13.854:	<br>
+14:08:15.261:	Current page is: SettingsTerminal<br>
+14:08:15.261:	The method "setBooleanValue(no)" are called<br>
+14:08:15.553:	The method "setBooleanValue(no)" are called<br>
+14:08:15.700:	exception caught during click, failed to find SettingsTerminalAddTipValue<br>
+14:08:15.700:	The method "setBooleanValue(no)" are called<br>
+14:08:16.337:	The method "reachPage()" are called<br>
+14:08:16.337:	method reachPage(GP, Purchase) is called.<br>
+14:08:16.337:	method find(PurchaseSideMenu) is called.<br>
+14:08:16.991:	method goToSidemenuPage(Purchase) is called.<br>
+14:08:16.991:	method findCurrentPage(0) is called.<br>
+14:08:17.491:	<br>
+14:08:17.737:	Current page is: SettingsTerminal<br>
+14:08:17.737:	method clickOnPage(SettingsTerminal, Purchase, [Ljava.lang.String;@26273d) is called.<br>
+14:08:17.737:	method findCurrentPage(0) is called.<br>
+14:08:18.238:	<br>
+14:08:18.477:	Current page is: SettingsTerminal<br>
+14:08:18.477:	method clickButton (0, PurchaseSideMenu) is called.<br>
+14:08:18.477:	method find(PurchaseSideMenu) is called.<br>
+14:08:19.133:	method clickButton (0, SideMenuPurchase) is called.<br>
+14:08:19.133:	method find(SideMenuPurchase) is called.<br>
+14:08:20.335:	method waitUntilPage(30, Purchase) is called.<br>
+14:08:20.335:	method findCurrentPage(0) is called.<br>
+14:08:20.835:	<br>
+14:08:21.232:	Current page is: Purchase<br>
+14:08:21.232:	The method "singlePurchase()" are called<br>
+14:08:21.232:	method singlePurchase(1400, no, , no, ) is called.<br>
+14:08:21.232:	method findCurrentPage(1) is called.<br>
+14:08:21.733:	<br>
+14:08:21.879:	Current page is: Purchase<br>
+14:08:21.879:	method enterPurchaseAmount(0, 1400) is called.<br>
+14:08:21.879:	method enterNumPadOK (0, 1400) is called.<br>
+14:08:21.879:	method enterNumPad (0, 1400) is called.<br>
+14:08:21.879:	Number to be entered is: 1400<br>
+14:08:21.879:	method find(EnterPIN1) is called.<br>
+14:08:22.052:	method find(EnterPIN4) is called.<br>
+14:08:22.686:	method find(EnterPIN0) is called.<br>
+14:08:23.300:	method find(EnterPIN0) is called.<br>
+14:08:23.922:	method find(EnterPINOK) is called.<br>
+14:08:24.548:	method findCurrentPage(1) is called.<br>
+14:08:25.049:	<br>
+14:08:33.345:	Current page is: <br>
+14:08:33.345:	reached an unrecognized page: <br>
+14:08:33.345:	method clickButton (0, NoNetworkConnectionretry) is called.<br>
+14:08:33.345:	method find(NoNetworkConnectionretry) is called.<br>
+14:08:33.420:	exception caught during button click, failed to find NoNetworkConnectionretry<br>
+14:08:33.420:	method findCurrentPage(1) is called.<br>
+14:08:33.920:	<br>
+14:08:38.423:	Current page is: <br>
+14:08:38.423:	reached an unrecognized page: <br>
+14:08:38.423:	method clickButton (0, NoNetworkConnectionretry) is called.<br>
+14:08:38.424:	method find(NoNetworkConnectionretry) is called.<br>
+14:08:38.488:	exception caught during button click, failed to find NoNetworkConnectionretry<br>
+14:08:38.489:	method findCurrentPage(1) is called.<br>
+14:08:38.989:	<br>
+14:08:44.554:	Current page is: <br>
+14:08:44.554:	reached an unrecognized page: <br>
+14:08:44.554:	method clickButton (0, NoNetworkConnectionretry) is called.<br>
+14:08:44.554:	method find(NoNetworkConnectionretry) is called.<br>
+14:08:44.647:	exception caught during button click, failed to find NoNetworkConnectionretry<br>
+14:08:44.647:	method findCurrentPage(1) is called.<br>
+14:08:45.148:	<br>
+14:08:45.284:	Current page is: Purchase<br>
+14:08:45.284:	method enterPurchaseAmount(0, 1400) is called.<br>
+14:08:45.284:	method enterNumPadOK (0, 1400) is called.<br>
+14:08:45.284:	method enterNumPad (0, 1400) is called.<br>
+14:08:45.284:	Number to be entered is: 1400<br>
+14:08:45.284:	method find(EnterPIN1) is called.<br>
+14:08:45.442:	method find(EnterPIN4) is called.<br>
+14:08:46.088:	method find(EnterPIN0) is called.<br>
+14:08:46.679:	method find(EnterPIN0) is called.<br>
+14:08:47.342:	method find(EnterPINOK) is called.<br>
+14:08:47.926:	method findCurrentPage(1) is called.<br>
+14:08:48.426:	<br>
+14:08:56.121:	Current page is: <br>
+14:08:56.121:	reached an unrecognized page: <br>
+14:08:56.121:	method clickButton (0, NoNetworkConnectionretry) is called.<br>
+14:08:56.121:	method find(NoNetworkConnectionretry) is called.<br>
+14:08:56.185:	exception caught during button click, failed to find NoNetworkConnectionretry<br>
+14:08:56.185:	method findCurrentPage(1) is called.<br>
+14:08:56.685:	<br>
+14:08:57.379:	Current page is: Purchase<br>
+14:08:57.379:	method enterPurchaseAmount(0, 1400) is called.<br>
+14:08:57.380:	method enterNumPadOK (0, 1400) is called.<br>
+14:08:57.380:	method enterNumPad (0, 1400) is called.<br>
+14:08:57.380:	Number to be entered is: 1400<br>
+14:08:57.380:	method find(EnterPIN1) is called.<br>
+14:08:57.535:	method find(EnterPIN4) is called.<br>
+14:08:58.112:	method find(EnterPIN0) is called.<br>
+14:08:58.708:	method find(EnterPIN0) is called.<br>
+14:08:59.418:	method find(EnterPINOK) is called.<br>
+14:09:00.113:	method findCurrentPage(1) is called.<br>
+14:09:00.614:	<br>
+14:09:08.568:	Current page is: <br>
+14:09:08.568:	reached an unrecognized page: <br>
+14:09:08.568:	method clickButton (0, NoNetworkConnectionretry) is called.<br>
+14:09:08.568:	method find(NoNetworkConnectionretry) is called.<br>
+14:09:08.635:	exception caught during button click, failed to find NoNetworkConnectionretry<br>
+14:09:08.635:	method findCurrentPage(1) is called.<br>
+14:09:09.136:	<br>
+14:09:13.353:	Current page is: <br>
+14:09:13.353:	reached an unrecognized page: <br>
+14:09:13.353:	method clickButton (0, NoNetworkConnectionretry) is called.<br>
+14:09:13.353:	method find(NoNetworkConnectionretry) is called.<br>
+14:09:13.424:	exception caught during button click, failed to find NoNetworkConnectionretry<br>
+14:09:13.425:	method findCurrentPage(1) is called.<br>
+14:09:13.926:	<br>

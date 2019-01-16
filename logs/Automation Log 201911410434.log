@@ -1,0 +1,1343 @@
+---------Start of logs---------
+10:04:34.884:	The method "logComment()" are called
+10:04:34.884:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+10:04:34.885:	The method "launch()" are called
+10:04:34.885:	method launch (120) is called.
+10:04:34.885:	method launch (CBA, 120) is called.
+10:04:34.885:	method findCurrentPage(120) is called.
+10:04:35.386:	
+10:04:44.701:	Current page is: 
+10:04:44.701:	This page  is not recognized.
+10:04:44.701:	method findCurrentPage(120) is called.
+10:04:45.203:	
+10:04:46.538:	Current page is: SignInSelection
+10:04:46.689:	method findCurrentPage(120) is called.
+10:04:47.190:	
+10:04:48.582:	Current page is: EnterPIN
+10:04:48.582:	<font color='grey'>App launched and awaiting for login.</font>
+10:04:48.582:	The method "login()" are called
+10:04:48.582:	method login(1) is called.
+10:04:49.583:	method enterNumPadOK (123456) is called.
+10:04:49.583:	method enterNumPad (123456) is called.
+10:04:49.583:	Number to be entered is: 123456
+10:04:53.704:	<font color='grey'>User Authentication performed.</font>
+10:04:53.704:	The method "waitUntilPage()" are called
+10:05:02.688:	Current page is: 
+10:05:02.803:	Current page is: Purchase
+10:05:02.803:	page count is: 534
+10:05:03.303:	The method "reachPage()" are called
+10:05:03.303:	method reachPage(GP, SettingsTerminal) is called.
+10:05:03.303:	method reachPage(GP, Purchase) is called.
+10:05:03.429:	method goToSidemenuPage(Purchase) is called.
+10:05:03.429:	method findCurrentPage(0) is called.
+10:05:03.930:	
+10:05:04.114:	Current page is: Purchase
+10:05:04.114:	method findCurrentPage(0) is called.
+10:05:04.614:	
+10:05:04.758:	Current page is: Purchase
+10:05:06.001:	method login(1) is called.
+10:05:07.001:	method enterNumPadOK (123456) is called.
+10:05:07.001:	method enterNumPad (123456) is called.
+10:05:07.001:	Number to be entered is: 123456
+10:05:12.130:	<font color='grey'>User Authentication performed.</font>
+10:05:21.171:	Current page is: 
+10:05:27.946:	Current page is: 
+10:05:35.006:	Current page is: 
+10:05:41.977:	Current page is: 
+10:05:42.478:	The method "setBooleanValue(no)" are called
+10:05:42.619:	The method "setBooleanValue(no)" are called
+10:05:42.760:	The method "reachPage()" are called
+10:05:42.760:	method reachPage(GP, Purchase) is called.
+10:05:42.868:	method goToSidemenuPage(Purchase) is called.
+10:05:42.868:	method findCurrentPage(0) is called.
+10:05:43.368:	
+10:05:49.673:	Current page is: 
+10:05:49.674:	method clickOnPage(, Purchase, [Ljava.lang.String;@1064bdc) is called.
+10:05:49.674:	method findCurrentPage(0) is called.
+10:05:50.174:	
+10:05:56.518:	Current page is: 
+10:05:59.181:	Current page is: Purchase
+10:05:59.181:	page count is: 537
+10:05:59.181:	The method "singlePurchase()" are called
+10:05:59.181:	method singlePurchase(1000, no, , no, ) is called.
+10:05:59.181:	method findCurrentPage(1) is called.
+10:05:59.681:	
+10:05:59.826:	Current page is: Purchase
+10:05:59.826:	method enterPurchaseAmount(1000) is called.
+10:05:59.826:	method enterNumPadOK (1000) is called.
+10:05:59.826:	method enterNumPad (1000) is called.
+10:05:59.826:	Number to be entered is: 1000
+10:06:02.451:	method findCurrentPage(1) is called.
+10:06:02.951:	
+10:06:05.721:	Current page is: PurchaseDescription
+10:06:05.820:	method findCurrentPage(1) is called.
+10:06:06.320:	
+10:06:08.149:	Current page is: TapToPay
+10:06:08.149:	waiting for card tap
+10:06:08.149:	method findCurrentPage(1) is called.
+10:06:08.649:	
+10:06:14.834:	Current page is: 
+10:06:14.835:	reached an unrecognized page: 
+10:06:14.835:	exception caught during button click, failed to find NoNetworkConnectionretry
+10:06:14.835:	method findCurrentPage(1) is called.
+10:06:15.336:	
+10:06:17.312:	Current page is: PurchaseResult
+10:06:17.312:	<font color='grey'>Transaction is made, Processing time is: 9 seconds.</font>
+10:06:17.313:	The method "test()" are called
+10:06:18.297:	Current page is: PurchaseResult
+10:06:18.297:	page count is: 20
+10:06:18.298:	The method "test()" are called
+10:06:18.449:	The method "clickButton()" are called
+10:06:18.616:	The method "waitUntilPage()" are called
+10:06:19.766:	Current page is: Purchase
+10:06:19.766:	page count is: 539
+10:06:19.766:	The method "test()" are called
+10:06:19.884:	Current page is: Purchase
+10:06:19.884:	page count is: 540
+10:06:19.884:	The method "reachPage()" are called
+10:06:19.884:	method reachPage(GP, TransactionHistory) is called.
+10:06:19.885:	method reachPage(GP, Purchase) is called.
+10:06:19.985:	method goToSidemenuPage(Purchase) is called.
+10:06:19.985:	method findCurrentPage(0) is called.
+10:06:20.486:	
+10:06:20.613:	Current page is: Purchase
+10:06:20.613:	method goToSidemenuPage(TransactionHistory) is called.
+10:06:20.613:	method findCurrentPage(0) is called.
+10:06:21.113:	
+10:06:21.254:	Current page is: Purchase
+10:06:21.254:	method clickOnPage(Purchase, TransactionHistory, [Ljava.lang.String;@2fce12) is called.
+10:06:21.254:	method findCurrentPage(0) is called.
+10:06:21.755:	
+10:06:21.886:	Current page is: Purchase
+10:06:25.784:	Current page is: TransactionHistory
+10:06:25.784:	page count is: 29
+10:06:25.784:	The method "test()" are called
+10:06:27.215:	Current page is: TransactionHistory
+10:06:27.215:	page count is: 30
+10:06:27.215:	The method "test()" are called
+10:06:27.434:	The method "clickButton()" are called
+10:06:27.659:	The method "waitUntilPage()" are called
+10:06:29.724:	Current page is: TransactionDetails
+10:06:29.724:	page count is: 17
+10:06:29.724:	The method "test()" are called
+10:06:30.792:	Current page is: TransactionDetails
+10:06:30.792:	page count is: 18
+10:06:30.792:	The method "test()" are called
+10:06:30.945:	The method "test()" are called
+10:06:31.091:	The method "test()" are called
+10:06:31.287:	The method "test()" are called
+10:06:31.443:	The method "test()" are called
+10:06:31.577:	The method "clickButton()" are called
+10:06:31.746:	The method "waitUntilPage()" are called
+10:06:33.587:	Current page is: TransactionHistory
+10:06:33.587:	page count is: 31
+10:06:33.587:	The method "reachPage()" are called
+10:06:33.587:	method reachPage(GP, Purchase) is called.
+10:06:33.748:	method goToSidemenuPage(Purchase) is called.
+10:06:33.748:	method findCurrentPage(0) is called.
+10:06:34.249:	
+10:06:34.968:	Current page is: TransactionHistory
+10:06:34.968:	method clickOnPage(TransactionHistory, Purchase, [Ljava.lang.String;@178d415) is called.
+10:06:34.968:	method findCurrentPage(0) is called.
+10:06:35.468:	
+10:06:36.144:	Current page is: TransactionHistory
+10:06:38.878:	Current page is: Purchase
+10:06:38.878:	page count is: 544
+10:06:38.879:	The method "test()" are called
+10:06:39.007:	Current page is: Purchase
+10:06:39.008:	page count is: 545
+10:06:39.008:	<font color='blue'>Test Case: TS_1 completed.</font>
+10:06:39.008:	-----------------------------------<br>
+10:06:39.008:	The method "logComment()" are called
+10:06:39.008:	<font color='grey'>Start of base purchase with tips/desription/email receipt - please have SUCCESS testing card placed at the back of device!</font>
+10:06:39.008:	The method "logComment()" are called
+10:06:39.008:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+10:06:39.008:	The method "reachPage()" are called
+10:06:39.008:	method reachPage(GP, SettingsTerminal) is called.
+10:06:39.008:	method reachPage(GP, Purchase) is called.
+10:06:39.085:	method goToSidemenuPage(Purchase) is called.
+10:06:39.085:	method findCurrentPage(0) is called.
+10:06:39.586:	
+10:06:39.730:	Current page is: Purchase
+10:06:39.730:	method findCurrentPage(0) is called.
+10:06:40.231:	
+10:06:40.376:	Current page is: Purchase
+10:06:41.524:	method login(1) is called.
+10:06:42.525:	method enterNumPadOK (123456) is called.
+10:06:42.525:	method enterNumPad (123456) is called.
+10:06:42.525:	Number to be entered is: 123456
+10:06:46.913:	<font color='grey'>User Authentication performed.</font>
+10:06:54.277:	Current page is: 
+10:06:59.876:	Current page is: 
+10:07:05.959:	Current page is: 
+10:07:12.563:	Current page is: 
+10:07:19.470:	Current page is: 
+10:07:19.971:	The method "setBooleanValue(no)" are called
+10:07:20.098:	The method "setBooleanValue(yes)" are called
+10:07:20.346:	The method "reachPage()" are called
+10:07:20.346:	method reachPage(GP, Purchase) is called.
+10:07:20.980:	method goToSidemenuPage(Purchase) is called.
+10:07:20.980:	method findCurrentPage(0) is called.
+10:07:21.481:	
+10:07:28.201:	Current page is: 
+10:07:28.201:	method clickOnPage(, Purchase, [Ljava.lang.String;@286339) is called.
+10:07:28.201:	method findCurrentPage(0) is called.
+10:07:28.701:	
+10:07:35.216:	Current page is: 
+10:07:37.752:	Current page is: Purchase
+10:07:37.752:	page count is: 548
+10:07:37.752:	The method "singlePurchase(9999)" are called
+10:07:37.752:	method singlePurchase(1100, Total, 9999, no, ) is called.
+10:07:37.753:	method findCurrentPage(1) is called.
+10:07:38.253:	
+10:07:38.373:	Current page is: Purchase
+10:07:38.373:	method enterPurchaseAmount(1100) is called.
+10:07:38.373:	method enterNumPadOK (1100) is called.
+10:07:38.373:	method enterNumPad (1100) is called.
+10:07:38.373:	Number to be entered is: 1100
+10:07:40.953:	method findCurrentPage(1) is called.
+10:07:41.453:	
+10:07:44.044:	Current page is: PurchaseDescription
+10:07:44.135:	method findCurrentPage(1) is called.
+10:07:44.635:	
+10:07:47.754:	Current page is: SetTipDuringPurchase
+10:07:47.755:	method setTipType(Total, 9999) is called.
+10:07:47.814:	exception caught during button click, failed to find SetTipDuringPurchaseCustomTip
+10:07:47.814:	method findCurrentPage(1) is called.
+10:07:48.314:	
+10:07:50.926:	Current page is: SetTipDuringPurchase
+10:07:50.926:	method setTipType(Total, 9999) is called.
+10:07:50.998:	exception caught during button click, failed to find SetTipDuringPurchaseCustomTip
+10:07:50.998:	method findCurrentPage(1) is called.
+10:07:51.498:	
+10:07:54.236:	Current page is: SetTipDuringPurchase
+10:07:54.236:	method setTipType(Total, 9999) is called.
+10:07:54.299:	exception caught during button click, failed to find SetTipDuringPurchaseCustomTip
+10:07:54.299:	method findCurrentPage(1) is called.
+10:07:54.800:	
+10:07:57.425:	Current page is: SetTipDuringPurchase
+10:07:57.426:	method setTipType(Total, 9999) is called.
+10:07:57.479:	exception caught during button click, failed to find SetTipDuringPurchaseCustomTip
+10:07:57.479:	method findCurrentPage(1) is called.
+10:07:57.980:	
+10:08:00.420:	Current page is: SetTipDuringPurchase
+10:08:00.421:	method setTipType(Total, 9999) is called.
+10:08:00.484:	exception caught during button click, failed to find SetTipDuringPurchaseCustomTip
+10:08:00.484:	method findCurrentPage(1) is called.
+10:08:00.985:	
+10:08:03.648:	Current page is: SetTipDuringPurchase
+10:08:03.649:	method setTipType(Total, 9999) is called.
+10:08:03.714:	exception caught during button click, failed to find SetTipDuringPurchaseCustomTip
+10:08:03.714:	method findCurrentPage(1) is called.
+10:08:04.214:	
+10:08:06.900:	Current page is: SetTipDuringPurchase
+10:08:06.900:	method setTipType(Total, 9999) is called.
+10:08:06.964:	exception caught during button click, failed to find SetTipDuringPurchaseCustomTip
+10:08:06.964:	method findCurrentPage(1) is called.
+10:08:07.465:	
+10:08:10.215:	Current page is: SetTipDuringPurchase
+10:08:10.215:	method setTipType(Total, 9999) is called.
+10:08:10.276:	exception caught during button click, failed to find SetTipDuringPurchaseCustomTip
+10:08:10.276:	The method "test()" are called
+10:08:13.431:	Current page is: SetTipDuringPurchase
+10:08:13.431:	page count is: 9
+10:08:13.431:	The method "test()" are called
+10:08:13.495:	The method "clickButton()" are called
+10:08:13.602:	The method "waitUntilPage()" are called
+10:08:16.124:	Current page is: TapToPay
+10:08:16.124:	page count is: 37
+10:08:21.639:	Current page is: 
+10:08:29.683:	Current page is: 
+10:08:30.689:	Current page is: PurchaseResult
+10:08:30.689:	page count is: 21
+10:08:31.829:	Current page is: PurchaseResult
+10:08:31.829:	page count is: 22
+10:08:32.871:	Current page is: PurchaseResult
+10:08:32.871:	page count is: 23
+10:08:33.898:	Current page is: PurchaseResult
+10:08:33.898:	page count is: 24
+10:08:35.026:	Current page is: PurchaseResult
+10:08:35.026:	page count is: 25
+10:08:36.149:	Current page is: PurchaseResult
+10:08:36.150:	page count is: 26
+10:08:37.270:	Current page is: PurchaseResult
+10:08:37.270:	page count is: 27
+10:08:38.361:	Current page is: PurchaseResult
+10:08:38.361:	page count is: 28
+10:08:39.481:	Current page is: PurchaseResult
+10:08:39.481:	page count is: 29
+10:08:40.597:	Current page is: PurchaseResult
+10:08:40.597:	page count is: 30
+10:08:41.720:	Current page is: PurchaseResult
+10:08:41.720:	page count is: 31
+10:08:43.037:	Current page is: PurchaseResult
+10:08:43.037:	page count is: 32
+10:08:44.186:	Current page is: PurchaseResult
+10:08:44.186:	page count is: 33
+10:08:45.289:	Current page is: PurchaseResult
+10:08:45.289:	page count is: 34
+10:08:46.420:	Current page is: PurchaseResult
+10:08:46.420:	page count is: 35
+10:08:47.509:	Current page is: PurchaseResult
+10:08:47.509:	page count is: 36
+10:08:48.631:	Current page is: PurchaseResult
+10:08:48.631:	page count is: 37
+10:08:49.777:	Current page is: PurchaseResult
+10:08:49.777:	page count is: 38
+10:08:50.890:	Current page is: PurchaseResult
+10:08:50.890:	page count is: 39
+10:08:52.020:	Current page is: PurchaseResult
+10:08:52.021:	page count is: 40
+10:08:53.131:	Current page is: PurchaseResult
+10:08:53.131:	page count is: 41
+10:08:54.245:	Current page is: PurchaseResult
+10:08:54.245:	page count is: 42
+10:08:55.376:	Current page is: PurchaseResult
+10:08:55.376:	page count is: 43
+10:08:56.491:	Current page is: PurchaseResult
+10:08:56.492:	page count is: 44
+10:08:57.652:	Current page is: PurchaseResult
+10:08:57.652:	page count is: 45
+10:08:58.784:	Current page is: PurchaseResult
+10:08:58.784:	page count is: 46
+10:08:59.912:	Current page is: PurchaseResult
+10:08:59.912:	page count is: 47
+10:09:01.026:	Current page is: PurchaseResult
+10:09:01.026:	page count is: 48
+10:09:02.130:	Current page is: PurchaseResult
+10:09:02.130:	page count is: 49
+10:09:03.269:	Current page is: PurchaseResult
+10:09:03.269:	page count is: 50
+10:09:04.422:	Current page is: PurchaseResult
+10:09:04.422:	page count is: 51
+10:09:05.591:	Current page is: PurchaseResult
+10:09:05.591:	page count is: 52
+10:09:06.731:	Current page is: PurchaseResult
+10:09:06.731:	page count is: 53
+10:09:07.894:	Current page is: PurchaseResult
+10:09:07.894:	page count is: 54
+10:09:09.037:	Current page is: PurchaseResult
+10:09:09.037:	page count is: 55
+10:09:10.111:	Current page is: PurchaseResult
+10:09:10.111:	page count is: 56
+10:09:11.789:	Current page is: PurchaseResult
+10:09:11.789:	page count is: 57
+10:09:12.774:	Current page is: PurchaseResult
+10:09:12.774:	page count is: 58
+10:09:13.808:	Current page is: PurchaseResult
+10:09:13.808:	page count is: 59
+10:09:14.813:	Current page is: PurchaseResult
+10:09:14.813:	page count is: 60
+10:09:15.816:	Current page is: PurchaseResult
+10:09:15.816:	page count is: 61
+10:09:16.878:	Current page is: PurchaseResult
+10:09:16.878:	page count is: 62
+10:09:18.186:	Current page is: PurchaseResult
+10:09:18.186:	page count is: 63
+10:09:19.231:	Current page is: PurchaseResult
+10:09:19.231:	page count is: 64
+10:09:20.216:	Current page is: PurchaseResult
+10:09:20.216:	page count is: 65
+10:09:21.212:	Current page is: PurchaseResult
+10:09:21.212:	page count is: 66
+10:09:22.236:	Current page is: PurchaseResult
+10:09:22.237:	page count is: 67
+10:09:23.244:	Current page is: PurchaseResult
+10:09:23.244:	page count is: 68
+10:09:24.410:	Current page is: PurchaseResult
+10:09:24.410:	page count is: 69
+10:09:25.428:	Current page is: PurchaseResult
+10:09:25.428:	page count is: 70
+10:09:26.431:	Current page is: PurchaseResult
+10:09:26.431:	page count is: 71
+10:09:27.433:	Current page is: PurchaseResult
+10:09:27.433:	page count is: 72
+10:09:28.468:	Current page is: PurchaseResult
+10:09:28.468:	page count is: 73
+10:09:29.464:	Current page is: PurchaseResult
+10:09:29.464:	page count is: 74
+10:09:30.409:	Current page is: PurchaseResult
+10:09:30.409:	page count is: 75
+10:09:31.299:	Current page is: PurchaseResult
+10:09:31.299:	page count is: 76
+10:09:32.406:	Current page is: PurchaseResult
+10:09:32.406:	page count is: 77
+10:09:33.542:	Current page is: PurchaseResult
+10:09:33.543:	page count is: 78
+10:09:34.636:	Current page is: PurchaseResult
+10:09:34.636:	page count is: 79
+10:09:35.734:	Current page is: PurchaseResult
+10:09:35.734:	page count is: 80
+10:09:36.849:	Current page is: PurchaseResult
+10:09:36.849:	page count is: 81
+10:09:37.942:	Current page is: PurchaseResult
+10:09:37.942:	page count is: 82
+10:09:39.045:	Current page is: PurchaseResult
+10:09:39.045:	page count is: 83
+10:09:40.129:	Current page is: PurchaseResult
+10:09:40.129:	page count is: 84
+10:09:41.353:	Current page is: PurchaseResult
+10:09:41.353:	page count is: 85
+10:09:42.446:	Current page is: PurchaseResult
+10:09:42.446:	page count is: 86
+10:09:43.515:	Current page is: PurchaseResult
+10:09:43.515:	page count is: 87
+10:09:44.623:	Current page is: PurchaseResult
+10:09:44.623:	page count is: 88
+10:09:45.740:	Current page is: PurchaseResult
+10:09:45.740:	page count is: 89
+10:09:46.790:	Current page is: PurchaseResult
+10:09:46.790:	page count is: 90
+10:09:47.906:	Current page is: PurchaseResult
+10:09:47.906:	page count is: 91
+10:09:49.018:	Current page is: PurchaseResult
+10:09:49.018:	page count is: 92
+10:09:50.138:	Current page is: PurchaseResult
+10:09:50.138:	page count is: 93
+10:09:51.229:	Current page is: PurchaseResult
+10:09:51.229:	page count is: 94
+10:09:52.342:	Current page is: PurchaseResult
+10:09:52.342:	page count is: 95
+10:09:53.455:	Current page is: PurchaseResult
+10:09:53.455:	page count is: 96
+10:09:54.555:	Current page is: PurchaseResult
+10:09:54.555:	page count is: 97
+10:09:55.666:	Current page is: PurchaseResult
+10:09:55.666:	page count is: 98
+10:09:56.793:	Current page is: PurchaseResult
+10:09:56.793:	page count is: 99
+10:09:57.911:	Current page is: PurchaseResult
+10:09:57.911:	page count is: 100
+10:09:59.029:	Current page is: PurchaseResult
+10:09:59.029:	page count is: 101
+10:10:00.133:	Current page is: PurchaseResult
+10:10:00.133:	page count is: 102
+10:10:01.240:	Current page is: PurchaseResult
+10:10:01.240:	page count is: 103
+10:10:02.380:	Current page is: PurchaseResult
+10:10:02.380:	page count is: 104
+10:10:03.541:	Current page is: PurchaseResult
+10:10:03.541:	page count is: 105
+10:10:04.650:	Current page is: PurchaseResult
+10:10:04.650:	page count is: 106
+10:10:05.688:	Current page is: PurchaseResult
+10:10:05.688:	page count is: 107
+10:10:06.653:	Current page is: PurchaseResult
+10:10:06.654:	page count is: 108
+10:10:07.704:	Current page is: PurchaseResult
+10:10:07.704:	page count is: 109
+10:10:08.823:	Current page is: PurchaseResult
+10:10:08.823:	page count is: 110
+10:10:09.925:	Current page is: PurchaseResult
+10:10:09.925:	page count is: 111
+10:10:11.615:	Current page is: PurchaseResult
+10:10:11.615:	page count is: 112
+10:10:12.727:	Current page is: PurchaseResult
+10:10:12.727:	page count is: 113
+10:10:13.828:	Current page is: PurchaseResult
+10:10:13.828:	page count is: 114
+10:10:14.328:	The method "inputText(ytao@mobeewave.com)" are called
+10:10:14.474:	exception caught during text entry, failed to find EmailReceiptForPurchaseEmail
+10:10:14.474:	The method "clickButton()" are called
+10:10:14.588:	exception caught during button click, failed to find EmailReceiptForPurchaseNext
+10:10:14.588:	The method "waitUntilPage()" are called
+10:10:15.191:	Current page is: PurchaseResult
+10:10:15.191:	page count is: 115
+10:10:15.759:	Current page is: PurchaseResult
+10:10:15.759:	page count is: 116
+10:10:16.889:	Current page is: PurchaseResult
+10:10:16.889:	page count is: 117
+10:10:18.335:	Current page is: PurchaseResult
+10:10:18.335:	page count is: 118
+10:10:19.460:	Current page is: PurchaseResult
+10:10:19.461:	page count is: 119
+10:10:20.545:	Current page is: PurchaseResult
+10:10:20.545:	page count is: 120
+10:10:21.669:	Current page is: PurchaseResult
+10:10:21.669:	page count is: 121
+10:10:22.783:	Current page is: PurchaseResult
+10:10:22.783:	page count is: 122
+10:10:23.909:	Current page is: PurchaseResult
+10:10:23.909:	page count is: 123
+10:10:25.068:	Current page is: PurchaseResult
+10:10:25.069:	page count is: 124
+10:10:26.201:	Current page is: PurchaseResult
+10:10:26.201:	page count is: 125
+10:10:27.326:	Current page is: PurchaseResult
+10:10:27.326:	page count is: 126
+10:10:28.454:	Current page is: PurchaseResult
+10:10:28.454:	page count is: 127
+10:10:29.552:	Current page is: PurchaseResult
+10:10:29.552:	page count is: 128
+10:10:30.685:	Current page is: PurchaseResult
+10:10:30.685:	page count is: 129
+10:10:31.807:	Current page is: PurchaseResult
+10:10:31.807:	page count is: 130
+10:10:32.915:	Current page is: PurchaseResult
+10:10:32.915:	page count is: 131
+10:10:34.009:	Current page is: PurchaseResult
+10:10:34.009:	page count is: 132
+10:10:35.142:	Current page is: PurchaseResult
+10:10:35.142:	page count is: 133
+10:10:36.242:	Current page is: PurchaseResult
+10:10:36.242:	page count is: 134
+10:10:37.330:	Current page is: PurchaseResult
+10:10:37.330:	page count is: 135
+10:10:38.473:	Current page is: PurchaseResult
+10:10:38.473:	page count is: 136
+10:10:39.636:	Current page is: PurchaseResult
+10:10:39.636:	page count is: 137
+10:10:40.806:	Current page is: PurchaseResult
+10:10:40.806:	page count is: 138
+10:10:41.892:	Current page is: PurchaseResult
+10:10:41.892:	page count is: 139
+10:10:43.047:	Current page is: PurchaseResult
+10:10:43.047:	page count is: 140
+10:10:44.210:	Current page is: PurchaseResult
+10:10:44.210:	page count is: 141
+10:10:45.316:	Current page is: PurchaseResult
+10:10:45.316:	page count is: 142
+10:10:46.304:	Current page is: PurchaseResult
+10:10:46.304:	page count is: 143
+10:10:47.325:	Current page is: PurchaseResult
+10:10:47.325:	page count is: 144
+10:10:48.320:	Current page is: PurchaseResult
+10:10:48.320:	page count is: 145
+10:10:49.328:	Current page is: PurchaseResult
+10:10:49.328:	page count is: 146
+10:10:50.459:	Current page is: PurchaseResult
+10:10:50.459:	page count is: 147
+10:10:51.494:	Current page is: PurchaseResult
+10:10:51.494:	page count is: 148
+10:10:52.461:	Current page is: PurchaseResult
+10:10:52.461:	page count is: 149
+10:10:53.507:	Current page is: PurchaseResult
+10:10:53.507:	page count is: 150
+10:10:54.494:	Current page is: PurchaseResult
+10:10:54.494:	page count is: 151
+10:10:55.480:	Current page is: PurchaseResult
+10:10:55.480:	page count is: 152
+10:10:56.476:	Current page is: PurchaseResult
+10:10:56.476:	page count is: 153
+10:10:57.473:	Current page is: PurchaseResult
+10:10:57.473:	page count is: 154
+10:10:58.502:	Current page is: PurchaseResult
+10:10:58.502:	page count is: 155
+10:10:59.484:	Current page is: PurchaseResult
+10:10:59.484:	page count is: 156
+10:11:00.496:	Current page is: PurchaseResult
+10:11:00.496:	page count is: 157
+10:11:01.516:	Current page is: PurchaseResult
+10:11:01.516:	page count is: 158
+10:11:02.522:	Current page is: PurchaseResult
+10:11:02.522:	page count is: 159
+10:11:03.683:	Current page is: PurchaseResult
+10:11:03.683:	page count is: 160
+10:11:04.563:	Current page is: PurchaseResult
+10:11:04.563:	page count is: 161
+10:11:05.565:	Current page is: PurchaseResult
+10:11:05.565:	page count is: 162
+10:11:06.683:	Current page is: PurchaseResult
+10:11:06.684:	page count is: 163
+10:11:07.783:	Current page is: PurchaseResult
+10:11:07.783:	page count is: 164
+10:11:08.892:	Current page is: PurchaseResult
+10:11:08.892:	page count is: 165
+10:11:09.969:	Current page is: PurchaseResult
+10:11:09.969:	page count is: 166
+10:11:11.614:	Current page is: PurchaseResult
+10:11:11.614:	page count is: 167
+10:11:12.711:	Current page is: PurchaseResult
+10:11:12.712:	page count is: 168
+10:11:13.803:	Current page is: PurchaseResult
+10:11:13.803:	page count is: 169
+10:11:14.898:	Current page is: PurchaseResult
+10:11:14.898:	page count is: 170
+10:11:15.972:	Current page is: PurchaseResult
+10:11:15.972:	page count is: 171
+10:11:17.125:	Current page is: PurchaseResult
+10:11:17.125:	page count is: 172
+10:11:18.474:	Current page is: PurchaseResult
+10:11:18.474:	page count is: 173
+10:11:19.584:	Current page is: PurchaseResult
+10:11:19.584:	page count is: 174
+10:11:20.736:	Current page is: PurchaseResult
+10:11:20.737:	page count is: 175
+10:11:21.836:	Current page is: PurchaseResult
+10:11:21.836:	page count is: 176
+10:11:22.951:	Current page is: PurchaseResult
+10:11:22.951:	page count is: 177
+10:11:24.039:	Current page is: PurchaseResult
+10:11:24.039:	page count is: 178
+10:11:25.151:	Current page is: PurchaseResult
+10:11:25.151:	page count is: 179
+10:11:26.255:	Current page is: PurchaseResult
+10:11:26.255:	page count is: 180
+10:11:27.358:	Current page is: PurchaseResult
+10:11:27.358:	page count is: 181
+10:11:28.487:	Current page is: PurchaseResult
+10:11:28.487:	page count is: 182
+10:11:29.580:	Current page is: PurchaseResult
+10:11:29.580:	page count is: 183
+10:11:30.693:	Current page is: PurchaseResult
+10:11:30.693:	page count is: 184
+10:11:31.781:	Current page is: PurchaseResult
+10:11:31.781:	page count is: 185
+10:11:32.872:	Current page is: PurchaseResult
+10:11:32.872:	page count is: 186
+10:11:33.986:	Current page is: PurchaseResult
+10:11:33.986:	page count is: 187
+10:11:35.073:	Current page is: PurchaseResult
+10:11:35.073:	page count is: 188
+10:11:36.240:	Current page is: PurchaseResult
+10:11:36.240:	page count is: 189
+10:11:37.321:	Current page is: PurchaseResult
+10:11:37.321:	page count is: 190
+10:11:38.447:	Current page is: PurchaseResult
+10:11:38.447:	page count is: 191
+10:11:39.437:	Current page is: PurchaseResult
+10:11:39.437:	page count is: 192
+10:11:40.424:	Current page is: PurchaseResult
+10:11:40.424:	page count is: 193
+10:11:41.599:	Current page is: PurchaseResult
+10:11:41.599:	page count is: 194
+10:11:42.705:	Current page is: PurchaseResult
+10:11:42.705:	page count is: 195
+10:11:43.821:	Current page is: PurchaseResult
+10:11:43.821:	page count is: 196
+10:11:44.960:	Current page is: PurchaseResult
+10:11:44.960:	page count is: 197
+10:11:46.083:	Current page is: PurchaseResult
+10:11:46.083:	page count is: 198
+10:11:47.218:	Current page is: PurchaseResult
+10:11:47.218:	page count is: 199
+10:11:48.310:	Current page is: PurchaseResult
+10:11:48.310:	page count is: 200
+10:11:49.426:	Current page is: PurchaseResult
+10:11:49.426:	page count is: 201
+10:11:50.524:	Current page is: PurchaseResult
+10:11:50.524:	page count is: 202
+10:11:51.628:	Current page is: PurchaseResult
+10:11:51.628:	page count is: 203
+10:11:52.736:	Current page is: PurchaseResult
+10:11:52.736:	page count is: 204
+10:11:53.814:	Current page is: PurchaseResult
+10:11:53.814:	page count is: 205
+10:11:54.939:	Current page is: PurchaseResult
+10:11:54.939:	page count is: 206
+10:11:56.021:	Current page is: PurchaseResult
+10:11:56.021:	page count is: 207
+10:11:57.135:	Current page is: PurchaseResult
+10:11:57.135:	page count is: 208
+10:11:58.243:	Current page is: PurchaseResult
+10:11:58.243:	page count is: 209
+10:11:59.335:	Current page is: PurchaseResult
+10:11:59.335:	page count is: 210
+10:12:00.436:	Current page is: PurchaseResult
+10:12:00.436:	page count is: 211
+10:12:01.568:	Current page is: PurchaseResult
+10:12:01.568:	page count is: 212
+10:12:02.673:	Current page is: PurchaseResult
+10:12:02.673:	page count is: 213
+10:12:03.755:	Current page is: PurchaseResult
+10:12:03.756:	page count is: 214
+10:12:04.864:	Current page is: PurchaseResult
+10:12:04.864:	page count is: 215
+10:12:05.966:	Current page is: PurchaseResult
+10:12:05.966:	page count is: 216
+10:12:07.142:	Current page is: PurchaseResult
+10:12:07.142:	page count is: 217
+10:12:08.261:	Current page is: PurchaseResult
+10:12:08.261:	page count is: 218
+10:12:09.369:	Current page is: PurchaseResult
+10:12:09.369:	page count is: 219
+10:12:10.500:	Current page is: PurchaseResult
+10:12:10.500:	page count is: 220
+10:12:11.832:	Current page is: PurchaseResult
+10:12:11.832:	page count is: 221
+10:12:12.840:	Current page is: PurchaseResult
+10:12:12.840:	page count is: 222
+10:12:13.865:	Current page is: PurchaseResult
+10:12:13.865:	page count is: 223
+10:12:14.985:	Current page is: PurchaseResult
+10:12:14.985:	page count is: 224
+10:12:15.485:	The method "clickButton()" are called
+10:12:15.634:	exception caught during button click, failed to find ReceiptSentConfirmationDone
+10:12:15.634:	The method "waitUntilPage()" are called
+10:12:16.260:	Current page is: PurchaseResult
+10:12:16.260:	page count is: 225
+10:12:16.754:	Current page is: PurchaseResult
+10:12:16.754:	page count is: 226
+10:12:18.257:	Current page is: PurchaseResult
+10:12:18.257:	page count is: 227
+10:12:19.375:	Current page is: PurchaseResult
+10:12:19.375:	page count is: 228
+10:12:20.440:	Current page is: PurchaseResult
+10:12:20.440:	page count is: 229
+10:12:21.493:	Current page is: PurchaseResult
+10:12:21.493:	page count is: 230
+10:12:22.531:	Current page is: PurchaseResult
+10:12:22.532:	page count is: 231
+10:12:23.570:	Current page is: PurchaseResult
+10:12:23.570:	page count is: 232
+10:12:24.726:	Current page is: PurchaseResult
+10:12:24.726:	page count is: 233
+10:12:25.752:	Current page is: PurchaseResult
+10:12:25.752:	page count is: 234
+10:12:26.782:	Current page is: PurchaseResult
+10:12:26.783:	page count is: 235
+10:12:27.708:	Current page is: PurchaseResult
+10:12:27.708:	page count is: 236
+10:12:28.704:	Current page is: PurchaseResult
+10:12:28.704:	page count is: 237
+10:12:29.717:	Current page is: PurchaseResult
+10:12:29.717:	page count is: 238
+10:12:30.750:	Current page is: PurchaseResult
+10:12:30.750:	page count is: 239
+10:12:31.756:	Current page is: PurchaseResult
+10:12:31.756:	page count is: 240
+10:12:32.744:	Current page is: PurchaseResult
+10:12:32.744:	page count is: 241
+10:12:33.738:	Current page is: PurchaseResult
+10:12:33.738:	page count is: 242
+10:12:34.737:	Current page is: PurchaseResult
+10:12:34.737:	page count is: 243
+10:12:35.740:	Current page is: PurchaseResult
+10:12:35.740:	page count is: 244
+10:12:36.716:	Current page is: PurchaseResult
+10:12:36.716:	page count is: 245
+10:12:37.615:	Current page is: PurchaseResult
+10:12:37.615:	page count is: 246
+10:12:38.710:	Current page is: PurchaseResult
+10:12:38.710:	page count is: 247
+10:12:39.816:	Current page is: PurchaseResult
+10:12:39.816:	page count is: 248
+10:12:40.942:	Current page is: PurchaseResult
+10:12:40.942:	page count is: 249
+10:12:42.017:	Current page is: PurchaseResult
+10:12:42.017:	page count is: 250
+10:12:43.110:	Current page is: PurchaseResult
+10:12:43.110:	page count is: 251
+10:12:44.204:	Current page is: PurchaseResult
+10:12:44.204:	page count is: 252
+10:12:45.311:	Current page is: PurchaseResult
+10:12:45.311:	page count is: 253
+10:12:46.435:	Current page is: PurchaseResult
+10:12:46.435:	page count is: 254
+10:12:47.561:	Current page is: PurchaseResult
+10:12:47.561:	page count is: 255
+10:12:48.649:	Current page is: PurchaseResult
+10:12:48.649:	page count is: 256
+10:12:49.752:	Current page is: PurchaseResult
+10:12:49.752:	page count is: 257
+10:12:50.870:	Current page is: PurchaseResult
+10:12:50.870:	page count is: 258
+10:12:51.952:	Current page is: PurchaseResult
+10:12:51.952:	page count is: 259
+10:12:53.040:	Current page is: PurchaseResult
+10:12:53.040:	page count is: 260
+10:12:54.131:	Current page is: PurchaseResult
+10:12:54.131:	page count is: 261
+10:12:55.203:	Current page is: PurchaseResult
+10:12:55.203:	page count is: 262
+10:12:56.287:	Current page is: PurchaseResult
+10:12:56.287:	page count is: 263
+10:12:57.393:	Current page is: PurchaseResult
+10:12:57.393:	page count is: 264
+10:12:58.502:	Current page is: PurchaseResult
+10:12:58.502:	page count is: 265
+10:12:59.599:	Current page is: PurchaseResult
+10:12:59.599:	page count is: 266
+10:13:00.671:	Current page is: PurchaseResult
+10:13:00.671:	page count is: 267
+10:13:01.780:	Current page is: PurchaseResult
+10:13:01.780:	page count is: 268
+10:13:02.886:	Current page is: PurchaseResult
+10:13:02.886:	page count is: 269
+10:13:03.949:	Current page is: PurchaseResult
+10:13:03.950:	page count is: 270
+10:13:05.060:	Current page is: PurchaseResult
+10:13:05.060:	page count is: 271
+10:13:06.162:	Current page is: PurchaseResult
+10:13:06.163:	page count is: 272
+10:13:07.284:	Current page is: PurchaseResult
+10:13:07.285:	page count is: 273
+10:13:08.475:	Current page is: PurchaseResult
+10:13:08.475:	page count is: 274
+10:13:09.522:	Current page is: PurchaseResult
+10:13:09.522:	page count is: 275
+10:13:10.552:	Current page is: PurchaseResult
+10:13:10.552:	page count is: 276
+10:13:11.729:	Current page is: PurchaseResult
+10:13:11.729:	page count is: 277
+10:13:12.868:	Current page is: PurchaseResult
+10:13:12.868:	page count is: 278
+10:13:13.953:	Current page is: PurchaseResult
+10:13:13.953:	page count is: 279
+10:13:15.051:	Current page is: PurchaseResult
+10:13:15.051:	page count is: 280
+10:13:16.170:	Current page is: PurchaseResult
+10:13:16.170:	page count is: 281
+10:13:17.259:	Current page is: PurchaseResult
+10:13:17.259:	page count is: 282
+10:13:18.648:	Current page is: PurchaseResult
+10:13:18.648:	page count is: 283
+10:13:19.768:	Current page is: PurchaseResult
+10:13:19.768:	page count is: 284
+10:13:20.893:	Current page is: PurchaseResult
+10:13:20.894:	page count is: 285
+10:13:21.995:	Current page is: PurchaseResult
+10:13:21.995:	page count is: 286
+10:13:23.105:	Current page is: PurchaseResult
+10:13:23.105:	page count is: 287
+10:13:24.264:	Current page is: PurchaseResult
+10:13:24.265:	page count is: 288
+10:13:25.361:	Current page is: PurchaseResult
+10:13:25.362:	page count is: 289
+10:13:26.490:	Current page is: PurchaseResult
+10:13:26.490:	page count is: 290
+10:13:27.616:	Current page is: PurchaseResult
+10:13:27.616:	page count is: 291
+10:13:28.769:	Current page is: PurchaseResult
+10:13:28.770:	page count is: 292
+10:13:29.870:	Current page is: PurchaseResult
+10:13:29.870:	page count is: 293
+10:13:31.014:	Current page is: PurchaseResult
+10:13:31.014:	page count is: 294
+10:13:32.126:	Current page is: PurchaseResult
+10:13:32.126:	page count is: 295
+10:13:33.236:	Current page is: PurchaseResult
+10:13:33.236:	page count is: 296
+10:13:34.342:	Current page is: PurchaseResult
+10:13:34.342:	page count is: 297
+10:13:35.444:	Current page is: PurchaseResult
+10:13:35.444:	page count is: 298
+10:13:36.555:	Current page is: PurchaseResult
+10:13:36.555:	page count is: 299
+10:13:37.689:	Current page is: PurchaseResult
+10:13:37.689:	page count is: 300
+10:13:38.814:	Current page is: PurchaseResult
+10:13:38.814:	page count is: 301
+10:13:39.904:	Current page is: PurchaseResult
+10:13:39.904:	page count is: 302
+10:13:41.021:	Current page is: PurchaseResult
+10:13:41.022:	page count is: 303
+10:13:42.177:	Current page is: PurchaseResult
+10:13:42.177:	page count is: 304
+10:13:43.274:	Current page is: PurchaseResult
+10:13:43.274:	page count is: 305
+10:13:44.676:	Current page is: PurchaseResult
+10:13:44.676:	page count is: 306
+10:13:45.687:	Current page is: PurchaseResult
+10:13:45.687:	page count is: 307
+10:13:46.684:	Current page is: PurchaseResult
+10:13:46.684:	page count is: 308
+10:13:47.712:	Current page is: PurchaseResult
+10:13:47.712:	page count is: 309
+10:13:48.868:	Current page is: PurchaseResult
+10:13:48.868:	page count is: 310
+10:13:49.988:	Current page is: PurchaseResult
+10:13:49.988:	page count is: 311
+10:13:51.015:	Current page is: PurchaseResult
+10:13:51.015:	page count is: 312
+10:13:52.012:	Current page is: PurchaseResult
+10:13:52.012:	page count is: 313
+10:13:53.047:	Current page is: PurchaseResult
+10:13:53.047:	page count is: 314
+10:13:54.069:	Current page is: PurchaseResult
+10:13:54.070:	page count is: 315
+10:13:55.114:	Current page is: PurchaseResult
+10:13:55.114:	page count is: 316
+10:13:56.243:	Current page is: PurchaseResult
+10:13:56.243:	page count is: 317
+10:13:57.288:	Current page is: PurchaseResult
+10:13:57.288:	page count is: 318
+10:13:58.355:	Current page is: PurchaseResult
+10:13:58.355:	page count is: 319
+10:13:59.355:	Current page is: PurchaseResult
+10:13:59.355:	page count is: 320
+10:14:00.343:	Current page is: PurchaseResult
+10:14:00.343:	page count is: 321
+10:14:01.337:	Current page is: PurchaseResult
+10:14:01.337:	page count is: 322
+10:14:02.297:	Current page is: PurchaseResult
+10:14:02.297:	page count is: 323
+10:14:03.284:	Current page is: PurchaseResult
+10:14:03.284:	page count is: 324
+10:14:04.265:	Current page is: PurchaseResult
+10:14:04.266:	page count is: 325
+10:14:05.278:	Current page is: PurchaseResult
+10:14:05.278:	page count is: 326
+10:14:06.422:	Current page is: PurchaseResult
+10:14:06.422:	page count is: 327
+10:14:07.486:	Current page is: PurchaseResult
+10:14:07.486:	page count is: 328
+10:14:08.482:	Current page is: PurchaseResult
+10:14:08.482:	page count is: 329
+10:14:09.421:	Current page is: PurchaseResult
+10:14:09.421:	page count is: 330
+10:14:10.436:	Current page is: PurchaseResult
+10:14:10.436:	page count is: 331
+10:14:11.804:	Current page is: PurchaseResult
+10:14:11.804:	page count is: 332
+10:14:12.898:	Current page is: PurchaseResult
+10:14:12.898:	page count is: 333
+10:14:13.986:	Current page is: PurchaseResult
+10:14:13.986:	page count is: 334
+10:14:15.075:	Current page is: PurchaseResult
+10:14:15.075:	page count is: 335
+10:14:16.163:	Current page is: PurchaseResult
+10:14:16.163:	page count is: 336
+10:14:16.663:	The method "test()" are called
+10:14:17.299:	Current page is: PurchaseResult
+10:14:17.299:	page count is: 337
+10:14:17.300:	The method "reachPage()" are called
+10:14:17.300:	method reachPage(GP, TransactionHistory) is called.
+10:14:17.300:	method reachPage(GP, Purchase) is called.
+10:14:17.404:	method reachPage(GP, EnterPIN) is called.
+10:14:17.404:	method launch (GP, 1) is called.
+10:14:17.404:	method findCurrentPage(1) is called.
+10:14:17.905:	
+10:14:18.593:	Current page is: PurchaseResult
+10:14:18.593:	This page PurchaseResult is not recognized.
+10:14:19.192:	Current page is: PurchaseResult
+10:14:19.192:	page count is: 339
+10:14:19.746:	Current page is: PurchaseResult
+10:14:19.746:	page count is: 340
+10:14:20.837:	Current page is: PurchaseResult
+10:14:20.837:	page count is: 341
+10:14:21.933:	Current page is: PurchaseResult
+10:14:21.933:	page count is: 342
+10:14:23.052:	Current page is: PurchaseResult
+10:14:23.052:	page count is: 343
+10:14:24.144:	Current page is: PurchaseResult
+10:14:24.144:	page count is: 344
+10:14:25.245:	Current page is: PurchaseResult
+10:14:25.246:	page count is: 345
+10:14:26.385:	Current page is: PurchaseResult
+10:14:26.385:	page count is: 346
+10:14:27.482:	Current page is: PurchaseResult
+10:14:27.482:	page count is: 347
+10:14:28.590:	Current page is: PurchaseResult
+10:14:28.590:	page count is: 348
+10:14:29.668:	Current page is: PurchaseResult
+10:14:29.668:	page count is: 349
+10:14:30.786:	Current page is: PurchaseResult
+10:14:30.786:	page count is: 350
+10:14:31.886:	Current page is: PurchaseResult
+10:14:31.886:	page count is: 351
+10:14:32.985:	Current page is: PurchaseResult
+10:14:32.985:	page count is: 352
+10:14:34.082:	Current page is: PurchaseResult
+10:14:34.082:	page count is: 353
+10:14:35.173:	Current page is: PurchaseResult
+10:14:35.173:	page count is: 354
+10:14:36.289:	Current page is: PurchaseResult
+10:14:36.289:	page count is: 355
+10:14:37.366:	Current page is: PurchaseResult
+10:14:37.367:	page count is: 356
+10:14:38.455:	Current page is: PurchaseResult
+10:14:38.455:	page count is: 357
+10:14:39.544:	Current page is: PurchaseResult
+10:14:39.544:	page count is: 358
+10:14:40.686:	Current page is: PurchaseResult
+10:14:40.686:	page count is: 359
+10:14:41.885:	Current page is: PurchaseResult
+10:14:41.885:	page count is: 360
+10:14:43.034:	Current page is: PurchaseResult
+10:14:43.034:	page count is: 361
+10:14:44.205:	Current page is: PurchaseResult
+10:14:44.205:	page count is: 362
+10:14:45.338:	Current page is: PurchaseResult
+10:14:45.338:	page count is: 363
+10:14:46.413:	Current page is: PurchaseResult
+10:14:46.413:	page count is: 364
+10:14:47.357:	Current page is: PurchaseResult
+10:14:47.357:	page count is: 365
+10:14:48.412:	Current page is: PurchaseResult
+10:14:48.412:	page count is: 366
+10:14:48.913:	<font color='grey'>unexpected page PurchaseResult reached</font>
+10:14:48.913:	method goToSidemenuPage(TransactionHistory) is called.
+10:14:48.913:	method findCurrentPage(0) is called.
+10:14:49.414:	
+10:14:50.058:	Current page is: PurchaseResult
+10:14:50.058:	method clickOnPage(PurchaseResult, TransactionHistory, [Ljava.lang.String;@90d8ad) is called.
+10:14:50.058:	method findCurrentPage(0) is called.
+10:14:50.559:	
+10:14:51.170:	Current page is: PurchaseResult
+10:14:51.280:	exception caught during button click, failed to find PurchaseSideMenu
+10:14:51.919:	exception caught during button click, failed to find SideMenuTransactionHistory
+10:14:53.084:	Current page is: PurchaseResult
+10:14:53.084:	page count is: 369
+10:14:53.655:	Current page is: PurchaseResult
+10:14:53.655:	page count is: 370
+10:14:54.772:	Current page is: PurchaseResult
+10:14:54.772:	page count is: 371
+10:14:55.837:	Current page is: PurchaseResult
+10:14:55.837:	page count is: 372
+10:14:56.940:	Current page is: PurchaseResult
+10:14:56.940:	page count is: 373
+10:14:58.090:	Current page is: PurchaseResult
+10:14:58.090:	page count is: 374
+10:14:59.197:	Current page is: PurchaseResult
+10:14:59.197:	page count is: 375
+10:15:00.342:	Current page is: PurchaseResult
+10:15:00.342:	page count is: 376
+10:15:01.444:	Current page is: PurchaseResult
+10:15:01.444:	page count is: 377
+10:15:02.560:	Current page is: PurchaseResult
+10:15:02.560:	page count is: 378
+10:15:03.689:	Current page is: PurchaseResult
+10:15:03.689:	page count is: 379
+10:15:04.802:	Current page is: PurchaseResult
+10:15:04.802:	page count is: 380
+10:15:05.905:	Current page is: PurchaseResult
+10:15:05.905:	page count is: 381
+10:15:06.986:	Current page is: PurchaseResult
+10:15:06.986:	page count is: 382
+10:15:08.086:	Current page is: PurchaseResult
+10:15:08.086:	page count is: 383
+10:15:09.206:	Current page is: PurchaseResult
+10:15:09.206:	page count is: 384
+10:15:10.276:	Current page is: PurchaseResult
+10:15:10.277:	page count is: 385
+10:15:11.852:	Current page is: PurchaseResult
+10:15:11.852:	page count is: 386
+10:15:12.953:	Current page is: PurchaseResult
+10:15:12.953:	page count is: 387
+10:15:14.031:	Current page is: PurchaseResult
+10:15:14.031:	page count is: 388
+10:15:15.140:	Current page is: PurchaseResult
+10:15:15.140:	page count is: 389
+10:15:16.232:	Current page is: PurchaseResult
+10:15:16.232:	page count is: 390
+10:15:17.364:	Current page is: PurchaseResult
+10:15:17.364:	page count is: 391
+10:15:18.656:	Current page is: PurchaseResult
+10:15:18.656:	page count is: 392
+10:15:19.804:	Current page is: PurchaseResult
+10:15:19.804:	page count is: 393
+10:15:20.943:	Current page is: PurchaseResult
+10:15:20.943:	page count is: 394
+10:15:22.091:	Current page is: PurchaseResult
+10:15:22.091:	page count is: 395
+10:15:22.592:	The method "test()" are called
+10:15:23.238:	Current page is: PurchaseResult
+10:15:23.238:	page count is: 396
+10:15:23.239:	The method "test()" are called
+10:15:23.348:	The method "clickButton()" are called
+10:15:23.444:	exception caught during button click, failed to find TransactionHistoryFirstTransaction
+10:15:23.444:	The method "waitUntilPage()" are called
+10:15:23.915:	Current page is: PurchaseResult
+10:15:23.915:	page count is: 397
+10:15:24.402:	Current page is: PurchaseResult
+10:15:24.402:	page count is: 398
+10:15:25.428:	Current page is: PurchaseResult
+10:15:25.428:	page count is: 399
+10:15:26.427:	Current page is: PurchaseResult
+10:15:26.427:	page count is: 400
+10:15:27.443:	Current page is: PurchaseResult
+10:15:27.443:	page count is: 401
+10:15:28.426:	Current page is: PurchaseResult
+10:15:28.426:	page count is: 402
+10:15:29.419:	Current page is: PurchaseResult
+10:15:29.419:	page count is: 403
+10:15:30.420:	Current page is: PurchaseResult
+10:15:30.420:	page count is: 404
+10:15:31.417:	Current page is: PurchaseResult
+10:15:31.417:	page count is: 405
+10:15:32.439:	Current page is: PurchaseResult
+10:15:32.439:	page count is: 406
+10:15:33.468:	Current page is: PurchaseResult
+10:15:33.469:	page count is: 407
+10:15:34.478:	Current page is: PurchaseResult
+10:15:34.478:	page count is: 408
+10:15:35.495:	Current page is: PurchaseResult
+10:15:35.496:	page count is: 409
+10:15:36.507:	Current page is: PurchaseResult
+10:15:36.507:	page count is: 410
+10:15:37.516:	Current page is: PurchaseResult
+10:15:37.516:	page count is: 411
+10:15:38.479:	Current page is: PurchaseResult
+10:15:38.479:	page count is: 412
+10:15:39.468:	Current page is: PurchaseResult
+10:15:39.468:	page count is: 413
+10:15:40.444:	Current page is: PurchaseResult
+10:15:40.444:	page count is: 414
+10:15:41.457:	Current page is: PurchaseResult
+10:15:41.457:	page count is: 415
+10:15:42.510:	Current page is: PurchaseResult
+10:15:42.510:	page count is: 416
+10:15:43.641:	Current page is: PurchaseResult
+10:15:43.641:	page count is: 417
+10:15:44.665:	Current page is: PurchaseResult
+10:15:44.665:	page count is: 418
+10:15:45.587:	Current page is: PurchaseResult
+10:15:45.587:	page count is: 419
+10:15:46.679:	Current page is: PurchaseResult
+10:15:46.679:	page count is: 420
+10:15:47.803:	Current page is: PurchaseResult
+10:15:47.803:	page count is: 421
+10:15:48.873:	Current page is: PurchaseResult
+10:15:48.873:	page count is: 422
+10:15:49.991:	Current page is: PurchaseResult
+10:15:49.991:	page count is: 423
+10:15:51.096:	Current page is: PurchaseResult
+10:15:51.096:	page count is: 424
+10:15:52.217:	Current page is: PurchaseResult
+10:15:52.217:	page count is: 425
+10:15:53.328:	Current page is: PurchaseResult
+10:15:53.328:	page count is: 426
+10:15:54.418:	Current page is: PurchaseResult
+10:15:54.418:	page count is: 427
+10:15:55.511:	Current page is: PurchaseResult
+10:15:55.511:	page count is: 428
+10:15:56.597:	Current page is: PurchaseResult
+10:15:56.597:	page count is: 429
+10:15:57.673:	Current page is: PurchaseResult
+10:15:57.673:	page count is: 430
+10:15:58.760:	Current page is: PurchaseResult
+10:15:58.760:	page count is: 431
+10:15:59.873:	Current page is: PurchaseResult
+10:15:59.873:	page count is: 432
+10:16:00.955:	Current page is: PurchaseResult
+10:16:00.956:	page count is: 433
+10:16:02.039:	Current page is: PurchaseResult
+10:16:02.039:	page count is: 434
+10:16:03.128:	Current page is: PurchaseResult
+10:16:03.128:	page count is: 435
+10:16:04.244:	Current page is: PurchaseResult
+10:16:04.244:	page count is: 436
+10:16:05.349:	Current page is: PurchaseResult
+10:16:05.350:	page count is: 437
+10:16:06.432:	Current page is: PurchaseResult
+10:16:06.432:	page count is: 438
+10:16:07.533:	Current page is: PurchaseResult
+10:16:07.534:	page count is: 439
+10:16:08.625:	Current page is: PurchaseResult
+10:16:08.625:	page count is: 440
+10:16:09.735:	Current page is: PurchaseResult
+10:16:09.735:	page count is: 441
+10:16:11.408:	Current page is: PurchaseResult
+10:16:11.408:	page count is: 442
+10:16:12.549:	Current page is: PurchaseResult
+10:16:12.549:	page count is: 443
+10:16:13.660:	Current page is: PurchaseResult
+10:16:13.660:	page count is: 444
+10:16:14.759:	Current page is: PurchaseResult
+10:16:14.760:	page count is: 445
+10:16:15.897:	Current page is: PurchaseResult
+10:16:15.897:	page count is: 446
+10:16:16.910:	Current page is: PurchaseResult
+10:16:16.910:	page count is: 447
+10:16:18.306:	Current page is: PurchaseResult
+10:16:18.306:	page count is: 448
+10:16:19.302:	Current page is: PurchaseResult
+10:16:19.302:	page count is: 449
+10:16:20.424:	Current page is: PurchaseResult
+10:16:20.424:	page count is: 450
+10:16:21.541:	Current page is: PurchaseResult
+10:16:21.541:	page count is: 451
+10:16:22.662:	Current page is: PurchaseResult
+10:16:22.662:	page count is: 452
+10:16:23.765:	Current page is: PurchaseResult
+10:16:23.765:	page count is: 453
+10:16:24.860:	Current page is: PurchaseResult
+10:16:24.860:	page count is: 454
+10:16:25.978:	Current page is: PurchaseResult
+10:16:25.978:	page count is: 455
+10:16:27.109:	Current page is: PurchaseResult
+10:16:27.109:	page count is: 456
+10:16:28.175:	Current page is: PurchaseResult
+10:16:28.175:	page count is: 457
+10:16:29.307:	Current page is: PurchaseResult
+10:16:29.307:	page count is: 458
+10:16:30.428:	Current page is: PurchaseResult
+10:16:30.428:	page count is: 459
+10:16:31.558:	Current page is: PurchaseResult
+10:16:31.558:	page count is: 460
+10:16:32.659:	Current page is: PurchaseResult
+10:16:32.659:	page count is: 461
+10:16:33.785:	Current page is: PurchaseResult
+10:16:33.785:	page count is: 462
+10:16:34.911:	Current page is: PurchaseResult
+10:16:34.911:	page count is: 463
+10:16:35.968:	Current page is: PurchaseResult
+10:16:35.968:	page count is: 464
+10:16:37.057:	Current page is: PurchaseResult
+10:16:37.057:	page count is: 465
+10:16:38.165:	Current page is: PurchaseResult
+10:16:38.166:	page count is: 466
+10:16:39.273:	Current page is: PurchaseResult
+10:16:39.273:	page count is: 467
+10:16:40.383:	Current page is: PurchaseResult
+10:16:40.383:	page count is: 468
+10:16:41.503:	Current page is: PurchaseResult
+10:16:41.503:	page count is: 469
+10:16:42.613:	Current page is: PurchaseResult
+10:16:42.613:	page count is: 470
+10:16:43.710:	Current page is: PurchaseResult
+10:16:43.711:	page count is: 471
+10:16:44.822:	Current page is: PurchaseResult
+10:16:44.822:	page count is: 472
+10:16:45.961:	Current page is: PurchaseResult
+10:16:45.961:	page count is: 473
+10:16:47.073:	Current page is: PurchaseResult
+10:16:47.073:	page count is: 474
+10:16:48.203:	Current page is: PurchaseResult
+10:16:48.203:	page count is: 475
+10:16:49.299:	Current page is: PurchaseResult
+10:16:49.299:	page count is: 476
+10:16:50.454:	Current page is: PurchaseResult
+10:16:50.454:	page count is: 477
+10:16:51.602:	Current page is: PurchaseResult
+10:16:51.603:	page count is: 478
+10:16:52.622:	Current page is: PurchaseResult
+10:16:52.622:	page count is: 479
+10:16:53.635:	Current page is: PurchaseResult
+10:16:53.635:	page count is: 480
+10:16:54.616:	Current page is: PurchaseResult
+10:16:54.616:	page count is: 481
+10:16:55.778:	Current page is: PurchaseResult
+10:16:55.778:	page count is: 482
+10:16:56.921:	Current page is: PurchaseResult
+10:16:56.921:	page count is: 483
+10:16:58.046:	Current page is: PurchaseResult
+10:16:58.046:	page count is: 484
+10:16:59.181:	Current page is: PurchaseResult
+10:16:59.181:	page count is: 485
+10:17:00.303:	Current page is: PurchaseResult
+10:17:00.303:	page count is: 486
+10:17:01.277:	Current page is: PurchaseResult
+10:17:01.277:	page count is: 487
+10:17:02.291:	Current page is: PurchaseResult
+10:17:02.291:	page count is: 488
+10:17:03.438:	Current page is: PurchaseResult
+10:17:03.438:	page count is: 489
+10:17:04.589:	Current page is: PurchaseResult
+10:17:04.589:	page count is: 490
+10:17:05.739:	Current page is: PurchaseResult
+10:17:05.739:	page count is: 491
+10:17:06.869:	Current page is: PurchaseResult
+10:17:06.869:	page count is: 492
+10:17:07.865:	Current page is: PurchaseResult
+10:17:07.865:	page count is: 493
+10:17:08.851:	Current page is: PurchaseResult
+10:17:08.851:	page count is: 494
+10:17:09.840:	Current page is: PurchaseResult
+10:17:09.840:	page count is: 495
+10:17:11.416:	Current page is: PurchaseResult
+10:17:11.416:	page count is: 496
+10:17:12.556:	Current page is: PurchaseResult
+10:17:12.556:	page count is: 497
+10:17:13.580:	Current page is: PurchaseResult
+10:17:13.580:	page count is: 498
+10:17:14.579:	Current page is: PurchaseResult
+10:17:14.579:	page count is: 499
+10:17:15.609:	Current page is: PurchaseResult
+10:17:15.609:	page count is: 500
+10:17:16.752:	Current page is: PurchaseResult
+10:17:16.752:	page count is: 501
+10:17:18.172:	Current page is: PurchaseResult
+10:17:18.173:	page count is: 502
+10:17:19.159:	Current page is: PurchaseResult
+10:17:19.159:	page count is: 503
+10:17:20.168:	Current page is: PurchaseResult
+10:17:20.168:	page count is: 504
+10:17:21.267:	Current page is: PurchaseResult
+10:17:21.268:	page count is: 505
+10:17:22.303:	Current page is: PurchaseResult
+10:17:22.303:	page count is: 506
+10:17:23.313:	Current page is: PurchaseResult
+10:17:23.313:	page count is: 507
+10:17:23.813:	The method "test()" are called
+10:17:24.222:	Current page is: PurchaseResult
+10:17:24.222:	page count is: 508
+10:17:24.222:	The method "test()" are called
+10:17:24.314:	The method "test()" are called
+10:17:24.405:	The method "test()" are called
+10:17:24.501:	The method "test()" are called
+10:17:24.604:	The method "test()" are called
+10:17:24.694:	The method "clickButton()" are called
+10:17:26.459:	The method "waitUntilPage()" are called
+10:17:32.512:	Current page is: 
+10:17:37.643:	Current page is: 
+10:17:43.260:	Current page is: 
+10:17:48.869:	Current page is: 
+10:17:54.629:	Current page is: 
+10:18:00.992:	Current page is: 
+10:18:06.420:	Current page is: 
+10:18:12.753:	Current page is: 
+10:18:18.517:	Current page is: 
+10:18:24.193:	Current page is: 
+10:18:29.807:	Current page is: 
+10:18:35.659:	Current page is: 
+10:18:41.692:	Current page is: 
+10:18:47.647:	Current page is: 
+10:18:53.792:	Current page is: 
+10:18:59.831:	Current page is: 
+10:19:05.796:	Current page is: 
+10:19:12.877:	Current page is: 
+10:19:19.118:	Current page is: 
+10:19:25.406:	Current page is: 
+10:19:31.505:	Current page is: 
+10:19:32.006:	The method "reachPage()" are called
+10:19:32.006:	method reachPage(GP, Purchase) is called.
+10:19:32.090:	method reachPage(GP, EnterPIN) is called.
+10:19:32.090:	method launch (GP, 1) is called.
+10:19:32.090:	method findCurrentPage(1) is called.
+10:19:32.590:	
+10:19:38.116:	Current page is: 
+10:19:38.116:	This page  is not recognized.
+10:19:43.740:	Current page is: 
+10:19:49.494:	Current page is: 
+10:19:55.531:	Current page is: 
+10:20:01.638:	Current page is: 
+10:20:07.676:	Current page is: 
+10:20:08.177:	<font color='grey'>unexpected page  reached</font>
+10:20:08.177:	The method "test()" are called
+10:20:14.448:	Current page is: 
+10:20:14.448:	The method "logComment()" are called
+10:20:14.448:	<font color='grey'>Email Receipt sent. Please check manually the email receipt is received and correct.</font>
+10:20:14.449:	<font color='blue'>Test Case: TS_2&3&4 completed.</font>
+10:20:14.449:	-----------------------------------<br>
+10:20:14.456:	The method "logComment()" are called
+10:20:14.456:	<font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font>
+10:20:14.456:	The method "logComment()" are called
+10:20:14.456:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+10:20:14.456:	The method "reachPage()" are called
+10:20:14.456:	method reachPage(GP, SettingsTerminal) is called.
+10:20:14.456:	method reachPage(GP, Purchase) is called.
+10:20:14.561:	method reachPage(GP, EnterPIN) is called.
+10:20:14.561:	method launch (GP, 1) is called.
+10:20:14.561:	method findCurrentPage(1) is called.
+10:20:15.062:	
+10:20:20.547:	Current page is: 
+10:20:20.547:	This page  is not recognized.
+10:20:25.704:	Current page is: 
+10:20:30.929:	Current page is: 
+10:20:36.601:	Current page is: 
+10:20:42.216:	Current page is: 
+10:20:47.913:	Current page is: 
+10:20:53.794:	Current page is: 
+10:20:54.296:	<font color='grey'>unexpected page  reached</font>
+10:20:54.296:	method findCurrentPage(0) is called.
+10:20:54.796:	
+10:21:00.158:	Current page is: 
+10:21:00.159:	<font color='grey'>unexpected page  reached</font>
+10:21:00.159:	The method "setBooleanValue(no)" are called
+10:21:00.228:	exception caught during click, failed to find SettingsTerminalPINWhenCancelTransactionValue
+10:21:00.228:	The method "setBooleanValue(no)" are called
+10:21:00.307:	exception caught during click, failed to find SettingsTerminalAddTipValue
+10:21:00.307:	The method "reachPage()" are called
+10:21:00.307:	method reachPage(GP, Purchase) is called.
+10:21:00.369:	method reachPage(GP, EnterPIN) is called.
+10:21:00.369:	method launch (GP, 1) is called.
+10:21:00.369:	method findCurrentPage(1) is called.
+10:21:00.869:	
+10:21:05.845:	Current page is: 
+10:21:05.845:	This page  is not recognized.
+10:21:11.515:	Current page is: 
+10:21:16.823:	Current page is: 
+10:21:22.806:	Current page is: 
+10:21:28.447:	Current page is: 

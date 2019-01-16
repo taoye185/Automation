@@ -1,0 +1,18 @@
+---------Start of logs---------
+13:45:43.981:	The method "logComment()" are called
+13:45:43.981:	<font color='grey'>Start of refund and void refund testing - please have SUCCESS testing card placed at the back of device!</font>
+13:45:43.981:	The method "logComment()" are called
+13:45:43.981:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+13:45:43.981:	The method "launch()" are called
+13:45:43.981:	method launch (120) is called.
+13:45:43.981:	method launch (CBA, 120) is called.
+13:45:43.981:	method findCurrentPage(120) is called.
+13:45:44.483:	
+13:45:47.860:	Current page is: MerchantSignIn
+13:45:47.860:	method merchantSignin (005040100000004) is called.
+13:45:49.371:	method findCurrentPage(120) is called.
+13:45:49.872:	
+13:45:56.767:	Current page is: 
+13:45:56.767:	This page  is not recognized.
+13:45:56.767:	method findCurrentPage(120) is called.
+13:45:57.268:	

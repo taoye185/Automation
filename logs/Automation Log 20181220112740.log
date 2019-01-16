@@ -1,0 +1,46 @@
+---------Start of logs---------
+11:27:40.065:	AndroidDriver created.
+11:27:40.067:	The method "logComment()" are called
+11:27:40.067:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+11:27:40.067:	The method "launch()" are called
+11:27:40.067:	method launch (120) is called.
+11:27:40.067:	method launch (CBA, 120) is called.
+11:27:40.067:	method findCurrentPage(120) is called.
+11:27:40.567:	
+11:27:50.698:	Current page is: 
+11:27:50.698:	This page  is not recognized.
+11:27:50.698:	method findCurrentPage(120) is called.
+11:27:51.199:	
+11:27:51.965:	Current page is: SignInSelection
+11:27:51.965:	method clickButton (0, SignInSelectionFirstUser) is called.
+11:27:51.965:	method find(SignInSelectionFirstUser) is called.
+11:27:52.150:	method findCurrentPage(120) is called.
+11:27:52.651:	
+11:27:53.812:	Current page is: EnterPIN
+11:27:53.812:	<font color='grey'>App launched and awaiting for login.</font>
+11:27:53.813:	The method "login()" are called
+11:27:53.813:	method login(1) is called.
+11:27:53.813:	method enterNumPadOK (1, 123456) is called.
+11:27:54.813:	method enterNumPad (1, 123456) is called.
+11:27:55.813:	Number to be entered is: 123456
+11:27:55.813:	method find(EnterPIN1) is called.
+11:27:56.016:	method find(EnterPIN2) is called.
+11:27:56.652:	method find(EnterPIN3) is called.
+11:27:57.358:	method find(EnterPIN4) is called.
+11:27:57.984:	method find(EnterPIN5) is called.
+11:27:58.696:	method find(EnterPIN6) is called.
+11:27:59.419:	method find(EnterPINOK) is called.
+11:27:59.691:	exception caught, not on PIN entering page.
+11:27:59.691:	<font color='grey'>User Authentication performed.</font>
+11:27:59.691:	The method "waitUntilPage()" are called
+11:27:59.691:	
+11:28:04.532:	Current page is: 
+11:28:04.533:	
+11:28:08.963:	Current page is: 
+11:28:09.463:	
+11:28:15.594:	Current page is: 
+11:28:16.095:	
+11:28:16.947:	Current page is: EnterPIN
+11:28:16.948:	page count is: 5
+11:28:16.948:	page count is: 6
+11:28:17.449:	

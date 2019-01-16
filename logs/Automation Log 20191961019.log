@@ -1,0 +1,124 @@
+---------Start of logs---------
+06:10:19.866:	writeElement is called
+06:10:19.867:	method get (ActivatingSecureElement) is called.
+06:10:19.867:	weight is: 0
+06:10:19.868:	method get (AllowBatterySettingsChange) is called.
+06:10:19.868:	weight is: 0
+06:10:19.868:	method get (AllowTimeoutSettingsChange) is called.
+06:10:19.868:	weight is: 0
+06:10:19.868:	method get (AndroidAlert) is called.
+06:10:19.868:	weight is: 0
+06:10:19.869:	method get (AndroidDeviceSettings) is called.
+06:10:19.869:	weight is: 0
+06:10:19.869:	method get (EnterPIN) is called.
+06:10:19.869:	weight is: 9
+06:10:19.871:	method get (MerchantPassword) is called.
+06:10:19.871:	weight is: 1
+06:10:19.871:	method get (MerchantSignIn) is called.
+06:10:19.871:	weight is: 1
+06:10:19.871:	method get (NoNetworkConnection) is called.
+06:10:19.871:	weight is: 0
+06:10:19.871:	method get (ProvisionUpdateComplete) is called.
+06:10:19.871:	weight is: 1
+06:10:19.871:	method get (PurchaseDescription) is called.
+06:10:19.871:	weight is: 0
+06:10:19.872:	method get (SettingsAdvanced) is called.
+06:10:19.872:	weight is: 11
+06:10:19.872:	method get (SettingsTerminal) is called.
+06:10:19.872:	weight is: 64
+06:10:19.875:	method get (SignInSelection) is called.
+06:10:19.875:	weight is: 2
+06:10:19.876:	method get (PurchaseResult) is called.
+06:10:19.876:	weight is: 18
+06:10:19.877:	method get (UpdateRequired) is called.
+06:10:19.877:	weight is: 1
+06:10:19.877:	method get (ConnectionErrorDuringProvision) is called.
+06:10:19.877:	weight is: 0
+06:10:19.878:	method get (PleaseRestartYourPhone) is called.
+06:10:19.879:	weight is: 0
+06:10:19.879:	method get (UpdatingSecureElement) is called.
+06:10:19.879:	weight is: 2
+06:10:19.879:	method get (TermsAndConditions) is called.
+06:10:19.879:	weight is: 0
+06:10:19.879:	method get (ContactUs) is called.
+06:10:19.880:	weight is: 0
+06:10:19.881:	method get (UserManagement) is called.
+06:10:19.881:	weight is: 0
+06:10:19.881:	method get (EditUser) is called.
+06:10:19.881:	weight is: 0
+06:10:19.883:	method get (DeleteUserConfirmation) is called.
+06:10:19.883:	weight is: 0
+06:10:19.883:	method get (AddNewUser) is called.
+06:10:19.883:	weight is: 0
+06:10:19.885:	method get (UserCreated) is called.
+06:10:19.885:	weight is: 0
+06:10:19.887:	method get (TransactionReports) is called.
+06:10:19.887:	weight is: 0
+06:10:19.889:	method get (TransactionHistory) is called.
+06:10:19.889:	weight is: 28
+06:10:19.890:	method get (NewTagScanned) is called.
+06:10:19.890:	weight is: 0
+06:10:19.891:	method get (Purchase) is called.
+06:10:19.891:	weight is: 478
+06:10:19.893:	method get (TapToPay) is called.
+06:10:19.893:	weight is: 25
+06:10:19.894:	method get (CardNotSupported) is called.
+06:10:19.894:	weight is: 0
+06:10:19.894:	method get (EmailReceiptForPurchase) is called.
+06:10:19.894:	weight is: 0
+06:10:19.895:	method get (ReceiptSentConfirmation) is called.
+06:10:19.895:	weight is: 0
+06:10:19.896:	method get (ProcessingPayment) is called.
+06:10:19.896:	weight is: 0
+06:10:19.896:	method get (PurchaseNotCompleted) is called.
+06:10:19.896:	weight is: 0
+06:10:19.896:	method get (SetTipDuringPurchase) is called.
+06:10:19.897:	weight is: 0
+06:10:19.898:	method get (AddTip) is called.
+06:10:19.898:	weight is: 0
+06:10:19.900:	method get (CreateNewPassword) is called.
+06:10:19.900:	weight is: 0
+06:10:19.902:	method get (EnterNewPIN) is called.
+06:10:19.902:	weight is: 0
+06:10:19.904:	method get (ConfirmNewPIN) is called.
+06:10:19.904:	weight is: 0
+06:10:19.904:	method get (CancelTransaction) is called.
+06:10:19.904:	weight is: 9
+06:10:19.905:	method get (PurchaseTimedOut) is called.
+06:10:19.906:	weight is: 0
+06:10:19.907:	method get (TransactionSearch) is called.
+06:10:19.907:	weight is: 0
+06:10:19.910:	method get (TransactionDetails) is called.
+06:10:19.910:	weight is: 16
+06:10:19.912:	method get (AccountLocked) is called.
+06:10:19.912:	weight is: 0
+06:10:19.913:	method get (ForgotPIN) is called.
+06:10:19.913:	weight is: 0
+06:10:19.914:	method get (ResetPIN) is called.
+06:10:19.914:	weight is: 0
+06:10:19.915:	method get (InvalidCredentials) is called.
+06:10:19.915:	weight is: 0
+06:10:19.916:	method get (VoidProcessingPayment) is called.
+06:10:19.917:	weight is: 0
+06:10:19.917:	method get (SecurityImage) is called.
+06:10:19.917:	weight is: 0
+06:10:19.919:	method get (ProvisionActivateComplete) is called.
+06:10:19.919:	weight is: 0
+06:10:19.921:	method get (PaymentAcceptanceSetup) is called.
+06:10:19.921:	weight is: 0
+06:10:19.923:	method get (DatePicker) is called.
+06:10:19.923:	weight is: 0
+06:10:19.923:	method get (ReportSentConfirmation) is called.
+06:10:19.923:	weight is: 0
+06:10:19.924:	method get (EnterOldPIN) is called.
+06:10:19.925:	weight is: 0
+06:10:19.925:	method get (PINUpdated) is called.
+06:10:19.925:	weight is: 0
+06:10:19.926:	method get (EnterRefundAmount) is called.
+06:10:19.926:	weight is: 4
+06:10:19.926:	method get (Signature) is called.
+06:10:19.926:	weight is: 6
+06:10:19.928:	method get (ConfirmSettlement) is called.
+06:10:19.928:	weight is: 1
+06:10:19.929:	.\src\Testcase configuration\Element Config\app elements - Pep Debug.csvhas been read.
+06:10:19.929:	.\src\Testcase configuration\Element Config\app elements - Pep Debug.csvhas been written.

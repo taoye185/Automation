@@ -1,0 +1,16 @@
+---------Start of logs---------
+11:24:55.575:	The method "logComment()" are called
+11:24:55.575:	<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font>
+11:24:55.576:	The method "launch()" are called
+11:24:55.576:	method launch (120) is called.
+11:24:55.576:	method launch (CBA, 120) is called.
+11:24:55.576:	method findCurrentPage(120) is called.
+11:24:56.077:	
+11:24:59.270:	Current page is: MerchantSignIn
+11:24:59.270:	method merchantSignin (005040100000004) is called.
+11:25:00.780:	driverType Androidnot implemented for this method
+11:25:00.780:	method findCurrentPage(120) is called.
+11:25:01.281:	
+11:25:07.925:	Current page is: 
+11:25:07.925:	This page  is not recognized.
+11:25:07.925:	method findCurrentPage(120) is called.

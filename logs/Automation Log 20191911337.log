@@ -1,0 +1,44 @@
+---------Start of logs---------
+11:03:37.960:	The method "logComment()" are called
+11:03:37.960:	<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font>
+11:03:37.960:	The method "launch()" are called
+11:03:37.960:	method launch (120) is called.
+11:03:37.960:	method launch (CBA, 120) is called.
+11:03:37.960:	method findCurrentPage(120) is called.
+11:03:38.460:	
+11:03:38.461:	Current page is: 
+11:03:38.461:	This page  is not recognized.
+11:03:38.461:	method findCurrentPage(120) is called.
+11:03:38.962:	
+11:03:38.966:	Current page is: 
+11:03:38.966:	This page  is not recognized.
+11:03:38.966:	method findCurrentPage(120) is called.
+11:03:39.467:	
+11:03:39.470:	Current page is: 
+11:03:39.470:	This page  is not recognized.
+11:03:39.470:	method findCurrentPage(120) is called.
+11:03:39.970:	
+11:03:39.971:	Current page is: 
+11:03:39.971:	This page  is not recognized.
+11:03:39.971:	method findCurrentPage(120) is called.
+11:03:40.472:	
+11:03:40.474:	Current page is: 
+11:03:40.474:	This page  is not recognized.
+11:03:40.474:	The method "login()" are called
+11:03:40.474:	method login(1) is called.
+11:03:41.474:	method enterNumPadOK (123456) is called.
+11:03:41.474:	method enterNumPad (123456) is called.
+11:03:41.474:	Number to be entered is: 123456
+11:03:42.039:	exception caught, not on PIN entering page.
+11:03:42.268:	exception caught, not on PIN entering page.
+11:03:42.268:	<font color='grey'>User Authentication performed.</font>
+11:03:42.269:	The method "waitUntilPage()" are called
+11:03:51.225:	Current page is: 
+11:03:52.394:	Current page is: MerchantSignIn
+11:03:52.394:	page count is: 2
+11:03:53.982:	Current page is: MerchantSignIn
+11:03:53.982:	page count is: 3
+11:03:55.466:	Current page is: MerchantSignIn
+11:03:55.466:	page count is: 4
+11:03:56.974:	Current page is: MerchantSignIn
+11:03:56.974:	page count is: 5

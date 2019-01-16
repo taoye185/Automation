@@ -1,0 +1,104 @@
+---------Start of logs---------
+11:57:13.220:	The method "logComment()" are called
+11:57:13.220:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+11:57:13.220:	The method "launch()" are called
+11:57:13.220:	method launch (120) is called.
+11:57:13.221:	method launch (CBA, 120) is called.
+11:57:13.221:	method findCurrentPage(120) is called.
+11:57:13.722:	
+11:57:24.265:	Current page is: 
+11:57:24.265:	This page  is not recognized.
+11:57:24.265:	method findCurrentPage(120) is called.
+11:57:24.768:	
+11:57:25.878:	Current page is: SignInSelection
+11:57:26.069:	method findCurrentPage(120) is called.
+11:57:26.569:	
+11:57:27.746:	Current page is: EnterPIN
+11:57:27.746:	<font color='grey'>App launched and awaiting for login.</font>
+11:57:27.746:	The method "login()" are called
+11:57:27.747:	method login(1) is called.
+11:57:28.747:	method enterNumPadOK (123456) is called.
+11:57:28.747:	method enterNumPad (123456) is called.
+11:57:28.747:	Number to be entered is: 123456
+11:57:32.668:	exception caught, not on PIN entering page.
+11:57:32.669:	<font color='grey'>User Authentication performed.</font>
+11:57:32.669:	The method "waitUntilPage()" are called
+11:57:34.940:	Current page is: AllowTimeoutSettingsChange
+11:57:34.940:	page count is: 10
+11:57:35.457:	Current page is: AllowTimeoutSettingsChange
+11:57:35.457:	page count is: 11
+11:57:36.380:	Current page is: AllowTimeoutSettingsChange
+11:57:36.381:	page count is: 12
+11:57:37.330:	Current page is: AllowTimeoutSettingsChange
+11:57:37.330:	page count is: 13
+11:57:38.240:	Current page is: AllowTimeoutSettingsChange
+11:57:38.240:	page count is: 14
+11:57:41.493:	Current page is: AndroidDeviceSettings
+11:57:41.493:	page count is: 2
+11:57:52.093:	Current page is: 
+11:57:52.938:	Current page is: Purchase
+11:57:52.938:	page count is: 147
+11:57:53.439:	The method "reachPage()" are called
+11:57:53.439:	method reachPage(GP, SettingsTerminal) is called.
+11:57:53.439:	method reachPage(GP, Purchase) is called.
+11:57:53.550:	method goToSidemenuPage(Purchase) is called.
+11:57:53.550:	method findCurrentPage(0) is called.
+11:57:54.050:	
+11:57:54.375:	Current page is: Purchase
+11:57:54.375:	method findCurrentPage(0) is called.
+11:57:54.875:	
+11:57:55.240:	Current page is: Purchase
+11:57:56.470:	method login(1) is called.
+11:57:57.470:	method enterNumPadOK (123456) is called.
+11:57:57.470:	method enterNumPad (123456) is called.
+11:57:57.470:	Number to be entered is: 123456
+11:58:01.696:	<font color='grey'>User Authentication performed.</font>
+11:58:03.759:	Current page is: SettingsTerminal
+11:58:03.759:	page count is: 22
+11:58:03.759:	The method "setBooleanValue(no)" are called
+11:58:03.902:	The method "setBooleanValue(no)" are called
+11:58:04.041:	The method "reachPage()" are called
+11:58:04.041:	method reachPage(GP, Purchase) is called.
+11:58:04.161:	method goToSidemenuPage(Purchase) is called.
+11:58:04.161:	method findCurrentPage(0) is called.
+11:58:04.662:	
+11:58:05.125:	Current page is: SettingsTerminal
+11:58:05.125:	method clickOnPage(SettingsTerminal, Purchase, [Ljava.lang.String;@1a745bc) is called.
+11:58:05.125:	method findCurrentPage(0) is called.
+11:58:05.625:	
+11:58:14.786:	Current page is: 
+11:58:14.786:	<font color='grey'>unexpected page  reached</font>
+11:58:14.787:	The method "singlePurchase()" are called
+11:58:14.787:	method singlePurchase(1000, no, , no, ) is called.
+11:58:14.787:	method findCurrentPage(1) is called.
+11:58:15.288:	
+11:58:15.857:	Current page is: SettingsTerminal
+11:58:15.857:	reached an unrecognized page: SettingsTerminal
+11:58:15.952:	exception caught during button click, failed to find NoNetworkConnectionretry
+11:58:15.952:	method findCurrentPage(1) is called.
+11:58:16.453:	
+11:58:16.856:	Current page is: SettingsTerminal
+11:58:16.856:	reached an unrecognized page: SettingsTerminal
+11:58:16.967:	exception caught during button click, failed to find NoNetworkConnectionretry
+11:58:16.967:	method findCurrentPage(1) is called.
+11:58:17.467:	
+11:58:17.880:	Current page is: SettingsTerminal
+11:58:17.880:	reached an unrecognized page: SettingsTerminal
+11:58:17.975:	exception caught during button click, failed to find NoNetworkConnectionretry
+11:58:17.975:	method findCurrentPage(1) is called.
+11:58:18.476:	
+11:58:18.898:	Current page is: SettingsTerminal
+11:58:18.898:	reached an unrecognized page: SettingsTerminal
+11:58:18.984:	exception caught during button click, failed to find NoNetworkConnectionretry
+11:58:18.984:	method findCurrentPage(1) is called.
+11:58:19.485:	
+11:58:19.878:	Current page is: SettingsTerminal
+11:58:19.878:	reached an unrecognized page: SettingsTerminal
+11:58:19.970:	exception caught during button click, failed to find NoNetworkConnectionretry
+11:58:19.970:	method findCurrentPage(1) is called.
+11:58:20.470:	
+11:58:20.927:	Current page is: SettingsTerminal
+11:58:20.927:	reached an unrecognized page: SettingsTerminal
+11:58:21.016:	exception caught during button click, failed to find NoNetworkConnectionretry
+11:58:21.016:	method findCurrentPage(1) is called.
+11:58:21.516:	

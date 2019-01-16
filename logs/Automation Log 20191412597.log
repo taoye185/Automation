@@ -1,0 +1,35 @@
+---------Start of logs---------
+12:59:07.987:	AndroidDriver created.
+12:59:07.992:	The method "logComment()" are called
+12:59:07.993:	<font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font>
+12:59:07.993:	The method "logComment()" are called
+12:59:07.994:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+12:59:07.994:	The method "launch()" are called
+12:59:07.994:	method launch (120) is called.
+12:59:07.994:	method launch (CBA, 120) is called.
+12:59:07.994:	method findCurrentPage(120) is called.
+12:59:08.495:	
+12:59:11.202:	Current page is: MerchantSignIn
+12:59:11.202:	method merchantSignin (0, 005040100000004) is called.
+12:59:11.202:	method inputText (0, MerchantSignInID, 005040100000004) is called.
+12:59:11.202:	method find(MerchantSignInID) is called.
+12:59:12.049:	method clickButton (0, MerchantSignInOK) is called.
+12:59:12.049:	method find(MerchantSignInOK) is called.
+12:59:12.760:	method findCurrentPage(120) is called.
+12:59:13.261:	
+12:59:21.008:	Current page is: 
+12:59:21.008:	This page  is not recognized.
+12:59:21.008:	method findCurrentPage(120) is called.
+12:59:21.509:	
+12:59:22.730:	Current page is: MerchantPassword
+12:59:22.730:	method merchantPassword (0, {FXVo~9B) is called.
+12:59:22.730:	method inputText (0, MerchantPasswordpassword, {FXVo~9B) is called.
+12:59:22.730:	method find(MerchantPasswordpassword) is called.
+12:59:23.755:	method clickButton (0, MerchantPasswordContinue) is called.
+12:59:23.755:	method find(MerchantPasswordContinue) is called.
+12:59:24.380:	method findCurrentPage(120) is called.
+12:59:24.880:	
+12:59:29.669:	Current page is: 
+12:59:29.669:	This page  is not recognized.
+12:59:29.669:	method findCurrentPage(120) is called.
+12:59:30.170:	

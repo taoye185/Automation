@@ -1,0 +1,39 @@
+---------Start of logs---------
+11:21:35.755:	The method "logComment()" are called
+11:21:35.755:	<font color='grey'>Start of base purchase cancellation - please make sure NO card is placed behind the device!</font>
+11:21:35.755:	The method "launch()" are called
+11:21:35.755:	method launch (120) is called.
+11:21:35.755:	method launch (CBA, 120) is called.
+11:21:35.755:	method findCurrentPage(120) is called.
+11:21:36.256:	
+11:21:36.262:	Current page is: 
+11:21:36.262:	This page  is not recognized.
+11:21:36.262:	method findCurrentPage(120) is called.
+11:21:36.762:	
+11:21:36.768:	Current page is: 
+11:21:36.768:	This page  is not recognized.
+11:21:36.768:	method findCurrentPage(120) is called.
+11:21:37.268:	
+11:21:37.272:	Current page is: 
+11:21:37.272:	This page  is not recognized.
+11:21:37.272:	method findCurrentPage(120) is called.
+11:21:37.772:	
+11:21:37.776:	Current page is: 
+11:21:37.776:	This page  is not recognized.
+11:21:37.776:	method findCurrentPage(120) is called.
+11:21:38.276:	
+11:21:38.279:	Current page is: 
+11:21:38.279:	This page  is not recognized.
+11:21:38.279:	method findCurrentPage(120) is called.
+11:21:38.780:	
+11:21:38.782:	Current page is: 
+11:21:38.782:	This page  is not recognized.
+11:21:38.782:	method findCurrentPage(120) is called.
+11:21:39.283:	
+11:21:39.286:	Current page is: 
+11:21:39.286:	This page  is not recognized.
+11:21:39.286:	method findCurrentPage(120) is called.
+11:21:39.787:	
+11:21:39.790:	Current page is: 
+11:21:39.790:	This page  is not recognized.
+11:21:39.790:	method findCurrentPage(120) is called.

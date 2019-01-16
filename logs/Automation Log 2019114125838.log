@@ -1,0 +1,705 @@
+---------Start of logs---------
+12:58:38.430:	The method "logComment()" are called
+12:58:38.431:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+12:58:38.431:	The method "launch()" are called
+12:58:38.431:	method launch (120) is called.
+12:58:38.431:	method launch (CBA, 120) is called.
+12:58:38.431:	method findCurrentPage(120) is called.
+12:58:38.932:	
+12:58:42.321:	Current page is: MerchantSignIn
+12:58:42.321:	method merchantSignin (taoyenbc90123101) is called.
+12:58:43.817:	method findCurrentPage(120) is called.
+12:58:44.319:	
+12:58:52.010:	Current page is: 
+12:58:52.010:	This page  is not recognized.
+12:58:52.010:	method findCurrentPage(120) is called.
+12:58:52.511:	
+12:58:53.962:	Current page is: MerchantPassword
+12:58:53.962:	method merchantPassword (EJ4;q=2Y) is called.
+12:58:55.211:	exception caught during button click, failed to find MerchantPasswordContinue
+12:58:55.211:	method findCurrentPage(120) is called.
+12:58:55.711:	
+12:59:00.796:	Current page is: 
+12:59:00.796:	This page  is not recognized.
+12:59:00.796:	method findCurrentPage(120) is called.
+12:59:01.297:	
+12:59:06.197:	Current page is: 
+12:59:06.197:	This page  is not recognized.
+12:59:06.197:	method findCurrentPage(120) is called.
+12:59:06.697:	
+12:59:12.098:	Current page is: 
+12:59:12.099:	This page  is not recognized.
+12:59:12.099:	method findCurrentPage(120) is called.
+12:59:12.600:	
+12:59:17.180:	Current page is: 
+12:59:17.180:	This page  is not recognized.
+12:59:17.180:	method findCurrentPage(120) is called.
+12:59:17.681:	
+12:59:22.551:	Current page is: 
+12:59:22.551:	This page  is not recognized.
+12:59:22.551:	method findCurrentPage(120) is called.
+12:59:23.052:	
+12:59:27.388:	Current page is: 
+12:59:27.388:	This page  is not recognized.
+12:59:27.388:	method findCurrentPage(120) is called.
+12:59:27.889:	
+12:59:32.165:	Current page is: 
+12:59:32.165:	This page  is not recognized.
+12:59:32.165:	method findCurrentPage(120) is called.
+12:59:32.666:	
+12:59:36.945:	Current page is: 
+12:59:36.945:	This page  is not recognized.
+12:59:36.945:	method findCurrentPage(120) is called.
+12:59:37.446:	
+12:59:41.728:	Current page is: 
+12:59:41.728:	This page  is not recognized.
+12:59:41.728:	method findCurrentPage(120) is called.
+12:59:42.228:	
+12:59:46.459:	Current page is: 
+12:59:46.459:	This page  is not recognized.
+12:59:46.459:	method findCurrentPage(120) is called.
+12:59:46.959:	
+12:59:51.203:	Current page is: 
+12:59:51.203:	This page  is not recognized.
+12:59:51.203:	method findCurrentPage(120) is called.
+12:59:51.703:	
+12:59:55.970:	Current page is: 
+12:59:55.970:	This page  is not recognized.
+12:59:55.971:	method findCurrentPage(120) is called.
+12:59:56.471:	
+13:00:00.738:	Current page is: 
+13:00:00.738:	This page  is not recognized.
+13:00:00.738:	method findCurrentPage(120) is called.
+13:00:01.239:	
+13:00:05.407:	Current page is: 
+13:00:05.407:	This page  is not recognized.
+13:00:05.407:	method findCurrentPage(120) is called.
+13:00:05.907:	
+13:00:09.904:	Current page is: 
+13:00:09.904:	This page  is not recognized.
+13:00:09.904:	method findCurrentPage(120) is called.
+13:00:10.405:	
+13:00:14.873:	Current page is: 
+13:00:14.873:	This page  is not recognized.
+13:00:14.873:	method findCurrentPage(120) is called.
+13:00:15.374:	
+13:00:19.616:	Current page is: 
+13:00:19.616:	This page  is not recognized.
+13:00:19.616:	method findCurrentPage(120) is called.
+13:00:20.117:	
+13:00:23.991:	Current page is: 
+13:00:23.991:	This page  is not recognized.
+13:00:23.991:	method findCurrentPage(120) is called.
+13:00:24.492:	
+13:00:28.451:	Current page is: 
+13:00:28.451:	This page  is not recognized.
+13:00:28.451:	method findCurrentPage(120) is called.
+13:00:28.952:	
+13:00:32.284:	Current page is: 
+13:00:32.284:	This page  is not recognized.
+13:00:32.284:	method findCurrentPage(120) is called.
+13:00:32.784:	
+13:00:36.512:	Current page is: 
+13:00:36.512:	This page  is not recognized.
+13:00:36.512:	method findCurrentPage(120) is called.
+13:00:37.012:	
+13:00:40.900:	Current page is: 
+13:00:40.900:	This page  is not recognized.
+13:00:40.900:	method findCurrentPage(120) is called.
+13:00:41.400:	
+13:00:45.018:	Current page is: 
+13:00:45.018:	This page  is not recognized.
+13:00:45.018:	method findCurrentPage(120) is called.
+13:00:45.518:	
+13:00:49.296:	Current page is: 
+13:00:49.296:	This page  is not recognized.
+13:00:49.296:	method findCurrentPage(120) is called.
+13:00:49.797:	
+13:00:53.722:	Current page is: 
+13:00:53.723:	This page  is not recognized.
+13:00:53.723:	method findCurrentPage(120) is called.
+13:00:54.223:	
+13:00:57.844:	Current page is: 
+13:00:57.844:	This page  is not recognized.
+13:00:57.844:	method findCurrentPage(120) is called.
+13:00:58.345:	
+13:01:02.289:	Current page is: 
+13:01:02.289:	This page  is not recognized.
+13:01:02.289:	method findCurrentPage(120) is called.
+13:01:02.790:	
+13:01:06.464:	Current page is: 
+13:01:06.464:	This page  is not recognized.
+13:01:06.465:	method findCurrentPage(120) is called.
+13:01:06.966:	
+13:01:11.265:	Current page is: 
+13:01:11.265:	This page  is not recognized.
+13:01:11.265:	method findCurrentPage(120) is called.
+13:01:11.766:	
+13:01:15.482:	Current page is: 
+13:01:15.482:	This page  is not recognized.
+13:01:15.482:	method findCurrentPage(120) is called.
+13:01:15.982:	
+13:01:20.002:	Current page is: 
+13:01:20.002:	This page  is not recognized.
+13:01:20.002:	method findCurrentPage(120) is called.
+13:01:20.503:	
+13:01:24.229:	Current page is: 
+13:01:24.229:	This page  is not recognized.
+13:01:24.229:	method findCurrentPage(120) is called.
+13:01:24.730:	
+13:01:28.427:	Current page is: 
+13:01:28.427:	This page  is not recognized.
+13:01:28.427:	method findCurrentPage(120) is called.
+13:01:28.927:	
+13:01:32.638:	Current page is: 
+13:01:32.638:	This page  is not recognized.
+13:01:32.638:	method findCurrentPage(120) is called.
+13:01:33.139:	
+13:01:36.830:	Current page is: 
+13:01:36.830:	This page  is not recognized.
+13:01:36.830:	method findCurrentPage(120) is called.
+13:01:37.331:	
+13:01:41.049:	Current page is: 
+13:01:41.050:	This page  is not recognized.
+13:01:41.050:	method findCurrentPage(120) is called.
+13:01:41.551:	
+13:01:45.234:	Current page is: 
+13:01:45.235:	This page  is not recognized.
+13:01:45.235:	method findCurrentPage(120) is called.
+13:01:45.736:	
+13:01:49.394:	Current page is: 
+13:01:49.394:	This page  is not recognized.
+13:01:49.394:	method findCurrentPage(120) is called.
+13:01:49.895:	
+13:01:53.535:	Current page is: 
+13:01:53.535:	This page  is not recognized.
+13:01:53.535:	method findCurrentPage(120) is called.
+13:01:54.035:	
+13:01:57.871:	Current page is: 
+13:01:57.871:	This page  is not recognized.
+13:01:57.871:	method findCurrentPage(120) is called.
+13:01:58.372:	
+13:02:02.115:	Current page is: 
+13:02:02.115:	This page  is not recognized.
+13:02:02.115:	method findCurrentPage(120) is called.
+13:02:02.615:	
+13:02:06.214:	Current page is: 
+13:02:06.214:	This page  is not recognized.
+13:02:06.214:	method findCurrentPage(120) is called.
+13:02:06.714:	
+13:02:10.350:	Current page is: 
+13:02:10.350:	This page  is not recognized.
+13:02:10.350:	method findCurrentPage(120) is called.
+13:02:10.851:	
+13:02:14.627:	Current page is: 
+13:02:14.627:	This page  is not recognized.
+13:02:14.627:	method findCurrentPage(120) is called.
+13:02:15.127:	
+13:02:19.098:	Current page is: 
+13:02:19.099:	This page  is not recognized.
+13:02:19.099:	method findCurrentPage(120) is called.
+13:02:19.600:	
+13:02:23.357:	Current page is: 
+13:02:23.357:	This page  is not recognized.
+13:02:23.357:	method findCurrentPage(120) is called.
+13:02:23.858:	
+13:02:27.488:	Current page is: 
+13:02:27.488:	This page  is not recognized.
+13:02:27.488:	method findCurrentPage(120) is called.
+13:02:27.989:	
+13:02:31.599:	Current page is: 
+13:02:31.599:	This page  is not recognized.
+13:02:31.599:	method findCurrentPage(120) is called.
+13:02:32.100:	
+13:02:35.784:	Current page is: 
+13:02:35.784:	This page  is not recognized.
+13:02:35.784:	method findCurrentPage(120) is called.
+13:02:36.284:	
+13:02:40.140:	Current page is: 
+13:02:40.141:	This page  is not recognized.
+13:02:40.141:	method findCurrentPage(120) is called.
+13:02:40.641:	
+13:02:44.323:	Current page is: 
+13:02:44.323:	This page  is not recognized.
+13:02:44.323:	method findCurrentPage(120) is called.
+13:02:44.823:	
+13:02:48.506:	Current page is: 
+13:02:48.506:	This page  is not recognized.
+13:02:48.506:	method findCurrentPage(120) is called.
+13:02:49.007:	
+13:02:52.638:	Current page is: 
+13:02:52.639:	This page  is not recognized.
+13:02:52.639:	method findCurrentPage(120) is called.
+13:02:53.139:	
+13:02:56.481:	Current page is: 
+13:02:56.481:	This page  is not recognized.
+13:02:56.481:	method findCurrentPage(120) is called.
+13:02:56.982:	
+13:03:00.972:	Current page is: 
+13:03:00.972:	This page  is not recognized.
+13:03:00.972:	method findCurrentPage(120) is called.
+13:03:01.473:	
+13:03:05.401:	Current page is: 
+13:03:05.401:	This page  is not recognized.
+13:03:05.401:	method findCurrentPage(120) is called.
+13:03:05.902:	
+13:03:09.459:	Current page is: 
+13:03:09.459:	This page  is not recognized.
+13:03:09.459:	method findCurrentPage(120) is called.
+13:03:09.960:	
+13:03:14.285:	Current page is: 
+13:03:14.285:	This page  is not recognized.
+13:03:14.285:	method findCurrentPage(120) is called.
+13:03:14.786:	
+13:03:19.185:	Current page is: 
+13:03:19.185:	This page  is not recognized.
+13:03:19.185:	method findCurrentPage(120) is called.
+13:03:19.686:	
+13:03:23.625:	Current page is: 
+13:03:23.625:	This page  is not recognized.
+13:03:23.625:	method findCurrentPage(120) is called.
+13:03:24.126:	
+13:03:28.090:	Current page is: 
+13:03:28.090:	This page  is not recognized.
+13:03:28.090:	method findCurrentPage(120) is called.
+13:03:28.591:	
+13:03:32.246:	Current page is: 
+13:03:32.246:	This page  is not recognized.
+13:03:32.246:	method findCurrentPage(120) is called.
+13:03:32.747:	
+13:03:36.435:	Current page is: 
+13:03:36.435:	This page  is not recognized.
+13:03:36.435:	method findCurrentPage(120) is called.
+13:03:36.936:	
+13:03:40.631:	Current page is: 
+13:03:40.631:	This page  is not recognized.
+13:03:40.631:	method findCurrentPage(120) is called.
+13:03:41.131:	
+13:03:44.772:	Current page is: 
+13:03:44.772:	This page  is not recognized.
+13:03:44.772:	method findCurrentPage(120) is called.
+13:03:45.273:	
+13:03:48.981:	Current page is: 
+13:03:48.981:	This page  is not recognized.
+13:03:48.981:	method findCurrentPage(120) is called.
+13:03:49.482:	
+13:03:53.135:	Current page is: 
+13:03:53.135:	This page  is not recognized.
+13:03:53.135:	method findCurrentPage(120) is called.
+13:03:53.636:	
+13:03:57.312:	Current page is: 
+13:03:57.312:	This page  is not recognized.
+13:03:57.312:	method findCurrentPage(120) is called.
+13:03:57.813:	
+13:04:01.663:	Current page is: 
+13:04:01.663:	This page  is not recognized.
+13:04:01.663:	method findCurrentPage(120) is called.
+13:04:02.164:	
+13:04:05.832:	Current page is: 
+13:04:05.832:	This page  is not recognized.
+13:04:05.832:	method findCurrentPage(120) is called.
+13:04:06.333:	
+13:04:10.012:	Current page is: 
+13:04:10.012:	This page  is not recognized.
+13:04:10.012:	method findCurrentPage(120) is called.
+13:04:10.512:	
+13:04:14.623:	Current page is: 
+13:04:14.623:	This page  is not recognized.
+13:04:14.624:	method findCurrentPage(120) is called.
+13:04:15.125:	
+13:04:19.224:	Current page is: 
+13:04:19.224:	This page  is not recognized.
+13:04:19.224:	method findCurrentPage(120) is called.
+13:04:19.725:	
+13:04:23.364:	Current page is: 
+13:04:23.364:	This page  is not recognized.
+13:04:23.364:	method findCurrentPage(120) is called.
+13:04:23.865:	
+13:04:27.523:	Current page is: 
+13:04:27.523:	This page  is not recognized.
+13:04:27.523:	method findCurrentPage(120) is called.
+13:04:28.024:	
+13:04:31.709:	Current page is: 
+13:04:31.709:	This page  is not recognized.
+13:04:31.709:	method findCurrentPage(120) is called.
+13:04:32.209:	
+13:04:35.850:	Current page is: 
+13:04:35.850:	This page  is not recognized.
+13:04:35.850:	method findCurrentPage(120) is called.
+13:04:36.350:	
+13:04:40.032:	Current page is: 
+13:04:40.032:	This page  is not recognized.
+13:04:40.032:	method findCurrentPage(120) is called.
+13:04:40.533:	
+13:04:44.228:	Current page is: 
+13:04:44.228:	This page  is not recognized.
+13:04:44.229:	method findCurrentPage(120) is called.
+13:04:44.730:	
+13:04:48.418:	Current page is: 
+13:04:48.418:	This page  is not recognized.
+13:04:48.418:	method findCurrentPage(120) is called.
+13:04:48.919:	
+13:04:52.652:	Current page is: 
+13:04:52.652:	This page  is not recognized.
+13:04:52.652:	method findCurrentPage(120) is called.
+13:04:53.152:	
+13:04:56.786:	Current page is: 
+13:04:56.786:	This page  is not recognized.
+13:04:56.786:	method findCurrentPage(120) is called.
+13:04:57.286:	
+13:05:01.128:	Current page is: 
+13:05:01.128:	This page  is not recognized.
+13:05:01.128:	method findCurrentPage(120) is called.
+13:05:01.629:	
+13:05:05.305:	Current page is: 
+13:05:05.305:	This page  is not recognized.
+13:05:05.305:	method findCurrentPage(120) is called.
+13:05:05.806:	
+13:05:09.492:	Current page is: 
+13:05:09.492:	This page  is not recognized.
+13:05:09.492:	method findCurrentPage(120) is called.
+13:05:09.992:	
+13:05:14.295:	Current page is: 
+13:05:14.295:	This page  is not recognized.
+13:05:14.295:	method findCurrentPage(120) is called.
+13:05:14.795:	
+13:05:18.899:	Current page is: 
+13:05:18.899:	This page  is not recognized.
+13:05:18.899:	method findCurrentPage(120) is called.
+13:05:19.400:	
+13:05:22.711:	Current page is: 
+13:05:22.711:	This page  is not recognized.
+13:05:22.711:	method findCurrentPage(120) is called.
+13:05:23.212:	
+13:05:26.844:	Current page is: 
+13:05:26.844:	This page  is not recognized.
+13:05:26.844:	method findCurrentPage(120) is called.
+13:05:27.345:	
+13:05:30.840:	Current page is: 
+13:05:30.840:	This page  is not recognized.
+13:05:30.840:	method findCurrentPage(120) is called.
+13:05:31.341:	
+13:05:34.886:	Current page is: 
+13:05:34.886:	This page  is not recognized.
+13:05:34.886:	method findCurrentPage(120) is called.
+13:05:35.386:	
+13:05:39.198:	Current page is: 
+13:05:39.198:	This page  is not recognized.
+13:05:39.198:	method findCurrentPage(120) is called.
+13:05:39.699:	
+13:05:43.245:	Current page is: 
+13:05:43.245:	This page  is not recognized.
+13:05:43.245:	method findCurrentPage(120) is called.
+13:05:43.746:	
+13:05:47.376:	Current page is: 
+13:05:47.376:	This page  is not recognized.
+13:05:47.376:	method findCurrentPage(120) is called.
+13:05:47.876:	
+13:05:51.565:	Current page is: 
+13:05:51.566:	This page  is not recognized.
+13:05:51.566:	method findCurrentPage(120) is called.
+13:05:52.067:	
+13:05:55.779:	Current page is: 
+13:05:55.779:	This page  is not recognized.
+13:05:55.779:	method findCurrentPage(120) is called.
+13:05:56.280:	
+13:06:00.693:	Current page is: 
+13:06:00.693:	This page  is not recognized.
+13:06:00.693:	method findCurrentPage(120) is called.
+13:06:01.194:	
+13:06:04.863:	Current page is: 
+13:06:04.863:	This page  is not recognized.
+13:06:04.863:	method findCurrentPage(120) is called.
+13:06:05.364:	
+13:06:09.112:	Current page is: 
+13:06:09.112:	This page  is not recognized.
+13:06:09.112:	method findCurrentPage(120) is called.
+13:06:09.612:	
+13:06:13.881:	Current page is: 
+13:06:13.881:	This page  is not recognized.
+13:06:13.881:	method findCurrentPage(120) is called.
+13:06:14.383:	
+13:06:18.494:	Current page is: 
+13:06:18.495:	This page  is not recognized.
+13:06:18.495:	method findCurrentPage(120) is called.
+13:06:18.996:	
+13:06:22.653:	Current page is: 
+13:06:22.653:	This page  is not recognized.
+13:06:22.653:	method findCurrentPage(120) is called.
+13:06:23.153:	
+13:06:26.816:	Current page is: 
+13:06:26.816:	This page  is not recognized.
+13:06:26.816:	method findCurrentPage(120) is called.
+13:06:27.317:	
+13:06:31.261:	Current page is: 
+13:06:31.261:	This page  is not recognized.
+13:06:31.261:	method findCurrentPage(120) is called.
+13:06:31.763:	
+13:06:35.401:	Current page is: 
+13:06:35.401:	This page  is not recognized.
+13:06:35.401:	method findCurrentPage(120) is called.
+13:06:35.902:	
+13:06:39.789:	Current page is: 
+13:06:39.789:	This page  is not recognized.
+13:06:39.789:	method findCurrentPage(120) is called.
+13:06:40.290:	
+13:06:43.985:	Current page is: 
+13:06:43.985:	This page  is not recognized.
+13:06:43.985:	method findCurrentPage(120) is called.
+13:06:44.486:	
+13:06:48.208:	Current page is: 
+13:06:48.208:	This page  is not recognized.
+13:06:48.208:	method findCurrentPage(120) is called.
+13:06:48.709:	
+13:06:52.397:	Current page is: 
+13:06:52.397:	This page  is not recognized.
+13:06:52.397:	method findCurrentPage(120) is called.
+13:06:52.897:	
+13:06:56.585:	Current page is: 
+13:06:56.585:	This page  is not recognized.
+13:06:56.585:	method findCurrentPage(120) is called.
+13:06:57.085:	
+13:07:00.932:	Current page is: 
+13:07:00.932:	This page  is not recognized.
+13:07:00.932:	method findCurrentPage(120) is called.
+13:07:01.433:	
+13:07:05.124:	Current page is: 
+13:07:05.124:	This page  is not recognized.
+13:07:05.124:	method findCurrentPage(120) is called.
+13:07:05.624:	
+13:07:09.286:	Current page is: 
+13:07:09.286:	This page  is not recognized.
+13:07:09.286:	method findCurrentPage(120) is called.
+13:07:09.786:	
+13:07:14.275:	Current page is: 
+13:07:14.275:	This page  is not recognized.
+13:07:14.275:	method findCurrentPage(120) is called.
+13:07:14.775:	
+13:07:18.808:	Current page is: 
+13:07:18.808:	This page  is not recognized.
+13:07:18.808:	method findCurrentPage(120) is called.
+13:07:19.308:	
+13:07:23.030:	Current page is: 
+13:07:23.031:	This page  is not recognized.
+13:07:23.031:	method findCurrentPage(120) is called.
+13:07:23.532:	
+13:07:27.204:	Current page is: 
+13:07:27.204:	This page  is not recognized.
+13:07:27.204:	The method "login()" are called
+13:07:27.204:	method login(1) is called.
+13:07:28.205:	method enterNumPadOK (123456) is called.
+13:07:28.205:	method enterNumPad (123456) is called.
+13:07:28.205:	Number to be entered is: 123456
+13:07:28.274:	exception caught, not on PIN entering page.
+13:07:28.332:	exception caught, not on PIN entering page.
+13:07:28.332:	<font color='grey'>User Authentication performed.</font>
+13:07:28.332:	The method "waitUntilPage()" are called
+13:07:31.994:	Current page is: 
+13:07:35.705:	Current page is: 
+13:07:39.910:	Current page is: 
+13:07:44.102:	Current page is: 
+13:07:48.089:	Current page is: 
+13:07:52.228:	Current page is: 
+13:07:56.837:	Current page is: 
+13:08:01.390:	Current page is: 
+13:08:05.600:	Current page is: 
+13:08:09.615:	Current page is: 
+13:08:14.306:	Current page is: 
+13:08:19.052:	Current page is: 
+13:08:23.254:	Current page is: 
+13:08:27.452:	Current page is: 
+13:08:31.629:	Current page is: 
+13:08:35.828:	Current page is: 
+13:08:40.073:	Current page is: 
+13:08:44.266:	Current page is: 
+13:08:48.498:	Current page is: 
+13:08:52.675:	Current page is: 
+13:08:56.886:	Current page is: 
+13:09:01.354:	Current page is: 
+13:09:05.518:	Current page is: 
+13:09:09.717:	Current page is: 
+13:09:14.448:	Current page is: 
+13:09:19.013:	Current page is: 
+13:09:23.324:	Current page is: 
+13:09:27.457:	Current page is: 
+13:09:31.682:	Current page is: 
+13:09:32.183:	The method "reachPage()" are called
+13:09:32.183:	method reachPage(GP, SettingsTerminal) is called.
+13:09:32.183:	method reachPage(GP, Purchase) is called.
+13:09:32.242:	method reachPage(GP, EnterPIN) is called.
+13:09:32.243:	method launch (GP, 1) is called.
+13:09:32.243:	method findCurrentPage(1) is called.
+13:09:32.744:	
+13:09:36.432:	Current page is: 
+13:09:36.432:	This page  is not recognized.
+13:09:40.122:	Current page is: 
+13:09:43.843:	Current page is: 
+13:09:48.114:	Current page is: 
+13:09:52.428:	Current page is: 
+13:09:56.623:	Current page is: 
+13:10:01.016:	Current page is: 
+13:10:05.192:	Current page is: 
+13:10:09.323:	Current page is: 
+13:10:09.824:	<font color='grey'>unexpected page  reached</font>
+13:10:09.824:	method findCurrentPage(0) is called.
+13:10:10.325:	
+13:10:14.464:	Current page is: 
+13:10:14.464:	<font color='grey'>unexpected page  reached</font>
+13:10:14.464:	The method "setBooleanValue(no)" are called
+13:10:14.513:	exception caught during click, failed to find SettingsTerminalPINWhenCancelTransactionValue
+13:10:14.513:	The method "setBooleanValue(no)" are called
+13:10:14.569:	exception caught during click, failed to find SettingsTerminalAddTipValue
+13:10:14.569:	The method "setBooleanValue(no)" are called
+13:10:14.647:	exception caught during click, failed to find SettingsTerminalPurchaseDesriptionValue
+13:10:14.647:	The method "reachPage()" are called
+13:10:14.647:	method reachPage(GP, Purchase) is called.
+13:10:14.712:	method reachPage(GP, EnterPIN) is called.
+13:10:14.712:	method launch (GP, 1) is called.
+13:10:14.712:	method findCurrentPage(1) is called.
+13:10:15.213:	
+13:10:19.414:	Current page is: 
+13:10:19.414:	This page  is not recognized.
+13:10:23.032:	Current page is: 
+13:10:26.676:	Current page is: 
+13:10:30.636:	Current page is: 
+13:10:34.692:	Current page is: 
+13:10:39.391:	Current page is: 
+13:10:43.560:	Current page is: 
+13:10:47.761:	Current page is: 
+13:10:51.982:	Current page is: 
+13:10:52.483:	<font color='grey'>unexpected page  reached</font>
+13:10:52.483:	The method "singlePurchase()" are called
+13:10:52.483:	method singlePurchase(1000, no, , no, ) is called.
+13:10:52.483:	method findCurrentPage(1) is called.
+13:10:52.984:	
+13:10:56.698:	Current page is: 
+13:10:56.698:	reached an unrecognized page: 
+13:10:56.698:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:10:56.699:	method findCurrentPage(1) is called.
+13:10:57.200:	
+13:11:01.177:	Current page is: 
+13:11:01.177:	reached an unrecognized page: 
+13:11:01.177:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:11:01.178:	method findCurrentPage(1) is called.
+13:11:01.679:	
+13:11:05.318:	Current page is: 
+13:11:05.318:	reached an unrecognized page: 
+13:11:05.318:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:11:05.318:	method findCurrentPage(1) is called.
+13:11:05.819:	
+13:11:09.510:	Current page is: 
+13:11:09.510:	reached an unrecognized page: 
+13:11:09.510:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:11:09.510:	method findCurrentPage(1) is called.
+13:11:10.011:	
+13:11:14.351:	Current page is: 
+13:11:14.351:	reached an unrecognized page: 
+13:11:14.351:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:11:14.351:	method findCurrentPage(1) is called.
+13:11:14.851:	
+13:11:19.268:	Current page is: 
+13:11:19.268:	reached an unrecognized page: 
+13:11:19.268:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:11:19.268:	method findCurrentPage(1) is called.
+13:11:19.768:	
+13:11:23.503:	Current page is: 
+13:11:23.503:	reached an unrecognized page: 
+13:11:23.503:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:11:23.503:	method findCurrentPage(1) is called.
+13:11:24.004:	
+13:11:27.723:	Current page is: 
+13:11:27.723:	reached an unrecognized page: 
+13:11:27.723:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:11:27.723:	method findCurrentPage(1) is called.
+13:11:28.224:	
+13:11:31.945:	Current page is: 
+13:11:31.945:	reached an unrecognized page: 
+13:11:31.946:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:11:31.946:	method findCurrentPage(1) is called.
+13:11:32.446:	
+13:11:36.192:	Current page is: 
+13:11:36.192:	reached an unrecognized page: 
+13:11:36.192:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:11:36.192:	The method "test()" are called
+13:11:39.875:	Current page is: 
+13:11:39.877:	The method "test()" are called
+13:11:39.933:	The method "clickButton()" are called
+13:11:39.985:	exception caught during button click, failed to find PurchaseResultNoReceipt
+13:11:39.985:	The method "waitUntilPage()" are called
+13:11:43.672:	Current page is: 
+13:11:47.334:	Current page is: 
+13:11:51.511:	Current page is: 
+13:11:55.732:	Current page is: 
+13:12:00.095:	Current page is: 
+13:12:04.338:	Current page is: 
+13:12:08.501:	Current page is: 
+13:12:13.416:	Current page is: 
+13:12:17.580:	Current page is: 
+13:12:22.008:	Current page is: 
+13:12:26.237:	Current page is: 
+13:12:30.423:	Current page is: 
+13:12:34.285:	Current page is: 
+13:12:38.611:	Current page is: 
+13:12:42.991:	Current page is: 
+13:12:47.387:	Current page is: 
+13:12:51.853:	Current page is: 
+13:12:56.410:	Current page is: 
+13:13:00.843:	Current page is: 
+13:13:04.880:	Current page is: 
+13:13:09.033:	Current page is: 
+13:13:13.826:	Current page is: 
+13:13:18.420:	Current page is: 
+13:13:22.649:	Current page is: 
+13:13:26.888:	Current page is: 
+13:13:31.063:	Current page is: 
+13:13:35.292:	Current page is: 
+13:13:39.570:	Current page is: 
+13:13:40.071:	The method "test()" are called
+13:13:43.762:	Current page is: 
+13:13:43.762:	The method "reachPage()" are called
+13:13:43.762:	method reachPage(GP, TransactionHistory) is called.
+13:13:43.762:	method reachPage(GP, Purchase) is called.
+13:13:43.817:	method reachPage(GP, EnterPIN) is called.
+13:13:43.817:	method launch (GP, 1) is called.
+13:13:43.817:	method findCurrentPage(1) is called.
+13:13:44.317:	
+13:13:48.148:	Current page is: 
+13:13:48.149:	This page  is not recognized.
+13:13:51.847:	Current page is: 
+13:13:55.988:	Current page is: 
+13:14:00.421:	Current page is: 
+13:14:04.605:	Current page is: 
+13:14:08.757:	Current page is: 
+13:14:13.556:	Current page is: 
+13:14:17.707:	Current page is: 
+13:14:18.212:	<font color='grey'>unexpected page  reached</font>
+13:14:18.212:	method goToSidemenuPage(TransactionHistory) is called.
+13:14:18.212:	method findCurrentPage(0) is called.
+13:14:18.713:	
+13:14:22.447:	Current page is: 
+13:14:22.447:	method clickOnPage(, TransactionHistory, [Ljava.lang.String;@1310436) is called.
+13:14:22.447:	method findCurrentPage(0) is called.
+13:14:22.948:	
+13:14:26.622:	Current page is: 
+13:14:26.679:	exception caught during button click, failed to find PurchaseSideMenu
+13:14:27.242:	exception caught during button click, failed to find SideMenuTransactionHistory
+13:14:31.552:	Current page is: 
+13:14:35.231:	Current page is: 
+13:14:39.377:	Current page is: 
+13:14:43.618:	Current page is: 
+13:14:47.829:	Current page is: 
+13:14:52.016:	Current page is: 
+13:14:56.212:	Current page is: 
+13:15:00.517:	Current page is: 
+13:15:01.017:	The method "test()" are called
+13:15:04.870:	Current page is: 
+13:15:04.870:	The method "test()" are called
+13:15:04.926:	The method "clickButton()" are called
+13:15:04.984:	exception caught during button click, failed to find TransactionHistoryFirstTransaction
+13:15:04.984:	The method "waitUntilPage()" are called
+13:15:08.480:	Current page is: 
+13:15:12.877:	Current page is: 
+13:15:17.041:	Current page is: 
+13:15:22.101:	Current page is: 
+13:15:26.376:	Current page is: 
+13:15:30.700:	Current page is: 

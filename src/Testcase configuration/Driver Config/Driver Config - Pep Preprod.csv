@@ -1,0 +1,8 @@
+Active,Driver Name,Element Config file corresponding to Driver,DriverType
+1,Android,.\\src\\Testcase configuration\\Element Config\\app elements - Pep Preprod.csv,Android
+0,iOS,,iOS
+0,Chrome,.\\src\\Testcase configuration\\Element Config\\browser elements - Hive V2.csv,Chrome
+0,Firefox,,Firefox
+0,Safari,,Safari
+0,Edge,,Edge
+0,IE,,IE

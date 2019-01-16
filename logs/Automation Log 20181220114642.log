@@ -1,0 +1,118 @@
+---------Start of logs---------
+11:46:42.128:	AndroidDriver created.
+11:46:42.130:	The method "logComment()" are called
+11:46:42.130:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+11:46:42.130:	The method "launch()" are called
+11:46:42.130:	method launch (120) is called.
+11:46:42.130:	method launch (CBA, 120) is called.
+11:46:42.130:	method findCurrentPage(120) is called.
+11:46:42.630:	
+11:46:53.513:	Current page is: 
+11:46:53.513:	This page  is not recognized.
+11:46:53.513:	method findCurrentPage(120) is called.
+11:46:54.013:	
+11:46:54.728:	Current page is: SignInSelection
+11:46:54.728:	method clickButton (0, SignInSelectionFirstUser) is called.
+11:46:54.728:	method find(SignInSelectionFirstUser) is called.
+11:46:54.901:	method findCurrentPage(120) is called.
+11:46:55.402:	
+11:46:56.542:	Current page is: EnterPIN
+11:46:56.542:	<font color='grey'>App launched and awaiting for login.</font>
+11:46:56.542:	The method "login()" are called
+11:46:56.542:	method login(1) is called.
+11:46:56.542:	method enterNumPadOK (1, 123456) is called.
+11:46:57.542:	method enterNumPad (1, 123456) is called.
+11:46:58.543:	Number to be entered is: 123456
+11:46:58.543:	method find(EnterPIN1) is called.
+11:46:58.735:	method find(EnterPIN2) is called.
+11:47:00.091:	exception caught, not on PIN entering page.
+11:47:00.091:	method find(EnterPINOK) is called.
+11:47:00.301:	exception caught, not on PIN entering page.
+11:47:00.301:	<font color='grey'>User Authentication performed.</font>
+11:47:00.302:	The method "waitUntilPage()" are called
+11:47:00.302:	
+11:47:12.026:	Current page is: 
+11:47:12.027:	
+11:47:23.796:	Current page is: 
+11:47:24.297:	
+11:47:35.146:	Current page is: 
+11:47:35.646:	
+11:47:47.057:	Current page is: 
+11:47:47.558:	
+11:47:59.070:	Current page is: 
+11:47:59.571:	
+11:48:10.326:	Current page is: 
+11:48:10.827:	
+11:48:21.835:	Current page is: 
+11:48:22.336:	
+11:48:32.571:	Current page is: 
+11:48:33.071:	
+11:48:43.953:	Current page is: 
+11:48:44.453:	
+11:48:55.874:	Current page is: 
+11:48:56.375:	
+11:49:07.681:	Current page is: 
+11:49:08.181:	The method "reachPage()" are called
+11:49:08.181:	method reachPage(GP, SettingsTerminal) is called.
+11:49:08.181:	method reachPage(GP, Purchase) is called.
+11:49:08.181:	method find(PurchaseSideMenu) is called.
+11:49:08.461:	method reachPage(GP, EnterPIN) is called.
+11:49:08.461:	method launch (GP, 1) is called.
+11:49:08.461:	method findCurrentPage(1) is called.
+11:49:08.961:	
+11:49:19.948:	Current page is: 
+11:49:19.948:	This page  is not recognized.
+11:49:19.948:	method findCurrentPage(1) is called.
+11:49:20.448:	
+11:49:30.976:	Current page is: 
+11:49:30.976:	This page  is not recognized.
+11:49:30.976:	method findCurrentPage(1) is called.
+11:49:31.476:	
+11:49:42.131:	Current page is: 
+11:49:42.131:	This page  is not recognized.
+11:49:42.131:	method findCurrentPage(1) is called.
+11:49:42.632:	
+11:49:53.615:	Current page is: 
+11:49:53.615:	This page  is not recognized.
+11:49:53.615:	method findCurrentPage(1) is called.
+11:49:54.116:	
+11:50:04.295:	Current page is: 
+11:50:04.295:	This page  is not recognized.
+11:50:04.295:	method waitUntilPage(30, EnterPIN) is called.
+11:50:04.295:	method findCurrentPage(0) is called.
+11:50:04.796:	
+11:50:15.679:	Current page is: 
+11:50:15.679:	method findCurrentPage(1) is called.
+11:50:16.180:	
+11:50:27.378:	Current page is: 
+11:50:27.378:	method findCurrentPage(1) is called.
+11:50:27.880:	
+11:50:38.529:	Current page is: 
+11:50:38.530:	<font color='grey'>unexpected page  reached</font>
+11:50:38.530:	method findCurrentPage(0) is called.
+11:50:39.031:	
+11:50:49.941:	Current page is: 
+11:50:49.941:	<font color='grey'>unexpected page  reached</font>
+11:50:49.941:	The method "setBooleanValue(no)" are called
+11:50:50.134:	exception caught during click, failed to find SettingsTerminalPINWhenCancelTransactionValue
+11:50:50.135:	The method "setBooleanValue(no)" are called
+11:50:50.317:	exception caught during click, failed to find SettingsTerminalAddTipValue
+11:50:50.318:	The method "reachPage()" are called
+11:50:50.318:	method reachPage(GP, Purchase) is called.
+11:50:50.318:	method find(PurchaseSideMenu) is called.
+11:50:50.540:	method reachPage(GP, EnterPIN) is called.
+11:50:50.540:	method launch (GP, 1) is called.
+11:50:50.540:	method findCurrentPage(1) is called.
+11:50:51.040:	
+11:51:01.649:	Current page is: 
+11:51:01.649:	This page  is not recognized.
+11:51:01.649:	method findCurrentPage(1) is called.
+11:51:02.149:	
+11:51:13.550:	Current page is: 
+11:51:13.550:	This page  is not recognized.
+11:51:13.550:	method findCurrentPage(1) is called.
+11:51:14.051:	
+11:51:24.760:	Current page is: 
+11:51:24.760:	This page  is not recognized.
+11:51:24.760:	method findCurrentPage(1) is called.
+11:51:25.260:	

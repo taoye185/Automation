@@ -1,0 +1,196 @@
+---------Start of logs---------
+13:46:40.498:	writeElement is called
+13:46:40.498:	method get (ActivatingSecureElement) is called.
+13:46:40.499:	weight is: 0
+13:46:40.499:	method get (AllowBatterySettingsChange) is called.
+13:46:40.499:	weight is: 0
+13:46:40.499:	method get (AllowTimeoutSettingsChange) is called.
+13:46:40.499:	weight is: 0
+13:46:40.499:	method get (AndroidAlert) is called.
+13:46:40.500:	weight is: 0
+13:46:40.500:	method get (AndroidDeviceSettings) is called.
+13:46:40.500:	weight is: 0
+13:46:40.501:	method get (EnterPIN) is called.
+13:46:40.502:	weight is: 6
+13:46:40.502:	method get (MerchantPassword) is called.
+13:46:40.502:	weight is: 0
+13:46:40.502:	method get (MerchantSignIn) is called.
+13:46:40.502:	weight is: 0
+13:46:40.503:	method get (NoNetworkConnection) is called.
+13:46:40.503:	weight is: 0
+13:46:40.503:	method get (ProvisionUpdateComplete) is called.
+13:46:40.503:	weight is: 0
+13:46:40.503:	method get (PurchaseDescription) is called.
+13:46:40.503:	weight is: 0
+13:46:40.505:	method get (SettingsAdvanced) is called.
+13:46:40.505:	weight is: 24
+13:46:40.505:	method get (SettingsTerminal) is called.
+13:46:40.505:	weight is: 30
+13:46:40.507:	method get (SignInSelection) is called.
+13:46:40.507:	weight is: 0
+13:46:40.508:	method get (PurchaseResult) is called.
+13:46:40.508:	weight is: 30
+13:46:40.509:	method get (UpdateRequired) is called.
+13:46:40.509:	weight is: 0
+13:46:40.510:	method get (ConnectionErrorDuringProvision) is called.
+13:46:40.510:	weight is: 0
+13:46:40.510:	method get (PleaseRestartYourPhone) is called.
+13:46:40.510:	weight is: 0
+13:46:40.510:	method get (UpdatingSecureElement) is called.
+13:46:40.510:	weight is: 0
+13:46:40.511:	method get (TermsAndConditions) is called.
+13:46:40.511:	weight is: 0
+13:46:40.512:	method get (ContactUs) is called.
+13:46:40.512:	weight is: 0
+13:46:40.512:	method get (UserManagement) is called.
+13:46:40.512:	weight is: 0
+13:46:40.515:	method get (EditUser) is called.
+13:46:40.515:	weight is: 0
+13:46:40.518:	method get (DeleteUserConfirmation) is called.
+13:46:40.518:	weight is: 0
+13:46:40.518:	method get (AddNewUser) is called.
+13:46:40.518:	weight is: 0
+13:46:40.521:	method get (UserCreated) is called.
+13:46:40.521:	weight is: 0
+13:46:40.522:	method get (TransactionReports) is called.
+13:46:40.522:	weight is: 0
+13:46:40.524:	method get (TransactionHistory) is called.
+13:46:40.524:	weight is: 84
+13:46:40.526:	method get (NewTagScanned) is called.
+13:46:40.526:	weight is: 0
+13:46:40.526:	method get (Purchase) is called.
+13:46:40.526:	weight is: 126
+13:46:40.530:	method get (TapToPay) is called.
+13:46:40.530:	weight is: 0
+13:46:40.530:	method get (CardNotSupported) is called.
+13:46:40.531:	weight is: 0
+13:46:40.531:	method get (EmailReceiptForPurchase) is called.
+13:46:40.531:	weight is: 0
+13:46:40.533:	method get (ReceiptSentConfirmation) is called.
+13:46:40.533:	weight is: 0
+13:46:40.533:	method get (ProcessingPayment) is called.
+13:46:40.533:	weight is: 0
+13:46:40.535:	method get (PurchaseNotCompleted) is called.
+13:46:40.535:	weight is: 0
+13:46:40.535:	method get (SetTipDuringPurchase) is called.
+13:46:40.535:	weight is: 0
+13:46:40.537:	method get (AddTip) is called.
+13:46:40.537:	weight is: 0
+13:46:40.539:	method get (CreateNewPassword) is called.
+13:46:40.539:	weight is: 0
+13:46:40.541:	method get (EnterNewPIN) is called.
+13:46:40.541:	weight is: 0
+13:46:40.542:	method get (ConfirmNewPIN) is called.
+13:46:40.542:	weight is: 0
+13:46:40.542:	method get (CancelTransaction) is called.
+13:46:40.542:	weight is: 0
+13:46:40.545:	method get (PurchaseTimedOut) is called.
+13:46:40.545:	weight is: 0
+13:46:40.546:	method get (TransactionSearch) is called.
+13:46:40.546:	weight is: 0
+13:46:40.550:	method get (TransactionDetails) is called.
+13:46:40.550:	weight is: 48
+13:46:40.554:	method get (AccountLocked) is called.
+13:46:40.554:	weight is: 0
+13:46:40.554:	method get (ForgotPIN) is called.
+13:46:40.554:	weight is: 0
+13:46:40.556:	method get (ResetPIN) is called.
+13:46:40.556:	weight is: 0
+13:46:40.558:	method get (InvalidCredentials) is called.
+13:46:40.558:	weight is: 0
+13:46:40.558:	method get (VoidProcessingPayment) is called.
+13:46:40.558:	weight is: 0
+13:46:40.560:	method get (SecurityImage) is called.
+13:46:40.560:	weight is: 0
+13:46:40.561:	method get (ProvisionActivateComplete) is called.
+13:46:40.561:	weight is: 0
+13:46:40.563:	method get (PaymentAcceptanceSetup) is called.
+13:46:40.563:	weight is: 0
+13:46:40.566:	method get (DatePicker) is called.
+13:46:40.567:	weight is: 0
+13:46:40.567:	method get (ReportSentConfirmation) is called.
+13:46:40.567:	weight is: 0
+13:46:40.567:	method get (EnterOldPIN) is called.
+13:46:40.568:	weight is: 0
+13:46:40.569:	method get (PINUpdated) is called.
+13:46:40.569:	weight is: 0
+13:46:40.569:	method get (EnterRefundAmount) is called.
+13:46:40.569:	weight is: 12
+13:46:40.569:	method get (Signature) is called.
+13:46:40.569:	weight is: 6
+13:46:40.571:	.\src\Testcase configuration\Element Config\app elements - GP Debug.csvhas been read.
+13:46:40.572:	.\src\Testcase configuration\Element Config\app elements - GP Debug.csvhas been written.
+13:46:40.837:	reportHeader is: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Mobeewave Automation Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th colspan="7">Test Statistics</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">18,571</td></tr>
+</table>
+<h2>Default test</h2>
+<table class="result"><tr><th>Result</th></tr><tr><td><div class="stacktrace">
+13:46:40.838:	reportFooter is: </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
+13:46:40.838:	reportContent is: <font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font>
+<br><font color='grey'>This case assumes the app starts from the Purchase page.</font>
+<br><font color='grey'>App launched and awaiting for login.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>Transaction is made, Processing time is: 14 seconds.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br>
+<font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to SettingsTerminal, <font color='green'>test passed</font>.<br>
+Current page is equal to SettingsAdvanced, <font color='green'>test passed</font>.<br>
+<font color='grey'>Testing Version Number Display</font>
+<br>SettingsAdvancedAppVersionValue is expected to be <font color='brown'>1.4.7(4)</font>, but is actually equal to: <font color='brown'>1.4.9(12)</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to REFUND, <font color='green'>test passed</font>.<br>
+<font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to EnterRefundAmount, <font color='green'>test passed</font>.<br>
+<font color='grey'>Making Signature</font>
+<br>Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to - CA$14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to REFUND APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to - CA$14.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br>
+<font color='grey'>Refund testing completed.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is equal to VOID APPROVED, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is equal to VOID APPROVED, <font color='green'>test passed</font>.<br>
+TransactionDetailsAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br>
+TransactionDetailsVoid is equal to element not found, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='blue'>Test Case: TS_8&TS_9 completed.</font>
+<br>-----------------------------------<br>
+<br>

@@ -1,0 +1,261 @@
+---------Start of logs---------
+14:03:06.226:	writeElement is called
+14:03:06.226:	method get (ActivatingSecureElement) is called.
+14:03:06.227:	weight is: 0
+14:03:06.227:	method get (AllowBatterySettingsChange) is called.
+14:03:06.227:	weight is: 0
+14:03:06.227:	method get (AllowTimeoutSettingsChange) is called.
+14:03:06.227:	weight is: 0
+14:03:06.227:	method get (AndroidAlert) is called.
+14:03:06.227:	weight is: 0
+14:03:06.227:	method get (AndroidDeviceSettings) is called.
+14:03:06.227:	weight is: 0
+14:03:06.228:	method get (EnterPIN) is called.
+14:03:06.228:	weight is: 10
+14:03:06.230:	method get (MerchantPassword) is called.
+14:03:06.230:	weight is: 2
+14:03:06.230:	method get (MerchantSignIn) is called.
+14:03:06.230:	weight is: 2
+14:03:06.230:	method get (NoNetworkConnection) is called.
+14:03:06.230:	weight is: 0
+14:03:06.232:	method get (ProvisionUpdateComplete) is called.
+14:03:06.232:	weight is: 1
+14:03:06.232:	method get (PurchaseDescription) is called.
+14:03:06.232:	weight is: 1
+14:03:06.232:	method get (SettingsAdvanced) is called.
+14:03:06.232:	weight is: 17
+14:03:06.232:	method get (SettingsTerminal) is called.
+14:03:06.232:	weight is: 108
+14:03:06.234:	method get (SignInSelection) is called.
+14:03:06.235:	weight is: 2
+14:03:06.235:	method get (PurchaseResult) is called.
+14:03:06.235:	weight is: 31
+14:03:06.236:	method get (UpdateRequired) is called.
+14:03:06.236:	weight is: 1
+14:03:06.236:	method get (ConnectionErrorDuringProvision) is called.
+14:03:06.236:	weight is: 0
+14:03:06.237:	method get (PleaseRestartYourPhone) is called.
+14:03:06.237:	weight is: 0
+14:03:06.238:	method get (UpdatingSecureElement) is called.
+14:03:06.238:	weight is: 2
+14:03:06.238:	method get (TermsAndConditions) is called.
+14:03:06.238:	weight is: 0
+14:03:06.238:	method get (ContactUs) is called.
+14:03:06.238:	weight is: 0
+14:03:06.240:	method get (UserManagement) is called.
+14:03:06.240:	weight is: 0
+14:03:06.240:	method get (EditUser) is called.
+14:03:06.240:	weight is: 0
+14:03:06.242:	method get (DeleteUserConfirmation) is called.
+14:03:06.242:	weight is: 0
+14:03:06.242:	method get (AddNewUser) is called.
+14:03:06.242:	weight is: 0
+14:03:06.243:	method get (UserCreated) is called.
+14:03:06.244:	weight is: 0
+14:03:06.244:	method get (TransactionReports) is called.
+14:03:06.244:	weight is: 0
+14:03:06.246:	method get (TransactionHistory) is called.
+14:03:06.246:	weight is: 57
+14:03:06.247:	method get (NewTagScanned) is called.
+14:03:06.247:	weight is: 0
+14:03:06.249:	method get (Purchase) is called.
+14:03:06.249:	weight is: 589
+14:03:06.251:	method get (TapToPay) is called.
+14:03:06.251:	weight is: 36
+14:03:06.252:	method get (CardNotSupported) is called.
+14:03:06.252:	weight is: 0
+14:03:06.252:	method get (EmailReceiptForPurchase) is called.
+14:03:06.252:	weight is: 1
+14:03:06.252:	method get (ReceiptSentConfirmation) is called.
+14:03:06.252:	weight is: 1
+14:03:06.254:	method get (ProcessingPayment) is called.
+14:03:06.254:	weight is: 0
+14:03:06.254:	method get (PurchaseNotCompleted) is called.
+14:03:06.254:	weight is: 0
+14:03:06.254:	method get (SetTipDuringPurchase) is called.
+14:03:06.254:	weight is: 1
+14:03:06.256:	method get (AddTip) is called.
+14:03:06.256:	weight is: 1
+14:03:06.257:	method get (CreateNewPassword) is called.
+14:03:06.258:	weight is: 0
+14:03:06.259:	method get (EnterNewPIN) is called.
+14:03:06.259:	weight is: 0
+14:03:06.260:	method get (ConfirmNewPIN) is called.
+14:03:06.260:	weight is: 0
+14:03:06.260:	method get (CancelTransaction) is called.
+14:03:06.260:	weight is: 14
+14:03:06.262:	method get (PurchaseTimedOut) is called.
+14:03:06.262:	weight is: 0
+14:03:06.263:	method get (TransactionSearch) is called.
+14:03:06.263:	weight is: 0
+14:03:06.267:	method get (TransactionDetails) is called.
+14:03:06.267:	weight is: 30
+14:03:06.269:	method get (AccountLocked) is called.
+14:03:06.269:	weight is: 0
+14:03:06.270:	method get (ForgotPIN) is called.
+14:03:06.270:	weight is: 0
+14:03:06.271:	method get (ResetPIN) is called.
+14:03:06.271:	weight is: 0
+14:03:06.272:	method get (InvalidCredentials) is called.
+14:03:06.272:	weight is: 0
+14:03:06.274:	method get (VoidProcessingPayment) is called.
+14:03:06.274:	weight is: 0
+14:03:06.274:	method get (SecurityImage) is called.
+14:03:06.274:	weight is: 0
+14:03:06.275:	method get (ProvisionActivateComplete) is called.
+14:03:06.275:	weight is: 0
+14:03:06.277:	method get (PaymentAcceptanceSetup) is called.
+14:03:06.277:	weight is: 0
+14:03:06.279:	method get (DatePicker) is called.
+14:03:06.279:	weight is: 0
+14:03:06.280:	method get (ReportSentConfirmation) is called.
+14:03:06.280:	weight is: 0
+14:03:06.281:	method get (EnterOldPIN) is called.
+14:03:06.281:	weight is: 0
+14:03:06.281:	method get (PINUpdated) is called.
+14:03:06.281:	weight is: 0
+14:03:06.282:	method get (EnterRefundAmount) is called.
+14:03:06.282:	weight is: 6
+14:03:06.283:	method get (Signature) is called.
+14:03:06.283:	weight is: 7
+14:03:06.284:	method get (ConfirmSettlement) is called.
+14:03:06.284:	weight is: 1
+14:03:06.286:	.\src\Testcase configuration\Element Config\app elements - NBC Debug.csvhas been read.
+14:03:06.286:	error encountered when closing Android
+14:03:06.300:	reportHeader is: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Mobeewave Automation Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th colspan="7">Test Statistics</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">18,571</td></tr>
+</table>
+<h2>Default test</h2>
+<table class="result"><tr><th>Result</th></tr><tr><td><div class="stacktrace">
+14:03:06.309:	reportFooter is: </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
+14:03:06.309:	reportContent is: <font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+<br><font color='grey'>App launched and awaiting for login.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>Transaction is made, Processing time is: 21 seconds.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is expected to be <font color='brown'>PURCHASE APPROVED</font>, but is actually equal to: <font color='brown'>Purchase Approved</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is expected to be <font color='brown'>PLN10.00</font>, but is actually equal to: <font color='brown'>CA$10.00</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is expected to be <font color='brown'>PURCHASE APPROVED</font>, but is actually equal to: <font color='brown'>Purchase Approved</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsAmount is expected to be <font color='brown'>PLN10.00</font>, but is actually equal to: <font color='brown'>CA$10.00</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsMerchantName is expected to be <font color='brown'>Business</font>, but is actually equal to: <font color='brown'>Tao Ye the NBC Business Tester</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsEmailReceipt is expected to be <font color='brown'>EMAIL RECEIPT</font>, but is actually equal to: <font color='brown'>Email receipt</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsVoid is expected to be <font color='brown'>VOID</font>, but is actually equal to: <font color='brown'>Void</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsDescription is equal to element not found, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='blue'>Test Case: TS_1 completed.</font>
+<br>-----------------------------------<br>
+<br><font color='grey'>Start of base purchase with tips/desription/email receipt - please have SUCCESS testing card placed at the back of device!</font>
+<br><font color='grey'>This case assumes the app starts from the Purchase page.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>Transaction is made, Processing time is: 40 seconds.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is expected to be <font color='brown'>PURCHASE APPROVED</font>, but is actually equal to: <font color='brown'>Purchase Approved</font>, <font color='red'>test failed</font>.<br>
+PurchaseResultDescription is equal to This is a purchase description test., <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is expected to be <font color='brown'>PLN11.00</font>, but is actually equal to: <font color='brown'>CA$99.99</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is expected to be <font color='brown'>PURCHASE APPROVED</font>, but is actually equal to: <font color='brown'>Purchase Approved</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsAmount is expected to be <font color='brown'>PLN11.00</font>, but is actually equal to: <font color='brown'>CA$99.99</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsMerchantName is expected to be <font color='brown'>Business</font>, but is actually equal to: <font color='brown'>Tao Ye the NBC Business Tester</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsEmailReceipt is expected to be <font color='brown'>EMAIL RECEIPT</font>, but is actually equal to: <font color='brown'>Email receipt</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsVoid is expected to be <font color='brown'>VOID</font>, but is actually equal to: <font color='brown'>Void</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsDescription is equal to This is a purchase description test., <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='grey'>Email Receipt sent. Please check manually the email receipt is received and correct.</font>
+<br><font color='blue'>Test Case: TS_2&3&4 completed.</font>
+<br>-----------------------------------<br>
+<br><font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font>
+<br><font color='grey'>This case assumes the app starts from the Purchase page.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>Transaction is made, Processing time is: 15 seconds.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is expected to be <font color='brown'>PURCHASE APPROVED</font>, but is actually equal to: <font color='brown'>Purchase Approved</font>, <font color='red'>test failed</font>.<br>
+<font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is expected to be <font color='brown'>VOID APPROVED</font>, but is actually equal to: <font color='brown'>Void Approved</font>, <font color='red'>test failed</font>.<br>
+PurchaseResultAmount is expected to be <font color='brown'>- PLN14.00</font>, but is actually equal to: <font color='brown'>- CA$14.00</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is expected to be <font color='brown'>- PLN14.00</font>, but is actually equal to: <font color='brown'>- CA$14.00</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is expected to be <font color='brown'>VOID APPROVED</font>, but is actually equal to: <font color='brown'>Void Approved</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsAmount is expected to be <font color='brown'>- PLN14.00</font>, but is actually equal to: <font color='brown'>- CA$14.00</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsMerchantName is expected to be <font color='brown'>Business</font>, but is actually equal to: <font color='brown'>Tao Ye the NBC Business Tester</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsEmailReceipt is expected to be <font color='brown'>EMAIL RECEIPT</font>, but is actually equal to: <font color='brown'>Email receipt</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsVoid is equal to element not found, <font color='green'>test passed</font>.<br>
+TransactionDetailsDescription is equal to element not found, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='blue'>Test Case: TS_7 completed.</font>
+<br>-----------------------------------<br>
+<br><font color='grey'>Start of refund and void refund testing - please have SUCCESS testing card placed at the back of device!</font>
+<br><font color='grey'>This case assumes the app starts from the Purchase page.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br><font color='grey'>Transaction is made, Processing time is: 19 seconds.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is expected to be <font color='brown'>PURCHASE APPROVED</font>, but is actually equal to: <font color='brown'>Purchase Approved</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is expected to be <font color='brown'>PLN14.00</font>, but is actually equal to: <font color='brown'>CA$14.00</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is expected to be <font color='brown'>PURCHASE APPROVED</font>, but is actually equal to: <font color='brown'>Purchase Approved</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsAmount is expected to be <font color='brown'>PLN14.00</font>, but is actually equal to: <font color='brown'>CA$14.00</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsMerchantName is expected to be <font color='brown'>Business</font>, but is actually equal to: <font color='brown'>Tao Ye the NBC Business Tester</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsEmailReceipt is expected to be <font color='brown'>EMAIL RECEIPT</font>, but is actually equal to: <font color='brown'>Email receipt</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsVoid is expected to be <font color='brown'>VOID</font>, but is actually equal to: <font color='brown'>Void</font>, <font color='red'>test failed</font>.<br>
+<font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to SettingsTerminal, <font color='green'>test passed</font>.<br>
+Current page is equal to SettingsAdvanced, <font color='green'>test passed</font>.<br>
+<font color='grey'>Testing Version Number Display</font>
+<br>SettingsAdvancedAppVersionValue is expected to be <font color='brown'>1.4.9(159)</font>, but is actually equal to: <font color='brown'>1.4.9(168)</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to SettingsAdvanced, <font color='green'>test passed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is expected to be <font color='brown'>PLN14.00</font>, but is actually equal to: <font color='brown'>CA$14.00</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is expected to be <font color='brown'>PURCHASE APPROVED</font>, but is actually equal to: <font color='brown'>Purchase Approved</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsAmount is expected to be <font color='brown'>PLN14.00</font>, but is actually equal to: <font color='brown'>CA$14.00</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsMerchantName is expected to be <font color='brown'>Business</font>, but is actually equal to: <font color='brown'>Tao Ye the NBC Business Tester</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsEmailReceipt is expected to be <font color='brown'>EMAIL RECEIPT</font>, but is actually equal to: <font color='brown'>Email receipt</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsVoid is expected to be <font color='brown'>REFUND</font>, but is actually equal to: <font color='brown'>Refund</font>, <font color='red'>test failed</font>.<br>
+<font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to EnterRefundAmount, <font color='green'>test passed</font>.<br>
+<font color='grey'>Making Signature</font>
+<br>Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is expected to be <font color='brown'>#NAME?</font>, but is actually equal to: <font color='brown'>- CA$14.00</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is expected to be <font color='brown'>REFUND APPROVED</font>, but is actually equal to: <font color='brown'>Refund approved</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsAmount is expected to be <font color='brown'>#NAME?</font>, but is actually equal to: <font color='brown'>- CA$14.00</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsMerchantName is expected to be <font color='brown'>Business</font>, but is actually equal to: <font color='brown'>Tao Ye the NBC Business Tester</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsEmailReceipt is expected to be <font color='brown'>EMAIL RECEIPT</font>, but is actually equal to: <font color='brown'>Email receipt</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsVoid is expected to be <font color='brown'>VOID</font>, but is actually equal to: <font color='brown'>Void</font>, <font color='red'>test failed</font>.<br>
+<font color='grey'>Refund testing completed.</font>
+<br><font color='grey'>User Authentication performed.</font>
+<br>Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br>
+PurchaseResultResultText is expected to be <font color='brown'>VOID APPROVED</font>, but is actually equal to: <font color='brown'>Void Approved</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br>
+TransactionHistoryTransactionAmount is expected to be <font color='brown'>PLN14.00</font>, but is actually equal to: <font color='brown'>CA$14.00</font>, <font color='red'>test failed</font>.<br>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br>
+TransactionDetailsTitle is expected to be <font color='brown'>VOID APPROVED</font>, but is actually equal to: <font color='brown'>Void Approved</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsAmount is expected to be <font color='brown'>PLN14.00</font>, but is actually equal to: <font color='brown'>CA$14.00</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsMerchantName is expected to be <font color='brown'>Business</font>, but is actually equal to: <font color='brown'>Tao Ye the NBC Business Tester</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsEmailReceipt is expected to be <font color='brown'>EMAIL RECEIPT</font>, but is actually equal to: <font color='brown'>Email receipt</font>, <font color='red'>test failed</font>.<br>
+TransactionDetailsVoid is equal to element not found, <font color='green'>test passed</font>.<br>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br>
+<font color='blue'>Test Case: TS_8&TS_9 completed.</font>
+<br>-----------------------------------<br>
+<br>

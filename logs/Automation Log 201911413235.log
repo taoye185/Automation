@@ -1,0 +1,118 @@
+---------Start of logs---------
+13:23:05.181:	The method "logComment()" are called
+13:23:05.181:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+13:23:05.181:	The method "launch()" are called
+13:23:05.181:	method launch (120) is called.
+13:23:05.181:	method launch (CBA, 120) is called.
+13:23:05.181:	method findCurrentPage(120) is called.
+13:23:05.681:	
+13:23:16.176:	Current page is: 
+13:23:16.177:	This page  is not recognized.
+13:23:16.177:	method findCurrentPage(120) is called.
+13:23:16.679:	
+13:23:17.742:	Current page is: EnterPIN
+13:23:17.742:	<font color='grey'>App launched and awaiting for login.</font>
+13:23:17.742:	The method "login()" are called
+13:23:17.742:	method login(1) is called.
+13:23:18.743:	method enterNumPadOK (123456) is called.
+13:23:18.743:	method enterNumPad (123456) is called.
+13:23:18.743:	Number to be entered is: 123456
+13:23:22.983:	<font color='grey'>User Authentication performed.</font>
+13:23:22.983:	The method "waitUntilPage()" are called
+13:23:31.998:	Current page is: 
+13:23:32.137:	Current page is: Purchase
+13:23:32.137:	page count is: 534
+13:23:32.637:	The method "reachPage()" are called
+13:23:32.637:	method reachPage(GP, SettingsTerminal) is called.
+13:23:32.637:	method reachPage(GP, Purchase) is called.
+13:23:32.768:	method goToSidemenuPage(Purchase) is called.
+13:23:32.768:	method findCurrentPage(0) is called.
+13:23:33.268:	
+13:23:33.443:	Current page is: Purchase
+13:23:33.443:	method findCurrentPage(0) is called.
+13:23:33.944:	
+13:23:34.101:	Current page is: Purchase
+13:23:35.476:	method login(1) is called.
+13:23:36.476:	method enterNumPadOK (123456) is called.
+13:23:36.476:	method enterNumPad (123456) is called.
+13:23:36.476:	Number to be entered is: 123456
+13:23:40.971:	<font color='grey'>User Authentication performed.</font>
+13:23:42.945:	Current page is: SettingsTerminal
+13:23:42.945:	page count is: 95
+13:23:42.945:	The method "setBooleanValue(no)" are called
+13:23:43.266:	The method "setBooleanValue(no)" are called
+13:23:43.924:	The method "setBooleanValue(no)" are called
+13:23:44.240:	The method "reachPage()" are called
+13:23:44.241:	method reachPage(GP, Purchase) is called.
+13:23:44.913:	method goToSidemenuPage(Purchase) is called.
+13:23:44.913:	method findCurrentPage(0) is called.
+13:23:45.414:	
+13:23:45.695:	Current page is: SettingsTerminal
+13:23:45.695:	method clickOnPage(SettingsTerminal, Purchase, [Ljava.lang.String;@10954b) is called.
+13:23:45.695:	method findCurrentPage(0) is called.
+13:23:46.196:	
+13:23:46.488:	Current page is: SettingsTerminal
+13:23:49.152:	Current page is: Purchase
+13:23:49.152:	page count is: 537
+13:23:49.152:	The method "singlePurchase()" are called
+13:23:49.152:	method singlePurchase(1000, no, , no, ) is called.
+13:23:49.152:	method findCurrentPage(1) is called.
+13:23:49.652:	
+13:23:49.808:	Current page is: Purchase
+13:23:49.809:	method enterPurchaseAmount(1000) is called.
+13:23:49.809:	method enterNumPadOK (1000) is called.
+13:23:49.809:	method enterNumPad (1000) is called.
+13:23:49.809:	Number to be entered is: 1000
+13:23:52.542:	method findCurrentPage(1) is called.
+13:23:53.042:	
+13:24:01.641:	Current page is: 
+13:24:01.641:	reached an unrecognized page: 
+13:24:01.641:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:24:01.641:	method findCurrentPage(1) is called.
+13:24:02.142:	
+13:24:06.638:	Current page is: 
+13:24:06.638:	reached an unrecognized page: 
+13:24:06.638:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:24:06.638:	method findCurrentPage(1) is called.
+13:24:07.138:	
+13:24:11.429:	Current page is: 
+13:24:11.429:	reached an unrecognized page: 
+13:24:11.429:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:24:11.429:	method findCurrentPage(1) is called.
+13:24:11.930:	
+13:24:16.139:	Current page is: 
+13:24:16.139:	reached an unrecognized page: 
+13:24:16.139:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:24:16.139:	method findCurrentPage(1) is called.
+13:24:16.639:	
+13:24:21.298:	Current page is: 
+13:24:21.298:	reached an unrecognized page: 
+13:24:21.298:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:24:21.298:	method findCurrentPage(1) is called.
+13:24:21.798:	
+13:24:25.844:	Current page is: 
+13:24:25.844:	reached an unrecognized page: 
+13:24:25.844:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:24:25.844:	method findCurrentPage(1) is called.
+13:24:26.345:	
+13:24:35.159:	Current page is: 
+13:24:35.159:	reached an unrecognized page: 
+13:24:35.159:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:24:35.159:	method findCurrentPage(1) is called.
+13:24:35.661:	
+13:24:35.949:	Current page is: TapToPay
+13:24:35.949:	waiting for card tap
+13:24:35.949:	method findCurrentPage(1) is called.
+13:24:36.449:	
+13:24:42.944:	Current page is: 
+13:24:42.944:	reached an unrecognized page: 
+13:24:42.944:	exception caught during button click, failed to find NoNetworkConnectionretry
+13:24:42.944:	The method "test()" are called
+13:24:47.095:	Current page is: 
+13:24:47.100:	The method "test()" are called
+13:24:47.196:	The method "clickButton()" are called
+13:24:47.270:	exception caught during button click, failed to find PurchaseResultNoReceipt
+13:24:47.270:	The method "waitUntilPage()" are called
+13:24:51.396:	Current page is: 
+13:24:55.417:	Current page is: 
+13:25:00.371:	Current page is: 

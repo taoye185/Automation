@@ -1,0 +1,55 @@
+---------Start of logs---------
+11:55:58.228:	AndroidDriver created.
+11:55:58.230:	The method "logComment()" are called
+11:55:58.230:	<font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font>
+11:55:58.230:	The method "logComment()" are called
+11:55:58.230:	<font color='grey'>This case assumes the app starts from the Purchase page.</font>
+11:55:58.230:	The method "launch()" are called
+11:55:58.230:	method launch (120) is called.
+11:55:58.230:	method launch (CBA, 120) is called.
+11:55:58.230:	method findCurrentPage(120) is called.
+11:55:58.731:	
+11:56:01.315:	Current page is: MerchantSignIn
+11:56:01.315:	method merchantSignin (0, 005040100000004) is called.
+11:56:01.315:	method inputText (0, MerchantSignInID, 005040100000004) is called.
+11:56:01.315:	method find(MerchantSignInID) is called.
+11:56:02.129:	method clickButton (0, MerchantSignInOK) is called.
+11:56:02.129:	method find(MerchantSignInOK) is called.
+11:56:02.799:	method findCurrentPage(120) is called.
+11:56:03.299:	
+11:56:10.977:	Current page is: 
+11:56:10.977:	This page  is not recognized.
+11:56:10.977:	method findCurrentPage(120) is called.
+11:56:11.478:	
+11:56:12.495:	Current page is: MerchantPassword
+11:56:12.495:	method merchantPassword (0, {FXVo~9B) is called.
+11:56:12.495:	method inputText (0, MerchantPasswordpassword, {FXVo~9B) is called.
+11:56:12.495:	method find(MerchantPasswordpassword) is called.
+11:56:13.205:	method clickButton (0, MerchantPasswordContinue) is called.
+11:56:13.205:	method find(MerchantPasswordContinue) is called.
+11:56:14.096:	method findCurrentPage(120) is called.
+11:56:14.596:	
+11:56:19.159:	Current page is: 
+11:56:19.159:	This page  is not recognized.
+11:56:19.159:	method findCurrentPage(120) is called.
+11:56:19.660:	
+11:56:23.622:	Current page is: 
+11:56:23.622:	This page  is not recognized.
+11:56:23.622:	method findCurrentPage(120) is called.
+11:56:24.123:	
+11:56:27.879:	Current page is: 
+11:56:27.879:	This page  is not recognized.
+11:56:27.879:	The method "login()" are called
+11:56:27.879:	method login(1) is called.
+11:56:27.879:	method enterNumPadOK (1, 123456) is called.
+11:56:28.879:	method enterNumPad (1, 123456) is called.
+11:56:29.880:	Number to be entered is: 123456
+11:56:29.880:	method find(EnterPIN1) is called.
+11:56:29.957:	exception caught, not on PIN entering page.
+11:56:29.957:	method find(EnterPINOK) is called.
+11:56:30.016:	exception caught, not on PIN entering page.
+11:56:30.016:	<font color='grey'>User Authentication performed.</font>
+11:56:30.016:	The method "waitUntilPage()" are called
+11:56:30.016:	
+11:56:34.617:	Current page is: 
+11:56:34.619:	

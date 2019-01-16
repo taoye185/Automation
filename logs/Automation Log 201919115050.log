@@ -1,0 +1,81 @@
+---------Start of logs---------
+11:50:50.454:	The method "logComment()" are called
+11:50:50.454:	<font color='grey'>Start of base purchase test case - please have SUCCESS testing card placed at the back of device!</font>
+11:50:50.454:	The method "launch()" are called
+11:50:50.454:	method launch (120) is called.
+11:50:50.454:	method launch (CBA, 120) is called.
+11:50:50.454:	method findCurrentPage(120) is called.
+11:50:50.955:	
+11:50:54.212:	Current page is: MerchantSignIn
+11:50:54.212:	method merchantSignin (taoye67890123008) is called.
+11:50:55.770:	driverType Androidnot implemented for this method
+11:50:55.772:	method findCurrentPage(120) is called.
+11:50:56.272:	
+11:51:05.116:	Current page is: 
+11:51:05.116:	This page  is not recognized.
+11:51:05.116:	method findCurrentPage(120) is called.
+11:51:05.617:	
+11:51:07.104:	Current page is: MerchantPassword
+11:51:07.104:	method merchantPassword (Thankyou1@) is called.
+11:51:08.454:	driverType Androidnot implemented for this method
+11:51:08.454:	method findCurrentPage(120) is called.
+11:51:08.954:	
+11:51:11.415:	Current page is: SignInSelection
+11:51:11.629:	method findCurrentPage(120) is called.
+11:51:12.130:	
+11:51:15.977:	Current page is: UpdateRequired
+11:51:16.138:	method findCurrentPage(120) is called.
+11:51:16.639:	
+11:51:22.990:	Current page is: UpdatingSecureElement
+11:51:52.991:	method findCurrentPage(120) is called.
+11:51:53.491:	
+11:52:28.081:	Current page is: UpdatingSecureElement
+11:52:58.082:	method findCurrentPage(120) is called.
+11:52:58.583:	
+11:53:06.520:	Current page is: UpdatingSecureElement
+11:53:36.520:	method findCurrentPage(120) is called.
+11:53:37.020:	
+11:53:37.855:	Current page is: 
+11:53:37.855:	This page  is not recognized.
+11:53:37.855:	method findCurrentPage(120) is called.
+11:53:38.356:	
+11:53:39.198:	Current page is: 
+11:53:39.198:	This page  is not recognized.
+11:53:39.198:	method findCurrentPage(120) is called.
+11:53:39.698:	
+11:53:40.522:	Current page is: 
+11:53:40.522:	This page  is not recognized.
+11:53:40.523:	method findCurrentPage(120) is called.
+11:53:41.023:	
+11:53:41.878:	Current page is: 
+11:53:41.878:	This page  is not recognized.
+11:53:41.878:	method findCurrentPage(120) is called.
+11:53:42.379:	
+11:53:43.233:	Current page is: 
+11:53:43.233:	This page  is not recognized.
+11:53:43.233:	method findCurrentPage(120) is called.
+11:53:43.733:	
+11:53:44.487:	Current page is: 
+11:53:44.487:	This page  is not recognized.
+11:53:44.487:	method findCurrentPage(120) is called.
+11:53:44.988:	
+11:53:46.886:	Current page is: 
+11:53:46.886:	This page  is not recognized.
+11:53:46.886:	method findCurrentPage(120) is called.
+11:53:47.387:	
+11:53:48.282:	Current page is: 
+11:53:48.282:	This page  is not recognized.
+11:53:48.282:	method findCurrentPage(120) is called.
+11:53:48.783:	
+11:53:49.626:	Current page is: 
+11:53:49.626:	This page  is not recognized.
+11:53:49.626:	method findCurrentPage(120) is called.
+11:53:50.126:	
+11:53:51.024:	Current page is: 
+11:53:51.024:	This page  is not recognized.
+11:53:51.024:	method findCurrentPage(120) is called.
+11:53:51.525:	
+11:53:52.419:	Current page is: 
+11:53:52.419:	This page  is not recognized.
+11:53:52.419:	method findCurrentPage(120) is called.
+11:53:52.920:	
