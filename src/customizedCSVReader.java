@@ -1,22 +1,15 @@
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.LocalDateTime;
 import java.util.Iterator;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Reporter;
-
 import com.opencsv.CSVReader;
 
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class customizedCSVReader {
@@ -328,6 +321,7 @@ catch (Exception e) {
 		wr.write(output);
 		wr.flush();
 		log.logConsole(filePath + "has been written.");
+		wr.close();
 	}
 	
 	public String writeArrayAsCSV (String[] array, int desiredLength) {

@@ -1,47 +1,9 @@
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Iterator;
-import java.util.Properties;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import com.opencsv.CSVReader;
-
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-
-import java.util.Properties;
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-/*
-import javax.mail.BodyPart;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
-*/
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 
@@ -62,7 +24,7 @@ public class AutomationMain{
 	static String driverFile = "";
 //	static String chromeElementFile = "";
 	static String deviceFile = "";
-	static MWLogger log;
+	static MWLogger log; 
 
 	static DesiredCapabilities configurationList = new DesiredCapabilities();
 	static DesiredCapabilities driverList = new DesiredCapabilities();
@@ -71,7 +33,7 @@ public class AutomationMain{
 	public void beforeTest( ) throws IOException {
 		customizedCSVReader cr = new customizedCSVReader();	
 		try { 	
-			DesiredCapabilities config = cr.readPairing(testManagementFile);	//read Test Management Configuration File
+			cr.readPairing(testManagementFile);	//read Test Management Configuration File
 			appFile = cr.returnPairingValue("appFile");			//retrieve the app file from the Test Management Configuration File
 			deviceFile = cr.returnPairingValue("deviceFile"); 	//retrieve the device file from the Test Management Configuration File
 			groupFile = cr.returnPairingValue("groupFile");		//retrieve the test gropu file from the Test Management Configuration File

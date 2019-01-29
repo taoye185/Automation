@@ -13,13 +13,16 @@ AllowBatterySettingsChangeContinue,//android.widget.Button[@text='Continue'],All
 AllowTimeoutSettingsChangeTitle,//android.widget.TextView[@resource-id='com.gpc.mobeewave.mpos.debug:id/popup_header'],AllowTimeoutSettingsChange,Title,view,yes,Allow write system setting,0
 AllowTimeoutSettingsChangeTextBody,//android.widget.TextView[@resource-id='com.gpc.mobeewave.mpos.debug:id/popup_text'],AllowTimeoutSettingsChange,TextBody,view,,,
 AllowTimeoutSettingsChangeDeny,//android.widget.Button[@text='Deny'],AllowTimeoutSettingsChange,Deny,click,,,
-AllowTimeoutSettingsChangeContinue,//android.widget.Button[@text='Continue'],AllowTimeoutSettingsChange,Continue,click,,,
+AllowTimeoutSettingsChangeContinue,//android.widget.Button[@text='CONTINUE'],AllowTimeoutSettingsChange,Continue,click,,,
 AndroidAlertTitle,//android.widget.TextView[@resource-id='android:id/alertTitle'],AndroidAlert,Title,view,yes,Stop optimizing battery usage?,0
 AndroidAlertTextBody,//android.widget.TextView[@resource-id='android:id/message'],AndroidAlert,TextBody,view,,,
 AndroidAlertDeny,//android.widget.Button[@text='Deny'],AndroidAlert,Deny,click,,,
 AndroidAlertAllow,//android.widget.Button[@text='Allow'],AndroidAlert,Allow,click,,,
 AndroidDeviceSettingsback,//android.view.ViewGroup[@resource-id='android:id/action_bar']/android.widget.ImageButton[@index=0],AndroidDeviceSettings,back,click,,,
 AndroidDeviceSettingsTitle,//android.view.ViewGroup[@resource-id='android:id/action_bar']/android.widget.TextView[@index=1],AndroidDeviceSettings,Title,view,yes,DEVICE SETTINGS,0
+AndroidDeviceSettingsQuickQsPanel,//android.widget.LinearLayout[@resource-id='com.android.systemui:id/quick_qs_panel'],AndroidDeviceSettings,QuickQsPanel,click,,,
+AndroidDeviceSettingsWifiButton,//android.widget.LinearLayout[@resource-id='com.android.systemui:id/quick_qs_panel']/android.widget.LinearLayout[@index=0]/android.widget.LinearLayout[@index=0]/android.widget.FrameLayout[@index=0]/android.view.ViewGroup[@index=0],AndroidDeviceSettings,WifiButton,click,,,
+AndroidDeviceSettingsQuickQsPanelExpanded,(//android.view.View[@resource-id='com.android.systemui:id/backgroundNormal'])[last()],AndroidDeviceSettings,QuickQsPanelExpanded,click,,,
 EnterPINPepImage,//android.widget.ImageView[@resource-id='com.gpc.mobeewave.mpos.debug:id/lock_bank_logo'],EnterPIN,PepImage,view,,,
 EnterPINProcessTitle,//android.widget.TextView[@resource-id='com.gpc.mobeewave.mpos.debug:id/toolbar_title'],EnterPIN,ProcessTitle,view,,,
 EnterPINEncryptedPIN,//android.widget.TextView[@resource-id='com.gpc.mobeewave.mpos.debug:id/lock_pin_bg'],EnterPIN,EncryptedPIN,view,,,
@@ -38,7 +41,7 @@ EnterPINDelete,//android.widget.Button[@resource-id='com.gpc.mobeewave.mpos.debu
 EnterPIN0,//android.widget.Button[@resource-id='com.gpc.mobeewave.mpos.debug:id/numpad_button_0'],EnterPIN,0,click,,,
 EnterPINOK,//android.widget.LinearLayout[@resource-id='com.gpc.mobeewave.mpos.debug:id/numpad_button_ok'],EnterPIN,OK,click,,,
 EnterPINSecurityImage,//android.widget.ImageView[@resource-id='com.gpc.mobeewave.mpos.debug:id/lock_merchant_image'],EnterPIN,SecurityImage,click,,,
-EnterPINForgotPIN,//android.widget.Button[@resource-id='com.gpc.mobeewave.mpos.debug:id/base_tertiary_button'],EnterPIN,ForgotPIN,click,yes,FORGOT PIN,9
+EnterPINForgotPIN,//android.widget.Button[@resource-id='com.gpc.mobeewave.mpos.debug:id/base_tertiary_button'],EnterPIN,ForgotPIN,click,yes,FORGOT PIN,11
 MerchantPasswordpassword,//android.widget.EditText[@text='Password'],MerchantPassword,password,text input,yes,Password,0
 MerchantPasswordContinue,//android.widget.Button[@text='CONTINUE'],MerchantPassword,Continue,click,,,
 MerchantSignInID,//android.widget.EditText[@resource-id='com.gpc.mobeewave.mpos.debug:id/sign_up_account_number'],MerchantSignIn,ID,text input,,,
@@ -207,7 +210,7 @@ TransactionHistorySecondTransaction,//android.support.v7.widget.RecyclerView[@re
 NewTagScannedTitle,//android.widget.TextView[@text='NEW TAG SCANNED'],NewTagScanned,Title,view,yes,NEW TAG SCANNED,0
 AllAppListingCBADebug,//android.widget.FrameLayout[@content-desc='CBA debug'],AllAppListing,CBADebug,click,,,
 PurchaseSideMenu,//android.view.ViewGroup[@resource-id='com.gpc.mobeewave.mpos.debug:id/toolbar']/android.widget.ImageButton[@index=0],Purchase,SideMenu,view,,,
-PurchaseTitle,//android.widget.TextView[@resource-id='com.gpc.mobeewave.mpos.debug:id/lock_header'],Purchase,Title,view,yes,Enter Amount,189
+PurchaseTitle,//android.widget.TextView[@resource-id='com.gpc.mobeewave.mpos.debug:id/lock_header'],Purchase,Title,view,yes,Enter Amount,191
 PurchaseAmount,//android.widget.TextView[@resource-id='com.gpc.mobeewave.mpos.debug:id/amount_label_amount'],Purchase,Amount,view,,,
 Purchase1,//android.widget.Button[@resource-id='com.gpc.mobeewave.mpos.debug:id/numpad_button_1'],Purchase,1,click,,,
 Purchase2,//android.widget.Button[@resource-id='com.gpc.mobeewave.mpos.debug:id/numpad_button_2'],Purchase,2,click,,,

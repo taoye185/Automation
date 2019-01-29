@@ -1,7 +1,5 @@
 import java.util.Vector;
 
-import org.openqa.selenium.WebElement;
-
 public class mobilePage  {
 	
 //	private Vector pe = new Vector();

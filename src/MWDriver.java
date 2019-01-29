@@ -1,5 +1,3 @@
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
@@ -145,6 +143,7 @@ public class MWDriver extends RemoteWebDriver {
 			case "scrollDown": {this.scrollDown();break;} //need refinement
 			case "scrollUp": {this.scrollUp();break;} //need refinement
 			case "setBooleanValue": {this.setBooleanValue(parameters[4], parameters[5]); break;}
+			case "toggleWifi": {this.toggleWifi(); break;}
 			case "test": {this.test(parameters[7], Arrays.copyOfRange(parameters, 8, parameters.length));break;}
 			case "wait": {this.wait(waitSec); break;}
 			case "waitUntilPresent": {this.waitUntilElement (waitSec, parameters[4]);break;}
@@ -218,7 +217,11 @@ public class MWDriver extends RemoteWebDriver {
 		try {
 		WebElement el = this.findByURI(URI);
 		PointOption po = new PointOption();
-		po.withCoordinates(el.getLocation().getX(), el.getLocation().getY());
+		int initX = el.getLocation().getX();
+		int initY = el.getLocation().getY();
+		int x = initX +el.getSize().getWidth()/2;
+		int y = initY +el.getSize().getHeight()/2;
+		po.withCoordinates(x,y);
 		return po;
 		}
 		catch (Exception e) {
@@ -351,102 +354,56 @@ public class MWDriver extends RemoteWebDriver {
 			return currentPage;
 		}
 	
-	/********************driver dependent methods ********************************/	
-	public void launch() throws InterruptedException, IOException {
-		/* Pre:		If the driverType is "Android", the app to be tested is one of CBA/Pep/NBC/GP, and it has not been logged in yet
-		 * 			If the driverType is some other WebDriver, the StartingURL configuration was already set and read in from the configuration file
-		 * Post:	If the driverType is "Android", the app is launched and reachs the EnterPIN page; If the driverType is some other browser,
-		 * 			the browser is open with the default StartingURL read from configuration file
+	public String waitUntilPage (int timeout, String targetPage) throws InterruptedException, IOException {
+		/* 	Pre:	timeout is a positive integer
+		 * 	Post:	the driver will wait until the timeout seconds has passed or the target page is loaded, whichever earlier. The current page name will be returned.
 		 */
-		switch (driverType) {
-		case "Android": {
-			this.launch(120);
-			break;
+		LocalTime startT = LocalTime.now();
+		LocalTime endT = LocalTime.now();
+		String currentPage = this.findCurrentPage();
+		while ((!targetPage.equals(currentPage)) && (ChronoUnit.SECONDS.between(startT, endT)<timeout)) {
+			currentPage = this.findCurrentPage();
+			Thread.sleep(500);
+			endT = LocalTime.now();
 		}
-		default: {
-			((WebDriver)this.chooseDriver()).get((String) cap.getCapability("StartingURL"));
+		if (ChronoUnit.SECONDS.between(startT, endT)>=timeout) {
+			log.logFile("The waitUntilPage method timed out after " + ChronoUnit.SECONDS.between(startT, endT) + " seconds.");
 		}
-		}
-
+		log.logFile(" The current page is " + currentPage);
+		return currentPage;
 	}
-	
-	
-public String reachPageByProcess (int timeoutIteration,String processName, String targetPage) throws InterruptedException, IOException {
-	String currentPage = this.findCurrentPage();
-	String previousPage = "";
-	int iteration = 0;
-	while ((!currentPage.equals(targetPage)) && (iteration<timeoutIteration)) {
-		if (previousPage.equals(currentPage)) {
-			log.logConsole(previousPage + " is equal to " + currentPage + ", do nothing");
-			iteration ++;
-		}	//if
-
-		else {
-			switch (processName) {
-				case "launch": {
-					this.launchProcess(currentPage);
-					break;
-				}	//case
-				case "login": {
-					this.loginProcess(currentPage);
-					break;
-				}	//case
-				default: {
-					log.logFailure("Process Undefined: Please check csv file used correct process name.");
-					return currentPage;
-				}	//default
-			}	//switch
-		}			//else
-		previousPage = currentPage;
-		currentPage = this.findCurrentPage(); //decide what to do depending on which page the user is on
-
-	}	//while
-	return currentPage;
-}
-
-
-
-public String waitUntilPage (int timeout, String targetPage) throws InterruptedException, IOException {
-	LocalTime startT = LocalTime.now();
-	String currentPage = this.findCurrentPage();
-	while ((!targetPage.equals(currentPage)) && (ChronoUnit.SECONDS.between(startT, LocalTime.now())<timeout)) {
-		currentPage = this.findCurrentPage();
-		Thread.sleep(500);
-	}
-	return currentPage;
-}
 
 /*
-public String waitUntilNewPage (String driverName, int timeout, String currentPage) throws InterruptedException {
-	LocalTime startT = LocalTime.now();
-	String newPage = this.findCurrentPage(driverName);
-	while ((currentPage.equals(newPage)) && (ChronoUnit.SECONDS.between(startT, LocalTime.now())<timeout)) {
-		newPage = this.findCurrentPage(driverName);
-		Thread.sleep(500);
+	public String waitUntilNewPage (int timeout, String currentPage) throws InterruptedException {
+		LocalTime startT = LocalTime.now();
+		String newPage = this.findCurrentPage();
+		while ((currentPage.equals(newPage)) && (ChronoUnit.SECONDS.between(startT, LocalTime.now())<timeout)) {
+			newPage = this.findCurrentPage();
+			Thread.sleep(500);
+		}
+		return newPage;
 	}
-	return newPage;
-}
-*/
-
-public boolean test(String method, String[] contents) throws InterruptedException, IOException {
-/* Pre: 	waitSec is a positive integer, method is either "equal" or "isOnPage" (to be expanded)
-* 			fieldName is a URI - if method is "isOnPage", fieldName can be null as it is not used.
-* Post: 	The method returns a boolean state depending on whether the expected value equal to the actual value.
 */	
-System.out.println("method is: " + method);
-System.out.println("contents are: " +log.logArray(contents));
+	
+	public boolean test(String method, String[] contents) throws InterruptedException, IOException {
+		/* Pre: 	method is either "equal" or "isOnPage" (to be expanded)
+		* 			fieldName is a URI - if method is "isOnPage", fieldName can be null as it is not used.
+		* Post: 	The method returns a boolean state depending on whether the expected value equal to the actual value.
+		*/	
+		System.out.println("method is: " + method);
+		System.out.println("contents are: " +log.logArray(contents));
 
-	boolean testResult = false;
-	String actualValue = "";
-			switch (method) {
+		boolean testResult = false;
+		String actualValue = "";
+		switch (method) {
 		case "equal": {
 			String fieldName = contents[0];
 			String expectedValue = contents[1];
 			try {
-			actualValue = this.findByURI(fieldName).getText();
+				actualValue = this.findByURI(fieldName).getText();
 			}
 			catch (Exception e) {
-			actualValue = "element not found";
+				actualValue = "element not found";
 			}
 			return log.logTestResult(fieldName, actualValue, expectedValue);
 		}
@@ -459,57 +416,105 @@ System.out.println("contents are: " +log.logArray(contents));
 			String fieldName = contents[0];
 			String sortOrder = contents[1];
 			//not finished yet
-			
-			}
+		}
 		default: {
 			testResult = false;
 //			Reporter.log(method + " is not a defined test methodology, no test was conducted.");
 			log.logColorText("red", method + " is not a defined test methodology, no test was conducted.");
 			return testResult;	
 		}
+		}
 	}
-}
+	
+	public void logComment (String comment ) throws IOException {
+		log.logComment(comment);
+	}
+	
+	public void wait(int waitSec) throws InterruptedException {
+		Thread.sleep(waitSec*1000);
+	}
+	
+	public void scrollToBottom() throws IOException {
+		JavascriptExecutor js = (JavascriptExecutor) this.chooseDriver();
 
+	    //This will scroll the web page till end.		
+	    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
 
+	public void scrollToTop() throws IOException {
+		JavascriptExecutor js = (JavascriptExecutor) this.chooseDriver();
 
+	    //This will scroll the web page till end.		
+	    js.executeScript("window.scrollTo(0, 0)");
+	}
 
-public void logComment (String comment ) throws IOException {
-	log.logComment(comment);
-}
+	public void scrollDown() throws IOException {
+		JavascriptExecutor js = (JavascriptExecutor) this.chooseDriver();
 
-public void wait(int waitSec) throws InterruptedException {
-	Thread.sleep(waitSec*1000);
-}
+	    //This will scroll the web page till end.		
+	    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
 
-public void scrollToBottom() throws IOException {
-	JavascriptExecutor js = (JavascriptExecutor) this.chooseDriver();
+	public void scrollUp() throws IOException {
+		JavascriptExecutor js = (JavascriptExecutor) this.chooseDriver();
 
-    //This will scroll the web page till end.		
-    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-}
+	    //This will scroll the web page till end.		
+	    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
+	
+	/********************driver dependent methods ********************************/	
+	public void launch() throws InterruptedException, IOException {
+		/* Pre:		If the driverType is "Android", then the app to be tested is one of CBA/Pep/NBC/GP, and it has not been logged in yet
+		 * 			If the driverType is some other WebDriver, then the StartingURL configuration was already set and read in from the configuration file
+		 * Post:	If the driverType is "Android", the app is launched and reachs the EnterPIN page; If the driverType is some other browser,
+		 * 			the browser is open with the default StartingURL read from configuration file
+		 */
+		switch (driverType) {
+		case "Android": {
+			this.launch(120);
+			break;
+		}
+		default: {
+			((WebDriver)this.chooseDriver()).get((String) cap.getCapability("StartingURL"));
+		}
+		}
+	}
+	
+	public String reachPageByProcess (int timeoutIteration,String processName, String targetPage) throws InterruptedException, IOException {
+	/*	Pre:	TBD	
+	 * 	Post:	TBD
+	 */
+		String currentPage = this.findCurrentPage();
+		String previousPage = "";
+		int iteration = 0;
+		while ((!currentPage.equals(targetPage)) && (iteration<timeoutIteration)) {
+			if (previousPage.equals(currentPage)) {
+				log.logConsole(previousPage + " is equal to " + currentPage + ", do nothing");
+				iteration ++;
+			}	//if
+			else {
+				switch (processName) {
+				case "launch": {
+					this.launchProcess(currentPage);
+					break;
+				}	//case
+				case "login": {
+					this.loginProcess(currentPage);
+					break;
+				}	//case
+				default: {
+					log.logFailure("Process Undefined: Please check csv file used correct process name.");
+					return currentPage;
+				}	//default
+				}	//switch
+			}			//else
+			previousPage = currentPage;
+			currentPage = this.findCurrentPage(); //decide what to do depending on which page the user is on
+		}	//while
+		return currentPage;
+	}
 
-public void scrollToTop() throws IOException {
-	JavascriptExecutor js = (JavascriptExecutor) this.chooseDriver();
-
-    //This will scroll the web page till end.		
-    js.executeScript("window.scrollTo(0, 0)");
-}
-
-public void scrollDown() throws IOException {
-	JavascriptExecutor js = (JavascriptExecutor) this.chooseDriver();
-
-    //This will scroll the web page till end.		
-    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-}
-
-public void scrollUp() throws IOException {
-	JavascriptExecutor js = (JavascriptExecutor) this.chooseDriver();
-
-    //This will scroll the web page till end.		
-    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-}
-
-public void close() {
+	public void close() {
 		try {
 			Object obj = this.chooseDriver();
 			String filePath = (String)cap.getCapability(driverName);
@@ -529,7 +534,8 @@ public void close() {
 		catch (Exception e) {
 			try {
 				log.logConsole("error encountered when closing "+driverName);
-			} catch (IOException e1) {
+			} 
+			catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
@@ -537,35 +543,31 @@ public void close() {
 	}
 
 
-
-//The next set of functions uses the basic functions above to construct frequently used functions on the page level	
-public void merchantSignin(String ID) throws InterruptedException, IOException {
-/* Pre: 	waitSec is a positive integer, 
-* 			ID is not empty,
-* 			MerchantSignInID is accurately defined in configuration file,
-* 			MerchantSignInOK is accurately defined in configuration file.
-* Post: 	If the current page is not Merchant Signin page, do nothing,
-* 			otherwise input the merchant id as specified by the parameter "ID".
-*/
-	log.logFile("method merchantSignin ("+ ID  +") is called.");
-//Thread.sleep(waitSec * 1000);	//wait the current page to load
-	switch (driverType) {
-	case "Android": {
-		try {
-			this.inputText("MerchantSignInID", ID); //input merchant ID
-			this.clickButton("MerchantSignInOK" ); // click OK
+	public void merchantSignin(String ID) throws InterruptedException, IOException {
+		/* Pre: 	If the driverType is "Android", then the app to be tested is one of CBA/Pep/NBC/GP, and it is on the Merchant Signin page
+		 * 			ID is not empty,
+		 * 			MerchantSignInID is an URI accurately defined in configuration file,
+		 * 			MerchantSignInOK is an URI accurately defined in configuration file.
+		 * Post: 	If the current page is not Merchant Signin page, do nothing,
+		 * 			otherwise input the merchant id as specified by the parameter "ID" and then click on the OK button.
+		 */
+		log.logFile("method merchantSignin ("+ ID  +") is called.");
+		switch (driverType) {
+		case "Android": {
+			try {
+				this.inputText("MerchantSignInID", ID); //input merchant ID
+				this.clickButton("MerchantSignInOK" ); // click OK
 			}
-		catch(Exception e) {
-			log.logConsole("exception caught, not on Merchant Sign IN page");
+			catch(Exception e) {
+				log.logConsole("exception caught, not on Merchant Sign IN page");
 			}
-		break;
-	}
-	default: {
+			break;
+		}
+		default: {
 			log.logConsole("driverType " + driverType + "not implemented for this method");
+		}
+		}
 	}
-	}
-
-}
 
 public void merchantPassword(String password) throws InterruptedException, IOException {
 /* Pre: 	waitSec is a positive integer, 
@@ -1203,8 +1205,42 @@ public void login(int waitSec) throws InterruptedException, IOException {
 */
 log.logFile("method login("+waitSec +") is called.");
 this.wait(waitSec);
-this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
-log.logColorText(logInfoColor,"User Authentication performed.");
+String currentPage = "";
+int iteration=0;
+while ((!currentPage.equals("Purchase")) && (iteration<waitSec)) {
+	currentPage = this.findCurrentPage();
+	iteration ++;
+	switch (currentPage) {
+		case "Purchase": {
+			break; // do nothing
+		}
+		case "EnterPIN": {
+			this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
+			log.logColorText(logInfoColor,"User Authentication performed.");
+			break;
+		}
+		case "AllowTimeoutSettingsChange": {
+			this.clickButton("AllowTimeoutSettingsChangeContinue");
+			break;
+		}
+		case "AndroidDeviceSettings": {
+			this.clickButton("AndroidDeviceSettingsback");
+			break;
+		}
+		default: {
+			log.logConsole("This page "+currentPage+ " is not recognized.");
+//			currentPage = this.findCurrentPage(waitSec); //decide what to do depending on which page the user is on
+//			iteration++;
+			//current page not one of the above
+		}
+	}
+}
+
+
+
+
+
+
 }
 
 public void multiplePurchase(int numPurchase, String tipType, String tipValue, String descriptionType, String descriptionValue, String emailType, String emailValue) throws InterruptedException, IOException {
@@ -1730,8 +1766,8 @@ case ("HorizontalBottom"): {}
 case ("VerticalLeft"): {}
 case ("VerticalMid"): {}
 case ("VerticalRight"): {}
-dafault: return true;
-
+dafault: { return true;
+}
 }
 
 
@@ -1806,6 +1842,28 @@ public void swipe(String startURI, String endURI) throws IOException {
 	}
 }
 
+public void swipe(int x1, int y1, int x2, int y2) throws IOException {
+	log.logConsole("swipe starting");
+
+		PointOption startPo = new PointOption();
+		PointOption endPo = new PointOption();
+		startPo.withCoordinates(x1, y1);
+		endPo.withCoordinates(x2, y2);
+
+	
+	try {
+		io.appium.java_client.TouchAction ta = new io.appium.java_client.TouchAction(and);
+		WaitOptions wo = new WaitOptions();
+		wo.withDuration(Duration.ofSeconds(1));
+		ta.press(startPo).waitAction(wo).moveTo(endPo).release().perform();
+		return;
+	}
+	catch (Exception e) {
+		System.out.println("error duing swiping");
+		return;
+	}
+}
+
 public void sign() throws IOException {
 this.tap("SignatureSignArea"); 
 this.swipe("SignatureSignArea", "SignatureConfirm");
@@ -1845,6 +1903,32 @@ public WebElement waitUntilElement(int timeOutSec, String URI) throws Interrupte
 	}
 }
 
+
+public void toggleWifi() throws IOException, InterruptedException {
+//	this.swipe("AndroidDeviceSettingsQuickQsPanel", "PurchaseTitle");
+	this.swipe(540,30,540,480);		//swipe down QuickQsPanel
+	Thread.sleep(500);
+	this.clickButton("AndroidDeviceSettingsWifiButton"); //click wifi button
+	Thread.sleep(500);
+	this.swipe("AndroidDeviceSettingsQuickQsPanelExpanded", "AndroidDeviceSettingsWifiButton");	//swipe up QuickQsPanel
+//	this.swipe(540,900,540,480);
+	Thread.sleep(500);
+	this.enterNumPadOK("1234");
+	
+}
+
+public void toggle(String target) throws IOException, InterruptedException {
+	switch (target) {
+	case "wifi": {
+		this.toggleWifi();
+		break;
+		
+	}
+	default: {
+		//to be implemented
+	}
+	}
+}
 
 
 }
