@@ -1,0 +1,24 @@
+ID,Xpath,Page,Field,action,unique,value,
+EmailDetailsSelectToReadText,//*[@id="primaryContainer"]/div[4]/div/div[1]/div/div[4]/div[3]/div/div[5]/div[2]/div/span[2],EmailDetails,SelectToReadText,,,,
+EmailListFirstEmail,//*[@id="_ariaId_26"]/div[2],EmailList,FirstEmail,,,,
+EmailListSecondEmail,//*[@id="_ariaId_29"]/div[2],EmailList,SecondEmail,,,,
+MicrosoftPasswordPassword,//*[@id="i0118"],MicrosoftPassword,Password,,,,
+MicrosoftPasswordSignIn,//*[@id="idSIButton9"],MicrosoftPassword,SignIn,,,,
+MicrosoftPasswordForgotPassword,//*[@id="idA_PWD_ForgotPassword"],MicrosoftPassword,ForgotPassword,,yes,Forgot my password,5
+MicrosoftSignInUsername,//*[@id="i0116"],MicrosoftSignIn,Username,,,,
+MicrosoftSignInNext,//*[@id="idSIButton9"],MicrosoftSignIn,Next,,,,
+MicrosoftSignInCantAccess,//*[@id="cantAccessAccount"],MicrosoftSignIn,CantAccess,,yes,Can’t access your account?,5
+MicrosoftStaySignedInYes,//*[@id="idSIButton9"],MicrosoftStaySignedIn,Yes,,,,
+MicrosoftStaySignedInStaySignedIn,/html/body/div/form/div[1]/div/div[1]/div[2]/div/div[2]/div/div[1],MicrosoftStaySignedIn,StaySignedIn,,yes,Stay signed in?,5
+OutlookFunctionalityEmailSearchCover,//*[@id="primaryContainer"]/div[4]/div/div[1]/div/div[1]/div[1]/div/div/div[1]/div[1]/div[1]/div[2]/div[2]/button/span[2],OutlookFunctionality,EmailSearchCover,,,,
+OutlookFunctionalitySearchButton,//*[@id="primaryContainer"]/div[4]/div/div[1]/div/div[1]/div[1]/div/div/div[1]/div[1]/div[1]/div[2]/div[2]/div/div[1]/div/button[1],OutlookFunctionality,SearchButton,,,,
+OutlookFunctionalityTitle,//*[@id="O365_NavHeader"]/div[1]/div[5]/a[2]/span,OutlookFunctionality,Title,,,,
+OutlookFunctionalityMarkRead,//*[@id="primaryContainer"]/div[4]/div/div[1]/div/div[4]/div[1]/div/div[1]/div/div/div[3]/div/button/span[2],OutlookFunctionality,MarkRead,,yes,Mark all as read,8
+OutlookFunctionalityEmailSearch,//*[@id="primaryContainer"]/div[4]/div/div[1]/div/div[1]/div[1]/div/div/div[1]/div[1]/div[1]/div[2]/div[2]/div/div[1]/div/form/div/input,OutlookFunctionality,EmailSearch,,,,
+EmailListFirstEmailTime,//*[@id="_ariaId_139"]/div[2]/div[4]/span,EmailList,FirstEmailTime,,,,
+EmailDetailsMerchantIDValue,//*[@id="Item.MessageUniqueBody"]/div/div/div/div[2]/table/tbody/tr/td/div[3]/table/tbody/tr/td/div/table/tbody/tr[2]/td/div/b,EmailDetails,MerchantIDValue,,,,
+EmailDetailsPasswordValue,//*[@id="Item.MessageUniqueBody"]/div/div/div/div[2]/table/tbody/tr/td/div[3]/table/tbody/tr/td/div/table/tbody/tr[3]/td/div/b,EmailDetails,PasswordValue,,,,
+EmailListFirstEmailSelect,//*[@id="_ariaId_136"]/div[2]/button,EmailList,FirstEmailSelect,,,,
+test1,//*[contains(text(),'National Bank Easy Pay Registration')],test,1,,,
+test2,//*[contains(text(),'re almost there.')]/../../..,test,2,,,
+EmailListLatestEmail,//*[@id="primaryContainer"]/div[4]/div/div[1]/div/div[4]/div[3]/div/div[2]/div/div/div/div[5]/div[3]/div[1]/div[3]/div[1]/div/div/div[2]/div[6],EmailList,LatestEmail,,,,

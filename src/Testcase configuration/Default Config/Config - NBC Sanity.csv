@@ -14,3 +14,4 @@ Active,Capabilities Name,Capabilities Value
 1,LogInfoColor,grey
 1,LogCaseColor,blue
 1,DefaultTimeout,120
+1,StartingURL,http://integration-tms.mobeewave-hive.com/#/login

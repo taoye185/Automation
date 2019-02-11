@@ -42,6 +42,7 @@ public class MWDriver extends RemoteWebDriver {
 	private ElementList mPageList;		//a list of all the pages present in an app. this really should be app/driver specific, but for now, I'm
 										//putting it like this until the restructuring is implemented.
 	private DesiredCapabilities elementList; //all the elements read from the element file
+	static private DesiredCapabilities retrievedVariables = new DesiredCapabilities();
 	private String driverType;
 	private String driverName;
 	
@@ -135,9 +136,15 @@ public class MWDriver extends RemoteWebDriver {
 		
 			switch (parameters[2]) {	//these methods has been implemented under MWDriver class and should work for all drivers defined
 			case "clickButton": {this.clickButton(parameters[4]);break;}	
+			case "close": {this.close();break;}
+			case "checkPassword": {this.checkAccountPasswordInOutlook(); break;}
+			case "checkNewPassword": {this.checkUpdatedAccountPasswordInOutlook(waitSec);break;}
 			case "inputText": {this.inputText(parameters[4], parameters[5]);break;}	
+			case "inputVariableText": {this.inputVariableText(parameters[4], parameters[5]);break;}
 			case "launch": {this.launch();break;}
+			case "launchURL": {this.launchURL(parameters[4]); break;}
 			case "logComment": {this.logComment(parameters[4]); break;}
+			case "loginToOutlook": {this.loginToOutlook(waitSec); break;}
 			case "scrollToBottom": {this.scrollToBottom();break;} //need refinement
 			case "scrollToTop": {this.scrollToTop();break;} //need refinement
 			case "scrollDown": {this.scrollDown();break;} //need refinement
@@ -161,6 +168,7 @@ public class MWDriver extends RemoteWebDriver {
 			case "pickDate": {this.pickDate(parameters[4],parameters[5],parameters[6]);break;}
 			case "reachPageByProcess": {this.reachPageByProcess(waitSec, parameters[4], parameters[5]);break;}
 			case "reachPage": {this.reachPage("GP", parameters[4]);break;}
+			case "readFromPage": {this.retrieveFromContent(parameters[4], parameters[5]);break;}
 			case "showSideMenu": {this.showSideMenu(waitSec);break;}
 			case "sign": {this.sign();break;}
 			case "singlePurchase": {this.singlePurchase(waitSec,parameters[4],parameters[5],parameters[6],parameters[7] ); break;}
@@ -211,18 +219,14 @@ public class MWDriver extends RemoteWebDriver {
 	
 	private PointOption getPO(String URI) throws IOException {
 		/* Pre: URI is a unique valid string corresponding to a visible WebElement on page
-		 * Post: the location of the WebElement is returned as a PointOption object. Unexpected URIs would result null being returned.
+		 * Post: the center location of the WebElement is returned as a PointOption object. Unexpected URIs would result null being returned.
 		 */
 		log.logFile("The method getPO( " + URI + " is called.");
 		try {
 		WebElement el = this.findByURI(URI);
-		PointOption po = new PointOption();
-		int initX = el.getLocation().getX();
-		int initY = el.getLocation().getY();
-		int x = initX +el.getSize().getWidth()/2;
-		int y = initY +el.getSize().getHeight()/2;
-		po.withCoordinates(x,y);
-		return po;
+		int x = el.getLocation().getX() +el.getSize().getWidth()/2;
+		int y = el.getLocation().getY() +el.getSize().getHeight()/2;
+		return this.getPO(x, y);
 		}
 		catch (Exception e) {
 		log.logConsole(URI + " is not found.");
@@ -232,9 +236,6 @@ public class MWDriver extends RemoteWebDriver {
 	}
 
 	private PointOption getPO(int x, int y) {
-//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-//		int maxX = screenSize.width;
-//		int maxY = screenSize.height;
 		PointOption po = new PointOption();
 		po.withCoordinates(x, y);
 		return po;
@@ -265,63 +266,15 @@ public class MWDriver extends RemoteWebDriver {
 		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement on page
 		 * 	Post:	The WebElement whose xpath matching the xpath attribute of the URI is returned, a null is returned if no WebElement is found.
 		 */
+		log.logConsole("finding elements by name " + URI);
 		String xpath = ((pageElement) elementList.getCapability(URI)).getPath();
-		return this.findByXPath(xpath);
+		log.logConsole("xpath is " + xpath);
+		WebElement we =  this.findByXPath(xpath);
+		log.logConsole("Webelement is " + we.toString());
+		return we;
 	}
 	
-	
-	/********************driver independent methods ********************************/	
-	
-	public void clickButton(String URI) throws IOException {
-		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement on page
-		 * 	Post:	The WebElement is clicked.
-		 */
-		log.logFile(URI + " is being clicked.");
-		try {
-			this.findByURI(URI).click();
-		}
-		catch (Exception e) {
-			log.logConsole("exception caught during button click, failed to find " + URI);
-			System.out.println(e);
-		}
-	}
-	
-	public void inputText(String URI, String value) throws IOException {
-		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement on page
-		 * 	Post:	The value string is being entered into the URI text field.
-		 */
-		try {
-			this.findByURI(URI).sendKeys(value);
-		}
-		catch (Exception e) {
-			log.logConsole("exception caught during text entry, failed to find " + URI);
-			System.out.println(e);
-		}
-	}
-	
-	public void setBooleanValue(String URI, String value) throws IOException {
-		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement with a boolean "checked" attributes control (checkbox/switch, etc) on page
-		 * 			value is a case sensitive string that equals to either "yes" or "no" (non-"yes" string is regarded as "no")
-		 * 	Post:	The WebElement is set to the state in which the "checked" attributes correspondsi to the value parameter specified.
-		 */
-		String expectedValue = "false";
-		if (value.equals("yes")) {
-			expectedValue = "true";
-		}
-		try {
-			if (this.findByURI(URI).getAttribute("checked").equals(expectedValue)) {
-				//do nothing
-			}
-			else {
-				this.findByURI(URI).click();
-			}
-		}
-		catch (Exception e) {
-			log.logConsole("exception caught during click, failed to find " + URI);
-		}
-	}
-	
-	public String findCurrentPage () throws InterruptedException, IOException {
+	private String findCurrentPage () throws InterruptedException, IOException {
 		/*	Pre:	A list of all available pages with unique identifiers have been loaded into the mPageList data structure	
 		 * 	Post:	returns the name of the current page. an empty string is returned if the current page is not recognized
 		 * 			The visiting count of the corresponding current page is incremented to reflect the corresponding visiting frequencies for the specific page
@@ -353,6 +306,316 @@ public class MWDriver extends RemoteWebDriver {
 			log.logConsole("Current page is: "+currentPage);
 			return currentPage;
 		}
+
+	private String findCurrentPage(int waitSec) throws InterruptedException, IOException {
+		/* Pre: mobilePage has been initialized
+		* This function is to be used as strictly a helper function to determine what page the app is currently displaying
+		* Post: return the PageName associated with the current mobilePage
+		*/
+		log.logFile("method findCurrentPage("+waitSec +") is called.");
+		Thread.sleep(500);
+		String currentPage = "";
+		log.logConsole("");
+		System.out.print("Current Page Verification in progress");
+		/*		DesiredCapabilities pages = (DesiredCapabilities) cap.getCapability("AndroidPage");
+		Iterator<Object> mPage =  pages.asMap().values().iterator();
+
+			while (mPage.hasNext()) {
+		*/
+		for (int i=0; i<mPageList.size(); i++) {
+			try {
+//				mobilePage tempPage =(mobilePage) mPage.next();	
+				mobilePage tempPage =(mobilePage) mPageList.elementAt(i);
+				String name =  tempPage.getPageName();
+				String id =  tempPage.getUID();
+				String value =  tempPage.getUValue();
+				if (!(id.isEmpty())) {
+				pageElement pEle = (pageElement) elementList.getCapability(id);
+				String xp = pEle.getPath();
+				String title = this.findByXPath(xp).getText();
+					if (title.equals(value)) {
+						log.logConsole("Current page is: "+name);
+						tempPage.incrementCount();
+						return name;
+					}
+					else {
+						System.out.print(".");
+//						log.logFile("match not found: " + id + " is not equal to " + value + " , but equal to " + title);
+					}
+				}
+			}
+			catch (Exception e) {
+				System.out.print(".");
+			}
+		} //while
+		log.logConsole("Current page is: "+currentPage);
+		return currentPage;
+		}
+	
+	private void clearText(String URI) throws InterruptedException, IOException {
+		/* 	Pre: 	URI is a unique valid string corresponding to a visible WebElement on page
+		* 	Post: 	The text field is cleared.
+		* 			use this method when no validation or boundary cases are expected
+		*/			
+			log.logFile("method clearText (" + URI  +") is called.");
+
+			try {
+			this.findByURI(URI).clear();
+			}
+			catch (Exception e) {
+				log.logConsole("exception caught during text clearance, failed to find " + URI);
+			}
+		}
+
+	private void clickButtonMultipleTimes(String URI, int count) throws IOException {
+
+		try {
+			for (int i=0; i<count; i++) {
+				this.clickButton(URI);
+			}
+		}
+		catch(Exception e) {
+			log.logConsole("exception caught while trying to find " + URI);
+		}
+	}
+	
+	private void selectDay (int day) throws IOException {
+		log.logFile("method selectDay ("+day  +") is called.");
+		String xpath = "//android.view.View[@resource-id='android:id/month_view']/android.view.View[@text="+day+"]";
+		this.findByXPath(xpath).click();
+		}
+	
+	private int[] parseDatePickerString (String dateString) throws IOException {
+		log.logFile("method parseDatePickerString ("+dateString  +") is called.");
+		int[] date = new int[3];
+		date[2]= Integer.parseInt(dateString.substring(0, 2));
+		date[0] = Integer.parseInt(dateString.substring(dateString.length()-4, dateString.length()));
+		String month = dateString.substring(3, dateString.length()-5);
+		log.logFile("The Year is parsed to be: "+date[0]);
+		log.logFile("The month is parsed to be: "+month);
+		log.logFile("The day is parsed to be: "+date[2]);
+		switch (month) {
+
+		case "January": {
+			date[1]=1;break;
+		}
+		case "February": {
+			date[1]=2;break;
+		}
+		case "March": {
+			date[1]=3;break;
+		}
+		case "April": {
+			date[1]=4;break;
+		}
+		case "May": {
+			date[1]=5;break;
+		}
+		case "June": {
+			date[1]=6;break;
+		}
+		case "July": {
+			date[1]=7;break;
+		}
+		case "August": {
+			date[1]=8;break;
+		}
+		case "September": {
+			date[1]=9;break;
+		}
+		case "October": {
+			date[1]=10;break;
+		}
+		case "November": {
+			date[1]=11;break;
+		}
+		case "December": {
+			date[1]=12;break;
+		}
+		}
+		return date;
+		}
+	
+	private void loginProcess (String currentPage) throws InterruptedException, IOException {
+		log.logFile("method loginProcess ("+currentPage +") is called.");
+
+		switch (currentPage) {
+			case "EnterPIN": {
+				this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
+				log.logColorText(logInfoColor,"User Authentication performed.");
+				break;
+			}
+			case "AllowBatterySettingsChange": {
+				this.clickButton("AllowBatterySettingsChangeContinue");
+				break;
+			}
+			case "AllowTimeoutSettingsChange": {
+				this.clickButton("AllowTimeoutSettingsChangeContinue");
+				break;
+			}
+			case "AndroidDeviceSettings": {
+				this.clickButton("AndroidDeviceSettingsback");
+				break;
+			}
+			case "AndroidAlert": {
+				this.clickButton("AndroidAlertAllow");
+				break;
+			}
+			default: {
+				log.logConsole("This page "+currentPage+ " is not recognized.");
+			}
+		}
+		}
+	
+	private void launchProcess (String currentPage) throws InterruptedException, IOException {
+		/* Pre: This function defines the default actions on each page for the launch process
+		* Post: Depending on the current page the app is at, advance one page towards the end goal
+		*/
+
+		log.logFile("method launchProcess ("+currentPage  +") is called.");
+		log.logConsole("current page in launch process is: " + currentPage);
+		switch (currentPage) {
+			case "ActivatingSecureElement": {
+				Thread.sleep(30000);break;
+				//Under Provisioning, wait for 30 seconds before rechecking progress
+			}
+			case "ConfirmNewPIN": {
+				this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
+				break;					
+			}
+			case "CreateNewPassword": {
+				this.inputText("CreateNewPasswordEnterPassword", (String) cap.getCapability("MerchantNewPassword"));
+				this.inputText("CreateNewPasswordVerifyPassword", (String) cap.getCapability("MerchantNewPassword"));
+				this.clickButton("CreateNewPasswordContinue");
+				break;
+			}
+			case "EnterNewPIN": {
+				this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
+				break;
+			}
+			case "EnterPIN": {
+					log.logColorText(logInfoColor,"App launched and awaiting for login.");
+					// In Enter PIN page, do nothing
+					break;
+			}
+			case "MerchantPassword": {
+				this.merchantPassword((String) cap.getCapability("MerchantPassword"));
+				break;					
+			}
+			case "MerchantSignIn": {
+				this.merchantSignin((String) cap.getCapability("MerchantID"));
+				// First time merchant registration page, entering merchant credentials
+				// potential problem: taking too long to register, needs to add more checks and logics later
+				break;
+			}
+			case "PaymentAcceptanceSetup": {
+				this.clickButton("PaymentAcceptanceSetupContinue");break;
+				// Provision page, click continue to start provision
+			}
+			case "ProvisionActivateComplete": {
+				this.clickButton("ProvisionActivateCompleteDone");break;
+				//Provision is done, proceed
+			}			
+			case "ProvisionUpdateComplete": {
+				this.clickButton("ProvisionUpdateCompleteDone");break;
+				//Provision is done, proceed
+			}
+			case "SignInSelection": {
+				this.clickButton((String) cap.getCapability("Username")); break;
+				// Have multiple user to select from, select the user specified in Config file to advance to Enter PIN page
+			}
+			case "UpdateRequired": {
+				this.clickButton("UpdateRequiredUpdatenow"); break;
+			}
+			case "UpdatingSecureElement": {
+				Thread.sleep(30000);break;
+				//Under Provisioning, wait for 30 seconds before rechecking progress
+			}
+			default: {
+				log.logConsole("This page "+currentPage+ " is not recognized.");
+				//current page not one of the above
+			}
+		}	//switch
+		}	//method
+
+	private String clickOnPage (String expectedPage, String targetPage, String[] URIs) throws InterruptedException, IOException {
+		log.logFile("method clickOnPage("+expectedPage + ", "+targetPage+ ", "+URIs+") is called.");
+		String cPage = this.findCurrentPage(0);
+		if (cPage.equals(expectedPage)) {
+			for (int i=0; i<URIs.length; i++) {
+				this.clickButton(URIs[i]);
+				Thread.sleep(500);
+			}
+			return this.waitUntilPage(30, targetPage);
+			}
+		else if (cPage.equals(targetPage)) {
+			log.logComment("Already reached " + targetPage +".");
+			return cPage;
+		}
+		else {
+			log.logComment("unexpected page " + cPage + " reached");
+			return cPage;
+		}
+		}
+
+	private String clickOnPage (String expectedPage, String targetPage, String URI) throws InterruptedException, IOException {
+	log.logFile("method clickOnPage("+expectedPage + ", "+targetPage+ ", "+URI+") is called.");
+	String[] URIs = new String[1];
+	URIs[0] = URI;
+	return this.clickOnPage(expectedPage, targetPage, URIs);
+	}
+	
+	/********************driver independent methods ********************************/	
+	
+	public void clickButton(String URI) throws IOException {
+		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement on page
+		 * 	Post:	The WebElement is clicked.
+		 */
+		log.logFile(URI + " is being clicked.");
+		try {
+			this.findByURI(URI).click();
+		}
+		catch (Exception e) {
+			log.logConsole("exception caught during button click, failed to find " + URI);
+			System.out.println(e);
+		}
+	}
+	
+	public void inputText(String URI, String value) throws IOException {
+		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement on page
+		 * 	Post:	The value string is being entered into the URI text field.
+		 */
+		log.logConsole("inputText( "+ URI + " , " + value + " is called.");
+		try {
+			this.findByURI(URI).sendKeys(value);
+		}
+		catch (Exception e) {
+			log.logConsole("exception caught during text entry, failed to find " + URI);
+			System.out.println(e);
+		}
+	}
+	
+	public void setBooleanValue(String URI, String value) throws IOException {
+		/*	Pre: 	URI is a unique valid string corresponding to a visible WebElement with a boolean "checked" attributes control (checkbox/switch, etc) on page
+		 * 			value is a case sensitive string that equals to either "yes" or "no" (non-"yes" string is regarded as "no")
+		 * 	Post:	The WebElement is set to the state in which the "checked" attributes correspondsi to the value parameter specified.
+		 */
+		String expectedValue = "false";
+		if (value.equals("yes")) {
+			expectedValue = "true";
+		}
+		try {
+			if (this.findByURI(URI).getAttribute("checked").equals(expectedValue)) {
+				//do nothing
+			}
+			else {
+				this.findByURI(URI).click();
+			}
+		}
+		catch (Exception e) {
+			log.logConsole("exception caught during click, failed to find " + URI);
+		}
+	}
 	
 	public String waitUntilPage (int timeout, String targetPage) throws InterruptedException, IOException {
 		/* 	Pre:	timeout is a positive integer
@@ -480,6 +743,102 @@ public class MWDriver extends RemoteWebDriver {
 		}
 	}
 	
+	public void launchURL(String URL ) throws IOException {
+		switch (driverType) {
+		case "Android": {
+			log.logConsole("Function not defined for driverType " + driverType);
+		}
+		default: {
+			((WebDriver)this.chooseDriver()).get(URL);
+		}
+		}
+	}
+	
+	public void launch (int waitSec) throws InterruptedException, IOException {
+		log.logFile("method launch ("+waitSec + ") is called.");		
+		this.launch("CBA", waitSec);
+		}
+	
+	public void launch (String appName, int waitSec) throws InterruptedException, IOException {
+		/* Pre: This function should be used when the test case requires the user to launch the app and reach the login page
+		* Post: login page reached without any assertion used
+		*/
+		//Thread.sleep(waitSec * 1000);
+		log.logFile("method launch ("+appName + ", " + waitSec  +") is called.");
+		String currentPage = "";
+		int iteration = 0;
+		while ((!currentPage.equals("EnterPIN")) && (iteration<waitSec)) {
+			iteration ++;
+			currentPage = this.findCurrentPage(waitSec); //decide what to do depending on which page the user is on
+			switch (currentPage) {
+				case "ActivatingSecureElement": {
+					Thread.sleep(30000);break;
+					//Under Provisioning, wait for 30 seconds before rechecking progress
+				}
+
+				case "ConfirmNewPIN": {
+					this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
+					break;					
+				}
+				case "CreateNewPassword": {
+					this.inputText("CreateNewPasswordEnterPassword", (String) cap.getCapability("MerchantNewPassword"));
+					this.inputText("CreateNewPasswordVerifyPassword", (String) cap.getCapability("MerchantNewPassword"));
+					this.clickButton("CreateNewPasswordContinue");
+					break;
+				}
+				case "EnterNewPIN": {
+					this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
+					break;
+				}
+				case "EnterPIN": {
+						log.logColorText(logInfoColor,"App launched and awaiting for login.");
+						// In Enter PIN page, do nothing
+						break;
+				}
+				case "MerchantPassword": {
+					this.merchantPassword((String) cap.getCapability("MerchantPassword"));
+					break;					
+				}
+				case "MerchantSignIn": {
+					this.merchantSignin((String) cap.getCapability("MerchantID"));
+					// First time merchant registration page, entering merchant credentials
+					// potential problem: taking too long to register, needs to add more checks and logics later
+					break;
+				}
+				case "PaymentAcceptanceSetup": {
+					this.clickButton("PaymentAcceptanceSetupContinue");break;
+					// Provision page, click continue to start provision
+				}
+				case "ProvisionUpdateComplete": {
+					this.clickButton("ProvisionUpdateCompleteDone");break;
+					//Provision is done, proceed
+				}
+				case "ProvisionActivateComplete": {
+					this.clickButton("ProvisionActivateCompleteDone");break;
+					//Provision is done, proceed
+				}
+				case "SignInSelection": {
+					this.clickButton((String) cap.getCapability("Username")); break;
+					// Have multiple user to select from, select the user specified in Config file to advance to Enter PIN page
+				}
+				case "UpdateRequired": {
+					this.clickButton("UpdateRequiredUpdatenow"); break;
+				}
+
+				case "UpdatingSecureElement": {
+					Thread.sleep(30000);break;
+					//Under Provisioning, wait for 30 seconds before rechecking progress
+				}
+				default: {
+					log.logConsole("This page "+currentPage+ " is not recognized.");
+//					iteration++;
+					//current page not one of the above
+				}
+			}
+		}
+
+		}
+	
 	public String reachPageByProcess (int timeoutIteration,String processName, String targetPage) throws InterruptedException, IOException {
 	/*	Pre:	TBD	
 	 * 	Post:	TBD
@@ -534,6 +893,7 @@ public class MWDriver extends RemoteWebDriver {
 		catch (Exception e) {
 			try {
 				log.logConsole("error encountered when closing "+driverName);
+				System.out.println(e);
 			} 
 			catch (IOException e1) {
 				// TODO Auto-generated catch block
@@ -541,7 +901,6 @@ public class MWDriver extends RemoteWebDriver {
 			}
 		}
 	}
-
 
 	public void merchantSignin(String ID) throws InterruptedException, IOException {
 		/* Pre: 	If the driverType is "Android", then the app to be tested is one of CBA/Pep/NBC/GP, and it is on the Merchant Signin page
@@ -569,1002 +928,778 @@ public class MWDriver extends RemoteWebDriver {
 		}
 	}
 
-public void merchantPassword(String password) throws InterruptedException, IOException {
-/* Pre: 	waitSec is a positive integer, 
-* 			password is not empty,
-* 			MerchantPasswordpassword is accurately defined in configuration file,
-* 			MerchantPasswordContinue is accurately defined in configuration file.
-* Post: 	If the current page is not Merchant Password page, do nothing,
-* 			otherwise input the merchant password as specified by the parameter "password".
-*/		
-	log.logFile("method merchantPassword ("+ password  +") is called.");
-//Thread.sleep(waitSec * 1000); //wait the current page to load
-
-	switch (driverType) {
-	case "Android": {
-		try {
-			this.inputText( "MerchantPasswordpassword", password);//input password
-			this.clickButton("MerchantPasswordContinue" ); // click OK
+	public void merchantPassword(String password) throws InterruptedException, IOException {
+		/* Pre: 	If the driverType is "Android", then the app to be tested is one of CBA/Pep/NBC/GP, and it is on the Merchant Password page 
+		 * 			password is not empty,
+		 * 			MerchantPasswordpassword is accurately defined in configuration file,
+		 * 			MerchantPasswordContinue is accurately defined in configuration file.
+		 * Post: 	If the current page is not Merchant Password page, do nothing,
+		 * 			otherwise input the merchant password as specified by the parameter "password".
+		 */		
+		log.logFile("method merchantPassword ("+ password  +") is called.");
+		switch (driverType) {
+		case "Android": {
+			try {
+				this.inputText( "MerchantPasswordpassword", password);//input password
+				this.clickButton("MerchantPasswordContinue" ); // click OK
 			}
-		catch(Exception e) {
-			log.logConsole("exception caught, not on Merchant Password page.");
-		}
-		break;
-	}
-	default: {
-		log.logConsole("driverType " + driverType + "not implemented for this method");
-	}
-	}
-}
-
-
-public void clearText(String URI) throws InterruptedException, IOException {
-/* Pre: 	waitSec is a non-negative integer, URI are accurately defined in the configuration file
-* Post: 	The text field is cleared.
-* 			use this method when no validation or boundary cases are expected
-*/			
-	log.logFile("method clearText (" + URI  +") is called.");
-
-	try {
-	this.findByURI(URI).clear();
-	}
-	catch (Exception e) {
-		log.logConsole("exception caught during text clearance, failed to find " + URI);
-	}
-}
-
-
-
-public void enterNumPadOK(String PIN) throws InterruptedException, IOException {
-/* Pre: 	waitSec is a positive integer, 
-* 			The numerous numpad buttons on PIN page are all accurately defined in configuration file.
-* Post: 	If the current page is not Enter PIN page, do nothing,
-* 			otherwise try enter the PIN digits one by one then click OK.
-*/	
-log.logFile("method enterNumPadOK ("+ PIN  +") is called.");
-
-try {
-	this.enterNumPad(PIN);
-	this.findByURI("EnterPINOK").click(); //Click OK
-}
-catch(Exception e) {
-	log.logConsole("exception caught, not on PIN entering page.");
-
-}
-}
-public void clearNumPad(String numOfClear) throws IOException {
-int iteration = Integer.parseInt(numOfClear);
-try {
-for (int i=0; i<iteration; i++) {
-	this.findByURI("EnterPINDelete").click(); //Enter each digit of the PIN
-}
-}
-catch(Exception e) {
-	log.logConsole("exception caught while trying to clear numpad.");
-}
-}
-
-public void enterNumPad(String PIN) throws InterruptedException, IOException {
-/* Pre: 	waitSec is a positive integer, 
-* 			The numerous numpad buttons on PIN page are all accurately defined in configuration file.
-* Post: 	If the current page is not Enter PIN page, do nothing,
-* 			otherwise try enter the PIN digits one by one then click OK.
-*/	
-log.logFile("method enterNumPad ("+ PIN  +") is called.");
-try {
-	log.logConsole("Number to be entered is: " + PIN);
-	for (int i=0; i < PIN.length(); i++ ) {
-		int digit = Character.getNumericValue(PIN.charAt(i));
-		this.findByURI("EnterPIN"+digit).click(); //Enter each digit of the PIN
-	}
-}
-catch(Exception e) {
-	log.logConsole("exception caught, not on PIN entering page.");
-}
-}
-
-public void pickDate (String tYear, String tMonth, String tDay) throws IOException {
-log.logFile("method pickDate ("+tYear + ", " + tMonth  +", " +tDay  +") is called.");
-try {
-int year = Integer.parseInt(tYear);
-int month = Integer.parseInt(tMonth);
-int day = Integer.parseInt(tDay);
-boolean done = false;
-while (!done) {
-String firstDayofSelectedMonth = this.findByURI("DatePickerFirstDay").getAttribute("contentDescription");
-log.logConsole("first day of selected month is: "+firstDayofSelectedMonth);
-int[] date = this.parseDatePickerString(firstDayofSelectedMonth);
-int targetMonth = year*100+month;
-log.logConsole("target month is:"+targetMonth);
-int selectedMonth = date[0]*100+date[1];
-log.logConsole("selected month is:"+selectedMonth);
-if (targetMonth == selectedMonth) {
-	log.logFile("at target month");
-	this.selectDay(day);
-	done = true;
-}
-else if (targetMonth < selectedMonth) {
-	log.logFile("target month is earlier");
-	this.clickButton("DatePickerPreviousMonth");
-}
-else {
-	log.logFile("target month is later");
-	this.clickButton("DatePickerNextMonth");
-}
-Thread.sleep(500);
-}
-}
-catch (Exception e) {
-	log.logConsole("Error Trying to select date.");
-}
-this.findByURI("DatePickerOK").click();
-}
-
-public void selectDay (int day) throws IOException {
-log.logFile("method selectDay ("+day  +") is called.");
-String xpath = "//android.view.View[@resource-id='android:id/month_view']/android.view.View[@text="+day+"]";
-this.findByXPath(xpath).click();
-}
-
-public int[] parseDatePickerString (String dateString) throws IOException {
-log.logFile("method parseDatePickerString ("+dateString  +") is called.");
-int[] date = new int[3];
-date[2]= Integer.parseInt(dateString.substring(0, 2));
-date[0] = Integer.parseInt(dateString.substring(dateString.length()-4, dateString.length()));
-String month = dateString.substring(3, dateString.length()-5);
-log.logFile("The Year is parsed to be: "+date[0]);
-log.logFile("The month is parsed to be: "+month);
-log.logFile("The day is parsed to be: "+date[2]);
-switch (month) {
-
-case "January": {
-	date[1]=1;break;
-}
-case "February": {
-	date[1]=2;break;
-}
-case "March": {
-	date[1]=3;break;
-}
-case "April": {
-	date[1]=4;break;
-}
-case "May": {
-	date[1]=5;break;
-}
-case "June": {
-	date[1]=6;break;
-}
-case "July": {
-	date[1]=7;break;
-}
-case "August": {
-	date[1]=8;break;
-}
-case "September": {
-	date[1]=9;break;
-}
-case "October": {
-	date[1]=10;break;
-}
-case "November": {
-	date[1]=11;break;
-}
-case "December": {
-	date[1]=12;break;
-}
-}
-return date;
-}
-
-public void showSideMenu (int waitSec) throws InterruptedException, IOException {
-/* Pre: 	waitSec is a positive integer, 
-* Post: 	The Side Menu is displayed.
-*/	
-log.logFile("method showSideMenu ("+waitSec + ") is called.");
-this.wait(waitSec);
-this.clickButton("SideMenuShowMenu"); 
-}
-
-/*
-public void logColorText (String color, String text) {
-Reporter.log("<font color='"+color+"'>"+text +"</font>");
-}
-
-public void logComment (int waitSec, String comment ) {
-this.logColorText(logInfoColor, comment);
-}*/
-
-
-//The next set of functions (launch & findCurrentPage & multiplePurchase, etc) are attempts to implement "reproduce steps" and are not completed yet.
-public void launch (int waitSec) throws InterruptedException, IOException {
-log.logFile("method launch ("+waitSec + ") is called.");		
-this.launch("CBA", waitSec);
-}
-
-public void launch (String appName, int waitSec) throws InterruptedException, IOException {
-/* Pre: This function should be used when the test case requires the user to luanch the app and reach the login page
-* Post: login page reached without any assertion used
-*/
-//Thread.sleep(waitSec * 1000);
-log.logFile("method launch ("+appName + ", " + waitSec  +") is called.");
-String currentPage = "";
-int iteration = 0;
-while ((!currentPage.equals("EnterPIN")) && (iteration<waitSec)) {
-	iteration ++;
-	currentPage = this.findCurrentPage(waitSec); //decide what to do depending on which page the user is on
-	switch (currentPage) {
-		case "ActivatingSecureElement": {
-			Thread.sleep(30000);break;
-			//Under Provisioning, wait for 30 seconds before rechecking progress
-		}
-
-		case "ConfirmNewPIN": {
-			this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
-			break;					
-		}
-		case "CreateNewPassword": {
-			this.inputText("CreateNewPasswordEnterPassword", (String) cap.getCapability("MerchantNewPassword"));
-			this.inputText("CreateNewPasswordVerifyPassword", (String) cap.getCapability("MerchantNewPassword"));
-			this.clickButton("CreateNewPasswordContinue");
+			catch(Exception e) {
+				log.logConsole("exception caught, not on Merchant Password page.");
+			}
 			break;
-		}
-		case "EnterNewPIN": {
-			this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
-			break;
-		}
-		case "EnterPIN": {
-				log.logColorText(logInfoColor,"App launched and awaiting for login.");
-				// In Enter PIN page, do nothing
-				break;
-		}
-		case "MerchantPassword": {
-			this.merchantPassword((String) cap.getCapability("MerchantPassword"));
-			break;					
-		}
-		case "MerchantSignIn": {
-			this.merchantSignin((String) cap.getCapability("MerchantID"));
-			// First time merchant registration page, entering merchant credentials
-			// potential problem: taking too long to register, needs to add more checks and logics later
-			break;
-		}
-		case "PaymentAcceptanceSetup": {
-			this.clickButton("PaymentAcceptanceSetupContinue");break;
-			// Provision page, click continue to start provision
-		}
-		case "ProvisionUpdateComplete": {
-			this.clickButton("ProvisionUpdateCompleteDone");break;
-			//Provision is done, proceed
-		}
-		case "ProvisionActivateComplete": {
-			this.clickButton("ProvisionActivateCompleteDone");break;
-			//Provision is done, proceed
-		}
-		case "SignInSelection": {
-			this.clickButton((String) cap.getCapability("Username")); break;
-			// Have multiple user to select from, select the user specified in Config file to advance to Enter PIN page
-		}
-		case "UpdateRequired": {
-			this.clickButton("UpdateRequiredUpdatenow"); break;
-		}
-
-		case "UpdatingSecureElement": {
-			Thread.sleep(30000);break;
-			//Under Provisioning, wait for 30 seconds before rechecking progress
 		}
 		default: {
-			log.logConsole("This page "+currentPage+ " is not recognized.");
-//			iteration++;
-			//current page not one of the above
+			log.logConsole("driverType " + driverType + "not implemented for this method");
+		}
 		}
 	}
-}
 
-}
-
-public void loginProcess (String currentPage) throws InterruptedException, IOException {
-log.logFile("method loginProcess ("+currentPage +") is called.");
-
-switch (currentPage) {
-	case "EnterPIN": {
-		this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
-		log.logColorText(logInfoColor,"User Authentication performed.");
-		break;
-	}
-	case "AllowBatterySettingsChange": {
-		this.clickButton("AllowBatterySettingsChangeContinue");
-		break;
-	}
-	case "AllowTimeoutSettingsChange": {
-		this.clickButton("AllowTimeoutSettingsChangeContinue");
-		break;
-	}
-	case "AndroidDeviceSettings": {
-		this.clickButton("AndroidDeviceSettingsback");
-		break;
-	}
-	case "AndroidAlert": {
-		this.clickButton("AndroidAlertAllow");
-		break;
-	}
-	default: {
-		log.logConsole("This page "+currentPage+ " is not recognized.");
-	}
-}
-}
-public void launchProcess (String currentPage) throws InterruptedException, IOException {
-/* Pre: This function defines the default actions on each page for the launch process
-* Post: Depending on the current page the app is at, advance one page towards the end goal
-*/
-
-log.logFile("method launchProcess ("+currentPage  +") is called.");
-log.logConsole("current page in launch process is: " + currentPage);
-switch (currentPage) {
-	case "ActivatingSecureElement": {
-		Thread.sleep(30000);break;
-		//Under Provisioning, wait for 30 seconds before rechecking progress
-	}
-	case "ConfirmNewPIN": {
-		this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
-		break;					
-	}
-	case "CreateNewPassword": {
-		this.inputText("CreateNewPasswordEnterPassword", (String) cap.getCapability("MerchantNewPassword"));
-		this.inputText("CreateNewPasswordVerifyPassword", (String) cap.getCapability("MerchantNewPassword"));
-		this.clickButton("CreateNewPasswordContinue");
-		break;
-	}
-	case "EnterNewPIN": {
-		this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
-		break;
-	}
-	case "EnterPIN": {
-			log.logColorText(logInfoColor,"App launched and awaiting for login.");
-			// In Enter PIN page, do nothing
+	public void enterNumPadOK(String PIN) throws InterruptedException, IOException {
+		/* Pre: 	The numerous numpad buttons on PIN page are all accurately defined in configuration file.
+		 * Post: 	If the current page is not a NumPad page, do nothing,
+		 * 			otherwise try enter the PIN digits one by one then click OK.
+		 */	
+		log.logFile("method enterNumPadOK ("+ PIN  +") is called.");
+		switch (driverType) {
+		case "Android": {
+			try {
+				this.enterNumPad(PIN);
+				this.findByURI("EnterPINOK").click(); //Click OK
+			}
+			catch(Exception e) {
+				log.logConsole("exception caught while trying to enter " + PIN);
+			}
 			break;
+		}
+		default: {
+			log.logConsole("driverType " + driverType + "not implemented for this method");			
+		}
+		}
 	}
-	case "MerchantPassword": {
-		this.merchantPassword((String) cap.getCapability("MerchantPassword"));
-		break;					
-	}
-	case "MerchantSignIn": {
-		this.merchantSignin((String) cap.getCapability("MerchantID"));
-		// First time merchant registration page, entering merchant credentials
-		// potential problem: taking too long to register, needs to add more checks and logics later
-		break;
-	}
-	case "PaymentAcceptanceSetup": {
-		this.clickButton("PaymentAcceptanceSetupContinue");break;
-		// Provision page, click continue to start provision
-	}
-	case "ProvisionActivateComplete": {
-		this.clickButton("ProvisionActivateCompleteDone");break;
-		//Provision is done, proceed
-	}			
-	case "ProvisionUpdateComplete": {
-		this.clickButton("ProvisionUpdateCompleteDone");break;
-		//Provision is done, proceed
-	}
-	case "SignInSelection": {
-		this.clickButton((String) cap.getCapability("Username")); break;
-		// Have multiple user to select from, select the user specified in Config file to advance to Enter PIN page
-	}
-	case "UpdateRequired": {
-		this.clickButton("UpdateRequiredUpdatenow"); break;
-	}
-	case "UpdatingSecureElement": {
-		Thread.sleep(30000);break;
-		//Under Provisioning, wait for 30 seconds before rechecking progress
-	}
-	default: {
-		log.logConsole("This page "+currentPage+ " is not recognized.");
-		//current page not one of the above
-	}
-}	//switch
-}	//method
-
-
-
-
-public String clickOnPage (String expectedPage, String targetPage, String[] URIs) throws InterruptedException, IOException {
-log.logFile("method clickOnPage("+expectedPage + ", "+targetPage+ ", "+URIs+") is called.");
-String cPage = this.findCurrentPage(0);
-if (cPage.equals(expectedPage)) {
-	for (int i=0; i<URIs.length; i++) {
-		this.clickButton(URIs[i]);
-		Thread.sleep(500);
-	}
-	return this.waitUntilPage(30, targetPage);
-	}
-else if (cPage.equals(targetPage)) {
-	log.logComment("Already reached " + targetPage +".");
-	return cPage;
-}
-else {
-	log.logComment("unexpected page " + cPage + " reached");
-	return cPage;
-}
-}
-
-public String clickOnPage (String expectedPage, String targetPage, String URI) throws InterruptedException, IOException {
-log.logFile("method clickOnPage("+expectedPage + ", "+targetPage+ ", "+URI+") is called.");
-String[] URIs = new String[1];
-URIs[0] = URI;
-return this.clickOnPage(expectedPage, targetPage, URIs);
-}
-
-public String goToSidemenuPages (String targetPage) throws InterruptedException, IOException {
-log.logFile("method goToSidemenuPage("+targetPage+") is called.");
-String currentPage = this.findCurrentPage(0);
-if (currentPage.equals(targetPage)) {
-	return currentPage;
-}
-String[] URIs = new String[2];
-URIs[0] = "PurchaseSideMenu";
-switch (targetPage) {
-case "Purchase": {
-	URIs[1] = "SideMenuPurchase";break;
-}
-case "TransactionReports": {
-	URIs[1] = "SideMenuTransactionReports";break;
-}
-case "TransactionHistory": {
-	URIs[1] = "SideMenuTransactionHistory";break;
-}
-case "UserManagement": {
-	URIs[1] = "SideMenuUserManagement";break;
-}
-case "ContactUs": {
-	URIs[1] = "SideMenuContactUs";break;
-}
-case "Help": {
-	URIs[1] = "SideMenuHelp";break;
-}
-default: {
 	
-}
-}
-return this.clickOnPage(currentPage, targetPage, URIs);
-}
+	public void clearNumPad(String numOfClear) throws IOException {
 
-public String reachPage (String appName, String targetPage) throws InterruptedException, IOException {
-log.logFile("method reachPage("+appName + ", "+targetPage+") is called.");		
-switch (appName) {
-	default: {
-		
+		log.logFile("method clearNumPad ("+ numOfClear  +") is called.");
+		switch (driverType) {
+		case "Android": {
+			try {
+				int iteration = Integer.parseInt(numOfClear);
+				this.clickButtonMultipleTimes("EnterPINDelete", iteration);
+			}
+			catch(Exception e) {
+				log.logConsole("exception caught while trying to find delete button");
+			}
+			break;
+		}
+		default: {
+			log.logConsole("driverType " + driverType + "not implemented for this method");			
+		}
+		}		
+	}
+
+	public void enterNumPad(String PIN) throws InterruptedException, IOException {
+		/* Pre: 	The numerous numpad buttons on PIN page are all accurately defined in configuration file.
+		 * Post: 	If the current page is not a NumPad page, do nothing,
+		 * 			otherwise try enter the PIN digits one by one without click OK.
+		 */	
+		log.logFile("method enterNumPad ("+ PIN  +") is called.");
+		switch (driverType) {
+		case "Android": {
+			try {
+				log.logConsole("Number to be entered is: " + PIN);
+				for (int i=0; i < PIN.length(); i++ ) {
+					int digit = Character.getNumericValue(PIN.charAt(i));
+					this.findByURI("EnterPIN"+digit).click(); //Enter each digit of the PIN
+				}
+			}
+			catch(Exception e) {
+				log.logConsole("exception caught, not on PIN entering page.");
+			}
+			break;
+		}
+		default:{
+			log.logConsole("driverType " + driverType + "not implemented for this method");			
+		}
+		}
+
+	}
+
+	public void pickDate (String tYear, String tMonth, String tDay) throws IOException {
+		log.logFile("method pickDate ("+tYear + ", " + tMonth  +", " +tDay  +") is called.");
+		switch (driverType) {
+		case "Android": {
+			try {
+				int year = Integer.parseInt(tYear);
+				int month = Integer.parseInt(tMonth);
+				int day = Integer.parseInt(tDay);
+				boolean done = false;
+				while (!done) {
+					String firstDayofSelectedMonth = this.findByURI("DatePickerFirstDay").getAttribute("contentDescription");
+					log.logConsole("first day of selected month is: "+firstDayofSelectedMonth);
+					int[] date = this.parseDatePickerString(firstDayofSelectedMonth);
+					int targetMonth = year*100+month;
+					log.logConsole("target month is:"+targetMonth);
+					int selectedMonth = date[0]*100+date[1];
+					log.logConsole("selected month is:"+selectedMonth);
+					if (targetMonth == selectedMonth) {
+						log.logFile("at target month");
+						this.selectDay(day);
+						done = true;
+					}
+					else if (targetMonth < selectedMonth) {
+						log.logFile("target month is earlier");
+						this.clickButton("DatePickerPreviousMonth");
+					}
+					else {
+						log.logFile("target month is later");
+						this.clickButton("DatePickerNextMonth");
+					}
+					Thread.sleep(500);
+				}
+			}
+			catch (Exception e) {
+				log.logConsole("Error Trying to select date.");
+			}
+			this.findByURI("DatePickerOK").click();
+		}
+		default: {
+			log.logConsole("driverType " + driverType + "not implemented for this method");			
+		}
+		}
+	}
+
+	public void showSideMenu (int waitSec) throws InterruptedException, IOException {
+		/* Pre: 	waitSec is a positive integer, 
+		 * Post: 	The Side Menu is displayed.
+		 */	
+		log.logFile("method showSideMenu ("+waitSec + ") is called.");
+		this.wait(waitSec);
+		this.clickButton("SideMenuShowMenu"); 
+	}
+
+	public String goToSidemenuPages (String targetPage) throws InterruptedException, IOException {
+		log.logFile("method goToSidemenuPage("+targetPage+") is called.");
+		String currentPage = this.findCurrentPage(0);
+		if (currentPage.equals(targetPage)) {
+			return currentPage;
+		}
+		String[] URIs = new String[2];
+		URIs[0] = "PurchaseSideMenu";
 		switch (targetPage) {
-		case "AccountLocked": {}
-		case "ActivatingSecureElement": {}
-		case "AddNewUser": {}
-		case "AddTip": {}
-		case "AllowBatterySettingsChange": {}
-		case "AllowTimeoutSettingsChange": {}
-		case "AndroidAlert": {}
-		case "AndroidDeviceSettings": {}
-		case "CancelTransaction": {}
-		case "CardNotSupported": {}
-		case "ConfirmNewPIN": {}
-		case "ConnectionErrorDuringProvision": {}
-		case "ContactUs": {
-			String currentPage = this.reachPage(appName, "Purchase");
-			return this.goToSidemenuPages(targetPage);
-		}
-		case "CreateNewPassword": {}
-		case "DatePicker": {}
-		case "DeleteUserConfirmation": {}
-		case "EditUser": {}
-		case "EmailReceiptForPurchase": {}
-		case "EnterNewPIN": {}
-		case "EnterOldPIN": {}
-		case "EnterPIN": {
-			this.launch(appName,1);
-			return this.waitUntilPage(30, "EnterPIN");
-		}
-		case "ForgotPIN": {
-			String currentPage = this.reachPage(appName, "EnterPIN");
-			return this.clickOnPage("EnterPIN", targetPage, "EnterPINForgotPIN");
-		}
-		case "InvalidCredentials": {}
-		case "MerchantPassword": {}
-		case "MerchantSignIn": {}
-		case "NewTagScanned": {}
-		case "NoNetworkConnection": {}
-		case "PaymentAcceptanceSetup": {}
-		case "PINUpdated": {}
-		case "PleaseRestartYourPhone": {}
-		case "ProcessingPayment": {}
-		case "ProvisionActivateComplete": {}
-		case "ProvisionUpdateComplete": {}
 		case "Purchase": {
-			try { this.findByURI("PurchaseSideMenu");} //is there a sidemenu button available?
-			catch (Exception e) {	//if no, proceed from sign in
-				String currentPage = this.reachPage(appName, "EnterPIN");
-				if (currentPage.equals("EnterPIN")) {
-					this.login(0);
-					return this.waitUntilPage(30, targetPage);
-				}
-				else {
-					log.logComment("unexpected page " + currentPage + " reached");
-					return currentPage;
-				}
-			}			
-			//if a sidemenu is found, proceed from sidemenu
-			return this.goToSidemenuPages(targetPage);
-		}
-		case "PurchaseDescription": {}
-		case "PurchaseNotCompleted": {}
-		case "PurchaseResult": {}
-		case "PurchaseTimedOut": {}
-		case "ReceiptSentConfirmation": {}
-		case "ReportSentConfirmation": {}
-		case "ResetPIN": {}
-		case "SecurityImage": {}
-		case "SettingsAdvanced": {
-			String currentPage = this.reachPage(appName, "SettingsTerminal");
-			return this.clickOnPage("SettingsTerminal", targetPage, "SettingsTerminalAdvancedTab");
-		}
-		case "SettingsTerminal": {
-			String currentPage = this.reachPage(appName, "Purchase");
-			String cPage = this.findCurrentPage(0);
-			if (cPage.equals("Purchase")) {
-				this.clickButton("PurchaseSideMenu");
-				this.clickButton("SideMenuSettings");
-				this.login(1);
-				return this.waitUntilPage(30, targetPage);
-			}
-			else if (cPage.equals(targetPage)) {
-				log.logComment("Already reached " + targetPage +".");
-				return cPage;
-			}
-			else {
-				log.logComment("unexpected page " + cPage + " reached");
-				return cPage;
-			}
-		}
-		case "SetTipDuringPurchase": {}
-		case "SignInSelection": {}
-		case "TapToPay": {}
-		case "TermsAndConditions": {}
-		case "TransactionDetails": {}
-		case "TransactionHistory": {
-			String currentPage = this.reachPage(appName, "Purchase");
-			return this.goToSidemenuPages(targetPage);
+			URIs[1] = "SideMenuPurchase";break;
 		}
 		case "TransactionReports": {
-			String currentPage = this.reachPage(appName, "Purchase");
-			return this.goToSidemenuPages(targetPage);
+			URIs[1] = "SideMenuTransactionReports";break;
 		}
-		case "TransactionSearch": {}
-		case "UpdateRequired": {}
-		case "UpdatingSecureElement": {}
-		case "UserCreated": {}
+		case "TransactionHistory": {
+			URIs[1] = "SideMenuTransactionHistory";break;
+		}
 		case "UserManagement": {
-			String currentPage = this.reachPage(appName, "Purchase");
-			return this.goToSidemenuPages(targetPage);
+			URIs[1] = "SideMenuUserManagement";break;
 		}
-		case "VoidProcessingPayment": {}
+		case "ContactUs": {
+			URIs[1] = "SideMenuContactUs";break;
+		}
+		case "Help": {
+			URIs[1] = "SideMenuHelp";break;
+		}
 		default: {
+			
 		}
 		}
-	}
-	}
+		return this.clickOnPage(currentPage, targetPage, URIs);
+		}
+
+	public String reachPage (String appName, String targetPage) throws InterruptedException, IOException {
+		log.logFile("method reachPage("+appName + ", "+targetPage+") is called.");		
+		switch (appName) {
+			default: {
+				
+				switch (targetPage) {
+				case "AccountLocked": {}
+				case "ActivatingSecureElement": {}
+				case "AddNewUser": {}
+				case "AddTip": {}
+				case "AllowBatterySettingsChange": {}
+				case "AllowTimeoutSettingsChange": {}
+				case "AndroidAlert": {}
+				case "AndroidDeviceSettings": {}
+				case "CancelTransaction": {}
+				case "CardNotSupported": {}
+				case "ConfirmNewPIN": {}
+				case "ConnectionErrorDuringProvision": {}
+				case "ContactUs": {
+					String currentPage = this.reachPage(appName, "Purchase");
+					return this.goToSidemenuPages(targetPage);
+				}
+				case "CreateNewPassword": {}
+				case "DatePicker": {}
+				case "DeleteUserConfirmation": {}
+				case "EditUser": {}
+				case "EmailReceiptForPurchase": {}
+				case "EnterNewPIN": {}
+				case "EnterOldPIN": {}
+				case "EnterPIN": {
+					this.launch(appName,1);
+					return this.waitUntilPage(30, "EnterPIN");
+				}
+				case "ForgotPIN": {
+					String currentPage = this.reachPage(appName, "EnterPIN");
+					return this.clickOnPage("EnterPIN", targetPage, "EnterPINForgotPIN");
+				}
+				case "InvalidCredentials": {}
+				case "MerchantPassword": {}
+				case "MerchantSignIn": {}
+				case "NewTagScanned": {}
+				case "NoNetworkConnection": {}
+				case "PaymentAcceptanceSetup": {}
+				case "PINUpdated": {}
+				case "PleaseRestartYourPhone": {}
+				case "ProcessingPayment": {}
+				case "ProvisionActivateComplete": {}
+				case "ProvisionUpdateComplete": {}
+				case "Purchase": {
+					try { this.findByURI("PurchaseSideMenu");} //is there a sidemenu button available?
+					catch (Exception e) {	//if no, proceed from sign in
+						String currentPage = this.reachPage(appName, "EnterPIN");
+						if (currentPage.equals("EnterPIN")) {
+							this.login(0);
+							return this.waitUntilPage(30, targetPage);
+						}
+						else {
+							log.logComment("unexpected page " + currentPage + " reached");
+							return currentPage;
+						}
+					}			
+					//if a sidemenu is found, proceed from sidemenu
+					return this.goToSidemenuPages(targetPage);
+				}
+				case "PurchaseDescription": {}
+				case "PurchaseNotCompleted": {}
+				case "PurchaseResult": {}
+				case "PurchaseTimedOut": {}
+				case "ReceiptSentConfirmation": {}
+				case "ReportSentConfirmation": {}
+				case "ResetPIN": {}
+				case "SecurityImage": {}
+				case "SettingsAdvanced": {
+					String currentPage = this.reachPage(appName, "SettingsTerminal");
+					return this.clickOnPage("SettingsTerminal", targetPage, "SettingsTerminalAdvancedTab");
+				}
+				case "SettingsTerminal": {
+					String currentPage = this.reachPage(appName, "Purchase");
+					String cPage = this.findCurrentPage(0);
+					if (cPage.equals("Purchase")) {
+						this.clickButton("PurchaseSideMenu");
+						this.clickButton("SideMenuSettings");
+						this.login(1);
+						return this.waitUntilPage(30, targetPage);
+					}
+					else if (cPage.equals(targetPage)) {
+						log.logComment("Already reached " + targetPage +".");
+						return cPage;
+					}
+					else {
+						log.logComment("unexpected page " + cPage + " reached");
+						return cPage;
+					}
+				}
+				case "SetTipDuringPurchase": {}
+				case "SignInSelection": {}
+				case "TapToPay": {}
+				case "TermsAndConditions": {}
+				case "TransactionDetails": {}
+				case "TransactionHistory": {
+					String currentPage = this.reachPage(appName, "Purchase");
+					return this.goToSidemenuPages(targetPage);
+				}
+				case "TransactionReports": {
+					String currentPage = this.reachPage(appName, "Purchase");
+					return this.goToSidemenuPages(targetPage);
+				}
+				case "TransactionSearch": {}
+				case "UpdateRequired": {}
+				case "UpdatingSecureElement": {}
+				case "UserCreated": {}
+				case "UserManagement": {
+					String currentPage = this.reachPage(appName, "Purchase");
+					return this.goToSidemenuPages(targetPage);
+				}
+				case "VoidProcessingPayment": {}
+				default: {
+				}
+				}
+			}
+			}
+
 
 String currentPage = this.findCurrentPage(1);
 return currentPage;
 }
 
-public String findCurrentPage(int waitSec) throws InterruptedException, IOException {
-/* Pre: mobilePage has been initialized
-* This function is to be used as strictly a helper function to determine what page the app is currently displaying
-* Post: return the PageName associated with the current mobilePage
-*/
-log.logFile("method findCurrentPage("+waitSec +") is called.");
-Thread.sleep(500);
-String currentPage = "";
-log.logConsole("");
-System.out.print("Current Page Verification in progress");
-/*		DesiredCapabilities pages = (DesiredCapabilities) cap.getCapability("AndroidPage");
-Iterator<Object> mPage =  pages.asMap().values().iterator();
-
-	while (mPage.hasNext()) {
-*/
-for (int i=0; i<mPageList.size(); i++) {
-	try {
-//		mobilePage tempPage =(mobilePage) mPage.next();	
-		mobilePage tempPage =(mobilePage) mPageList.elementAt(i);
-		String name =  tempPage.getPageName();
-		String id =  tempPage.getUID();
-		String value =  tempPage.getUValue();
-		if (!(id.isEmpty())) {
-		pageElement pEle = (pageElement) elementList.getCapability(id);
-		String xp = pEle.getPath();
-		String title = this.findByXPath(xp).getText();
-			if (title.equals(value)) {
-				log.logConsole("Current page is: "+name);
-				tempPage.incrementCount();
-				return name;
-			}
-			else {
-				System.out.print(".");
-//				log.logFile("match not found: " + id + " is not equal to " + value + " , but equal to " + title);
-			}
-		}
-	}
-	catch (Exception e) {
-		System.out.print(".");
-	}
-} //while
-log.logConsole("Current page is: "+currentPage);
-return currentPage;
-}
-
-
-public void login(int waitSec) throws InterruptedException, IOException {
-/*Pre: Username and MerchantPIN is appropriately defined in Config file
-* Post: user logs in with the username and PIN defined in config file
-*/
-log.logFile("method login("+waitSec +") is called.");
-this.wait(waitSec);
-String currentPage = "";
-int iteration=0;
-while ((!currentPage.equals("Purchase")) && (iteration<waitSec)) {
-	currentPage = this.findCurrentPage();
-	iteration ++;
-	switch (currentPage) {
-		case "Purchase": {
-			break; // do nothing
-		}
-		case "EnterPIN": {
-			this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
-			log.logColorText(logInfoColor,"User Authentication performed.");
-			break;
-		}
-		case "AllowTimeoutSettingsChange": {
-			this.clickButton("AllowTimeoutSettingsChangeContinue");
-			break;
-		}
-		case "AndroidDeviceSettings": {
-			this.clickButton("AndroidDeviceSettingsback");
-			break;
-		}
-		default: {
-			log.logConsole("This page "+currentPage+ " is not recognized.");
-//			currentPage = this.findCurrentPage(waitSec); //decide what to do depending on which page the user is on
-//			iteration++;
-			//current page not one of the above
-		}
-	}
-}
-
-
-
-
-
-
-}
-
-public void multiplePurchase(int numPurchase, String tipType, String tipValue, String descriptionType, String descriptionValue, String emailType, String emailValue) throws InterruptedException, IOException {
-/*Pre: numPurchase is a positive integer
-* Post: multiple purchases are performed 
-*/ 
-//This method still needs further refining to allow ability to deal with different kinds of non-optimal conditions
-log.logFile("method multiplePurchase("+numPurchase + ", "+tipType+ ", "+tipValue+ ", "+descriptionType+ ", "+descriptionValue+ ", "+emailType+ ", "+emailValue+") is called.");
-int i = 0;
-int iteration = 0;
-int waitSec = 1;
-
-while ((i<numPurchase) && (iteration<numPurchase*3)) {
-	this.singlePurchase(1000, tipType,  tipValue,  descriptionType,  descriptionValue);
-	String page = this.findCurrentPage(waitSec);
-	log.logConsole("This is the " + (i+1)+"th purchase attempt");
-	switch (page) {
-
-		case "PurchaseResult": {
-			this.clickButton("PurchaseResultNoReceipt");
-//			this.clickButton(0, "PurchaseResultEmailReceipt");
-			log.logConsole("Purchase made.");
-			log.logColorText(logInfoColor,"Transaction #"+(i+1)+" is made.");
-			i++;
-			break;
-		}
-		case "CardNotSupported": {
-			this.clickButton("CardNotSupportedTryAgain");
-			log.logConsole("Purchase made.");
-			log.logColorText(logInfoColor,"Transaction #"+(i+1)+" is denied due to card not supported.");
-			i++;
-			break;
-		}
-		case "PurchaseNotCompleted": {
-			this.clickButton("PurchaseNotCompletedDone");
-			log.logConsole("Purchase made.");
-			log.logColorText(logInfoColor,"Transaction #"+(i+1)+" is attempted but not completed.");
-			i++;
-			break;
-		}
-		case "ReceiptSentConfirmation": {
-			this.clickButton("ReceiptSentConfirmationDone"); 
-			break;
-
-		}
-		
-		case "NewTagScanned": {
-			log.logConsole("Pressing key code 82, still needs implementation");
-//			this.pressKeyCode(82);
-			log.logConsole("Pressing AllAppListingCBADebug");
-			this.wait(3);
-			this.clickButton("AllAppListingCBADebug");
-			waitSec = 5;
-			break;
-		}
-		case "EmailReceiptForPurchase": {
-			this.wait(1);
-			this.clearText("EmailReceiptForPurchaseEmail");
-			this.inputText("EmailReceiptForPurchaseEmail", (String) cap.getCapability("CustomerEmail"));
-			this.clickButton("EmailReceiptForPurchaseNext");
-			break;
-		}
-		
-		default: {
-//			iteration = numPurchase*3+1;
-			log.logConsole("reached an unrecognized page: " + page);
-			this.clickButton("NoNetworkConnectionretry");
-			//if an page is not recognized, try to see if there is a button "RETRY". if yes, click it
-			waitSec = 5;
-			
-		}
-
-
-	}
-}
-log.logColorText(logInfoColor,numPurchase + " consecutive purchases attempted.");
-}
-
-public void enterPurchaseAmount(String amount) throws InterruptedException, IOException {
-/*Pre: amount is a string that can be parsed into an integer representing the amount of purchases
-* Post: amount specified is entered and ok is clicked
-*/
-log.logFile("method enterPurchaseAmount("+amount+") is called.");
-this.enterNumPadOK(amount);
-}
-
-
-
-public String singlePurchase(int amount, String tipType, String tipValue, String descriptionType, String descriptionValue) throws InterruptedException, IOException {
-/*Pre: Amount is an integer acceptable to the app, tipType can be "none", "default", "Percentage","Dollar", and "total";
-* tipValue are integers (in String type), descriptionType can be "none" or "yes"
-* the app is on the purchase page, waiting for an amount to be entered
-* Post: one single purchase is performed, or the app has not made any progress after a pre-configured timeout time(timeout still to be implemented).
-*/ 
-//This method still needs further refining to allow ability to deal with different kinds of non-optimal conditions
-log.logFile("method singlePurchase("+amount + ", "+tipType+ ", "+tipValue+ ", "+descriptionType+ ", "+descriptionValue+ ") is called.");
-
-LocalTime startT = LocalTime.now();
-LocalTime endT = LocalTime.now();
-int iteration = 0;
-int waitSec = 1;
-String page = "";
-long betweenT = 0;
-while (iteration<10 ) { //break loop if timed out
-	page = this.findCurrentPage(waitSec); //find the current page and decide action based on it
-	iteration ++;	//time out counter increment
-	switch (page) {
-		case "Purchase" : {			
-			this.enterPurchaseAmount(Integer.toString(amount));
-			//In Purchase page, enter the amount of the purchase
-			break;
-		}
-		case "TapToPay":{
-			log.logConsole("waiting for card tap");
-			startT = LocalTime.now();
-			//nothing to do other than wait, start tracking processing time
-			break;
-		}
-		case "ProcessingPayment": {
-			log.logConsole("processing payment");
-			//nothing to do other than wait
-			break;
-		}
-		case "PurchaseDescription": {
-			if (descriptionType.equals("yes")) {
-				this.inputText("PurchaseDescriptionDescription", descriptionValue);
-				//input the description according to parameter
-			}
-				this.clickButton("PurchaseDescriptionNext");
-				//click next
-			break;
-		}
-		case "PurchaseResult": {	//in Purchase Result page
-			endT = LocalTime.now();	//record processing end time
-			betweenT = ChronoUnit.SECONDS.between(startT, endT);
-			log.logColorText(logInfoColor,"Transaction is made, Processing time is: " + betweenT + " seconds." );
-			return page;	//destination reached, end method
-		}
-		case "CardNotSupported": {	//in Purchase Result(Card not supported) page
-			endT = LocalTime.now();
-			betweenT = ChronoUnit.SECONDS.between(startT, endT);
-			log.logColorText(logInfoColor,"Transaction is denied due to card not supported, Processing time is: " + betweenT + " seconds." );
-			return page;
-		}
-		case "PurchaseNotCompleted": {	//in Purchase Result(Purchase not completed) page
-			endT = LocalTime.now();
-			betweenT = ChronoUnit.SECONDS.between(startT, endT);
-			log.logColorText(logInfoColor,"Transaction is attempted but not completed, Processing time is: " + betweenT + " seconds." );
-			return page;
-		}
-		case "NewTagScanned": {		//known bug encountered, external page on foreground, not implemented yet
-			log.logConsole("Pressing key code 82, still needs implementation");
-//			this.pressKeyCode(82);
-			log.logConsole("Pressing AllAppListingCBADebug");
-			this.wait(3);
-			this.clickButton("AllAppListingCBADebug");
-			break;
-		}
-		case "SetTipDuringPurchase": {
-			this.setTipType(tipType, tipValue);
-			break;
-		}
-		case "EnterCustomTip": {
-			this.setTipValue(tipType, tipValue);
-			break;
-		} 	
-		case "AddTip": {
-			this.setTipValue(tipType, tipValue);
-			break;
-		} 
-		default: {
-			log.logConsole("reached an unrecognized page: " + page);
-			this.clickButton("NoNetworkConnectionretry");
-			//if an page is not recognized, try to see if there is a button "RETRY". if yes, click it
-		}
-	}	//end of switch
-}	//end of while
-return page;
-}	
-
-public String singlePurchaseUntil (int amount, String tipType, String tipValue, String descriptionType, String descriptionValue, String targetPage) throws InterruptedException, IOException {
-/*Pre: Amount is an integer acceptable to the app, tipType can be "none", "default", "Percentage","Dollar", and "total";
-* tipValue are integers (in String type), descriptionType can be "none" or "yes"
-* the app is on the purchase page, waiting for an amount to be entered
-* Post: one single purchase is performed, or the app has not made any progress after a pre-configured timeout time(timeout still to be implemented).
-*/ 
-//This method still needs further refining to allow ability to deal with different kinds of non-optimal conditions
-log.logFile("method singlePurchase("+amount + ", "+tipType+ ", "+tipValue+ ", "+descriptionType+ ", "+descriptionValue+ ") is called.");
-
-LocalTime startT = LocalTime.now();
-LocalTime endT = LocalTime.now();
-int iteration = 0;
-int timeOutSec = defaultTimeOutSec;
-String page = this.findCurrentPage(0);
-String previousPage = "";
-long betweenT = 0;
-while (iteration<10 ) { //break loop if timed out
-	startT = LocalTime.now();
-	page = this.waitUntilNewPage(timeOutSec,page); //find the current page and decide action based on it
-	if (page.equals(targetPage)) {
-		endT = LocalTime.now();	//record processing end time
-		betweenT = ChronoUnit.SECONDS.between(startT, endT);
-		switch (page) {
-			case "PurchaseResult": {
-				log.report("Transaction is made, Processing time is: " + betweenT + " seconds." );
-				return page;	//destination reached, end method
-			}
-			case "CardNotSupported": {
-				log.report("Transaction is made, Processing time is: " + betweenT + " seconds." );
-				return page;	//destination reached, end method
-			}
-			case "PurchaseNotCompleted": {
-				log.report("Transaction is attempted but not completed, Processing time is: " + betweenT + " seconds." );
-				return page;	//destination reached, end method
-			}
-			default: {
-				log.report("Target page: " + targetPage + " is reached, Processing time is: " + betweenT + " seconds." );
-				return page;	//destination reached, end method
+	public void login(int waitSec) throws InterruptedException, IOException {
+		/*Pre: Username and MerchantPIN is appropriately defined in Config file
+		* Post: user logs in with the username and PIN defined in config file
+		*/
+		log.logFile("method login("+waitSec +") is called.");
+		this.wait(waitSec);
+		String currentPage = "";
+		int iteration=0;
+		while ((!currentPage.equals("Purchase")) && (iteration<waitSec)) {
+			currentPage = this.findCurrentPage();
+			iteration ++;
+			switch (currentPage) {
+				case "Purchase": {
+					break; // do nothing
+				}
+				case "EnterPIN": {
+					this.enterNumPadOK((String) cap.getCapability("MerchantPIN"));
+					log.logColorText(logInfoColor,"User Authentication performed.");
+					break;
+				}
+				case "AllowTimeoutSettingsChange": {
+					this.clickButton("AllowTimeoutSettingsChangeContinue");
+					break;
+				}
+				case "AndroidDeviceSettings": {
+					this.clickButton("AndroidDeviceSettingsback");
+					break;
+				}
+				default: {
+					log.logConsole("This page "+currentPage+ " is not recognized.");
+//					currentPage = this.findCurrentPage(waitSec); //decide what to do depending on which page the user is on
+//					iteration++;
+					//current page not one of the above
+				}
 			}
 		}
+
+
+
+
+
+
+		}
+
+	public String loginToOutlook (int waitSec) throws IOException, InterruptedException {
+		log.logFile("method loginToOutlook (" + ") is called.");
+		String currentPage = "";
+		int iteration = 0;
+		((WebDriver)this.chooseDriver()).get("https://outlook.office365.com/owa/");
+//		((WebDriver) this.chooseDriver()).navigate().to("https://outlook.office.com/owa/");
+		while ((!currentPage.equals("OutlookFunctionality")) && (iteration<waitSec)) {
+			iteration ++;
+			currentPage = this.findCurrentPage(waitSec); //decide what to do depending on which page the user is on
+			switch (currentPage) {
+				case "MicrosoftSignIn": {
+					this.inputText("MicrosoftSignInUsername", "ytao@mobeewave.com"); // need to softcode this
+					this.clickButton("MicrosoftSignInNext");
+					break;
+				}
+				case "MicrosoftPassword": {
+					this.inputText("MicrosoftPasswordPassword", "Thankyou1"); // need to softcode this
+					this.clickButton("MicrosoftPasswordSignIn");
+					break;
+				}
+				case "MicrosoftStaySignedIn": {
+					this.clickButton("MicrosoftStaySignedInYes");
+					break;
+				}
+				case "OutlookFunctionality": {
+					break;
+				}
+				default: {
+					log.logConsole("This page "+currentPage+ " is not recognized.");
+//					iteration++;
+					//current page not one of the above
+				}
+			}
+		}
+		return currentPage;
 	}
 	
-	iteration ++;	//time out counter increment
-	switch (page) {
-		case "Purchase" : {			
-			this.enterPurchaseAmount(Integer.toString(amount));
-			//In Purchase page, enter the amount of the purchase
-			break;
+	public String checkAccountPasswordInOutlook ( ) throws IOException, InterruptedException {
+		this.loginToOutlook(10);
+		this.searchEmailTitle();
+		this.findLatestEmail();
+		this.waitUntilElement(10, "EmailDetailsPasswordValue");
+		this.retrieveFromContent("MPassword", "EmailDetailsPasswordValue");	
+		String password = (String) retrievedVariables.getCapability("MPassword");
+		return password;
+	}
+	
+	public String checkUpdatedAccountPasswordInOutlook (int waitSec) throws IOException, InterruptedException {
+		log.logConsole("trying to check whether new email for password has been received");
+		LocalTime startTime = LocalTime.now();
+		LocalTime currentTime = startTime;
+		String existingPassword = (String) retrievedVariables.getCapability("MPassword");
+		String currentPassword = existingPassword;
+
+//		log.logConsole("1");
+//		chd.get("https://outlook.office365.com/owa/");
+//		log.logConsole("1.5");
+//		this.launchURL("https://outlook.office365.com/owa/");
+//		log.logConsole("2");
+//		this.loginToOutlook(10);
+//		this.searchEmailTitle();
+		while (currentPassword.equals(existingPassword) && 	ChronoUnit.SECONDS.between(startTime, currentTime) < waitSec) {
+			log.logConsole("In while loop with time elapsed" + ChronoUnit.SECONDS.between(startTime, currentTime));
+			this.clickButton("OutlookFunctionalitySearchButton");
+			this.findLatestEmail();
+			this.waitUntilElement(10, "EmailDetailsPasswordValue");
+			this.retrieveFromContent("MPassword", "EmailDetailsPasswordValue");	
+			currentPassword = (String) retrievedVariables.getCapability("MPassword");
+			currentTime = LocalTime.now();
 		}
-		case "TapToPay":{
-			log.logConsole("waiting for card tap");
-			//nothing to do other than wait
-			break;
-		}
-		case "ProcessingPayment": {
-			log.logConsole("processing payment");
-			//nothing to do other than wait
-			break;
-		}
-		case "PurchaseDescription": {
-			if (descriptionType.equals("yes")) {
-				this.inputText("PurchaseDecsriptionDescription", descriptionValue);
-				//input the description according to parameter
+		return currentPassword;
+	}
+	
+	private void searchEmailTitle() throws InterruptedException, IOException {
+		this.waitUntilElement(10, "OutlookFunctionalityEmailSearchCover");
+		this.clickButton("OutlookFunctionalityEmailSearchCover");		//click to focus on the search field
+		this.waitUntilElement(10, "OutlookFunctionalityEmailSearch");
+		this.inputText("OutlookFunctionalityEmailSearch", "National Bank Easy Pay Registration Instructions");	//input email title, need to softcode this
+		this.clickButton("OutlookFunctionalitySearchButton");			//click search
+	}
+	
+	public void findLatestEmail() throws IOException, InterruptedException {
+		this.waitUntilElement(10, "EmailListLatestEmail");
+		this.clickButton("EmailListLatestEmail");
+	}
+	
+	public void multiplePurchase(int numPurchase, String tipType, String tipValue, String descriptionType, String descriptionValue, String emailType, String emailValue) throws InterruptedException, IOException {
+		/*Pre: numPurchase is a positive integer
+		* Post: multiple purchases are performed 
+		*/ 
+		//This method still needs further refining to allow ability to deal with different kinds of non-optimal conditions
+		log.logFile("method multiplePurchase("+numPurchase + ", "+tipType+ ", "+tipValue+ ", "+descriptionType+ ", "+descriptionValue+ ", "+emailType+ ", "+emailValue+") is called.");
+		int i = 0;
+		int iteration = 0;
+		int waitSec = 1;
+
+		while ((i<numPurchase) && (iteration<numPurchase*3)) {
+			this.singlePurchase(1000, tipType,  tipValue,  descriptionType,  descriptionValue);
+			String page = this.findCurrentPage(waitSec);
+			log.logConsole("This is the " + (i+1)+"th purchase attempt");
+			switch (page) {
+
+				case "PurchaseResult": {
+					this.clickButton("PurchaseResultNoReceipt");
+//					this.clickButton(0, "PurchaseResultEmailReceipt");
+					log.logConsole("Purchase made.");
+					log.logColorText(logInfoColor,"Transaction #"+(i+1)+" is made.");
+					i++;
+					break;
+				}
+				case "CardNotSupported": {
+					this.clickButton("CardNotSupportedTryAgain");
+					log.logConsole("Purchase made.");
+					log.logColorText(logInfoColor,"Transaction #"+(i+1)+" is denied due to card not supported.");
+					i++;
+					break;
+				}
+				case "PurchaseNotCompleted": {
+					this.clickButton("PurchaseNotCompletedDone");
+					log.logConsole("Purchase made.");
+					log.logColorText(logInfoColor,"Transaction #"+(i+1)+" is attempted but not completed.");
+					i++;
+					break;
+				}
+				case "ReceiptSentConfirmation": {
+					this.clickButton("ReceiptSentConfirmationDone"); 
+					break;
+
+				}
+				
+				case "NewTagScanned": {
+					log.logConsole("Pressing key code 82, still needs implementation");
+//					this.pressKeyCode(82);
+					log.logConsole("Pressing AllAppListingCBADebug");
+					this.wait(3);
+					this.clickButton("AllAppListingCBADebug");
+					waitSec = 5;
+					break;
+				}
+				case "EmailReceiptForPurchase": {
+					this.wait(1);
+					this.clearText("EmailReceiptForPurchaseEmail");
+					this.inputText("EmailReceiptForPurchaseEmail", (String) cap.getCapability("CustomerEmail"));
+					this.clickButton("EmailReceiptForPurchaseNext");
+					break;
+				}
+				
+				default: {
+//					iteration = numPurchase*3+1;
+					log.logConsole("reached an unrecognized page: " + page);
+					this.clickButton("NoNetworkConnectionretry");
+					//if an page is not recognized, try to see if there is a button "RETRY". if yes, click it
+					waitSec = 5;
+					
+				}
+
+
 			}
-				this.clickButton("PurchaseDescriptionNext");
-				//click next
-			break;
 		}
-		case "PurchaseResult": {	//in Purchase Result page
-			endT = LocalTime.now();	//record processing end time
-			betweenT = ChronoUnit.SECONDS.between(startT, endT);
-			log.logColorText(logInfoColor,"Transaction is made, Processing time is: " + betweenT + " seconds." );
-			return page;	//destination reached, end method
+		log.logColorText(logInfoColor,numPurchase + " consecutive purchases attempted.");
 		}
-		case "CardNotSupported": {	//in Purchase Result(Card not supported) page
-			endT = LocalTime.now();
-			betweenT = ChronoUnit.SECONDS.between(startT, endT);
-			log.logColorText(logInfoColor,"Transaction is denied due to card not supported, Processing time is: " + betweenT + " seconds." );
-			return page;
+
+	public void enterPurchaseAmount(String amount) throws InterruptedException, IOException {
+		/*Pre: amount is a string that can be parsed into an integer representing the amount of purchases
+		* Post: amount specified is entered and ok is clicked
+		*/
+		log.logFile("method enterPurchaseAmount("+amount+") is called.");
+		this.enterNumPadOK(amount);
 		}
-		case "PurchaseNotCompleted": {	//in Purchase Result(Purchase not completed) page
-			endT = LocalTime.now();
-			betweenT = ChronoUnit.SECONDS.between(startT, endT);
-			log.logColorText(logInfoColor,"Transaction is attempted but not completed, Processing time is: " + betweenT + " seconds." );
-			return page;
-		}
-		case "NewTagScanned": {		//known bug encountered, external page on foreground, not implemented yet
-			log.logConsole("Pressing key code 82, still needs implementation");
-//			this.pressKeyCode(82);
-			log.logConsole("Pressing AllAppListingCBADebug");
-			this.wait(3);
-			this.clickButton("AllAppListingCBADebug");
-			break;
-		}
-		case "SetTipDuringPurchase": {
-			this.setTipType(tipType, tipValue);
-			break;
-		}
-		case "EnterCustomTip": {
-			this.setTipValue(tipType, tipValue);
-			break;
-		} 	
-		default: {
-			log.logConsole("reached an unrecognized page: " + page);
-			this.clickButton("NoNetworkConnectionretry");
-			//if an page is not recognized, try to see if there is a button "RETRY". if yes, click it
-		}
-	}	//end of switch
-}	//end of while
-return page;
-}	
 
+	public void retrieveFromContent (String variableName, String URI) throws IOException {
+		WebElement we = this.findByURI(URI);
+		log.logConsole("we is " + we);
+		String value = we.getText();
+		log.logConsole("value is " + value);
+		retrievedVariables.setCapability(variableName, value);
 
-
-
-
-
-
-public void setTipValue (String tipType, String tipValue) throws InterruptedException, IOException  {
-log.logFile("method setTipValue("+tipType+ ", "+tipValue+ ") is called.");
-
-int tipV = Integer.parseInt(tipValue);
-switch (tipType) {
-	case "Percentage": { 
-		this.clickButton("AddTipTip%");
-		break;
 	}
-	case "Dollar": {	
-		this.clickButton("AddTipTip$");
-		break;
+	
+	public String readFromVariable (String variableName) {
+		return (String) retrievedVariables.getCapability(variableName);
 	}
-	case "Total": {	
-		this.clickButton("AddTipTipTotalAmount");
-		break;
-	}			
-	default: { 
-		log.logConsole("Tip type " + tipType + " is not recognized.");
-//		this.clickButton(0, "SetTipDuringPurchasePay"); 
-		break;
+	
+	public void inputVariableText (String URI, String variableName) throws IOException {
+		String value = this.readFromVariable(variableName);
+		this.inputText(URI, value);
 	}
+	
+	public String singlePurchase(int amount, String tipType, String tipValue, String descriptionType, String descriptionValue) throws InterruptedException, IOException {
+		/*Pre: Amount is an integer acceptable to the app, tipType can be "none", "default", "Percentage","Dollar", and "total";
+		* tipValue are integers (in String type), descriptionType can be "none" or "yes"
+		* the app is on the purchase page, waiting for an amount to be entered
+		* Post: one single purchase is performed, or the app has not made any progress after a pre-configured timeout time(timeout still to be implemented).
+		*/ 
+		//This method still needs further refining to allow ability to deal with different kinds of non-optimal conditions
+		log.logFile("method singlePurchase("+amount + ", "+tipType+ ", "+tipValue+ ", "+descriptionType+ ", "+descriptionValue+ ") is called.");
 
-}
-this.enterNumPadOK(tipValue);
-}
+		LocalTime startT = LocalTime.now();
+		LocalTime endT = LocalTime.now();
+		int iteration = 0;
+		int waitSec = 1;
+		String page = "";
+		long betweenT = 0;
+		while (iteration<10 ) { //break loop if timed out
+			page = this.findCurrentPage(waitSec); //find the current page and decide action based on it
+			iteration ++;	//time out counter increment
+			switch (page) {
+				case "Purchase" : {			
+					this.enterPurchaseAmount(Integer.toString(amount));
+					//In Purchase page, enter the amount of the purchase
+					break;
+				}
+				case "TapToPay":{
+					log.logConsole("waiting for card tap");
+					startT = LocalTime.now();
+					//nothing to do other than wait, start tracking processing time
+					break;
+				}
+				case "ProcessingPayment": {
+					log.logConsole("processing payment");
+					//nothing to do other than wait
+					break;
+				}
+				case "PurchaseDescription": {
+					if (descriptionType.equals("yes")) {
+						this.inputText("PurchaseDescriptionDescription", descriptionValue);
+						//input the description according to parameter
+					}
+						this.clickButton("PurchaseDescriptionNext");
+						//click next
+					break;
+				}
+				case "PurchaseResult": {	//in Purchase Result page
+					endT = LocalTime.now();	//record processing end time
+					betweenT = ChronoUnit.SECONDS.between(startT, endT);
+					log.logColorText(logInfoColor,"Transaction is made, Processing time is: " + betweenT + " seconds." );
+					return page;	//destination reached, end method
+				}
+				case "CardNotSupported": {	//in Purchase Result(Card not supported) page
+					endT = LocalTime.now();
+					betweenT = ChronoUnit.SECONDS.between(startT, endT);
+					log.logColorText(logInfoColor,"Transaction is denied due to card not supported, Processing time is: " + betweenT + " seconds." );
+					return page;
+				}
+				case "PurchaseNotCompleted": {	//in Purchase Result(Purchase not completed) page
+					endT = LocalTime.now();
+					betweenT = ChronoUnit.SECONDS.between(startT, endT);
+					log.logColorText(logInfoColor,"Transaction is attempted but not completed, Processing time is: " + betweenT + " seconds." );
+					return page;
+				}
+				case "NewTagScanned": {		//known bug encountered, external page on foreground, not implemented yet
+					log.logConsole("Pressing key code 82, still needs implementation");
+//					this.pressKeyCode(82);
+					log.logConsole("Pressing AllAppListingCBADebug");
+					this.wait(3);
+					this.clickButton("AllAppListingCBADebug");
+					break;
+				}
+				case "SetTipDuringPurchase": {
+					this.setTipType(tipType, tipValue);
+					break;
+				}
+				case "EnterCustomTip": {
+					this.setTipValue(tipType, tipValue);
+					break;
+				} 	
+				case "AddTip": {
+					this.setTipValue(tipType, tipValue);
+					break;
+				} 
+				default: {
+					log.logConsole("reached an unrecognized page: " + page);
+					this.clickButton("NoNetworkConnectionretry");
+					//if an page is not recognized, try to see if there is a button "RETRY". if yes, click it
+				}
+			}	//end of switch
+		}	//end of while
+		return page;
+		}
+
+	public String singlePurchaseUntil (int amount, String tipType, String tipValue, String descriptionType, String descriptionValue, String targetPage) throws InterruptedException, IOException {
+		/*Pre: Amount is an integer acceptable to the app, tipType can be "none", "default", "Percentage","Dollar", and "total";
+		* tipValue are integers (in String type), descriptionType can be "none" or "yes"
+		* the app is on the purchase page, waiting for an amount to be entered
+		* Post: one single purchase is performed, or the app has not made any progress after a pre-configured timeout time(timeout still to be implemented).
+		*/ 
+		//This method still needs further refining to allow ability to deal with different kinds of non-optimal conditions
+		log.logFile("method singlePurchase("+amount + ", "+tipType+ ", "+tipValue+ ", "+descriptionType+ ", "+descriptionValue+ ") is called.");
+
+		LocalTime startT = LocalTime.now();
+		LocalTime endT = LocalTime.now();
+		int iteration = 0;
+		int timeOutSec = defaultTimeOutSec;
+		String page = this.findCurrentPage(0);
+		String previousPage = "";
+		long betweenT = 0;
+		while (iteration<10 ) { //break loop if timed out
+			startT = LocalTime.now();
+			page = this.waitUntilNewPage(timeOutSec,page); //find the current page and decide action based on it
+			if (page.equals(targetPage)) {
+				endT = LocalTime.now();	//record processing end time
+				betweenT = ChronoUnit.SECONDS.between(startT, endT);
+				switch (page) {
+					case "PurchaseResult": {
+						log.report("Transaction is made, Processing time is: " + betweenT + " seconds." );
+						return page;	//destination reached, end method
+					}
+					case "CardNotSupported": {
+						log.report("Transaction is made, Processing time is: " + betweenT + " seconds." );
+						return page;	//destination reached, end method
+					}
+					case "PurchaseNotCompleted": {
+						log.report("Transaction is attempted but not completed, Processing time is: " + betweenT + " seconds." );
+						return page;	//destination reached, end method
+					}
+					default: {
+						log.report("Target page: " + targetPage + " is reached, Processing time is: " + betweenT + " seconds." );
+						return page;	//destination reached, end method
+					}
+				}
+			}
+			
+			iteration ++;	//time out counter increment
+			switch (page) {
+				case "Purchase" : {			
+					this.enterPurchaseAmount(Integer.toString(amount));
+					//In Purchase page, enter the amount of the purchase
+					break;
+				}
+				case "TapToPay":{
+					log.logConsole("waiting for card tap");
+					//nothing to do other than wait
+					break;
+				}
+				case "ProcessingPayment": {
+					log.logConsole("processing payment");
+					//nothing to do other than wait
+					break;
+				}
+				case "PurchaseDescription": {
+					if (descriptionType.equals("yes")) {
+						this.inputText("PurchaseDecsriptionDescription", descriptionValue);
+						//input the description according to parameter
+					}
+						this.clickButton("PurchaseDescriptionNext");
+						//click next
+					break;
+				}
+				case "PurchaseResult": {	//in Purchase Result page
+					endT = LocalTime.now();	//record processing end time
+					betweenT = ChronoUnit.SECONDS.between(startT, endT);
+					log.logColorText(logInfoColor,"Transaction is made, Processing time is: " + betweenT + " seconds." );
+					return page;	//destination reached, end method
+				}
+				case "CardNotSupported": {	//in Purchase Result(Card not supported) page
+					endT = LocalTime.now();
+					betweenT = ChronoUnit.SECONDS.between(startT, endT);
+					log.logColorText(logInfoColor,"Transaction is denied due to card not supported, Processing time is: " + betweenT + " seconds." );
+					return page;
+				}
+				case "PurchaseNotCompleted": {	//in Purchase Result(Purchase not completed) page
+					endT = LocalTime.now();
+					betweenT = ChronoUnit.SECONDS.between(startT, endT);
+					log.logColorText(logInfoColor,"Transaction is attempted but not completed, Processing time is: " + betweenT + " seconds." );
+					return page;
+				}
+				case "NewTagScanned": {		//known bug encountered, external page on foreground, not implemented yet
+					log.logConsole("Pressing key code 82, still needs implementation");
+//					this.pressKeyCode(82);
+					log.logConsole("Pressing AllAppListingCBADebug");
+					this.wait(3);
+					this.clickButton("AllAppListingCBADebug");
+					break;
+				}
+				case "SetTipDuringPurchase": {
+					this.setTipType(tipType, tipValue);
+					break;
+				}
+				case "EnterCustomTip": {
+					this.setTipValue(tipType, tipValue);
+					break;
+				} 	
+				default: {
+					log.logConsole("reached an unrecognized page: " + page);
+					this.clickButton("NoNetworkConnectionretry");
+					//if an page is not recognized, try to see if there is a button "RETRY". if yes, click it
+				}
+			}	//end of switch
+		}	//end of while
+		return page;
+		}	
+
+	public void setTipValue (String tipType, String tipValue) throws InterruptedException, IOException  {
+		log.logFile("method setTipValue("+tipType+ ", "+tipValue+ ") is called.");
+
+		int tipV = Integer.parseInt(tipValue);
+		switch (tipType) {
+			case "Percentage": { 
+				this.clickButton("AddTipTip%");
+				break;
+			}
+			case "Dollar": {	
+				this.clickButton("AddTipTip$");
+				break;
+			}
+			case "Total": {	
+				this.clickButton("AddTipTipTotalAmount");
+				break;
+			}			
+			default: { 
+				log.logConsole("Tip type " + tipType + " is not recognized.");
+//				this.clickButton(0, "SetTipDuringPurchasePay"); 
+				break;
+			}
+
+		}
+		this.enterNumPadOK(tipValue);
+		}
 
 public void setTipType (String tipType, String tipValue) throws InterruptedException, IOException  {
 log.logFile("method setTipType("+tipType+ ", "+tipValue+ ") is called.");
@@ -1893,11 +2028,11 @@ public WebElement waitUntilElement(int timeOutSec, String URI) throws Interrupte
 		}
 	}
 	default: {
-			Object obj = this.chooseDriver();
+			Object obj = this.chooseDriver(); 
 			if (timeOutSec==0 ) {
 				timeOutSec = 10;
 			}
-			WebElement waitElement = (new WebDriverWait(((WebDriver) obj), timeOutSec)).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) elementList.getCapability(URI))));	
+			WebElement waitElement = (new WebDriverWait(((WebDriver) obj), timeOutSec)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(((pageElement) elementList.getCapability(URI)).getPath())));	
 			return waitElement;
 	}
 	}
