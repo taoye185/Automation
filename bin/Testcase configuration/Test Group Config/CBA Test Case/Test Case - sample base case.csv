@@ -1,0 +1,11 @@
+active,driver type,Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+1,Android,merchantSignin,6,5.04E+12,,,,,
+1,Android,merchantPassword,5,6Z214UU53,,,,,
+1,Android,clickButton,5,SignInSelectionFirstUser,,,,,
+1,Android,enterEmptyPIN,5,,,,,,
+1,Android,enterPIN,5,123456,,,,,
+1,Android,clickButton,5,SideMenuShowMenu,,,,,
+1,Android,clickButton,5,SideMenuSettings,,,,,
+1,Android,enterPIN,5,123456,,,,,
+1,Android,clickButton,5,SettingsTerminalAdvancedTab,,,,,
+1,Android,checkPageOverlap,5,SettingsAdvanced,,,,,

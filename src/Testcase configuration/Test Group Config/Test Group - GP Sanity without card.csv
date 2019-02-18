@@ -1,0 +1,3 @@
+Active,test case,test case config file
+1,TS_5,.\\src\\Testcase configuration\\Test Group Config\\GP Test Case\\Test Case - cancel purchase without confirmation.csv
+1,TS_6,.\\src\\Testcase configuration\\Test Group Config\\GP Test Case\\Test Case - cancel purchase with confirmation.csv

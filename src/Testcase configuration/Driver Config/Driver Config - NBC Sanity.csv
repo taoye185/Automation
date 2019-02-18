@@ -1,0 +1,9 @@
+Active,Driver Name,Element Config file corresponding to Driver,DriverType
+0,Android,.\\src\\Testcase configuration\\Element Config\\app elements - NBC Debug.csv,Android
+0,iOS,,iOS
+1,Chrome,.\\src\\Testcase configuration\\Element Config\\browser elements - Hive V2.csv,Chrome
+0,Firefox,,Firefox
+0,Safari,,Safari
+0,Edge,,Edge
+0,IE,,IE
+1,Outlook,.\\src\\Testcase configuration\\Element Config\\browser elements - outlook.csv,Chrome

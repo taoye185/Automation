@@ -1,0 +1,8 @@
+Active,Driver Name,Element Config file corresponding to Driver,DriverType
+0,Android,.\\src\\Testcase configuration\\Element Config\\app elements - CBA Pre-Prod Debug.csv,Android
+0,iOS,,iOS
+1,Chrome,.\\src\\Testcase configuration\\Element Config\\browser elements - Hive V3.csv,Chrome
+0,Firefox,.\\src\\Testcase configuration\\Element Config\\browser elements - Hive V3.csv,Firefox
+0,Safari,,Safari
+0,Edge,,Edge
+0,IE,,IE

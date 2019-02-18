@@ -1,0 +1,68 @@
+Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+1,Android,logComment,0,Start of purchase void testing - please have SUCCESS testing card placed at the back of device!,,,,,
+1,Android,logComment,0,This case assumes the app starts from the launch.,,,,,
+1,Android,launch,5,,,,,,
+1,Android,login,1,,,,,,
+1,Android,waitUntilPage,120,Purchase,,,,,
+1,Android,reachPage,0,TransactionHistory,,,,,
+1,Android,clickButton,0,TransactionHistorySearch,,,,,
+1,Android,waitUntilPage,120,TransactionSearch,,,,,
+1,Android,clickButton,0,TransactionSearchFromDateValue,,,,,
+1,Android,waitUntilPage,120,DatePicker,,,,,
+1,Android,pickDate,0,2018,10,1,,,
+1,Android,waitUntilPage,120,TransactionSearch,,,,,
+1,Android,clickButton,0,TransactionSearchToDateValue,,,,,
+1,Android,waitUntilPage,120,DatePicker,,,,,
+1,Android,pickDate,0,2018,10,30,,,
+1,Android,waitUntilPage,120,TransactionSearch,,,,,
+1,Android,setBooleanValue,0,TransactionSearchPurchaseCheckBox,yes,,,,
+1,Android,clickButton,0,TransactionSearchSearch,,,,,
+1,Android,waitUntilPage,120,TransactionSearchResult,,,,,
+1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
+1,Android,waitUntilPage,120,TransactionDetails,,,,,
+1,Android,clickButton,0,TransactionDetailsVoid,,,,,
+1,Android,wait,3,,,,,,
+1,Android,login,0,,,,,,
+1,Android,wait,3,,,,,,
+1,Android,clearNumPad,5,4,,,,,
+1,Android,enterNumPadOK,0,1,,,,,
+1,Android,waitUntilPage,120,Signature,,,,,
+1,Android,logComment,0,Making Signature,,,,,
+1,Android,sign,0,,,,,,
+1,Android,clickButton,0,SignatureConfirm,,,,,
+1,Android,waitUntilPage,120,PurchaseResult,,,,,
+1,Android,clickButton,0,PurchaseResultNoReceipt,,,,,
+1,Android,waitUntilPage,120,Purchase,,,,,
+1,Android,reachPage,0,TransactionHistory,,,,,
+1,Android,test,0,,,,isOnPage,,TransactionHistory
+1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,- $0.01
+1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
+1,Android,waitUntilPage,120,TransactionDetails,,,,,
+1,Android,test,0,,,,isOnPage,,TransactionDetails
+1,Android,test,0,,,,equal,TransactionDetailsTitle,Refund approved
+1,Android,test,0,,,,equal,TransactionDetailsAmount,- $0.01
+1,Android,test,0,,,,equal,TransactionDetailsMerchantName,taoye008
+1,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,Email receipt
+1,Android,test,0,,,,equal,TransactionDetailsVoid,Void
+1,Android,logComment,0,Refund testing completed.,,,,,
+1,Android,clickButton,0,TransactionDetailsVoid,,,,,
+1,Android,login,1,,,,,,
+1,Android,waitUntilPage,120,PurchaseResult,,,,,
+1,Android,test,0,,,,isOnPage,,PurchaseResult
+1,Android,test,0,,,,equal,PurchaseResultResultText,Void approved
+1,Android,clickButton,0,PurchaseResultNoReceipt,,,,,
+1,Android,waitUntilPage,120,TransactionHistory,,,,,
+1,Android,test,0,,,,isOnPage,,TransactionHistory
+1,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,$0.01
+1,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
+1,Android,waitUntilPage,120,TransactionDetails,,,,,
+1,Android,test,0,,,,isOnPage,,TransactionDetails
+1,Android,test,0,,,,equal,TransactionDetailsTitle,Void approved
+1,Android,test,0,,,,equal,TransactionDetailsAmount,$0.01
+1,Android,test,0,,,,equal,TransactionDetailsMerchantName,taoye008
+1,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,Email receipt
+1,Android,test,0,,,,equal,TransactionDetailsVoid,element not found
+1,Android,clickButton,0,TransactionDetailsBack,,,,,
+1,Android,waitUntilPage,120,TransactionHistory,,,,,
+1,Android,reachPage,0,Purchase,,,,,
+1,Android,test,0,,,,isOnPage,,Purchase

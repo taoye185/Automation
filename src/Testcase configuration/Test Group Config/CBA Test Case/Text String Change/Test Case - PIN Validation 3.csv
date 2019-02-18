@@ -1,0 +1,48 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+waitUntilPage,120,AccountLocked,,,,,
+clickButton,0,AccountLockedResetPIN,,,,,
+waitUntilPage,120,ForgotPIN,,,,,
+clickButton,0,ForgotPINResetPIN,,,,,
+waitUntilPage,30,ResetPIN,,,,,
+logComment,0,Testing Reset PIN screen UI,,,,,
+test,0,,,,isOnPage,,ResetPIN
+test,0,,,,equal,ResetPINProcessTitle,Reset PIN
+test,0,,,,equal,ResetPINTextBody,element not found
+test,0,,,,equal,ResetPINTitle,Enter Merchant ID
+test,0,,,,equal,ResetPINMerchantIDValue,Merchant ID
+test,0,,,,equal,ResetPINResetPIN,Continue
+clickButton,0,ResetPINResetPIN,,,,,
+waitUntilPage,120,InvalidCredentials,,,,,
+logComment,0,Testing Invalid Credentials popup UI,,,,,
+test,0,,,,isOnPage,,InvalidCredentials
+test,0,,,,equal,InvalidCredentialsTitle,Invalid details
+test,0,,,,equal,InvalidCredentialsTextBody,"Check you entered the correct details. If you're still having problems, call us on 1800 230 177."
+test,0,,,,equal,InvalidCredentialsRetry,Retry
+clickButton,0,InvalidCredentialsRetry,,,,,
+waitUntilPage,30,ResetPIN,,,,,
+inputText,0,ResetPINMerchantIDValue,taoye67890123012,,,,
+clickButton,1,ResetPINResetPIN,,,,,
+waitUntilPage,30,MerchantPassword,,,,,
+inputText,0,MerchantPasswordpassword,Thankyou1@,,,,
+clickButton,1,ResetPINResetPIN,,,,,
+waitUntilPage,120,EnterNewPIN,,,,,
+logComment,0,Testing Create New PIN screen UI,,,,,
+test,0,,,,isOnPage,,EnterNewPIN
+test,0,,,,equal,EnterNewPINTitle,Enter new PIN
+test,0,,,,equal,EnterNewPINProcessTitle,Registration
+test,0,,,,equal,EnterNewPINTextBody,element not found
+clickButton,0,EnterPINOK,,,,,
+test,1,,,,equal,EnterNewPINTextBody,PIN must be 6 digits
+enterNumPadOK,1,123456,,,,,
+waitUntilPage,120,ConfirmNewPIN,,,,,
+test,0,,,,isOnPage,,ConfirmNewPIN
+test,0,,,,equal,ConfirmNewPINProcessTitle,Registration
+test,0,,,,equal,ConfirmNewPINTextBody,Confirm new PIN
+test,0,,,,equal,ConfirmNewPINTitle,element not found
+enterNumPadOK,0,123455,,,,,
+test,1,,,,equal,ConfirmNewPINTextBody,PINs don't match
+waitUntilPage,120,EnterNewPIN,,,,,
+enterNumPadOK,0,123456,,,,,
+waitUntilPage,120,ConfirmNewPIN,,,,,
+enterNumPadOK,0,123456,,,,,
+waitUntilPage,120,Purchase,,,,,

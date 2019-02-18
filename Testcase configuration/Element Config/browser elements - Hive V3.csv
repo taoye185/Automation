@@ -1,6 +1,0 @@
-ID,Xpath,Page,Field,action,unique,value
-LoginLogo,"//*[@id=""root""]/main/div/div/div/img",Login,Logo,view,,
-LoginUsername,"//*[@id=""root""]/main/div/div/form/div/div[1]/div/input",Login,Username,view,,
-LoginPassword,"//*[@id=""root""]/main/div/div/form/div/div[2]/div/input",Login,Password,view,,
-LoginLogin,"//*[@id=""root""]/main/div/div/form/div/button",Login,Login,view,,
-LoginForgotpassword,"//*[@id=""root""]/main/div/div/form/div/a/div",Login,Forgotpassword,view,yes,Forgot Password?

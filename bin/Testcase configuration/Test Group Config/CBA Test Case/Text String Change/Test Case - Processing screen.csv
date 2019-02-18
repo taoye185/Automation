@@ -1,0 +1,13 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,5,,,,,,
+login,5,,,,,,
+showSideMenu,15,,,,,,
+clickButton,5,SideMenuSettings,,,,,
+login,5,,,,,,
+setBooleanValue,5,SettingsTerminalAddTipValue,no,,,,
+showSideMenu,5,,,,,,
+clickButton,5,SideMenuPurchase,,,,,
+singlePurchaseUntil,200,none,,none,,ProcessingPayment,
+test,0,,,,equal,ProcessingPaymentProcessTitle,Purchase
+test,0,,,,equal,ProcessingPaymentPurchaseAmount,$2.00
+test,0,,,,equal,ProcessingPaymentTitle,Processing

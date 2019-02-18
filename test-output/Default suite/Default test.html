@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jan 15 14:21:09 EST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>189 seconds (189596 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='AutomationMain.appTesting()'><b>appTesting</b><br>Test class: AutomationMain<br/>
+<a href="#Output-26540753" onClick='toggleBox("Output-26540753", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-26540753" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-26540753">
+<font color='grey'>Start of purchase void testing - please have SUCCESS testing card placed at the back of device!</font><br/>
+<font color='grey'>This case assumes the app starts from the Purchase page.</font><br/>
+<font color='grey'>App launched and awaiting for login.</font><br/>
+<font color='grey'>User Authentication performed.</font><br/>
+<font color='grey'>User Authentication performed.</font><br/>
+<font color='grey'>Transaction is made, Processing time is: 16 seconds.</font><br/>
+Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br/>
+PurchaseResultResultText is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br/>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br/>
+TransactionHistoryTransactionAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br/>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br/>
+TransactionDetailsAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br/>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br/>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br/>
+<font color='grey'>User Authentication performed.</font><br/>
+Current page is equal to SettingsTerminal, <font color='green'>test passed</font>.<br/>
+Current page is equal to SettingsAdvanced, <font color='green'>test passed</font>.<br/>
+<font color='grey'>Testing Version Number Display</font><br/>
+SettingsAdvancedAppVersionValue is expected to be <font color='brown'>1.4.7(4)</font>, but is actually equal to: <font color='brown'>1.4.9(12)</font>, <font color='red'>test failed</font>.<br/>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br/>
+TransactionHistoryTransactionAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br/>
+TransactionDetailsTitle is equal to PURCHASE APPROVED, <font color='green'>test passed</font>.<br/>
+TransactionDetailsAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br/>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br/>
+TransactionDetailsVoid is equal to REFUND, <font color='green'>test passed</font>.<br/>
+<font color='grey'>User Authentication performed.</font><br/>
+Current page is equal to EnterRefundAmount, <font color='green'>test passed</font>.<br/>
+<font color='grey'>Making Signature</font><br/>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br/>
+TransactionHistoryTransactionAmount is equal to - CA$14.00, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br/>
+TransactionDetailsTitle is equal to REFUND APPROVED, <font color='green'>test passed</font>.<br/>
+TransactionDetailsAmount is equal to - CA$14.00, <font color='green'>test passed</font>.<br/>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br/>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br/>
+TransactionDetailsVoid is equal to VOID, <font color='green'>test passed</font>.<br/>
+<font color='grey'>Refund testing completed.</font><br/>
+<font color='grey'>User Authentication performed.</font><br/>
+Current page is equal to PurchaseResult, <font color='green'>test passed</font>.<br/>
+PurchaseResultResultText is equal to VOID APPROVED, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionHistory, <font color='green'>test passed</font>.<br/>
+TransactionHistoryTransactionAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+Current page is equal to TransactionDetails, <font color='green'>test passed</font>.<br/>
+TransactionDetailsTitle is equal to VOID APPROVED, <font color='green'>test passed</font>.<br/>
+TransactionDetailsAmount is equal to CA$14.00, <font color='green'>test passed</font>.<br/>
+TransactionDetailsMerchantName is equal to taoye, <font color='green'>test passed</font>.<br/>
+TransactionDetailsEmailReceipt is equal to EMAIL RECEIPT, <font color='green'>test passed</font>.<br/>
+TransactionDetailsVoid is equal to element not found, <font color='green'>test passed</font>.<br/>
+Current page is equal to Purchase, <font color='green'>test passed</font>.<br/>
+<font color='blue'>Test Case: TS_8&TS_9 completed.</font><br/>
+-----------------------------------<br><br/>
+</div>
+</td>
+<td></td>
+<td>165</td>
+<td>AutomationMain@19d1a19</td></tr>
+</table><p>
+</body>
+</html>

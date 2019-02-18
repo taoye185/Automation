@@ -1,0 +1,12 @@
+Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+1,Android,launch,5,,,,,,
+1,Android,login,5,,,,,,
+1,Android,showSideMenu,5,,,,,,
+1,Android,clickButton,5,SideMenuSettings,,,,,
+1,Android,login,5,,,,,,
+1,Android,setBooleanValue,5,SettingsTerminalAddTipValue,yes,,,,
+1,Android,setBooleanValue,5,SettingsTerminalAddDescriptionValue,yes,,,,
+1,Android,showSideMenu,5,,,,,,
+1,Android,clickButton,5,SideMenuPurchase,,,,,
+1,Android,singlePurchase,200,none,,none,,,
+1,Android,test,5,,,,equal,PurchaseResultResultText,Approved

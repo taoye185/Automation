@@ -1,0 +1,69 @@
+Active,Driver,Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+1,Chrome,logComment,0,"Start of onboarding testing - will access Hive V2 Acquirer Portal, Outlook Web App, as well as mpos app",,,,,
+1,Chrome,logComment,0,This case assumes the app has not been opened,,,,,
+1,Chrome,logComment,0,This case assumes that the browser already remembers login credentials for Outlook Web App so no login is required,,,,,
+1,Outlook,checkPassword,0,,,,,,
+1,Chrome,launch,5,,,,,,
+1,Chrome,waitUntilPresent,10,LoginLogin,,,,,
+1,Chrome,inputText,0,LoginUsername,admin,,,,
+1,Chrome,inputText,0,LoginPassword,Mobeewave2015,,,,
+1,Chrome,clickButton,0,LoginLogin,,,,,
+1,Chrome,waitUntilPresent,10,MerchantListSearch,,,,,
+1,Chrome,inputText,0,MerchantListSearch,taoyenbc90123101,,,,
+1,Chrome,wait,3,,,,,,
+1,Chrome,clickButton,0,MerchantListDetails,,,,,
+1,Chrome,waitUntilPresent,10,MerchantDetailsResendActivationEmail,,,,,
+1,Chrome,wait,3,,,,note that this wait is needed otherwise driver can't click the button for some reason,,
+1,Chrome,clickButton,0,MerchantDetailsResendActivationEmail,,,,,
+1,Chrome,logComment,0,"Activation Email sent, now go check the email...",,,,,
+1,Outlook,checkNewPassword,180,,,,,,
+0,Chrome,wait,30,,,,,,
+0,Outlook,loginToOutlook,10,,,,,,
+0,Outlook,waitUntilPresent,10,OutlookFunctionalityEmailSearchCover,,,,,
+0,Outlook,clickButton,0,OutlookFunctionalityEmailSearchCover,,,,,
+0,Outlook,waitUntilPresent,10,OutlookFunctionalityEmailSearch,,,,,
+0,Outlook,inputText,0,OutlookFunctionalityEmailSearch,National Bank Easy Pay Registration Instructions,,,,
+0,Outlook,clickButton,0,OutlookFunctionalitySearchButton,,,,,
+0,Outlook,wait,3,,,,,,
+0,Outlook,clickButton,0,EmailListLatestEmail,,,,,
+0,Outlook,waitUntilPresent,10,EmailDetailsMerchantIDValue,,,,,
+0,Outlook,readFromPage,0,MID,EmailDetailsMerchantIDValue,,,,
+0,Outlook,readFromPage,0,MPassword,EmailDetailsPasswordValue,,,,
+1,Outlook,checkPassword,0,,,,,,
+0,Outlook,close,0,,,,,,
+0,Outlook,launchURL,3,EmailListFirstEmailSelect,,,,,
+0,Outlook,wait,3,,,,,,
+0,Outlook,retrieveFromContent,0,password,EmailDetailsPasswordValue,,,,
+0,Android,reachPage,0,SettingsTerminal,,,,,
+0,Android,setBooleanValue,0,SettingsTerminalPINWhenCancelTransactionValue,no,,,,
+0,Android,setBooleanValue,0,SettingsTerminalAddTipValue,no,,,,
+0,Android,setBooleanValue,0,SettingsTerminalPurchaseDesriptionValue,no,,,,
+0,Android,reachPage,0,Purchase,,,,,
+0,Android,singlePurchase,1400,no,,no,,,
+0,Android,test,0,,,,isOnPage,,PurchaseResult
+0,Android,test,0,,,,equal,PurchaseResultResultText,PURCHASE APPROVED
+0,Android,clickButton,0,PurchaseResultVoid,,,,,
+0,Android,login,3,,,,,,
+0,Android,waitUntilPage,120,PurchaseResult,,,,,
+0,Android,test,0,,,,isOnPage,,PurchaseResult
+0,Android,test,0,,,,equal,PurchaseResultResultText,VOID APPROVED
+0,Android,test,0,,,,equal,PurchaseResultAmount,#NAME?
+0,Android,clickButton,0,PurchaseResultNoReceipt,,,,,
+0,Android,waitUntilPage,120,Purchase,,,,,
+0,Android,test,0,,,,isOnPage,,Purchase
+0,Android,reachPage,0,TransactionHistory,,,,,
+0,Android,test,0,,,,isOnPage,,TransactionHistory
+0,Android,test,0,,,,equal,TransactionHistoryTransactionAmount,#NAME?
+0,Android,clickButton,0,TransactionHistoryFirstTransaction,,,,,
+0,Android,waitUntilPage,120,TransactionDetails,,,,,
+0,Android,test,0,,,,isOnPage,,TransactionDetails
+0,Android,test,0,,,,equal,TransactionDetailsTitle,VOID APPROVED
+0,Android,test,0,,,,equal,TransactionDetailsAmount,#NAME?
+0,Android,test,0,,,,equal,TransactionDetailsMerchantName,Business
+0,Android,test,0,,,,equal,TransactionDetailsEmailReceipt,EMAIL RECEIPT
+0,Android,test,0,,,,equal,TransactionDetailsVoid,element not found
+0,Android,test,0,,,,equal,TransactionDetailsDescription,element not found
+0,Android,clickButton,0,TransactionDetailsBack,,,,,
+0,Android,waitUntilPage,120,TransactionHistory,,,,,
+0,Android,reachPage,0,Purchase,,,,,
+0,Android,test,0,,,,isOnPage,,Purchase

@@ -1,0 +1,16 @@
+Active,Capabilities Name,Capabilities Value
+1,appPackage,com.mobeewave.cba.mpos.debug
+1,appActivity,com.mobeewave.mpos2.login.LoginActivity
+1,app,C:\\Users\\YeTao\\eclipse-workspace\\automationTemplates\\apps\\app-secureelement-cba-integration-debug-v1.4.5.406.apk
+1,MerchantID,taoye67890123008
+1,MerchantPassword,Thankyou1@
+1,MerchantNewPassword,Thankyou1@
+1,MerchantPIN,123456
+1,Username,SignInSelectionFirstUser
+1,CustomerEmail,ytao@mobeewave.com
+1,LogPassColor,green
+1,LogFailColor,red
+1,LogEmphasisColor,brown
+1,LogInfoColor,grey
+1,LogCaseColor,blue
+1,DefaultTimeout,120

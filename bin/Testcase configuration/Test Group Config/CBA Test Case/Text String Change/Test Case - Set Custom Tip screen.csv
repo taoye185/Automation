@@ -1,0 +1,28 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,5,,,,,,
+login,5,,,,,,
+showSideMenu,15,,,,,,
+clickButton,5,SideMenuSettings,,,,,
+login,5,,,,,,
+setBooleanValue,5,SettingsTerminalAddTipValue,yes,,,,
+showSideMenu,5,,,,,,
+clickButton,5,SideMenuPurchase,,,,,
+enterNumPadOK,5,500,,,,,
+clickButton,5,SetTipDuringPurchaseCustomTip,,,,,
+enterNumPad,5,500,,,,,
+test,5,,,,equal,AddTipProcessTitle,Add tip
+test,0,,,,equal,AddTipTipAmount,$5.00
+test,0,,,,equal,AddTipTotalPurchaseAmount,Total: $10.00
+test,0,,,,equal,AddTipTitle,Enter amount
+clickButton,5,AddTipTip%,,,,,
+enterNumPad,5,10,,,,,
+test,5,,,,equal,AddTipProcessTitle,Add tip
+test,0,,,,equal,AddTipTipAmount,10%
+test,0,,,,equal,AddTipTotalPurchaseAmount,Total: $5.50
+test,0,,,,equal,AddTipTitle,Enter percentage
+clickButton,5,AddTipTipTotalAmount,,,,,
+enterNumPad,5,1500,,,,,
+test,5,,,,equal,AddTipProcessTitle,Add tip
+test,0,,,,equal,AddTipTipAmount,$15.00
+test,0,,,,equal,AddTipTotalPurchaseAmount,Original amount: $5.00
+test,0,,,,equal,AddTipTitle,Enter total amount

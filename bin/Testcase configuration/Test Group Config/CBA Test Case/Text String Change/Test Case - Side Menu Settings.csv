@@ -1,0 +1,23 @@
+Method Name, Seconds to Wait, URI, Value, action, AssertOperation, ActualURI, Expected Value
+launch,1,,,,,,
+reachPageByProcess,10,login,Purchase,,,,
+clickButton,0,PurchaseSideMenu,,,,,
+clickButton,1,SideMenuSettings,,,,,
+login,5,,,,,,
+waitUntilPage,120,SettingsTerminal,,,,,
+setBooleanValue,0,SettingsTerminalAddTipValue,yes,,,,
+logComment,0,"Testing Side menu Flow, screen 9",,,,,
+test,5,,,,isOnPage,,SettingsTerminal
+test,0,,,,equal,SettingsTerminalTipOptionText,Suggest these tip options
+clickButton,0,SettingsTerminalAdvancedTab,,,,,
+waitUntilPage,120,SettingsAdvanced,,,,,
+logComment,0,"Testing Side menu Flow, screen 10",,,,,
+test,5,,,,isOnPage,,SettingsAdvanced
+test,0,,,,equal,SettingsAdvancedTitle,Settings
+test,0,,,,equal,SettingsAdvancedTerminalTab,Terminal
+test,0,,,,equal,SettingsAdvancedAdvancedTab,Advanced
+test,0,,,,equal,SettingsAdvancedAppVersionText,App version
+test,0,,,,equal,SettingsAdvancedSettlementTimeText,Transactions will be captured for settlement every day at:
+test,0,,,,equal,SettingsAdvancedRequirePermissionText,To ensure performance reliability when accepting payments:
+test,0,,,,equal,SettingsAdvancedAllowModifyTimeoutText,Allow app to modify device screen timeout
+test,0,,,,equal,SettingsAdvancedAllowmodifyPowerSettingText,Allow app to modify device power settings
